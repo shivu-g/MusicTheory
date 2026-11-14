@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guitar Theory Maps Chapter 7</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<nav aria-label="Guide"><a href="index.html">← All chapters</a><span class="here">Chapter 7 of 7</span><span class="metro"></span><span style="display:flex;gap:8px"><a href="chapter-6.html">← Prev</a></span></nav>
+<div class="chap" id="chapter-7" style="background:#be185d"><span>Chapter 7</span><h2>Making Music: Lines and Practice</h2><p>How to turn scales and arpeggios into melodies that follow the chords, and how to practise so that it sticks.</p></div>
+<div class="legend"><span><i class="sw" style="background:var(--root)"></i>Root</span><span><i class="sw" style="background:var(--perfect)"></i>Perfect</span><span><i class="sw" style="background:var(--major)"></i>Major</span><span><i class="sw" style="background:var(--minor)"></i>Minor</span><span><i class="sw" style="background:var(--tritone)"></i>Tritone / altered</span><span class="cap">Click any note, chord or ▶ to hear it.</span></div>
+<div class="card"><h3>In this chapter</h3><ol class="toc"><li><span class="n">1</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-1">Chord tones are the targets</a></li><li><span class="n">2</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-2">Guide tones: the 3rd and 7th</a></li><li><span class="n">3</span><i class="dotc" style="background:var(--minor)"></i><a href="#lesson-3">Approach notes and enclosures</a></li><li><span class="n">4</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-4">Building a line over ii – V – I</a></li><li><span class="n">5</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-5">Soloing over the blues</a></li><li><span class="n">6</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-6">Phrasing: saying something</a></li><li><span class="n">7</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-7">How to practise</a></li><li><span class="n">8</span><i class="dotc" style="background:var(--major)"></i><a href="#lesson-8">Chapter 7 checkpoint</a></li></ol><p class="cap"><i class="dotc" style="background:var(--go)"></i> Core: do these on a first pass. <i class="dotc" style="background:var(--minor)"></i> Go deeper: safe to skip and come back to. <i class="dotc" style="background:var(--major)"></i> Checkpoint.</p></div>
+
+<section id="lesson-1">
+  <div class="lhd"><span class="num">1</span><span class="badge core">Core</span></div>
+  <h2>Chord tones are the targets</h2>
+  <p>A scale tells you which notes are available. It does not tell you which ones sound right at a given moment. The notes that sound settled are the notes of the chord being played underneath. A melody that lands on chord tones on the strong beats will sound as if it belongs, even with no accompaniment.</p>
+  <p>In a ii – V – I all three chords come from one scale, so the scale never changes. What changes is which four notes of it are the targets.</p>
+  <div class="card">
+    <div class="ctl"><div class="grp"><span class="lab">Key</span><span class="grp" id="ctKey"></span></div><div class="grp"><span class="lab">Chord</span><span class="grp" id="ctCh"></span></div></div>
+    <p id="ctInfo"></p>
+    <div class="scroll"><div id="ctNeck" style="min-width:720px"></div></div>
+    <p class="cap">One position of the key's major scale. Coloured dots are the current chord's tones, labelled from that chord's root; small grey dots are the other scale notes. Switch chords and watch the targets move.</p>
+  </div>
+</section>
+<section id="lesson-2">
+  <div class="lhd"><span class="num">2</span><span class="badge core">Core</span></div>
+  <h2>Guide tones: the 3rd and 7th</h2>
+  <p>Of a chord's four notes, the 3rd and 7th say the most about it. Follow them through a progression and you get two smooth lines that move by a half step or not at all. Those lines are called <b>guide tones</b>, and a solo built around them outlines the harmony clearly.</p>
+  <div class="card">
+    <div class="ctl"><div class="grp"><span class="lab">Key</span><span class="grp" id="gtKey"></span></div><button type="button" class="pbtn" id="gtPlay">▶ Play the guide tones</button></div>
+    <div id="gtOut" style="display:flex;flex-direction:column;gap:8px"></div>
+    <p class="cap">ii – V – I. Each row is one line you could sing or play; together they are enough to hear the chords.</p>
+  </div>
+</section>
+<section id="lesson-3">
+  <div class="lhd"><span class="num">3</span><span class="badge deep">Go deeper</span></div>
+  <h2>Approach notes and enclosures</h2>
+  <p>Notes outside the scale are not wrong if they are on their way somewhere. A note a half step below a chord tone, played just before it, makes the arrival stronger. Circle the target from both sides and you have an <b>enclosure</b>, one of the signature sounds of jazz lines.</p>
+  <div class="card">
+    <div class="ctl"><div class="grp"><span class="lab">Chord</span><span class="grp" id="apRoot"></span></div><div class="grp"><span class="grp" id="apQual"></span></div></div>
+    <div id="apOut" style="display:flex;flex-direction:column;gap:12px"></div>
+    <p class="cap">Dark chips are the chord tones being targeted. Light chips are the approach notes.</p>
+  </div>
+</section>
+<section id="lesson-4">
+  <div class="lhd"><span class="num">4</span><span class="badge core">Core</span></div>
+  <h2>Building a line over ii – V – I</h2>
+  <p>Put the last three lessons together and a line almost writes itself.</p>
+  <div class="card">
+    <div class="flow">
+      <div class="step"><b>1. Choose the targets</b>Pick a guide tone to land on at the start of each bar.</div>
+      <div class="arrow" aria-hidden="true">→</div>
+      <div class="step"><b>2. Fill the gaps</b>Connect the targets with arpeggio and scale notes.</div>
+      <div class="arrow" aria-hidden="true">→</div>
+      <div class="step"><b>3. Aim the arrival</b>Make the last note of each bar a step or half step from the next target.</div>
+    </div>
+    <div class="ctl"><div class="grp"><span class="lab">Key</span><span class="grp" id="lnKey"></span></div><div class="grp"><span class="lab">Example</span><span class="grp" id="lnEx"></span></div><button type="button" class="pbtn" id="lnPlay">▶ Play line</button></div>
+    <div id="lnOut" style="display:flex;flex-direction:column;gap:10px"></div>
+    <p class="cap" id="lnInfo"></p>
+  </div>
+</section>
+<section id="lesson-5">
+  <div class="lhd"><span class="num">5</span><span class="badge core">Core</span></div>
+  <h2>Soloing over the blues</h2>
+  <p>The 12-bar blues uses three dominant 7 chords, and there are three common ways to play over it. Most players mix all three.</p>
+  <ul>
+    <li><b>One scale throughout:</b> the minor pentatonic or blues scale of the key. Simple, and its clash with the major chords is the blues sound.</li>
+    <li><b>Sweeten it:</b> switch to the major pentatonic of the key over the I chord.</li>
+    <li><b>Follow the chords:</b> aim for each chord's 3rd and ♭7 as it arrives.</li>
+  </ul>
+  <div class="card">
+    <div class="ctl"><div class="grp"><span class="lab">Key</span><span class="grp" id="blKey"></span></div><div class="grp"><span class="lab">Chord</span><span class="grp" id="blCh"></span></div></div>
+    <p id="blInfo"></p>
+    <div class="scroll"><div id="blNeck" style="min-width:720px"></div></div>
+    <p class="cap">Minor pentatonic box 1. Small grey dots are the pentatonic; coloured dots are the tones of the current chord, labelled from its root. Some chord tones lie outside the box: those are the notes that make a blues solo follow the changes.</p>
+  </div>
+</section>
+<section id="lesson-6">
+  <div class="lhd"><span class="num">6</span><span class="badge core">Core</span></div>
+  <h2>Phrasing: saying something</h2>
+  <p>Right notes are not yet music. What makes a solo memorable is how the notes are grouped. Four habits do most of the work.</p>
+  <div class="card">
+    <div class="sd">
+      <div class="sdc"><span class="rn">Motif</span><span class="cap">Start with a short idea of three to five notes that you could sing back.</span></div>
+      <div class="sdc" style="border-top-color:var(--perfect)"><span class="rn">Repeat</span><span class="cap">Play it again. Repetition is what tells the listener it was an idea.</span></div>
+      <div class="sdc" style="border-top-color:var(--major)"><span class="rn">Vary</span><span class="cap">Change one thing: the last note, the rhythm, or the octave.</span></div>
+      <div class="sdc" style="border-top-color:var(--minor)"><span class="rn">Leave space</span><span class="cap">Stop. A rest lets the phrase land and gives you time to hear the next one.</span></div>
+    </div>
+    <div class="ctl"><div class="grp"><span class="lab">Key</span><span class="grp" id="phKey"></span></div><span class="grp" id="phBtns"></span></div>
+    <div id="phOut" style="display:flex;flex-direction:column;gap:8px"></div>
+    <p class="cap">A four-bar example in the minor pentatonic. Play each step, then all four in a row.</p>
+  </div>
+  <div class="tip"><b>Sing first.</b> If you cannot sing a phrase, you are probably playing a finger pattern. Sing a short idea, then find it on the guitar.</div>
+</section>
+<section id="lesson-7">
+  <div class="lhd"><span class="num">7</span><span class="badge core">Core</span></div>
+  <h2>How to practise</h2>
+  <p>Short, regular and slow beats long, occasional and fast. Practise at a speed where you make no mistakes, then raise it a little at a time. A metronome keeps you honest.</p>
+  <div class="card">
+    <h3>Metronome</h3>
+    <div class="metro"></div>
+    <p class="cap">The same metronome sits in the bar at the top of every page. The first beat of every four is higher. Start around 60 to 80 and only move up when a pattern is clean three times in a row.</p>
+  </div>
+  <div class="card">
+    <h3>A balanced 30 minutes</h3>
+    <div class="scroll"><div class="cheat">
+      <div class="crow lhead"><span>Block</span><span>What to do</span><span>Time</span></div>
+      <div class="crow"><b><span class="cn2">1</span>Warm up</b><span>One scale position, slowly, with the metronome.</span><span class="ex">5 min</span></div>
+      <div class="crow"><b><span class="cn2">2</span>Fretboard</b><span>One practice pattern and one arpeggio in that position (chapter 6).</span><span class="ex">7 min</span></div>
+      <div class="crow"><b><span class="cn2">3</span>Harmony</b><span>One chord idea: a new voicing, a ii – V – I, or one substitution (chapters 2, 4 and 5).</span><span class="ex">6 min</span></div>
+      <div class="crow"><b><span class="cn2">4</span>Ear</b><span>Play intervals or cadences from this guide with your eyes closed and name them.</span><span class="ex">4 min</span></div>
+      <div class="crow"><b><span class="cn2">5</span>Music</b><span>Improvise over a loop or play a song, using today's idea at least once.</span><span class="ex">8 min</span></div>
+    </div></div>
+  </div>
+</section>
+<section id="lesson-8">
+  <div class="lhd"><span class="num">8</span><span class="badge check">Checkpoint</span></div>
+  <h2>Chapter 7 checkpoint</h2>
+  <div class="card">
+    <h3>You are ready to move on when you can</h3>
+    <ul>
+      <li>Name the chord tones of each chord in a ii – V – I and find them in one position.</li>
+      <li>Play the two guide-tone lines through a ii – V – I in two keys.</li>
+      <li>Approach any chord tone from a half step below.</li>
+      <li>Over a blues, land on the 3rd of the I chord and the 3rd of the IV chord as each arrives.</li>
+      <li>Play a four-bar phrase built from one motif, with at least one bar of space.</li>
+    </ul>
+    <h3>A ten-minute routine</h3>
+    <ol>
+      <li>Two minutes: guide tones only, through ii – V – I, with the metronome.</li>
+      <li>Three minutes: add one approach note before each guide tone.</li>
+      <li>Three minutes: improvise over a blues using only box 1 plus each chord's 3rd.</li>
+      <li>Two minutes: one motif, repeated and varied, with rests.</li>
+    </ol>
+  </div>
+</section>
+
+<div class="pager"><a class="ghost" href="chapter-6.html">← Chapter 6</a><a href="index.html">Back to all chapters →</a></div>
+<footer>Guitar Theory Maps · Chapter 7: Making Music: Lines and Practice</footer>
+</main>
+<script src="common.js"></script>
+<script src="neck.js"></script>
+<script>(function(){
+const SH=['C','C♯','D','D♯','E','F','F♯','G','G♯','A','A♯','B'];
+// 1. chord tones as targets
+let C={key:0,ch:0};const CH=[['ii7',1,2,'m7'],['V7',4,7,'7'],['Imaj7',0,0,'maj7']];
+function drawCT(){const key=RMAJ[C.key],kp=pcOf(key),c=CH[C.ch],ch=chordOf(key,c[1],c[2],c[3]),rp=mod12(kp+c[2]),iv=CQ[c[3]][0];
+ btns('ctKey',RMAJ,C.key,i=>{C.key=i;drawCT()});btns('ctCh',CH.map(x=>x[0]+' · '+chordOf(key,x[1],x[2],x[3]).name),C.ch,i=>{C.ch=i;drawCT()});
+ const win=posWin(CAGED[3],kp),map={};MAJ.forEach(x=>{const r=mod12(kp+x-rp);map[x]=iv.includes(r)?[IVL[r],famOf(r)]:[IVL[r],'ghost']});
+ const dots=scaleDots(kp,map,win).filter(d=>!d.dim).map(d=>({...d,dim:d.fam==='ghost'}));
+ neck('ctNeck',dots,ch.name+' chord tones in '+key+' major',{win});
+ $('ctInfo').innerHTML=`<b>${ch.name}</b> in the key of ${key} major: target ${ch.notes}. ${PB(BOTH(ch.midi),'Play '+ch.name)}`}
+drawCT();
+// 2. guide tones
+let Gk=0;
+function drawGT(){const key=RMAJ[Gk],kp=pcOf(key);btns('gtKey',RMAJ,Gk,i=>{Gk=i;drawGT()});
+ const ii=chordOf(key,1,2,'m7'),v=chordOf(key,4,7,'7'),I=chordOf(key,0,0,'maj7'),n=x=>x.notes.split(' '),chip=(t,l,f)=>`<span class="nchip" style="background:${col(f)};color:#fff">${t}<small style="display:block;font-size:.68rem;font-weight:600">${l}</small></span>`;
+ const row=(a,b,c)=>`<div class="chain">${a}<i>${b[0]} →</i>${b[1]}<i>${c[0]} →</i>${c[1]}</div>`;
+ $('gtOut').innerHTML=`<div class="chain"><span class="lab2">Chords</span><b>${ii.name}</b><i>→</i><b>${v.name}</b><i>→</i><b>${I.name}</b></div>`+row(chip(n(ii)[3],'7th','minor'),['down a half step',chip(n(v)[1],'3rd','major')],['stays',chip(n(I)[3],'7th','major')])+row(chip(n(ii)[1],'3rd','minor'),['stays',chip(n(v)[3],'7th','minor')],['down a half step',chip(I.notes.split(' ')[1],'3rd','major')]);
+ const b=48+kp,hi=60+kp;$('gtPlay').dataset.play='ccc:'+[[b+2-12,hi+5,hi+12],[b+7-12,hi+5,hi+11],[b-12+12,hi+4,hi+11]].map(x=>x.join(',')).join('|')}
+drawGT();
+// 3. approach notes
+let Ap={root:0,q:0};
+function drawAp(){const r=RMAJ[Ap.root],pc=pcOf(r),q=Ap.q?'m':'M',ch=chordOf(r,0,0,q),names=ch.notes.split(' '),sc=Ap.q?[0,2,3,5,7,9,10]:MAJ,b=60+pc,iv=CQ[q][0];
+ btns('apRoot',RMAJ,Ap.root,i=>{Ap.root=i;drawAp()});btns('apQual',['Major','Minor'],Ap.q,i=>{Ap.q=i;drawAp()});
+ const above=x=>{const i=sc.indexOf(x);return i===sc.length-1?12:sc[i+1]},nm=o=>{const i=sc.indexOf(mod12(o));return i>=0?spell(r,i,sc[i]):SH[mod12(pc+o)]};
+ const t=(o,tg)=>`<span class="nchip" style="${tg?'background:var(--root);color:var(--root-ink)':''}">${nm(o)}</span>`;
+ const rows=[['From a half step below','A chromatic note leading up into the target.',x=>[x-1,x]],['From the scale note above','A step down into the target.',x=>[above(x),x]],['Enclosure: above, below, target','Surround the target, then land on it.',x=>[above(x),x-1,x]]];
+ const tg=iv;
+ $('apOut').innerHTML=rows.map(([h,d,f])=>{const cells=tg.map(x=>f(x));return `<div><span class="lab2">${h}</span> ${PB('m'.repeat(cells.length)+':'+cells.map(c=>c.map(o=>b+o).join(',')).join('|'),'Play '+h)}<div class="chips" style="margin-top:6px">${cells.map(c=>`<span style="display:inline-flex;gap:3px;margin-right:10px">${c.map((o,i)=>t(o,i===c.length-1)).join('')}</span>`).join('')}</div><span class="cap">${d}</span></div>`}).join('')}
+drawAp();
+// 4. lines over ii-V-I (offsets in half steps from the key note)
+const LN=[{n:'Arpeggios and scale',bars:[[9,5,2,5,9,12,16,12],[11,14,17,14,11,7,9,5],[4,7,11,7,4,2,0]],d:'Diatonic notes only. Each bar starts on a guide tone, and the last note of each bar is one step from the next target.'},{n:'With approach notes',bars:[[2,4,5,9,12,14,12,10],[11,14,17,21,19,17,14,15],[16,12,7,9,11,14,12]],d:'The same idea with two chromatic approach notes, each a half step below the target that starts the next bar.'}];
+let Ln={key:0,ex:0};
+function drawLn(){const key=RMAJ[Ln.key],kp=pcOf(key),L=LN[Ln.ex],names=MAJ.map((x,i)=>spell(key,i,x)),b=(kp>6?48:60)+kp;
+ btns('lnKey',RMAJ,Ln.key,i=>{Ln.key=i;drawLn()});btns('lnEx',LN.map(x=>x.n),Ln.ex,i=>{Ln.ex=i;drawLn()});
+ const nm=o=>{const i=MAJ.indexOf(mod12(o));return i>=0?names[i]:SH[mod12(kp+o)]},ch=[chordOf(key,1,2,'m7'),chordOf(key,4,7,'7'),chordOf(key,0,0,'maj7')];
+ $('lnOut').innerHTML=L.bars.map((bar,i)=>`<div class="chain"><span class="lab2" style="min-width:5.5em">${ch[i].name}</span>${bar.map((o,j)=>`<span class="nchip" style="${j===0?'background:var(--root);color:var(--root-ink)':MAJ.includes(mod12(o))?'':'background:var(--tritone);color:#fff'}">${nm(o)}</span>`).join('')}</div>`).join('');
+ $('lnInfo').textContent=L.d+' Dark chips are the targets; red chips are chromatic approach notes.';$('lnPlay').dataset.play='mmm:'+L.bars.map(bar=>bar.map(o=>b+o).join(',')).join('|')}
+drawLn();
+// 5. blues
+let Bl={key:9,ch:0};const BC=[['I7',0],['IV7',5],['V7',7]];
+function drawBl(){const key=RMAJ[Bl.key],kp=pcOf(key),rp=mod12(kp+BC[Bl.ch][1]),cn=spell(key,[0,3,4][Bl.ch],BC[Bl.ch][1]),ch=chordOf(cn,0,0,'7');
+ btns('blKey',RMAJ,Bl.key,i=>{Bl.key=i;drawBl()});btns('blCh',BC.map((x,i)=>x[0]+' · '+spell(key,[0,3,4][i],x[1])+'7'),Bl.ch,i=>{Bl.ch=i;drawBl()});
+ const win=posWin(CAGED[2],mod12(kp+3)),dots=[],pent=[0,3,5,7,10];
+ for(let s=0;s<6;s++)for(let f=win[0];f<=win[1];f++){const p=mod12(LOWM[s]+f),r=mod12(p-rp),ct=[0,4,7,10].includes(r),pn=pent.includes(mod12(p-kp));if(ct)dots.push({s,f,txt:IVL[r],fam:famOf(r)});else if(pn)dots.push({s,f,txt:IVL[mod12(p-kp)],fam:'ghost',dim:true})}
+ neck('blNeck',dots,ch.name+' chord tones over the '+key+' minor pentatonic',{win});
+ const out=[4,10].map(x=>mod12(rp+x)).filter(p=>!pent.includes(mod12(p-kp)));
+ $('blInfo').innerHTML=`<b>${ch.name}</b>: ${ch.notes}. ${PB(BOTH(ch.midi),'Play '+ch.name)} ${out.length?`Its ${out.map(p=>IVL[mod12(p-rp)]==='3'?'3rd':'♭7').join(' and ')} (${out.map(p=>ch.notes.split(' ')[[0,4,7,10].indexOf(mod12(p-rp))]).join(', ')}) is not in the ${key} minor pentatonic, so reaching for it is what marks this chord.`:'Its 3rd and ♭7 are both already in the pentatonic.'}`}
+drawBl();
+// 6. phrasing
+let Ph=9;const PHR=[['Motif',[12,10,7,10,12]],['Repeat',[12,10,7,10,12]],['Vary the ending',[12,10,7,10,15]],['Answer and resolve',[10,7,5,3,0]]];
+function drawPh(){const key=RMAJ[Ph],kp=pcOf(key),b=(kp>6?48:60)+kp,lab={0:'R',3:'♭3',5:'4',7:'5',10:'♭7',12:'R',15:'♭3'},lo={0:0,3:2,5:3,7:4,10:6,12:0,15:2};
+ btns('phKey',RMAJ,Ph,i=>{Ph=i;drawPh()});
+ $('phBtns').innerHTML=PHR.map(([n,p],i)=>`<button type="button" class="pbtn" data-play="m:${p.map(o=>b+o).join(',')}">▶ ${i+1}. ${n}</button>`).join('')+`<button type="button" class="pbtn" data-play="mmmm:${PHR.map(([n,p])=>p.map(o=>b+o).join(',')).join('|')}">▶ All four bars</button>`;
+ $('phOut').innerHTML=PHR.map(([n,p],i)=>`<div class="chain"><span class="lab2" style="min-width:10em">${i+1}. ${n}</span>${p.map((o,j)=>`<span class="nchip" style="${i>1&&j===p.length-1?'background:var(--major);color:#fff':''}">${spell(key,lo[o],o%12)}<small style="display:block;font-size:.68rem;font-weight:600;opacity:.8">${lab[o]}</small></span>`).join('')}<i>rest</i></div>`).join('')}
+drawPh();
+})();
+</script>
+<script src="metro.js"></script>
+</body>
+</html>

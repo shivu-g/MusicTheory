@@ -180,3 +180,10 @@ section{scroll-margin-top:70px}
 .steps3{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
 .steps3 div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px}
 .steps3 b{display:block;font-family:var(--display);font-size:1.1rem}
+main{max-width:1180px}
+p,ul,ol{max-width:74ch}
+.metro{display:inline-flex;align-items:center;gap:6px;flex-wrap:wrap}
+.metro .mb{font:800 1rem var(--display);min-width:4.6em;text-align:center;font-variant-numeric:tabular-nums}
+.metro .pbtn{padding:3px 10px;min-width:2.2em}
+.mdot{width:14px;height:14px;border-radius:50%;background:var(--line);display:inline-block}
+nav{gap:8px 16px}

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guitar Theory Maps Chapter 6</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<nav aria-label="Guide"><a href="index.html">← All chapters</a><span class="here">Chapter 6 of 7</span><span class="metro"></span><span style="display:flex;gap:8px"><a href="chapter-5.html">← Prev</a><a href="chapter-7.html">Next →</a></span></nav>
+<div class="chap" id="chapter-6" style="background:#0e7490"><span>Chapter 6</span><h2>Scales and Arpeggios Across the Neck</h2><p>Turning scales from a list of notes into shapes under your fingers: positions, pentatonic boxes, arpeggios and the patterns used to practise them.</p></div>
+<div class="legend"><span><i class="sw" style="background:var(--root)"></i>Root</span><span><i class="sw" style="background:var(--perfect)"></i>Perfect</span><span><i class="sw" style="background:var(--major)"></i>Major</span><span><i class="sw" style="background:var(--minor)"></i>Minor</span><span><i class="sw" style="background:var(--tritone)"></i>Tritone / altered</span><span class="cap">Click any note, chord or ▶ to hear it.</span></div>
+<div class="card"><h3>In this chapter</h3><ol class="toc"><li><span class="n">1</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-1">Five positions of one scale</a></li><li><span class="n">2</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-2">The five pentatonic boxes</a></li><li><span class="n">3</span><i class="dotc" style="background:var(--minor)"></i><a href="#lesson-3">Three notes per string</a></li><li><span class="n">4</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-4">Arpeggios: chords played one note at a time</a></li><li><span class="n">5</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-5">Practice patterns</a></li><li><span class="n">6</span><i class="dotc" style="background:var(--minor)"></i><a href="#lesson-6">Symmetrical scales</a></li><li><span class="n">7</span><i class="dotc" style="background:var(--major)"></i><a href="#lesson-7">Chapter 6 checkpoint</a></li></ol><p class="cap"><i class="dotc" style="background:var(--go)"></i> Core: do these on a first pass. <i class="dotc" style="background:var(--minor)"></i> Go deeper: safe to skip and come back to. <i class="dotc" style="background:var(--major)"></i> Checkpoint.</p></div>
+
+<section id="lesson-1">
+  <div class="lhd"><span class="num">1</span><span class="badge core">Core</span></div>
+  <h2>Five positions of one scale</h2>
+  <p>A scale covers the whole neck, which is too much to take in at once. The usual answer is to cut it into five overlapping <b>positions</b>, each about four frets wide and each wrapped around one of the five chord shapes from chapter 5. Learn the five, and you can play in any key without moving your hand far.</p>
+  <div class="card">
+    <div class="ctl"><div class="grp"><span class="lab">Key</span><span class="grp" id="spRoot"></span></div><div class="grp"><span class="grp" id="spType"></span></div></div>
+    <div class="ctl"><div class="grp"><span class="lab">Position</span><span class="grp" id="spPos"></span></div><button type="button" class="pbtn" id="spPlay">▶ Play this position</button></div>
+    <p id="spInfo"></p>
+    <div class="scroll"><div id="spNeck" style="min-width:720px"></div></div>
+    <p class="cap">The green band is the position. Bright dots are one workable fingering inside it; faded dots are the rest of the scale. Numbers are scale degrees and R is the root.</p>
+  </div>
+  <div class="tip"><b>Natural minor is the same five shapes.</b> A minor has the same notes as C major, so its positions are C major's positions with a different note treated as home. Switch between Major and Natural minor above and watch only the labels change.</div>
+</section>
+<section id="lesson-2">
+  <div class="lhd"><span class="num">2</span><span class="badge core">Core</span></div>
+  <h2>The five pentatonic boxes</h2>
+  <p>The pentatonic scale has only two notes on each string, so its five positions are simple box shapes. Box 1 of the minor pentatonic, with the root under your first finger on the low E string, is the most played shape in rock and blues. The other four connect it to the rest of the neck.</p>
+  <div class="card">
+    <div class="ctl"><div class="grp"><span class="lab">Root</span><span class="grp" id="pbRoot"></span></div><div class="grp"><span class="grp" id="pbType"></span></div></div>
+    <div class="ctl"><div class="grp"><span class="lab">Box</span><span class="grp" id="pbPos"></span></div><button type="button" class="pbtn" id="pbPlay">▶ Play this box</button></div>
+    <p id="pbInfo"></p>
+    <div class="scroll"><div id="pbNeck" style="min-width:720px"></div></div>
+  </div>
+  <div class="tip"><b>Connect two boxes first.</b> Slide from the top of box 1 into box 2 on the G and B strings and back. Two connected boxes are far more useful than five separate ones.</div>
+</section>
+<section id="lesson-3">
+  <div class="lhd"><span class="num">3</span><span class="badge deep">Go deeper</span></div>
+  <h2>Three notes per string</h2>
+  <p>A second way to lay out a seven-note scale is to play exactly three notes on every string. The shapes are wider, with more stretching, but the picking is perfectly even, which makes them popular for fast runs. There are seven patterns, one starting from each note of the scale.</p>
+  <div class="card">
+    <div class="ctl"><div class="grp"><span class="lab">Key</span><span class="grp" id="n3Root"></span></div></div>
+    <div class="ctl"><div class="grp"><span class="lab">Start on degree</span><span class="grp" id="n3Pat"></span></div><button type="button" class="pbtn" id="n3Play">▶ Play pattern</button></div>
+    <div class="scroll"><div id="n3Neck" style="min-width:720px"></div></div>
+    <p class="cap">Major scale. Notice the pattern shifts up one fret when it reaches the B string.</p>
+  </div>
+</section>
+<section id="lesson-4">
+  <div class="lhd"><span class="num">4</span><span class="badge core">Core</span></div>
+  <h2>Arpeggios: chords played one note at a time</h2>
+  <p>An <b>arpeggio</b> is a chord with its notes played in sequence. On guitar it is the bridge between chords and melody: the arpeggio shows you which notes of the scale position belong to the chord of the moment. Each arpeggio shape sits inside one of the five positions.</p>
+  <div class="card">
+    <div class="ctl"><div class="grp"><span class="lab">Root</span><span class="grp" id="arRoot"></span></div></div>
+    <div class="ctl"><div class="grp"><span class="lab">Chord</span><span class="grp" id="arType"></span></div></div>
+    <div class="ctl"><div class="grp"><span class="lab">Position</span><span class="grp" id="arPos"></span></div><div class="grp"><span class="grp" id="arScale"></span></div><button type="button" class="pbtn" id="arPlay">▶ Play arpeggio</button></div>
+    <p id="arInfo"></p>
+    <div class="scroll"><div id="arNeck" style="min-width:720px"></div></div>
+    <p class="cap">Coloured dots are the arpeggio. With "Scale behind" on, small grey dots show the matching scale in the same position.</p>
+  </div>
+</section>
+<section id="lesson-5">
+  <div class="lhd"><span class="num">5</span><span class="badge core">Core</span></div>
+  <h2>Practice patterns</h2>
+  <p>Running a scale straight up and down teaches your fingers the shape but not much music. Sequences break the scale into small repeating cells. They build control and they are the raw material of real melodic lines.</p>
+  <div class="card">
+    <div class="ctl"><div class="grp"><span class="lab">Key</span><span class="grp" id="sqRoot"></span></div></div>
+    <div class="ctl"><div class="grp"><span class="lab">Pattern</span><span class="grp" id="sqPat"></span></div><button type="button" class="pbtn" id="sqPlay">▶ Play</button></div>
+    <div class="chips" id="sqOut"></div>
+    <p class="cap" id="sqInfo"></p>
+  </div>
+  <div class="tip"><b>Apply every pattern three ways.</b> Up, down, and in a second position. Then try the same pattern on a pentatonic box.</div>
+</section>
+<section id="lesson-6">
+  <div class="lhd"><span class="num">6</span><span class="badge deep">Go deeper</span></div>
+  <h2>Symmetrical scales</h2>
+  <p>A few scales are built from a repeating pattern of steps, so they have no single home note and the same fingering repeats up the neck. They are specialist colours, used over particular chords.</p>
+  <div class="card">
+    <div class="ctl"><div class="grp"><span class="lab">Root</span><span class="grp" id="syRoot"></span></div></div>
+    <div class="ctl"><div class="grp"><span class="lab">Scale</span><span class="grp" id="syType"></span></div><button type="button" class="pbtn" id="syPlay">▶ Play scale</button></div>
+    <p id="syInfo"></p>
+    <div class="scroll"><div id="syFret" style="min-width:720px"></div></div>
+    <div class="scroll"><div id="syPiano" style="min-width:420px;max-width:620px"></div></div>
+  </div>
+</section>
+<section id="lesson-7">
+  <div class="lhd"><span class="num">7</span><span class="badge check">Checkpoint</span></div>
+  <h2>Chapter 6 checkpoint</h2>
+  <div class="card">
+    <h3>You are ready to move on when you can</h3>
+    <ul>
+      <li>Play a major scale in at least two neighbouring positions and move between them.</li>
+      <li>Play minor pentatonic box 1 in any key, and connect it to box 2.</li>
+      <li>Play a major 7, minor 7 and dominant 7 arpeggio inside one scale position.</li>
+      <li>Play a scale in thirds and in groups of three without stopping.</li>
+    </ul>
+    <h3>A ten-minute routine</h3>
+    <ol>
+      <li>Two minutes: one major scale position, slowly, saying the degree numbers.</li>
+      <li>Three minutes: the same position in thirds, then in groups of three.</li>
+      <li>Three minutes: the arpeggios of I, IV and V inside that position.</li>
+      <li>Two minutes: pentatonic boxes 1 and 2, sliding between them.</li>
+    </ol>
+  </div>
+</section>
+
+<div class="pager"><a class="ghost" href="chapter-5.html">← Chapter 5</a><a href="chapter-7.html">Chapter 7: Making Music: Lines and Practice →</a></div>
+<footer>Guitar Theory Maps · Chapter 6: Scales and Arpeggios Across the Neck</footer>
+</main>
+<script src="common.js"></script>
+<script src="neck.js"></script>
+<script>(function(){
+const MIN=[0,2,3,5,7,8,10],ORD=[3,4,0,1,2]; // position order E, D, C, A, G
+const seqPlay=(dots)=>'m:'+dots.filter(d=>!d.dim).map(d=>LOWM[d.s]+d.f).sort((a,b)=>a-b).join(',');
+// 1. positions
+let P={root:7,t:0,pos:0};
+function drawPos(){const roots=P.t?RMIN:RMAJ,r=roots[P.root],pc=pcOf(r),sc=P.t?MIN:MAJ,maj=P.t?mod12(pc+3):pc,sh=CAGED[ORD[P.pos]],win=posWin(sh,maj),map={};
+ btns('spRoot',roots,P.root,i=>{P.root=i;drawPos()});btns('spType',['Major','Natural minor'],P.t,i=>{P.t=i;drawPos()});btns('spPos',ORD.map((o,i)=>`${i+1} (${CAGED[o].n} shape)`),P.pos,i=>{P.pos=i;drawPos()});
+ sc.forEach((x,i)=>map[x]=[i?String(i+1):'R',i?FAM[x]:'root']);const dots=scaleDots(pc,map,win);
+ neck('spNeck',dots,r+' scale position',{win});$('spPlay').dataset.play=seqPlay(dots);
+ $('spInfo').innerHTML=`<b>${r} ${P.t?'natural minor':'major'}, position ${P.pos+1}</b>: frets ${win[0]} to ${win[1]}, built around the ${CAGED[ORD[P.pos]].n}-shape ${P.t?RMAJ[maj]+' major (relative major)':r+' major'} chord. Notes: ${sc.map((x,i)=>spell(r,i,x)).join(' ')}.`}
+drawPos();
+// 2. pentatonic boxes
+const PT=[{n:'Minor pentatonic',s:[0,3,5,7,10],l:['R','♭3','4','5','♭7'],rel:3},{n:'Major pentatonic',s:[0,2,4,7,9],l:['R','2','3','5','6'],rel:0},{n:'Blues scale',s:[0,3,5,6,7,10],l:['R','♭3','4','♭5','5','♭7'],rel:3}],BOX=[2,3,4,0,1]; // G E D C A
+let PB_={root:9,t:0,pos:0};
+function drawBox(){const r=RMAJ[PB_.root],pc=pcOf(r),p=PT[PB_.t],maj=mod12(pc+p.rel),order=p.rel?BOX:ORD,sh=CAGED[order[PB_.pos]],win=posWin(sh,maj),map={};
+ btns('pbRoot',RMAJ,PB_.root,i=>{PB_.root=i;drawBox()});btns('pbType',PT.map(x=>x.n),PB_.t,i=>{PB_.t=i;drawBox()});btns('pbPos',[1,2,3,4,5].map(String),PB_.pos,i=>{PB_.pos=i;drawBox()});
+ p.s.forEach((x,i)=>map[x]=[p.l[i],i?(x===6?'tritone':FAM[x]):'root']);const dots=scaleDots(pc,map,win);
+ neck('pbNeck',dots,r+' '+p.n+' box',{win});$('pbPlay').dataset.play=seqPlay(dots);
+ $('pbInfo').innerHTML=`<b>${r} ${p.n.toLowerCase()}, box ${PB_.pos+1}</b>: frets ${win[0]} to ${win[1]}. ${p.rel?`Same notes as ${RMAJ[maj]} major pentatonic.`:`Same notes as ${RMAJ[mod12(pc+9)]} minor pentatonic.`}`}
+drawBox();
+// 3. three notes per string
+let N={root:7,pat:0};
+function draw3(){const r=RMAJ[N.root],pc=pcOf(r);btns('n3Root',RMAJ,N.root,i=>{N.root=i;draw3()});btns('n3Pat',[1,2,3,4,5,6,7].map(String),N.pat,i=>{N.pat=i;draw3()});
+ let m=40+mod12(pc+MAJ[N.pat]-4),deg=N.pat;const ms=[];for(let i=0;i<18;i++){ms.push([m,deg%7]);const a=MAJ[deg%7],b=MAJ[(deg+1)%7];m+=mod12(b-a)||12;deg++}
+ let dots=ms.map(([mm,d],i)=>{const s=Math.floor(i/3);return{s,f:mm-LOWM[s],txt:d?String(d+1):'R',fam:d?FAM[MAJ[d]]:'root'}});
+ if(Math.max(...dots.map(d=>d.f))>17)dots=dots.map(d=>({...d,f:d.f-12}));
+ neck('n3Neck',dots,r+' major, three notes per string',{frets:17});$('n3Play').dataset.play='m:'+dots.map(d=>LOWM[d.s]+d.f).join(',')}
+draw3();
+// 4. arpeggios
+const AT=[['M','major',MAJ],['m','minor',[0,2,3,5,7,9,10]],['maj7','maj7',MAJ],['7','7',[0,2,4,5,7,9,10]],['m7','m7',[0,2,3,5,7,9,10]],['ø','m7♭5',[0,1,3,5,6,8,10]]],SCN=['major scale','Dorian mode','major scale','Mixolydian mode','Dorian mode','Locrian mode'];
+let A={root:0,t:2,pos:0,sc:1};
+function drawArp(){const r=RMAJ[A.root],pc=pcOf(r),t=AT[A.t],iv=CQ[t[0]][0],sh=CAGED[ORD[A.pos]],win=posWin(sh,pc),map={};
+ btns('arRoot',RMAJ,A.root,i=>{A.root=i;drawArp()});btns('arType',AT.map(x=>x[1]),A.t,i=>{A.t=i;drawArp()});btns('arPos',ORD.map((o,i)=>`${i+1} (${CAGED[o].n} shape)`),A.pos,i=>{A.pos=i;drawArp()});btns('arScale',['Arpeggio only','Scale behind'],A.sc,i=>{A.sc=i;drawArp()});
+ iv.forEach(x=>map[x]=[IVL[x],x===6?'tritone':famOf(x)]);let dots=scaleDots(pc,map,win).filter(d=>!d.dim||false);
+ const arp=scaleDots(pc,map,win).filter(d=>!d.dim);
+ if(A.sc){const sm={};t[2].forEach(x=>{if(!iv.includes(x))sm[x]=[IVL[x],'ghost']});dots=arp.concat(scaleDots(pc,sm,win).filter(d=>!d.dim).map(d=>({...d,dim:true})))}else dots=arp;
+ neck('arNeck',dots,r+t[1]+' arpeggio',{win});$('arPlay').dataset.play='m:'+arp.map(d=>LOWM[d.s]+d.f).sort((a,b)=>a-b).join(',');
+ $('arInfo').innerHTML=`<b>${r}${CQ[t[0]][1]} arpeggio</b>: ${chordOf(r,0,0,t[0]).notes}. Position ${A.pos+1}, frets ${win[0]} to ${win[1]}. The scale behind it is the ${r} ${SCN[A.t]}.`}
+drawArp();
+// 5. sequences
+const SQ=[['Straight',1,'The plain scale, for reference.'],['Thirds',2,'Play a note, skip one, come back for the next. The classic melodic pattern.'],['Groups of three',3,'Three notes up, then start again one note higher. Feels like triplets.'],['Groups of four',4,'Four notes up, then start again one note higher. The staple of fast scale runs.']];
+let Sq={root:0,p:1};
+function drawSeq(){const r=RMAJ[Sq.root],b=48+pcOf(r),names=MAJ.map((x,i)=>spell(r,i,x));btns('sqRoot',RMAJ,Sq.root,i=>{Sq.root=i;drawSeq()});btns('sqPat',SQ.map(x=>x[0]),Sq.p,i=>{Sq.p=i;drawSeq()});
+ const L=i=>b+MAJ[i%7]+12*Math.floor(i/7),k=SQ[Sq.p][1],cells=[];
+ if(k===1)cells.push([0,1,2,3,4,5,6,7]);else if(k===2)for(let i=0;i<7;i++)cells.push([i,i+2]);else for(let i=0;i<=7-(k-1)+ (k-1);i++){if(i>7)break;cells.push(Array.from({length:k},(_,j)=>i+j))}
+ const fl=cells.flat();if(k>1)fl.push(7);
+ $('sqOut').innerHTML=cells.map(c=>`<span class="nchip" style="display:inline-flex;gap:6px">${c.map(i=>`<span><b>${i%7+1}</b> <small style="opacity:.7">${names[i%7]}</small></span>`).join('')}</span>`).join('');
+ $('sqInfo').textContent=SQ[Sq.p][2]+' Numbers are scale degrees; each box is one cell of the pattern.';$('sqPlay').dataset.play='m:'+fl.map(L).join(',')}
+drawSeq();
+// 6. symmetrical
+const SY=[{n:'Whole tone',s:[0,2,4,6,8,10],d:'Six notes, all a whole step apart. Dreamy and unanchored. Fits augmented chords and dominant 7 chords with a raised 5th.'},{n:'Diminished (whole-half)',s:[0,2,3,5,6,8,9,11],d:'Eight notes alternating whole step, half step. Fits diminished 7 chords built on the same root.'},{n:'Diminished (half-whole)',s:[0,1,3,4,6,7,9,10],d:'Eight notes alternating half step, whole step. Fits dominant 7 chords with a ♭9 or ♯9.'},{n:'Chromatic',s:[0,1,2,3,4,5,6,7,8,9,10,11],d:'All twelve notes. Not a scale to improvise with wholesale, but the source of passing notes between scale tones.'}];
+let Y={root:0,t:0};
+function drawSym(){const r=RMAJ[Y.root],pc=pcOf(r),y=SY[Y.t],map={};btns('syRoot',RMAJ,Y.root,i=>{Y.root=i;drawSym()});btns('syType',SY.map(x=>x.n),Y.t,i=>{Y.t=i;drawSym()});
+ y.s.forEach(x=>map[x]=[IVL[x],x===6?'tritone':famOf(x)]);drawFret('syFret',pc,map,r+' '+y.n);drawPiano('syPiano',pc,map,r+' '+y.n);
+ $('syInfo').innerHTML=`<b>${r} ${y.n.toLowerCase()}.</b> ${y.d}`;$('syPlay').dataset.play='m:'+y.s.concat(12).map(x=>48+pc+x).join(',')}
+drawSym();
+})();
+</script>
+<script src="metro.js"></script>
+</body>
+</html>
