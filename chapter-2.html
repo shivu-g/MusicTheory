@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guitar Theory Maps Chapter 2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<nav aria-label="Guide"><a href="index.html">← All chapters</a><span class="here">Chapter 2 of 4</span><span style="display:flex;gap:8px"><a href="chapter-1.html">← Prev</a><a href="chapter-3.html">Next →</a></span></nav>
+<div class="chap" id="chapter-2" style="background:var(--minor)"><span>Chapter 2</span><h2>Seventh Chords and Minor Keys</h2><p>Add one more third to a triad and you get seventh chords. Then: why minor keys come in three versions and what chords each one gives you.</p></div>
+<div class="legend"><span><i class="sw" style="background:var(--root)"></i>Root</span><span><i class="sw" style="background:var(--perfect)"></i>Perfect</span><span><i class="sw" style="background:var(--major)"></i>Major</span><span><i class="sw" style="background:var(--minor)"></i>Minor</span><span><i class="sw" style="background:var(--tritone)"></i>Tritone / altered</span><span class="cap">Click any note, chord or ▶ to hear it.</span></div>
+<div class="card"><h3>In this chapter</h3><ol class="toc"><li><span class="n">1</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-1">Seventh chords: stacking three thirds</a></li><li><span class="n">2</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-2">Seventh chords on the neck</a></li><li><span class="n">3</span><i class="dotc" style="background:var(--minor)"></i><a href="#lesson-3">More chord colours: sus, 6, add9 and 9</a></li><li><span class="n">4</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-4">Reading chord symbols</a></li><li><span class="n">5</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-5">Relative and parallel minor</a></li><li><span class="n">6</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-6">Why there are three minor scales</a></li><li><span class="n">7</span><i class="dotc" style="background:var(--minor)"></i><a href="#lesson-7">The scale harmonizer</a></li><li><span class="n">8</span><i class="dotc" style="background:var(--minor)"></i><a href="#lesson-8">The practical minor key</a></li><li><span class="n">9</span><i class="dotc" style="background:var(--major)"></i><a href="#lesson-9">Chapter 2 checkpoint</a></li></ol><p class="cap"><i class="dotc" style="background:var(--go)"></i> Core: do these on a first pass. <i class="dotc" style="background:var(--minor)"></i> Go deeper: safe to skip and come back to. <i class="dotc" style="background:var(--major)"></i> Checkpoint.</p></div>
+
+<section id="lesson-1">
+  <div class="lhd"><span class="num">1</span><span class="badge core">Core</span></div>
+  <h2>Seventh chords: stacking three thirds</h2>
+  <p>A seventh chord is a triad with one more third on top: root, 3rd, 5th and 7th. The triad underneath sets the basic colour and the 7th adds a second layer of tension or softness. Seven combinations cover almost everything you will meet.</p>
+  <div class="card"><div class="triads" id="sevs"></div>
+  <p class="cap">Read each stack from the bottom up. Examples are built on C.</p></div>
+  <div class="tip"><b>Two notes do the talking.</b> The 3rd and the 7th tell the ear which chord it is. The root is usually covered by the bass and the 5th is the same in most types, so guitarists often leave it out.</div>
+</section>
+
+<section id="lesson-2">
+  <div class="lhd"><span class="num">2</span><span class="badge core">Core</span></div>
+  <h2>Seventh chords on the neck</h2>
+  <p>Pick a root and a chord type. Every chord tone lights up across the fretboard, with the same notes on the piano below. Any group of dots you can reach that includes a 3rd and a 7th is a usable voicing.</p>
+  <div class="card">
+    <div class="ctl"><div class="grp"><span class="lab">Root</span><span class="grp" id="aRoots"></span></div></div>
+    <div class="ctl">
+      <div class="grp"><span class="lab">Chord</span><span class="grp" id="aTypes"></span></div>
+      <div class="grp"><span class="lab">Labels</span><span class="grp" id="aLabs"></span></div>
+    </div>
+    <div class="scroll"><div id="aFret" style="min-width:720px"></div></div>
+    <div class="scroll"><div id="aPiano" style="min-width:420px;max-width:620px"></div></div>
+    <p class="cap">Thin high E string on top, thick low E at the bottom. On piano, play the notes left to right from any root dot to hear the chord in its plainest form.</p>
+  </div>
+  <div class="card">
+    <h3>Shell voicings: root, 3rd and 7th only</h3>
+    <p>Three notes, movable anywhere, and enough to state the chord clearly. Top row has the root on the low E string, bottom row on the A string. Play only the dotted strings and mute the rest. Nut is to the left. Click a diagram to hear it.</p>
+    <div class="shapes" id="shells"></div>
+  </div>
+  <div class="tip"><b>One fret at a time.</b> Start on the maj7 shell. Lower the 7th one fret and it becomes a dominant 7. Lower the 3rd one fret as well and it becomes a minor 7. Hearing that sequence is the fastest way to learn the three main chord families.</div>
+</section>
+
+<section id="lesson-3">
+  <div class="lhd"><span class="num">3</span><span class="badge deep">Go deeper</span></div>
+  <h2>More chord colours: sus, 6, add9 and 9</h2>
+  <p>Not every chord is a plain stack of thirds. A few very common ones swap or add a single note. They are also in the chord list of the neck explorer above.</p>
+  <div class="card"><div class="sd" id="xChords"></div>
+  <p class="cap">All built on C. ▶ plays the notes one by one, then together.</p></div>
+  <ul>
+    <li><b>Suspended (sus):</b> the 3rd is replaced by the 2nd or the 4th, so the chord is neither major nor minor. It sounds open and usually resolves back to the 3rd.</li>
+    <li><b>6 chords:</b> a triad with the 6th added. A softer alternative to a major 7 or minor 7.</li>
+    <li><b>add9:</b> a triad plus the 9th (the 2nd an octave up) and no 7th.</li>
+    <li><b>9 chords:</b> a seventh chord with the 9th on top. The number tells you the highest note; the 7th is assumed to be underneath.</li>
+  </ul>
+</section>
+
+<section id="lesson-4">
+  <div class="lhd"><span class="num">4</span><span class="badge core">Core</span></div>
+  <h2>Reading chord symbols</h2>
+  <p>A chord symbol is read left to right. Each part answers one question, and anything not written takes its default.</p>
+  <div class="card">
+    <div class="scroll"><div class="cheat">
+      <div class="crow lhead"><span>Part</span><span>What it tells you</span><span>Examples</span></div>
+      <div class="crow"><b><span class="cn2">1</span>Root</b><span>The note the chord is built on. Always a capital letter, with ♯ or ♭ if needed.</span><span class="ex">C, F♯, B♭</span></div>
+      <div class="crow"><b><span class="cn2">2</span>Triad quality</b><span>Nothing written means major. m or − means minor, ° or dim means diminished, + or aug means augmented.</span><span class="ex">C, Cm, C°, C+</span></div>
+      <div class="crow"><b><span class="cn2">3</span>Seventh</b><span>A bare 7 always means the lowered 7th (♭7). The natural 7th has to be spelled out as maj7.</span><span class="ex">C7, Cmaj7, Cm7</span></div>
+      <div class="crow"><b><span class="cn2">4</span>Extension</b><span>9, 11 or 13 in place of the 7 means the 7th is included and that note is stacked on top.</span><span class="ex">C9, Cm11, C13</span></div>
+      <div class="crow"><b><span class="cn2">5</span>Alteration</b><span>A ♯ or ♭ in front of a number raises or lowers that one chord tone.</span><span class="ex">Cm7♭5, C7♯9, C7♭13</span></div>
+      <div class="crow"><b><span class="cn2">6</span>sus / add</b><span>sus replaces the 3rd with the 2nd or 4th. add puts in one extra note without a 7th.</span><span class="ex">Csus4, Cadd9</span></div>
+      <div class="crow"><b><span class="cn2">7</span>Slash</b><span>The letter after the slash is the lowest note to play. Used for inversions and moving bass lines.</span><span class="ex">C/E, C/G, D/C</span></div>
+    </div></div>
+  </div>
+  <div class="tip warn"><b>The classic trap.</b> C7 and Cmaj7 differ by one fret on the 7th but do opposite jobs: Cmaj7 is a chord of rest, C7 is a chord of tension. Likewise "Cm7" is minor triad plus ♭7, while "Cm(maj7)" is minor triad plus natural 7.</div>
+</section>
+
+<section id="lesson-5">
+  <div class="lhd"><span class="num">5</span><span class="badge core">Core</span></div>
+  <h2>Relative and parallel minor</h2>
+  <p>Every major key has two different minor partners, and they are easy to confuse.</p>
+  <div class="card">
+    <div class="rel">
+      <span class="rl">C major</span><div class="chips" id="rMaj"></div>
+      <span class="rl">A minor <i>relative</i></span><div class="chips" id="rRel"></div>
+      <span class="rl">C minor <i>parallel</i></span><div class="chips" id="rPar"></div>
+    </div>
+    <p class="cap">Dark chip = home note. Purple chips = notes lowered by a half step compared with C major.</p>
+  </div>
+  <ul>
+    <li><b>Relative minor</b> uses exactly the same seven notes and the same key signature, but treats the 6th note as home. C major and A minor are relatives.</li>
+    <li><b>Parallel minor</b> keeps the same home note and lowers the 3rd, 6th and 7th. C major and C minor are parallel.</li>
+  </ul>
+  <div class="tip"><b>On the neck.</b> The relative minor root is three frets below the major root on the same string: C at fret 8 of the low E string, A at fret 5. Going the other way, the relative major is three frets above the minor root.</div>
+</section>
+
+<section id="lesson-6">
+  <div class="lhd"><span class="num">6</span><span class="badge core">Core</span></div>
+  <h2>Why there are three minor scales</h2>
+  <p>Natural minor has one weakness: its 7th note sits a whole step below home, so the chord built on the 5th degree is a minor chord with little pull. Composers fixed that by raising notes, and each fix became a scale of its own.</p>
+  <div class="card">
+    <div class="flow">
+      <div class="step"><b>Natural minor <button type="button" class="pbtn" data-play="m:60,62,63,65,67,68,70,72" aria-label="Play C natural minor">▶</button></b>1 2 ♭3 4 5 ♭6 ♭7<br>Soft, modal sound. The v chord is minor, so the return home is gentle.</div>
+      <div class="arrow" aria-hidden="true">→</div>
+      <div class="step"><b>Harmonic minor <button type="button" class="pbtn" data-play="m:60,62,63,65,67,68,71,72" aria-label="Play C harmonic minor">▶</button></b>1 2 ♭3 4 5 ♭6 <u>7</u><br>Raise the 7th. Now the V chord is a dominant 7 and pulls hard to i. Side effect: a three-fret jump from ♭6 to 7.</div>
+      <div class="arrow" aria-hidden="true">→</div>
+      <div class="step"><b>Melodic minor <button type="button" class="pbtn" data-play="m:60,62,63,65,67,69,71,72" aria-label="Play C melodic minor">▶</button></b>1 2 ♭3 4 5 <u>6</u> <u>7</u><br>Raise the 6th too. The jump disappears and lines run smoothly. It is a major scale with a lowered 3rd.</div>
+    </div>
+    <p class="cap">Underlined degrees are the raised notes. ▶ plays each scale from C. Real minor-key music mixes all three freely, often within one phrase.</p>
+  </div>
+</section>
+
+<section id="lesson-7">
+  <div class="lhd"><span class="num">7</span><span class="badge deep">Go deeper</span></div>
+  <h2>The scale harmonizer</h2>
+  <p>Choose a scale and a key. The row of cards shows the chord built on each degree using only notes from that scale, with its Roman numeral and the mode that starts on that degree. Click a card to hear the chord. The fretboard and piano show the scale itself.</p>
+  <div class="card">
+    <div class="ctl">
+      <div class="grp"><span class="lab">Scale</span><span class="grp" id="bScales"></span></div>
+      <div class="grp"><span class="lab">Chords</span><span class="grp" id="bSev"></span></div>
+      <button type="button" class="pbtn" id="bPlayScale">▶ Scale</button><button type="button" class="pbtn" id="bPlayAll">▶ All seven chords</button>
+    </div>
+    <div class="ctl"><div class="grp"><span class="lab">Key</span><span class="grp" id="bRoots"></span></div></div>
+    <div class="chain" id="bSteps"></div>
+    <div class="scroll"><div class="dia" id="bDia" style="min-width:820px"></div></div>
+    <div class="legend">
+      <span><i class="sw" style="background:var(--major)"></i>Major type</span>
+      <span><i class="sw" style="background:var(--minor)"></i>Minor type</span>
+      <span><i class="sw" style="background:var(--go)"></i>Dominant 7</span>
+      <span><i class="sw" style="background:var(--tritone)"></i>Diminished or augmented</span>
+    </div>
+    <div class="scroll"><div id="bFret" style="min-width:720px"></div></div>
+    <div class="scroll"><div id="bPiano" style="min-width:420px;max-width:620px"></div></div>
+    <p class="cap">W = whole step (2 frets), H = half step (1 fret), W+H = 3 frets. A ♭ before a numeral means that degree is a half step lower than in the major scale.</p>
+  </div>
+  <h3>What to notice</h3>
+  <ul>
+    <li><b>Major scale:</b> only one dominant 7 chord, on V. That is why V7 points so clearly at I.</li>
+    <li><b>Natural minor:</b> the same seven chords as its relative major, renumbered from a new home. The dominant 7 moves to ♭VII.</li>
+    <li><b>Harmonic minor:</b> V becomes a dominant 7 and vii becomes a fully diminished 7. Both lead strongly back to i. The i chord gains a major 7th on top of a minor triad.</li>
+    <li><b>Melodic minor:</b> two dominant 7 chords side by side on IV and V, and two half-diminished chords on vi and vii. Its modes supply many of the scales jazz players use over altered dominants.</li>
+  </ul>
+  <div class="tip"><b>Practice loop.</b> Set the harmonizer to seventh chords, pick one key, and play i, iv and V from each of the three minor scales with the shell voicings from lesson 2. Listen for how the V chord changes the moment the 7th of the scale is raised.</div>
+</section>
+
+
+<section id="lesson-8">
+  <div class="lhd"><span class="num">8</span><span class="badge deep">Go deeper</span></div>
+  <h2>The practical minor key</h2>
+  <p>Because the three minor scales are mixed freely, a minor key in real music has more than seven chords to choose from. This is the palette you will actually meet, with the scale each chord comes from.</p>
+  <div class="card">
+    <div class="ctl"><div class="grp"><span class="lab">Key</span><span class="grp" id="mkRoots"></span></div>
+    <button type="button" class="pbtn" id="mkPlay">▶ Play ii – V – i</button></div>
+    <div class="sd" id="mkOut"></div>
+    <p class="cap">Click ▶ on a card to hear the chord. Green cards are the minor ii – V – i, the minor-key version of the most common cadence in jazz.</p>
+  </div>
+  <ul>
+    <li><b>V7 instead of v:</b> the raised 7th from harmonic minor is used on the V chord almost every time the music wants to return home.</li>
+    <li><b>♭III, ♭VI and ♭VII:</b> the three major chords from natural minor. They give minor-key rock and pop its sound.</li>
+    <li><b>iiø7 – V7 – i:</b> the half-diminished chord on ii leads to V7, which leads home.</li>
+  </ul>
+</section>
+
+<section id="lesson-9">
+  <div class="lhd"><span class="num">9</span><span class="badge check">Checkpoint</span></div>
+  <h2>Chapter 2 checkpoint</h2>
+  <div class="card">
+    <h3>You are ready to move on when you can</h3>
+    <ul>
+      <li>Build a major 7, dominant 7 and minor 7 chord from any root, and hear the difference between them.</li>
+      <li>Play the three shell voicings with the root on the low E string and on the A string.</li>
+      <li>Read a symbol such as Cm7♭5, Gsus4 or D/F♯ and say which notes it asks for.</li>
+      <li>Find the relative minor of any major key, and explain how it differs from the parallel minor.</li>
+      <li>Say which note harmonic minor raises, which two melodic minor raises, and why.</li>
+      <li>Name the three chords of a ii – V – i in a minor key.</li>
+    </ul>
+    <h3>A ten-minute routine</h3>
+    <ol>
+      <li>Two minutes: on one root, play the shells maj7, then 7, then m7, moving one finger at a time.</li>
+      <li>Three minutes: set the harmonizer to a major key and play its seven seventh chords as shells.</li>
+      <li>Three minutes: in one minor key, play i, iv and V7, then the minor ii – V – i.</li>
+      <li>Two minutes: take a chord chart for any song and decode five symbols out loud.</li>
+    </ol>
+  </div>
+</section>
+
+<div class="pager"><a class="ghost" href="chapter-1.html">← Chapter 1</a><a href="chapter-3.html">Chapter 3: Function, Progressions and Modes →</a></div>
+<footer>Guitar Theory Maps · Chapter 2: Seventh Chords and Minor Keys</footer>
+</main>
+<script src="common.js"></script>
+<script>// seventh chord types: tones = [semis, letterOffset, label, fam]
+const T7=[
+ {k:'maj7',n:'Major 7th',snd:'Lush, at rest',th:['M','m','M'],t:[[0,0,'R','root'],[4,2,'3','major'],[7,4,'5','perfect'],[11,6,'7','major']]},
+ {k:'7',n:'Dominant 7th',snd:'Bluesy, wants to resolve',th:['M','m','m'],t:[[0,0,'R','root'],[4,2,'3','major'],[7,4,'5','perfect'],[10,6,'♭7','minor']]},
+ {k:'m7',n:'Minor 7th',snd:'Mellow, relaxed',th:['m','M','m'],t:[[0,0,'R','root'],[3,2,'♭3','minor'],[7,4,'5','perfect'],[10,6,'♭7','minor']]},
+ {k:'m7♭5',n:'Half-diminished',snd:'Dark, searching',th:['m','m','M'],t:[[0,0,'R','root'],[3,2,'♭3','minor'],[6,4,'♭5','tritone'],[10,6,'♭7','minor']]},
+ {k:'°7',n:'Diminished 7th',snd:'Tense, symmetrical',th:['m','m','m'],t:[[0,0,'R','root'],[3,2,'♭3','minor'],[6,4,'♭5','tritone'],[9,6,'♭♭7','tritone']]},
+ {k:'m(maj7)',n:'Minor-major 7th',snd:'Mysterious, film noir',th:['m','M','M'],t:[[0,0,'R','root'],[3,2,'♭3','minor'],[7,4,'5','perfect'],[11,6,'7','major']]},
+ {k:'maj7♯5',n:'Augmented major 7th',snd:'Bright and unsettled',th:['M','M','m'],t:[[0,0,'R','root'],[4,2,'3','major'],[8,4,'♯5','tritone'],[11,6,'7','major']]}];
+document.getElementById('sevs').innerHTML=T7.map(c=>{
+ const th=k=>`<div class="gap ${k}">${k==='M'?'major 3rd':'minor 3rd'}</div>`;
+ let st='';for(let i=3;i>=0;i--){const [s,lo,lb,f]=c.t[i];st+=`<div class="note" style="background:${col(f)};${f==='root'?'color:var(--root-ink)':''}"><span>${spell('C',lo,s)}</span><span>${i?lb:'1'}</span></div>`;if(i)st+=th(c.th[i-1])}
+ return `<div class="triad"><h3>${c.n} ${PB(BOTH(c.t.map(x=>60+x[0])),"Play "+c.n)}</h3><div class="stack">${st}</div><div class="formula">C${c.k}</div><span class="cap">${c.t.map((x,i)=>i?x[2]:'1').join(' ')} · ${c.snd}</span></div>`}).join('');
+
+let A={root:0,type:0,lab:0};
+function renderA(){const r=RMAJ[A.root],c=T7[A.type],map={};c.t.forEach(([s,lo,lb,f])=>map[s]=[A.lab?spell(r,lo,s):lb,f]);
+ btns('aRoots',RMAJ,A.root,i=>{A.root=i;renderA()});btns('aTypes',T7.map(x=>x.k),A.type,i=>{A.type=i;renderA()});btns('aLabs',['Chord tones','Note names'],A.lab,i=>{A.lab=i;renderA()});
+ drawFret('aFret',pcOf(r),map,r+c.k);drawPiano('aPiano',pcOf(r),map,r+c.k)}
+renderA();
+
+// shells: [stringFromLow, fretOffset, label, fam]
+(function(){const R=['R','root'],sh=[
+ ['maj7','Root on low E',[[0,0,...R],[2,1,'7','major'],[3,1,'3','major']]],
+ ['7','Root on low E',[[0,0,...R],[2,0,'♭7','minor'],[3,1,'3','major']]],
+ ['m7','Root on low E',[[0,0,...R],[2,0,'♭7','minor'],[3,0,'♭3','minor']]],
+ ['maj7','Root on A',[[1,0,...R],[3,1,'7','major'],[4,2,'3','major']]],
+ ['7','Root on A',[[1,0,...R],[3,0,'♭7','minor'],[4,2,'3','major']]],
+ ['m7','Root on A',[[1,0,...R],[3,0,'♭7','minor'],[4,1,'♭3','minor']]]];
+ document.getElementById('shells').innerHTML=sh.map(([n,t,d])=>{const fw=40,sy=17,x0=10,y0=12;let s=`<svg class="snd" data-play="${BOTH(d.map(([st,off])=>LOWM[st]+3+off))}" viewBox="0 0 140 112" role="img" aria-label="${n} shell voicing, ${t}. Click to hear.">`;
+  for(let i=0;i<=3;i++)s+=`<line x1="${x0+i*fw}" y1="${y0}" x2="${x0+i*fw}" y2="${y0+5*sy}" stroke="var(--string)" stroke-width="1.5"/>`;
+  for(let i=0;i<6;i++)s+=`<line x1="${x0}" y1="${y0+i*sy}" x2="${x0+3*fw}" y2="${y0+i*sy}" stroke="var(--string)" stroke-width="${1+i*.4}"/>`;
+  d.forEach(([st,off,lb,f])=>s+=dot(x0+(off+.5)*fw,y0+(5-st)*sy,lb,f,8.5));
+  return `<div class="shape">${s}</svg><b>${n}</b><span>${t}</span></div>`}).join('')})();
+
+// relative / parallel
+(function(){const chip=(n,c)=>`<span class="nchip" style="background:${c==='root'?'var(--root)':c?col(c):'var(--bg)'};color:${c==='root'?'var(--root-ink)':c?'#fff':'var(--ink)'}">${n}</span>`;
+ document.getElementById('rMaj').innerHTML='C D E F G A B'.split(' ').map((n,i)=>chip(n,i?'':'root')).join('')+PB('m:60,62,64,65,67,69,71,72','Play scale');
+ document.getElementById('rRel').innerHTML='A B C D E F G'.split(' ').map((n,i)=>chip(n,i?'':'root')).join('')+PB('m:57,59,60,62,64,65,67,69','Play scale');
+ document.getElementById('rPar').innerHTML='C D E♭ F G A♭ B♭'.split(' ').map((n,i)=>chip(n,i?([2,5,6].includes(i)?'minor':''):'root')).join('')+PB('m:60,62,63,65,67,68,70,72','Play scale')})();
+
+// harmonizer
+
+const SC=[
+ {n:'Major',s:MAJ,minor:0,m:['Ionian','Dorian','Phrygian','Lydian','Mixolydian','Aeolian','Locrian']},
+ {n:'Natural minor',s:[0,2,3,5,7,8,10],minor:1,m:['Aeolian','Locrian','Ionian','Dorian','Phrygian','Lydian','Mixolydian']},
+ {n:'Harmonic minor',s:[0,2,3,5,7,8,11],minor:1,m:['Harmonic minor','Locrian ♮6','Ionian ♯5','Dorian ♯4','Phrygian dominant','Lydian ♯2','Ultralocrian']},
+ {n:'Melodic minor',s:[0,2,3,5,7,9,11],minor:1,m:['Melodic minor','Dorian ♭2','Lydian augmented','Lydian dominant','Mixolydian ♭6','Locrian ♮2','Altered']}];
+const DEG=['1','♭2','2','♭3','3','4','♭5','5','♭6','6','♭7','7'], RN=['I','II','III','IV','V','VI','VII'];
+let B={scale:0,root:0,sev:1};
+function renderB(){const sc=SC[B.scale],roots=sc.minor?RMIN:RMAJ,r=roots[B.root],s=sc.s;
+ btns('bScales',SC.map(x=>x.n),B.scale,i=>{B.scale=i;renderB()});btns('bSev',['Triads','Seventh chords'],B.sev,i=>{B.sev=i;renderB()});btns('bRoots',roots,B.root,i=>{B.root=i;renderB()});
+ const names=s.map((x,i)=>spell(r,i,x));const bm=48+pcOf(r),cm=i=>[0,2,4].concat(B.sev?[6]:[]).map(k=>bm+s[(i+k)%7]+(i+k>6?12:0));
+ document.getElementById('bPlayScale').dataset.play='m:'+s.concat(12).map(x=>bm+x).join(',');document.getElementById('bPlayAll').dataset.play='ccccccc:'+s.map((x,i)=>cm(i).join(',')).join('|');
+ let st='';s.forEach((x,i)=>{st+=`<span class="nchip" style="background:${i?col(FAM[x]):'var(--root)'};color:${i?'#fff':'var(--root-ink)'}">${DEG[x]}</span>`;const g=(i<6?s[i+1]:12)-x;st+=`<i>${g===1?'H':g===2?'W':'W+H'}</i>`});
+ st+=`<span class="nchip" style="background:var(--root);color:var(--root-ink)">1</span>`;document.getElementById('bSteps').innerHTML=st;
+ const iv=(i,k)=>((s[(i+k)%7]-s[i])%12+12)%12;
+ document.getElementById('bDia').innerHTML=s.map((x,i)=>{const t=iv(i,2),f=iv(i,4),v=iv(i,6);
+  const tri=t===4?(f===7?'maj':'aug'):(f===7?'min':'dim');let suf,rs,fam;
+  if(!B.sev){suf={maj:'',min:'m',dim:'°',aug:'+'}[tri];rs={maj:'',min:'',dim:'°',aug:'+'}[tri];fam={maj:'major',min:'minor',dim:'tritone',aug:'tritone'}[tri]}
+  else if(tri==='maj'){if(v===11){suf='maj7';rs='maj7';fam='major'}else{suf='7';rs='7';fam='go'}}
+  else if(tri==='min'){if(v===10){suf='m7';rs='7';fam='minor'}else{suf='m(maj7)';rs='(maj7)';fam='minor'}}
+  else if(tri==='dim'){if(v===10){suf='m7♭5';rs='ø7';fam='tritone'}else{suf='°7';rs='°7';fam='tritone'}}
+  else{suf='maj7♯5';rs='+maj7';fam='tritone'}
+  let rn=RN[i];if(t===3)rn=rn.toLowerCase();rn=(x<MAJ[i]?'♭':'')+rn;
+  const ns=[0,2,4].concat(B.sev?[6]:[]).map(k=>names[(i+k)%7]).join(' ');
+  return `<button type="button" class="deg" data-play="${BOTH(cm(i))}" style="background:${col(fam)}"><span class="rn">${rn}<small>${rs}</small></span><span class="cn">${names[i]}${suf}</span><span class="ns">${ns}</span><span class="md">${sc.m[i]}</span></button>`}).join('');
+ const map={};s.forEach((x,i)=>map[x]=[DEG[x],i?FAM[x]:'root']);
+ drawFret('bFret',pcOf(r),map,r+' '+sc.n+' scale');drawPiano('bPiano',pcOf(r),map,r+' '+sc.n+' scale')}
+renderB();
+</script>
+<script>// chapter 2 additions
+(function(){
+const X=[['Csus2','1 2 5',[0,2,7],[0,1,4],'Open, airy','perfect'],['Csus4','1 4 5',[0,5,7],[0,3,4],'Hanging, wants to resolve','perfect'],['C6','1 3 5 6',[0,4,7,9],[0,2,4,5],'Sweet, old-time','major'],['Cm6','1 ♭3 5 6',[0,3,7,9],[0,2,4,5],'Smoky minor','minor'],['Cadd9','1 3 5 9',[0,4,7,14],[0,2,4,1],'Bright and shimmering','major'],['C7sus4','1 4 5 ♭7',[0,5,7,10],[0,3,4,6],'Suspended dominant','go'],['Cmaj9','1 3 5 7 9',[0,4,7,11,14],[0,2,4,6,1],'Rich and lush','major'],['C9','1 3 5 ♭7 9',[0,4,7,10,14],[0,2,4,6,1],'Funky dominant','go'],['Cm9','1 ♭3 5 ♭7 9',[0,3,7,10,14],[0,2,4,6,1],'Smooth minor','minor']];
+document.getElementById('xChords').innerHTML=X.map(([n,f,s,lo,d,fam])=>`<div class="sdc" style="border-top-color:${col(fam)}"><span class="rn">${n}</span><span class="cn">${f}</span><span class="ns">${s.map((x,i)=>spell('C',lo[i],x%12)).join(' ')}</span><span class="cap">${d}</span>${PB(BOTH(s.map(x=>60+x)),'Play '+n)}</div>`).join('');
+T7.push({k:'sus2',t:[[0,0,'R','root'],[2,1,'2','major'],[7,4,'5','perfect']]},{k:'sus4',t:[[0,0,'R','root'],[5,3,'4','perfect'],[7,4,'5','perfect']]},{k:'6',t:[[0,0,'R','root'],[4,2,'3','major'],[7,4,'5','perfect'],[9,5,'6','major']]},{k:'m6',t:[[0,0,'R','root'],[3,2,'♭3','minor'],[7,4,'5','perfect'],[9,5,'6','major']]},{k:'add9',t:[[0,0,'R','root'],[4,2,'3','major'],[7,4,'5','perfect'],[2,1,'9','major']]},{k:'9',t:[[0,0,'R','root'],[4,2,'3','major'],[7,4,'5','perfect'],[10,6,'♭7','minor'],[2,1,'9','major']]});
+renderA();
+let MK=9;
+const PAL=[['i',0,0,'m','all three scales','go'],['iiø7',1,2,'ø','natural, harmonic','go'],['♭III',2,3,'M','natural','major'],['iv',3,5,'m','natural, harmonic','minor'],['v',4,7,'m','natural','minor'],['V7',4,7,'7','harmonic, melodic','go'],['♭VI',5,8,'M','natural, harmonic','major'],['♭VII',6,10,'M','natural','major'],['vii°7',6,11,'°7','harmonic','tritone']];
+function renderMK(){const key=RMIN[MK];btns('mkRoots',RMIN,MK,i=>{MK=i;renderMK()});
+ const ch=PAL.map(([rn,lo,s,q,src,f])=>({rn,src,f,...chordOf(key,lo,s,q)}));
+ document.getElementById('mkOut').innerHTML=ch.map(c=>`<div class="sdc" style="border-top-color:${col(c.f)}"><span class="rn">${c.rn}</span><span class="cn">${c.name}</span><span class="ns">${c.notes}</span><span class="cap">from: ${c.src}</span>${PB(BOTH(c.midi),'Play '+c.name)}</div>`).join('');
+ const i7=chordOf(key,0,0,'m7');document.getElementById('mkPlay').dataset.play='ccc:'+[ch[1].midi,ch[5].midi,i7.midi].map(m=>m.join(',')).join('|')}
+renderMK();
+})();
+</script>
+</body>
+</html>

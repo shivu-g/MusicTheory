@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guitar Theory Maps Chapter 1</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<nav aria-label="Guide"><a href="index.html">← All chapters</a><span class="here">Chapter 1 of 4</span><span style="display:flex;gap:8px"><a href="chapter-2.html">Next →</a></span></nav>
+<div class="chap" id="chapter-1" style="background:var(--perfect)"><span>Chapter 1</span><h2>Intervals, Keys and Triads</h2><p>The distances between notes, how keys relate to each other, and the three-note chords built from them.</p></div>
+<div class="legend"><span><i class="sw" style="background:var(--root)"></i>Root</span><span><i class="sw" style="background:var(--perfect)"></i>Perfect</span><span><i class="sw" style="background:var(--major)"></i>Major</span><span><i class="sw" style="background:var(--minor)"></i>Minor</span><span><i class="sw" style="background:var(--tritone)"></i>Tritone / altered</span><span class="cap">Click any note, chord or ▶ to hear it.</span></div>
+<div class="card"><h3>In this chapter</h3><ol class="toc"><li><span class="n">1</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-1">The twelve notes</a></li><li><span class="n">2</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-2">How the guitar is tuned</a></li><li><span class="n">3</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-3">Intervals: measuring the distance</a></li><li><span class="n">4</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-4">The interval map on the neck</a></li><li><span class="n">5</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-5">Interval shapes, string by string</a></li><li><span class="n">6</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-6">Naming an interval properly</a></li><li><span class="n">7</span><i class="dotc" style="background:var(--minor)"></i><a href="#lesson-7">Flipped and stretched intervals</a></li><li><span class="n">8</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-8">The major scale</a></li><li><span class="n">9</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-9">The circle of fifths</a></li><li><span class="n">10</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-10">Triads: stacking two thirds</a></li><li><span class="n">11</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-11">The seven triads inside a major key</a></li><li><span class="n">12</span><i class="dotc" style="background:var(--major)"></i><a href="#lesson-12">Chapter 1 checkpoint</a></li></ol><p class="cap"><i class="dotc" style="background:var(--go)"></i> Core: do these on a first pass. <i class="dotc" style="background:var(--minor)"></i> Go deeper: safe to skip and come back to. <i class="dotc" style="background:var(--major)"></i> Checkpoint.</p></div>
+
+
+
+<section id="lesson-1">
+  <div class="lhd"><span class="num">1</span><span class="badge core">Core</span></div>
+  <h2>The twelve notes</h2>
+  <p>Western music uses only twelve different notes. Seven have plain letter names, A to G, called <b>natural</b> notes. The other five sit in the gaps between them and each has two names: a <b>sharp</b> (♯, one step higher than the letter below) or a <b>flat</b> (♭, one step lower than the letter above). C♯ and D♭ are the same pitch.</p>
+  <p>The smallest distance between two notes is a <b>half step</b>: one fret on the guitar, or the very next key on the piano. Two half steps make a <b>whole step</b>: two frets. After twelve half steps you arrive at the same letter again, one <b>octave</b> higher.</p>
+  <div class="card">
+    <h3>All twelve, then back to C</h3>
+    <div class="chrom" id="chrom"></div>
+    <p class="cap">Dark chips are the five in-between notes. Red markers show the two places with no in-between note.</p>
+    <div class="scroll"><div id="p1" style="min-width:420px;max-width:620px"></div></div>
+    <p class="cap">On piano the pattern is visible: white keys are naturals, black keys are sharps and flats. There is no black key between E and F or between B and C.</p>
+    <div class="scroll"><div id="oneStr" style="min-width:720px"></div></div>
+    <p class="cap">The same twelve notes along the low E string. Each fret is one half step, and fret 12 is the octave.</p>
+  </div>
+  <div class="tip warn"><b>Memorise this first.</b> E to F and B to C are half steps (one fret). Every other pair of neighbouring letters is a whole step (two frets). Everything on the neck follows from that.</div>
+</section>
+
+<section id="lesson-2">
+  <div class="lhd"><span class="num">2</span><span class="badge core">Core</span></div>
+  <h2>How the guitar is tuned</h2>
+  <p>The six open strings, from thickest to thinnest, are E A D G B E. Each string is tuned five frets above the one before it, with one exception: the B string is only four frets above the G string. That single irregularity is why chord and scale shapes change when they reach the top two strings, and it comes up in almost every lesson that follows.</p>
+  <div class="card">
+    <div class="chain" id="tuning"></div>
+    <div class="scroll"><div id="tuneFret" style="min-width:640px"></div></div>
+    <p class="cap">The 5th-fret rule: fret 5 on a string sounds the same as the next open string. On the G string it is fret 4. Click a dot, then the open string above it, and you should hear the same note.</p>
+  </div>
+</section>
+
+<section id="lesson-3">
+  <div class="lhd"><span class="num">3</span><span class="badge core">Core</span></div>
+  <h2>Intervals: measuring the distance</h2>
+  <p>An <b>interval</b> is the distance between two notes. Play them together and you hear a harmonic interval; play them one after the other and you hear a melodic one. Every scale and chord is a recipe of intervals, so these thirteen names are the vocabulary for everything else.</p>
+  <p>Names have two parts. The number (2nd, 3rd, 5th) says how many letter names are spanned. The quality says the exact size. 4ths, 5ths and octaves are called <b>perfect</b>. 2nds, 3rds, 6ths and 7ths come in two sizes, <b>major</b> (larger) and <b>minor</b> (one half step smaller).</p>
+  <div class="card">
+    <h3>The interval ladder</h3>
+    <div class="scroll"><div class="ladder" id="ladder"></div></div>
+    <p class="cap">Bar length = number of half steps = number of frets on one string. ▶ plays the two notes apart, then together, starting from C.</p>
+  </div>
+  <div class="tip"><b>Ear habit.</b> Learn each interval as a sound as well as a number. Seconds and sevenths rub, thirds and sixths sound sweet, fourths, fifths and octaves sound open and hollow. Sing the top note after you play it.</div>
+</section>
+
+<section id="lesson-4">
+  <div class="lhd"><span class="num">4</span><span class="badge core">Core</span></div>
+  <h2>The interval map on the neck</h2>
+  <p>Pick a root. The fretboard shows where every other note sits in relation to it, and the piano shows the same notes in a line. Use the filter to isolate a triad or the major scale, and switch the labels to see actual note names.</p>
+  <div class="card">
+    <div class="ctl"><div class="grp"><span class="lab">Root</span><span class="grp" id="roots"></span></div></div>
+    <div class="ctl">
+      <div class="grp"><span class="lab">Show</span><span class="grp" id="filters"></span></div>
+      <div class="grp"><span class="lab">Labels</span><span class="grp" id="labels"></span></div>
+    </div>
+    <div class="scroll"><div id="fret" style="min-width:720px"></div></div>
+    <p class="cap">Drawn like tab: thin high E string on top, thick low E at the bottom. Numbers are frets. R = root.</p>
+    <div class="scroll"><div id="piano" style="min-width:420px;max-width:620px"></div></div>
+    <p class="cap">Note names are spelled by interval, so a few roots produce double flats (the minor 6th above D♭ is B♭♭, which sounds like A).</p>
+  </div>
+</section>
+
+<section id="lesson-5">
+  <div class="lhd"><span class="num">5</span><span class="badge core">Core</span></div>
+  <h2>Interval shapes, string by string</h2>
+  <p>On one string an interval is simply its number of frets. Across strings it becomes a fixed shape you can move anywhere. Because neighbouring strings are five frets apart, moving to the next string "uses up" five half steps, so the shape is whatever is left over.</p>
+  <p>The catch is the B string. Whenever a shape crosses from the G string to the B string, the upper note moves <b>one fret higher</b> than it would elsewhere. Pick an interval below to see every practical shape, including the shifted ones.</p>
+  <div class="card">
+    <div class="ctl"><div class="grp"><span class="lab">Interval</span><span class="grp" id="shIv"></span></div></div>
+    <p id="shInfo"></p>
+    <div id="shOut" style="display:flex;flex-direction:column;gap:14px"></div>
+    <p class="cap">Dark dot = root, coloured dot = the interval above it. Nut is to the left, low E string at the bottom. A red dashed line marks a shape that crosses G to B. Click a diagram to hear it.</p>
+  </div>
+  <div class="card">
+    <h3>Every interval at a glance</h3>
+    <p>Upper note relative to the root's fret, for a root on the low E, A or D string staying below the B string.</p>
+    <div class="scroll"><div class="tbl" id="shTbl"></div></div>
+    <p class="cap">"2 up" = two frets toward the body, "1 back" = one fret toward the nut, a dot = too far to reach. <b>Add one fret to the upper note whenever the shape crosses from the G string to the B string.</b></p>
+  </div>
+  <div class="tip"><b>Worked example: the octave.</b> Root on the low E string: skip a string, two frets up (lands on the D string). Root on the A string: same shape, landing on the G string. Root on the D string: the upper note lands on the B string, so it is <b>three</b> frets up. Root on the G string: lands on the high E string, also three frets up, because that shape crosses the B string too.</div>
+</section>
+
+<section id="lesson-6">
+  <div class="lhd"><span class="num">6</span><span class="badge core">Core</span></div>
+  <h2>Naming an interval properly</h2>
+  <p>Find the number first, then the quality. The number comes only from the letters; sharps and flats do not change it.</p>
+  <div class="card">
+    <div class="flow">
+      <div class="step"><b>1. Count letters</b>Include both ends. C up to E touches C, D, E: three letters, so it is some kind of 3rd.</div>
+      <div class="arrow" aria-hidden="true">→</div>
+      <div class="step"><b>2. Count half steps</b>C to E is 4 half steps (4 frets on one string).</div>
+      <div class="arrow" aria-hidden="true">→</div>
+      <div class="step"><b>3. Match the quality</b>A 3rd of 4 half steps is major. A 3rd of 3 half steps is minor.</div>
+    </div>
+    <h3>How quality changes when you stretch or shrink</h3>
+    <div class="chain">
+      <span class="lab2">Perfect family</span>
+      <span class="chip" style="background:var(--tritone)">diminished</span><i>+1 →</i>
+      <span class="chip" style="background:var(--perfect)">perfect</span><i>+1 →</i>
+      <span class="chip" style="background:var(--tritone)">augmented</span>
+    </div>
+    <div class="chain">
+      <span class="lab2">Major / minor family</span>
+      <span class="chip" style="background:var(--tritone)">diminished</span><i>+1 →</i>
+      <span class="chip" style="background:var(--minor)">minor</span><i>+1 →</i>
+      <span class="chip" style="background:var(--major)">major</span><i>+1 →</i>
+      <span class="chip" style="background:var(--tritone)">augmented</span>
+    </div>
+    <p class="cap">Each arrow is one half step wider. Unisons, 4ths, 5ths and octaves use the top row; 2nds, 3rds, 6ths and 7ths use the bottom row.</p>
+  </div>
+  <div class="card">
+    <h3>Interval namer</h3>
+    <p>Choose a lower and an upper note. The tool counts the letters and half steps and names the interval going up.</p>
+    <div class="ctl">
+      <div class="grp"><span class="lab">Lower note</span><span class="grp" id="nmLo"></span><span class="grp" id="nmLoA"></span></div>
+    </div>
+    <div class="ctl">
+      <div class="grp"><span class="lab">Upper note</span><span class="grp" id="nmHi"></span><span class="grp" id="nmHiA"></span></div>
+    </div>
+    <div id="nmOut" class="nmout"></div>
+  </div>
+  <div class="tip"><b>Same sound, two names.</b> C to D♯ and C to E♭ are the same fret, 3 half steps up. The first spans two letters, so it is an augmented 2nd; the second spans three, so it is a minor 3rd. Intervals like this are <b>enharmonic</b>: identical to the ear, different on paper. Try both in the namer.</div>
+</section>
+
+<section id="lesson-7">
+  <div class="lhd"><span class="num">7</span><span class="badge deep">Go deeper</span></div>
+  <h2>Flipped and stretched intervals</h2>
+  <p><b>Inversion.</b> Take the lower note of an interval and move it up an octave, and you get its inversion. The two always add up to an octave: the numbers add to 9, the half steps add to 12, major swaps with minor, augmented swaps with diminished, and perfect stays perfect.</p>
+  <div class="card">
+    <div class="invs" id="invs"></div>
+    <p class="cap">Each pair fills one octave. Knowing one of the pair gives you the other for free: a 6th shape is a 3rd shape turned upside down.</p>
+  </div>
+  <p><b>Compound intervals.</b> Intervals wider than an octave keep the sound of their smaller version with more space in it. Subtract 7 from the number to find the simple interval. These are the numbers you see in chord names such as add9, 11 and 13.</p>
+  <div class="card"><div class="invs" id="comp"></div>
+  <p class="cap">▶ plays the simple interval, then the compound one.</p></div>
+</section>
+
+<section id="lesson-8">
+  <div class="lhd"><span class="num">8</span><span class="badge core">Core</span></div>
+  <h2>The major scale</h2>
+  <p>A <b>scale</b> is a set of notes chosen from the twelve. The major scale picks seven of them using a fixed pattern of steps: whole, whole, half, whole, whole, whole, half. Start that pattern on any note and you get that note's major scale, and its <b>key</b>.</p>
+  <p>The major scale is also the measuring stick of music theory. Its notes are numbered 1 to 7, and every other scale or chord is described by comparison. "♭3" means a note one half step lower than the 3rd of the major scale; "♯5" means one half step higher than its 5th.</p>
+  <div class="card">
+    <div class="ctl"><div class="grp"><span class="lab">Key</span><span class="grp" id="scRoots"></span></div>
+    <button type="button" id="scPlay" class="pbtn">▶ Play scale</button></div>
+    <div class="chain" id="scSteps"></div>
+    <div class="scroll"><div id="scFret" style="min-width:720px"></div></div>
+    <div class="scroll"><div id="scPiano" style="min-width:420px;max-width:620px"></div></div>
+    <p class="cap">W = whole step (2 frets), H = half step (1 fret). The half steps always fall between degrees 3–4 and 7–8.</p>
+  </div>
+  <div class="tip"><b>Why keys have sharps or flats.</b> In C the pattern happens to land on natural notes only. Start anywhere else and some notes must be raised or lowered to keep the pattern, and every letter must be used exactly once. That set of sharps or flats is the key signature.</div>
+</section>
+
+<section id="lesson-9">
+  <div class="lhd"><span class="num">9</span><span class="badge core">Core</span></div>
+  <h2>The circle of fifths</h2>
+  <p>The circle arranges all twelve keys so that neighbours differ by a single note. Click any key to see its signature and hear its home chord.</p>
+  <div class="two">
+    <div id="circle"></div>
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div class="card" id="ckInfo"></div>
+      <ul>
+        <li><b>Clockwise:</b> each key is a perfect 5th higher and gains one sharp (or loses one flat).</li>
+        <li><b>Counter-clockwise:</b> each key is a perfect 4th higher and gains one flat.</li>
+        <li><b>Outer ring:</b> major keys. <b>Inner ring:</b> the relative minor, which shares the same signature.</li>
+        <li><b>Sharps arrive in this order:</b> F C G D A E B. <b>Flats in the reverse:</b> B E A D G C F.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card">
+    <h3>Reading a key signature</h3>
+    <ul>
+      <li><b>Sharps:</b> the key is one half step above the last sharp. Three sharps (F♯ C♯ G♯): last is G♯, so the key is A major.</li>
+      <li><b>Flats:</b> the key is the second-to-last flat. Three flats (B♭ E♭ A♭): second-to-last is E♭, so the key is E♭ major. One flat is F major.</li>
+      <li><b>No sharps or flats:</b> C major, or its relative A minor.</li>
+    </ul>
+  </div>
+  <div class="tip"><b>On the neck.</b> Counter-clockwise is the easy direction: same fret, next thinner string (low E string to A string to D string). Clockwise is the power-chord move: next thinner string, two frets up. Both rules shift by one fret when you cross onto the B string.</div>
+</section>
+
+<section id="lesson-10">
+  <div class="lhd"><span class="num">10</span><span class="badge core">Core</span></div>
+  <h2>Triads: stacking two thirds</h2>
+  <p>A <b>chord</b> is three or more notes played together. The basic chord is the <b>triad</b>: a root, the note a 3rd above it, and the note a 5th above it. Put another way, it is two thirds stacked. There are only two sizes of third, so there are only four possible stacks.</p>
+  <div class="card"><div class="triads" id="triads"></div>
+  <p class="cap">Read each stack from the bottom up. Examples are built on C. ▶ plays the notes one by one, then together.</p></div>
+  <div class="tip"><b>One note decides the mood.</b> Major and minor differ only in the 3rd, a single fret. Find a major triad, lower its 3rd by one fret, and you have the minor triad on the same root.</div>
+  <p><b>Inversions.</b> The three notes can be stacked with any of them at the bottom. Root at the bottom is <b>root position</b>, 3rd at the bottom is <b>first inversion</b>, 5th at the bottom is <b>second inversion</b>. It is still the same chord; only the flavour and the bass note change.</p>
+  <div class="card">
+    <h3>Triad shapes on three neighbouring strings</h3>
+    <div class="ctl">
+      <div class="grp"><span class="lab">Triad</span><span class="grp" id="tsType"></span></div>
+      <div class="grp"><span class="lab">Strings</span><span class="grp" id="tsSet"></span></div>
+    </div>
+    <div class="shapes" id="tsOut" style="grid-template-columns:repeat(auto-fit,minmax(190px,1fr))"></div>
+    <p class="cap">All shown for C. The number under each diagram is the fret of its leftmost column. Compare string sets: the shapes on D–G–B and G–B–E look different from the lower sets only because of the B string.</p>
+  </div>
+</section>
+
+<section id="lesson-11">
+  <div class="lhd"><span class="num">11</span><span class="badge core">Core</span></div>
+  <h2>The seven triads inside a major key</h2>
+  <p>Build a triad on each note of a major scale using only notes from that scale: start on a note, skip one, take one, skip one, take one. The result is the key's seven <b>diatonic</b> chords. The pattern of qualities is the same in every key: major, minor, minor, major, major, minor, diminished.</p>
+  <div class="card">
+    <div class="ctl"><div class="grp"><span class="lab">Key</span><span class="grp" id="keys"></span></div>
+    <button type="button" id="diaPlay" class="pbtn">▶ Play all seven</button></div>
+    <div class="chain" id="diaScale"></div>
+    <div class="scroll"><div class="dia" id="dia"></div></div>
+    <p class="cap">Click a chord to hear it and to see which scale notes it uses. Roman numerals: upper case = major, lower case = minor, ° = diminished.</p>
+  </div>
+  <ul>
+    <li><b>I, IV and V</b> are the three major chords and carry a huge share of songs between them.</li>
+    <li><b>ii, iii and vi</b> are the minor chords. vi is the relative minor: the same notes as the key, heard from a darker home base.</li>
+    <li><b>vii°</b> is the unstable one. It contains a tritone and wants to resolve back to I.</li>
+  </ul>
+</section>
+
+<section id="lesson-12">
+  <div class="lhd"><span class="num">12</span><span class="badge check">Checkpoint</span></div>
+  <h2>Chapter 1 checkpoint</h2>
+  <div class="card">
+    <h3>You are ready to move on when you can</h3>
+    <ul>
+      <li>Name the note at any fret on the low E and A strings.</li>
+      <li>Say which two pairs of natural notes are a half step apart, and which pair of strings is tuned differently.</li>
+      <li>Name all twelve intervals with their half-step counts, and recognise at least the 3rds, the 5th and the octave by ear.</li>
+      <li>Play a perfect 5th and an octave from a root on any string, including across the B string.</li>
+      <li>Build a major scale from any note using W W H W W W H.</li>
+      <li>Spell the four triad types from any root, and list the seven triads of a major key.</li>
+    </ul>
+    <h3>A ten-minute routine</h3>
+    <ol>
+      <li>Two minutes: pick a root, play each interval above it on one string, and say its name.</li>
+      <li>Two minutes: play the same intervals as cross-string shapes from lesson 5.</li>
+      <li>Three minutes: play the major scale in one key, then its seven triads, saying the numerals aloud.</li>
+      <li>Three minutes: on one string set, play a major triad through its three inversions up the neck, then make each one minor.</li>
+    </ol>
+  </div>
+</section>
+
+
+<div class="pager"><a class="ghost" href="index.html">← All chapters</a><a href="chapter-2.html">Chapter 2: Seventh Chords and Minor Keys →</a></div>
+<footer>Guitar Theory Maps · Chapter 1: Intervals, Keys and Triads</footer>
+</main>
+<script>(function(){
+const $=id=>document.getElementById(id),col=f=>`var(--${f})`;
+const L='CDEFGAB',NAT=[0,2,4,5,7,9,11],MAJ=NAT;
+const ROOTS=['C','D♭','D','E♭','E','F','F♯','G','A♭','A','B♭','B'];
+const SH=['C','C♯','D','D♯','E','F','F♯','G','G♯','A','A♯','B'];
+const pc=n=>{let p=NAT[L.indexOf(n[0])];for(const c of n.slice(1))p+=c==='♯'?1:-1;return(p%12+12)%12};
+const spell=(root,lo,semi)=>{const li=(L.indexOf(root[0])+lo)%7;let d=(((pc(root)+semi)%12-NAT[li])%12+12)%12;if(d>6)d-=12;return L[li]+(d>0?'♯'.repeat(d):'♭'.repeat(-d))};
+const IV=[
+ {s:'P1',n:'Unison',f:'root',d:'The same note',lo:0},
+ {s:'m2',n:'Minor 2nd',a:'half step',f:'minor',d:'Tight, biting clash',lo:1},
+ {s:'M2',n:'Major 2nd',a:'whole step',f:'major',d:'Gentle rub',lo:1},
+ {s:'m3',n:'Minor 3rd',f:'minor',d:'Dark and sweet',lo:2},
+ {s:'M3',n:'Major 3rd',f:'major',d:'Bright and sweet',lo:2},
+ {s:'P4',n:'Perfect 4th',f:'perfect',d:'Open, leaning forward',lo:3},
+ {s:'TT',n:'Tritone',a:'aug. 4th / dim. 5th',f:'tritone',d:'Restless, unstable',lo:3},
+ {s:'P5',n:'Perfect 5th',f:'perfect',d:'Hollow and strong',lo:4},
+ {s:'m6',n:'Minor 6th',f:'minor',d:'Bittersweet',lo:5},
+ {s:'M6',n:'Major 6th',f:'major',d:'Warm and open',lo:5},
+ {s:'m7',n:'Minor 7th',f:'minor',d:'Bluesy tension',lo:6},
+ {s:'M7',n:'Major 7th',f:'major',d:'Sharp, floating tension',lo:6},
+ {s:'P8',n:'Octave',f:'perfect',d:'Same note, higher',lo:7}];
+const OPEN=[64,59,55,50,45,40], LOW=[40,45,50,55,59,64], SN=['E','A','D','G','B','e'];
+
+// ---------- sound ----------
+let ac;
+function tone(m,when,dur){try{ac=ac||new (window.AudioContext||window.webkitAudioContext)();if(ac.state==='suspended')ac.resume();
+  const t=ac.currentTime+.03+when,f=440*Math.pow(2,(m-69)/12),o=ac.createOscillator(),o2=ac.createOscillator(),g=ac.createGain(),g2=ac.createGain(),lp=ac.createBiquadFilter();
+  o.type='triangle';o2.type='sawtooth';o.frequency.value=f;o2.frequency.value=f;g2.gain.value=.22;lp.type='lowpass';
+  lp.frequency.setValueAtTime(3400,t);lp.frequency.exponentialRampToValueAtTime(650,t+dur);
+  g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(.2,t+.01);g.gain.exponentialRampToValueAtTime(.0008,t+dur);
+  o.connect(lp);o2.connect(g2);g2.connect(lp);lp.connect(g);g.connect(ac.destination);o.start(t);o2.start(t);o.stop(t+dur+.05);o2.stop(t+dur+.05)}catch(e){}}
+function play(spec){const [mode,list]=spec.split(':'),groups=list.split('|').map(g=>g.split(',').map(Number));let t=0;
+ groups.forEach((ns,gi)=>{const m=mode.length>1?mode[gi%mode.length]:mode;
+  if(m==='m'){ns.forEach(n=>{tone(n,t,1.1);t+=.42})}else{ns.forEach((n,i)=>tone(n,t+i*.025,1.9));t+=1.2}
+  t+=.15})}
+const pb=(spec,label)=>`<button type="button" class="pbtn" data-play="${spec}" aria-label="${label||'Play'}">▶</button>`;
+const both=ns=>`mc:${ns.join(',')}|${ns.join(',')}`;
+
+// ---------- drawing ----------
+function dot(x,y,txt,fam,r,midi){return `<g class="snd" data-play="m:${midi}"><circle cx="${x}" cy="${y}" r="${r}" fill="${col(fam)}"/><text x="${x}" y="${y+4}" text-anchor="middle" font-size="${txt.length>2?9:11.5}" font-weight="700" fill="${fam==='root'?'var(--root-ink)':'#fff'}">${txt}</text></g>`}
+function fretboard(id,rp,map,label){const x0=60,fw=66,y0=28,sh=32;
+ let s=`<svg viewBox="0 0 880 230" role="img" aria-label="${label}"><rect x="${x0}" y="${y0-12}" width="${fw*12}" height="${sh*5+24}" rx="4" fill="var(--wood)"/>`;
+ [3,5,7,9].forEach(f=>s+=`<circle cx="${x0+(f-.5)*fw}" cy="${y0+sh*2.5}" r="6" fill="var(--line)"/>`);
+ s+=`<circle cx="${x0+11.5*fw}" cy="${y0+sh*1.5}" r="6" fill="var(--line)"/><circle cx="${x0+11.5*fw}" cy="${y0+sh*3.5}" r="6" fill="var(--line)"/>`;
+ for(let f=0;f<=12;f++){s+=`<line x1="${x0+f*fw}" y1="${y0-12}" x2="${x0+f*fw}" y2="${y0+sh*5+12}" stroke="${f?'var(--string)':'var(--ink)'}" stroke-width="${f?1.5:5}"/>`;
+  if(f)s+=`<text x="${x0+(f-.5)*fw}" y="222" text-anchor="middle" font-size="12" font-weight="600" fill="var(--muted)">${f}</text>`}
+ OPEN.forEach((o,i)=>s+=`<line x1="${x0}" y1="${y0+i*sh}" x2="${x0+12*fw}" y2="${y0+i*sh}" stroke="var(--string)" stroke-width="${1+i*.45}"/>`);
+ OPEN.forEach((o,i)=>{for(let f=0;f<=12;f++){const m=map[((o+f-rp)%12+12)%12];if(m)s+=dot(f?x0+(f-.5)*fw:x0-28,y0+i*sh,m[0],m[1],13,o+f)}});
+ $(id).innerHTML=s+'</svg>'}
+function piano(id,rp,map,label){const ww=36,h=120,base=48;
+ let s=`<svg viewBox="0 0 ${ww*14+2} ${h+6}" role="img" aria-label="${label}">`,tops='';
+ for(let o=0;o<2;o++){NAT.forEach((p,k)=>{const x=1+(o*7+k)*ww,mi=base+o*12+p;s+=`<rect class="snd" data-play="m:${mi}" x="${x}" y="1" width="${ww}" height="${h}" rx="4" fill="var(--key-white)" stroke="var(--string)"/>`;
+   const m=map[((p-rp)%12+12)%12];if(m)tops+=dot(x+ww/2,h-18,m[0],m[1],12,mi)});
+  [[0,1],[1,3],[3,6],[4,8],[5,10]].forEach(([k,p])=>{const x=1+(o*7+k+1)*ww-11,mi=base+o*12+p;tops+=`<rect class="snd" data-play="m:${mi}" x="${x}" y="1" width="22" height="${h*.62}" rx="3" fill="var(--key-black)"/>`;
+   const m=map[((p-rp)%12+12)%12];if(m)tops+=dot(x+11,h*.62-16,m[0],m[1],10.5,mi)})}
+ $(id).innerHTML=s+tops+'</svg>'}
+// mini diagram: dots [{s:lowIndex,c:column,txt,fam}], cols, optional fret label, optional G-B marker
+function mini(dots,cols,spec,fretLabel,bline){const fw=24,sy=15,x0=22,y0=10,W=x0+cols*fw+6;
+ let s=`<svg class="snd" data-play="${spec}" viewBox="0 0 ${W} ${y0+5*sy+(fretLabel!=null?24:10)}" role="img" aria-label="Fretboard shape, click to hear">`;
+ for(let i=0;i<=cols;i++)s+=`<line x1="${x0+i*fw}" y1="${y0}" x2="${x0+i*fw}" y2="${y0+5*sy}" stroke="var(--string)" stroke-width="1.2"/>`;
+ for(let i=0;i<6;i++){const y=y0+(5-i)*sy;s+=`<line x1="${x0}" y1="${y}" x2="${x0+cols*fw}" y2="${y}" stroke="var(--string)" stroke-width="${2.4-i*.3}"/><text x="8" y="${y+4}" text-anchor="middle" font-size="10" font-weight="700" fill="var(--muted)">${SN[i]}</text>`}
+ if(bline)s+=`<line x1="${x0}" y1="${y0+1.5*sy}" x2="${x0+cols*fw}" y2="${y0+1.5*sy}" stroke="var(--tritone)" stroke-width="2" stroke-dasharray="5 4"/>`;
+ dots.forEach(d=>{const x=x0+(d.c+.5)*fw,y=y0+(5-d.s)*sy;s+=`<circle cx="${x}" cy="${y}" r="8.5" fill="${col(d.fam)}"/><text x="${x}" y="${y+3.5}" text-anchor="middle" font-size="${d.txt.length>1?8:10}" font-weight="700" fill="${d.fam==='root'?'var(--root-ink)':'#fff'}">${d.txt}</text>`});
+ if(fretLabel!=null)s+=`<text x="${x0+fw/2}" y="${y0+5*sy+18}" text-anchor="middle" font-size="11" font-weight="700" fill="var(--muted)">${fretLabel}</text>`;
+ return s+'</svg>'}
+function btns(id,items,cur,on){const el=$(id);el.innerHTML='';items.forEach((t,i)=>{const b=document.createElement('button');b.type='button';b.textContent=t;b.setAttribute('aria-pressed',String(cur===i));b.onclick=()=>on(i);el.appendChild(b)})}
+
+// ---------- 1. twelve notes ----------
+(function(){const nm=['C','C♯ / D♭','D','D♯ / E♭','E','F','F♯ / G♭','G','G♯ / A♭','A','A♯ / B♭','B','C'];
+ $('chrom').innerHTML=nm.map((n,i)=>`<button type="button" class="cchip ${n.length>1?'acc':''}" data-play="m:${60+i}">${n}</button>${i===4||i===11?'<i class="nogap">half step</i>':''}`).join('');
+ const map={};SH.forEach((n,i)=>map[i]=[n,n.length>1?'ghost':'perfect']);piano('p1',0,map,'Piano keyboard with every note named');
+ const x0=60,fw=66;let s=`<svg viewBox="0 0 880 86" role="img" aria-label="Notes along the low E string"><line x1="${x0}" y1="34" x2="${x0+12*fw}" y2="34" stroke="var(--string)" stroke-width="3.4"/>`;
+ for(let f=0;f<=12;f++){s+=`<line x1="${x0+f*fw}" y1="14" x2="${x0+f*fw}" y2="54" stroke="${f?'var(--string)':'var(--ink)'}" stroke-width="${f?1.5:5}"/>`;
+  s+=`<text x="${f?x0+(f-.5)*fw:x0-28}" y="78" text-anchor="middle" font-size="12" font-weight="600" fill="var(--muted)">${f?f:'open'}</text>`;
+  const n=SH[(4+f)%12];s+=dot(f?x0+(f-.5)*fw:x0-28,34,n,n.length>1?'ghost':'perfect',13,40+f)}
+ $('oneStr').innerHTML=s+'</svg>'})();
+
+// ---------- 2. tuning ----------
+(function(){const g=['perfect 4th · 5 frets','perfect 4th · 5 frets','perfect 4th · 5 frets','major 3rd · 4 frets','perfect 4th · 5 frets'];
+ $('tuning').innerHTML=SN.map((n,i)=>`<button type="button" class="cchip" data-play="m:${LOW[i]}">${n.toUpperCase()}</button>${i<5?`<i style="color:${i===3?'var(--tritone)':'var(--muted)'}">${g[i]} →</i>`:''}`).join('');
+ const x0=70,fw=104,y0=22,sh=30;let s=`<svg viewBox="0 0 780 220" role="img" aria-label="Fifth fret tuning rule"><rect x="${x0}" y="${y0-12}" width="${fw*5}" height="${sh*5+24}" rx="4" fill="var(--wood)"/>`;
+ for(let f=0;f<=5;f++){s+=`<line x1="${x0+f*fw}" y1="${y0-12}" x2="${x0+f*fw}" y2="${y0+sh*5+12}" stroke="${f?'var(--string)':'var(--ink)'}" stroke-width="${f?1.5:5}"/>`;if(f)s+=`<text x="${x0+(f-.5)*fw}" y="212" text-anchor="middle" font-size="12" font-weight="600" fill="var(--muted)">${f}</text>`}
+ OPEN.forEach((o,i)=>{const y=y0+i*sh,li=5-i;s+=`<line x1="${x0}" y1="${y}" x2="${x0+5*fw}" y2="${y}" stroke="var(--string)" stroke-width="${1+i*.45}"/>`+dot(x0-30,y,SN[li].toUpperCase(),'ghost',13,o);
+  if(li<5){const fr=LOW[li+1]-LOW[li],fam=fr===4?'tritone':'perfect';s+=dot(x0+(fr-.5)*fw,y,SN[li+1].toUpperCase(),fam,13,o+fr)+`<text x="${x0+5*fw+14}" y="${y+4}" font-size="12.5" font-weight="600" fill="${col(fam)}">fret ${fr} = open ${SN[li+1].toUpperCase()} string</text>`}});
+ $('tuneFret').innerHTML=s+'</svg>'})();
+
+// ---------- 3. ladder ----------
+$('ladder').innerHTML='<div class="lrow lhead"><span>½</span><span></span><span>Name</span><span>Size</span><span>Sound</span><span>Hear</span></div>'+IV.map((v,i)=>`<div class="lrow"><span class="hs">${i}</span><span class="sym" style="color:${col(v.f)}">${v.s}</span><span>${v.n}${v.a?`<span class="cap"> · ${v.a}</span>`:''}</span><span><div class="bar" style="width:${Math.max(i/12*100,1.5)}%;background:${col(v.f)}"></div></span><span>${v.d}</span><span>${pb(both([60,60+i]),'Play '+v.n)}</span></div>`).join('');
+
+// ---------- 4. interval map (shared root R) ----------
+const FILTERS=[{k:'All 12',set:[0,1,2,3,4,5,6,7,8,9,10,11]},{k:'Major scale',set:MAJ},{k:'Major triad',set:[0,4,7]},{k:'Minor triad',set:[0,3,7]},{k:'Diminished triad',set:[0,3,6],ov:{6:['d5',4,'tritone']}},{k:'Augmented triad',set:[0,4,8],ov:{8:['A5',4,'tritone']}}];
+let R=0,filt=0,lab=0;
+function drawMap(){const r=ROOTS[R],f=FILTERS[filt],map={};
+ f.set.forEach(i=>{const o=f.ov&&f.ov[i],v=IV[i],sym=i?(o?o[0]:v.s):'R',lo=o?o[1]:v.lo;map[i]=[lab?spell(r,lo,i):sym,o?o[2]:v.f]});
+ btns('roots',ROOTS,R,i=>{R=i;renderRoot()});btns('filters',FILTERS.map(x=>x.k),filt,i=>{filt=i;drawMap()});btns('labels',['Intervals','Note names'],lab,i=>{lab=i;drawMap()});
+ fretboard('fret',pc(r),map,'Intervals from '+r+' on the fretboard');piano('piano',pc(r),map,'Intervals from '+r+' on the piano')}
+
+// ---------- 5. shapes ----------
+let shIv=7;const offT=o=>o===0?'same fret':o>0?`${o} fret${o>1?'s':''} up`:`${-o} fret${o<-1?'s':''} back`;
+function drawShapes(){const v=IV[shIv];btns('shIv',IV.slice(1).map(x=>x.s),shIv-1,i=>{shIv=i+1;drawShapes()});
+ $('shInfo').innerHTML=`<b style="color:${col(v.f)}">${v.n}</b>: ${shIv} half step${shIv>1?'s':''}. On one string that is ${shIv} fret${shIv>1?'s':''} up. Across strings:`;
+ let out='';['Next string','Skip one string','Skip two strings'].forEach((title,ki)=>{const k=ki+1;let cells='';
+  for(let s=0;s+k<6;s++){const off=shIv-(LOW[s+k]-LOW[s]);if(Math.abs(off)>4)continue;const cross=s<=3&&s+k>=4,rm=LOW[s]+5;
+   cells+=`<div class="shape">${mini([{s,c:4,txt:'R',fam:'root'},{s:s+k,c:4+off,txt:v.s,fam:v.f}],9,both([rm,rm+shIv]),null,cross)}<b>${SN[s].toUpperCase()} string → ${SN[s+k].toUpperCase()} string</b><span>${offT(off)}${cross?' <em class="shift">B-string shift</em>':''}</span></div>`}
+  if(cells)out+=`<div><span class="lab2">${title}</span><div class="shapes" style="grid-template-columns:repeat(auto-fill,minmax(200px,1fr));margin-top:6px">${cells}</div></div>`});
+ $('shOut').innerHTML=out}
+(function(){const c=o=>Math.abs(o)>4?'·':(o===0?'same fret':o>0?o+' up':-o+' back');
+ $('shTbl').innerHTML='<div class="trow lhead"><span>Interval</span><span>Same string</span><span>Next string</span><span>Skip one</span><span>Skip two</span></div>'+IV.slice(1).map((v,j)=>{const i=j+1;return `<div class="trow"><b style="color:${col(v.f)}">${v.s} <span class="cap">${v.n}</span></b><span>${i} up</span><span>${c(i-5)}</span><span>${c(i-10)}</span><span>${c(i-15)}</span></div>`}).join('')})();
+
+// ---------- 6. namer ----------
+let N={lo:0,la:1,hi:2,ha:1};const AC=['♭','♮','♯'],ORD=['unison','2nd','3rd','4th','5th','6th','7th','octave'];
+function drawNamer(){btns('nmLo',[...L],N.lo,i=>{N.lo=i;drawNamer()});btns('nmLoA',AC,N.la,i=>{N.la=i;drawNamer()});btns('nmHi',[...L],N.hi,i=>{N.hi=i;drawNamer()});btns('nmHiA',AC,N.ha,i=>{N.ha=i;drawNamer()});
+ const nm=(l,a)=>L[l]+(a===1?'':AC[a]),lo=nm(N.lo,N.la),hi=nm(N.hi,N.ha),pl=NAT[N.lo]+N.la-1,ph=NAT[N.hi]+N.ha-1;
+ let num=((N.hi-N.lo+7)%7)+1,semi=((ph-pl)%12+12)%12,base=MAJ[num-1];if(num===1&&semi>6){num=8;base=12}
+ let d=semi-base;if(d>6)d-=12;if(d<-6)d+=12;const perf=[1,4,5,8].includes(num);
+ const q=perf?({0:'perfect',1:'augmented','-1':'diminished',2:'doubly augmented','-2':'doubly diminished'})[d]:({0:'major','-1':'minor','-2':'diminished',1:'augmented',2:'doubly augmented','-3':'doubly diminished'})[d];
+ const fam=d===0?(perf?'perfect':'major'):(!perf&&d===-1?'minor':'tritone');let letters=[];for(let i=0;i<(num===8?8:num);i++)letters.push(L[(N.lo+i)%7]);
+ const m1=60+pl,m2=m1+(num===8&&semi===0?12:semi)+(num===8&&semi>0&&semi<6?12:0);
+ $('nmOut').innerHTML=`<div class="flow"><div class="step"><b>Letters</b>${letters.join(' ')}<br>${letters.length} letters, so a ${ORD[num-1]}</div><div class="arrow">→</div><div class="step"><b>Half steps</b>${m2-m1} (${m2-m1} fret${m2-m1===1?'':'s'} on one string)</div><div class="arrow">→</div><div class="step" style="border-top-color:${col(fam)}"><b style="color:${col(fam)}">${lo} up to ${hi}</b>${q?q+' '+ORD[num-1]:'an unusual spelling with no common name'} ${pb(both([m1,m2]),'Play this interval')}</div></div>`}
+
+// ---------- 7. inversion & compound ----------
+$('invs').innerHTML=[[1,11],[2,10],[3,9],[4,8],[5,7],[6,6]].map(([a,b])=>`<div class="inv"><span class="chip" style="background:${col(IV[a].f)}">${IV[a].s} · ${a}</span><i>flips to</i><span class="chip" style="background:${col(IV[b].f)}">${IV[b].s} · ${b}</span>${pb('mm:60,'+(60+a)+'|'+(60+a)+',72','Play inversion pair')}</div>`).join('');
+$('comp').innerHTML=[['9th',2,'M2'],['10th',4,'M3'],['11th',5,'P4'],['12th',7,'P5'],['13th',9,'M6']].map(([n,s,sm])=>`<div class="inv"><span class="chip" style="background:${col(IV[s].f)}">${n}</span><i>= octave +</i><span class="chip" style="background:${col(IV[s].f)}">${sm}</span><span class="cap">${s+12} half steps</span>${pb('cc:60,'+(60+s)+'|60,'+(72+s),'Play simple then compound')}</div>`).join('');
+
+// ---------- 8. major scale ----------
+function drawScale(){const r=ROOTS[R],names=MAJ.map((x,i)=>spell(r,i,x)),b=48+pc(r),map={};
+ btns('scRoots',ROOTS,R,i=>{R=i;renderRoot()});
+ let st='';MAJ.forEach((x,i)=>{st+=`<button type="button" class="cchip" data-play="m:${b+x}" style="background:${i?col(IV[x].f):'var(--root)'};color:${i?'#fff':'var(--root-ink)'}"><small>${i+1}</small>${names[i]}</button><i>${i===2||i===6?'H':'W'}</i>`});
+ $('scSteps').innerHTML=st+`<button type="button" class="cchip" data-play="m:${b+12}" style="background:var(--root);color:var(--root-ink)"><small>8</small>${names[0]}</button>`;
+ $('scPlay').dataset.play='m:'+MAJ.concat(12).map(x=>b+x).join(',');
+ MAJ.forEach((x,i)=>map[x]=[String(i+1),i?IV[x].f:'root']);fretboard('scFret',pc(r),map,r+' major scale on the fretboard');piano('scPiano',pc(r),map,r+' major scale on the piano')}
+
+// ---------- 9. circle ----------
+const KEYS=['C','G','D','A','E','B','F♯','D♭','A♭','E♭','B♭','F'],MIN=['Am','Em','Bm','F♯m','C♯m','G♯m','D♯m','B♭m','Fm','Cm','Gm','Dm'];let CK=0;
+function drawCircle(){const C=200,P=(r,a)=>[C+r*Math.sin(a),C-r*Math.cos(a)],sig=i=>i===0?'0':i<=6?i+'♯':(12-i)+'♭';
+ const wedge=(r1,r2,i)=>{const a0=(i-.5)*Math.PI/6,a1=(i+.5)*Math.PI/6,[x1,y1]=P(r2,a0),[x2,y2]=P(r2,a1),[x3,y3]=P(r1,a1),[x4,y4]=P(r1,a0);return `M${x1} ${y1}A${r2} ${r2} 0 0 1 ${x2} ${y2}L${x3} ${y3}A${r1} ${r1} 0 0 0 ${x4} ${y4}Z`};
+ let s='<svg viewBox="0 0 400 400" role="img" aria-label="Circle of fifths. Click a key to select it.">';
+ for(let i=0;i<12;i++){const hue=(205+i*30)%360,a=i*Math.PI/6,b=48+pc(KEYS[i]),on=i===CK;
+  s+=`<g class="snd" data-key="${i}" data-play="c:${b},${b+4},${b+7},${b+12}"><path d="${wedge(128,192,i)}" fill="hsl(${hue} 78% 62%)" stroke="${on?'var(--ink)':'var(--bg)'}" stroke-width="${on?5:3}"/><path d="${wedge(78,128,i)}" fill="hsl(${hue} 70% 80%)" stroke="var(--bg)" stroke-width="3"/>`;
+  let [x,y]=P(160,a);s+=`<text x="${x}" y="${y+7}" text-anchor="middle" font-size="21" font-weight="700" fill="#15172e" style="font-family:var(--display)">${KEYS[i]}</text>`;
+  [x,y]=P(103,a);s+=`<text x="${x}" y="${y+5}" text-anchor="middle" font-size="13" font-weight="700" fill="#15172e">${MIN[i]}</text></g>`;
+  [x,y]=P(58,a);s+=`<text x="${x}" y="${y+4}" text-anchor="middle" font-size="11.5" font-weight="700" fill="var(--muted)">${sig(i)}</text>`}
+ s+=`<text x="200" y="197" text-anchor="middle" font-size="12" font-weight="700" fill="var(--ink)">sharps →</text><text x="200" y="213" text-anchor="middle" font-size="12" font-weight="700" fill="var(--ink)">← flats</text>`;
+ $('circle').innerHTML=s+'</svg>';
+ const k=KEYS[CK],n=CK<=6?CK:12-CK,acc=CK<=6?'FCGDAEB'.slice(0,n).split('').map(x=>x+'♯'):'BEADGCF'.slice(0,n).split('').map(x=>x+'♭');
+ $('ckInfo').innerHTML=`<h3>${k} major${CK===6?' (also written G♭ major, 6 flats)':''}</h3><p><b>Signature:</b> ${n?`${n} ${CK<=6?'sharp':'flat'}${n>1?'s':''}: ${acc.join(' ')}`:'no sharps or flats'}</p><p><b>Scale:</b> ${MAJ.map((x,i)=>spell(k,i,x)).join(' ')}</p><p><b>Relative minor:</b> ${MIN[CK]}</p><p><b>Neighbours:</b> ${KEYS[(CK+11)%12]} (a 4th up) and ${KEYS[(CK+1)%12]} (a 5th up)</p>`}
+
+// ---------- 10. triads ----------
+const TR=[['Major','1 3 5',[0,4,7],[2,2,4],'Bright, settled',['M','m'],['major','perfect']],['Minor','1 ♭3 5',[0,3,7],[0,2,4],'Dark, settled',['m','M'],['minor','perfect']],['Diminished','1 ♭3 ♭5',[0,3,6],[0,2,4],'Tense, wants to move',['m','m'],['minor','tritone']],['Augmented','1 3 ♯5',[0,4,8],[0,2,4],'Dreamy, unresolved',['M','M'],['major','tritone']]];
+$('triads').innerHTML=TR.map(([n,fm,sm,_,snd,g,c])=>{const e=sm.map((x,i)=>spell('C',i*2,x)),d=fm.split(' '),th=k=>`<div class="gap ${k}">${k==='M'?'major 3rd · 4 frets':'minor 3rd · 3 frets'}</div>`;
+ return `<div class="triad"><h3>${n} ${pb(both(sm.map(x=>60+x)),'Play '+n+' triad')}</h3><div class="stack"><div class="note" style="background:${col(c[1])}"><span>${e[2]}</span><span>${d[2]}</span></div>${th(g[1])}<div class="note" style="background:${col(c[0])}"><span>${e[1]}</span><span>${d[1]}</span></div>${th(g[0])}<div class="note" style="background:var(--root);color:var(--root-ink)"><span>${e[0]}</span><span>1</span></div></div><div class="formula">${fm}</div><span class="cap">${snd}</span></div>`}).join('');
+let tsT=0,tsS=2;const SETS=[[0,1,2],[1,2,3],[2,3,4],[3,4,5]];
+function drawTriShapes(){btns('tsType',TR.map(x=>x[0]),tsT,i=>{tsT=i;drawTriShapes()});btns('tsSet',SETS.map(s=>s.map(i=>SN[i].toUpperCase()).join('–')),tsS,i=>{tsS=i;drawTriShapes()});
+ const sm=TR[tsT][2],lb=TR[tsT][1].split(' ').map((x,i)=>i?x:'R'),fams=['root',TR[tsT][6][0],TR[tsT][6][1]],set=SETS[tsS];
+ $('tsOut').innerHTML=['Root position','First inversion','Second inversion'].map((nm,inv)=>{let ms=[],prev=0;
+  for(let j=0;j<3;j++){const t=(inv+j)%3;let m=LOW[set[j]]+(((sm[t]-LOW[set[j]])%12)+12)%12;while(m<=prev)m+=12;prev=m;ms.push([m,t])}
+  let fr=ms.map(([m],j)=>m-LOW[set[j]]);while(Math.max(...fr)-Math.min(...fr)>5){const mi=fr.indexOf(Math.min(...fr));for(let j=mi;j<3;j++){ms[j][0]+=0}break}
+  if(Math.min(...fr)>=12){fr=fr.map(f=>f-12);ms=ms.map(([m,t])=>[m-12,t])}
+  const mn=Math.min(...fr),cols=Math.max(5,Math.max(...fr)-mn+1);
+  return `<div class="shape">${mini(ms.map(([m,t],j)=>({s:set[j],c:fr[j]-mn,txt:lb[t],fam:fams[t]})),cols,both(ms.map(x=>x[0])),mn?'fret '+mn:'open',set.includes(3)&&set.includes(4))}<b>${nm}</b><span>${lb[inv]==='R'?'root':lb[inv]} in the bass · frets ${fr.join(' ')}</span></div>`}).join('')}
+
+// ---------- 11. diatonic ----------
+let DG=0;
+function drawDia(){const r=ROOTS[R],q=['major','minor','minor','major','major','minor','tritone'],rn=['I','ii','iii','IV','V','vi','vii°'],sf=['','m','m','','','m','°'],n=MAJ.map((s,i)=>spell(r,i,s)),b=48+pc(r);
+ btns('keys',ROOTS,R,i=>{R=i;renderRoot()});const tri=i=>[0,2,4].map(k=>b+MAJ[(i+k)%7]+(i+k>6?12:0));
+ $('dia').innerHTML=n.map((x,i)=>`<button type="button" class="deg" data-deg="${i}" data-play="${both(tri(i))}" style="background:${col(q[i])};${i===DG?'outline:4px solid var(--ink);outline-offset:2px':''}"><span class="rn">${rn[i]}</span><span class="cn">${x}${sf[i]}</span><span class="ns">${x} ${n[(i+2)%7]} ${n[(i+4)%7]}</span></button>`).join('');
+ const used=[DG,(DG+2)%7,(DG+4)%7];$('diaScale').innerHTML=`<span class="lab2">${n[DG]}${sf[DG]} takes</span>`+n.map((x,i)=>`<span class="nchip" style="${used.includes(i)?`background:${col(q[DG])};color:#fff`:'opacity:.55'}">${x}</span>`).join('');
+ $('diaPlay').dataset.play='c'.repeat(7)+':'+[0,1,2,3,4,5,6].map(i=>tri(i).join(',')).join('|')}
+
+function renderRoot(){drawMap();drawScale();drawDia()}
+renderRoot();drawShapes();drawNamer();drawCircle();drawTriShapes();
+document.addEventListener('click',e=>{const t=e.target;if(!t.closest)return;const p=t.closest('[data-play]');if(p)play(p.dataset.play);
+ const k=t.closest('[data-key]');if(k){CK=+k.dataset.key;drawCircle()}const d=t.closest('[data-deg]');if(d){DG=+d.dataset.deg;drawDia()}});
+})();
+</script>
+</body>
+</html>

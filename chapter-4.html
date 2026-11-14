@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guitar Theory Maps Chapter 4</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<nav aria-label="Guide"><a href="index.html">← All chapters</a><span class="here">Chapter 4 of 4</span><span style="display:flex;gap:8px"><a href="chapter-3.html">← Prev</a></span></nav>
+<div class="chap" id="chapter-4" style="background:var(--major)"><span>Chapter 4</span><h2>Substitution and Borrowed Chords</h2><p>Six ways to change the chords of a progression without changing where it is going. One key selector drives every example in this chapter.</p></div>
+<div class="legend"><span><i class="sw" style="background:var(--root)"></i>Root</span><span><i class="sw" style="background:var(--perfect)"></i>Perfect</span><span><i class="sw" style="background:var(--major)"></i>Major</span><span><i class="sw" style="background:var(--minor)"></i>Minor</span><span><i class="sw" style="background:var(--tritone)"></i>Tritone / altered</span><span class="cap">Click any note, chord or ▶ to hear it.</span></div>
+<div class="card"><h3>In this chapter</h3><ol class="toc"><li><span class="n">1</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-1">Swapping chords that do the same job</a></li><li><span class="n">2</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-2">Secondary dominants</a></li><li><span class="n">3</span><i class="dotc" style="background:var(--minor)"></i><a href="#lesson-3">Tritone substitution</a></li><li><span class="n">4</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-4">Borrowing from the parallel minor</a></li><li><span class="n">5</span><i class="dotc" style="background:var(--minor)"></i><a href="#lesson-5">Diminished passing chords</a></li><li><span class="n">6</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-6">Reharmonising cheat sheet</a></li><li><span class="n">7</span><i class="dotc" style="background:var(--major)"></i><a href="#lesson-7">Chapter 4 checkpoint</a></li></ol><p class="cap"><i class="dotc" style="background:var(--go)"></i> Core: do these on a first pass. <i class="dotc" style="background:var(--minor)"></i> Go deeper: safe to skip and come back to. <i class="dotc" style="background:var(--major)"></i> Checkpoint.</p></div>
+
+<section id="lesson-1">
+  <div class="lhd"><span class="num">1</span><span class="badge core">Core</span></div>
+  <h2>Swapping chords that do the same job</h2>
+  <p>Stack the notes of a key in thirds and the seven seventh chords appear as a staircase: each chord is the one above it shifted along by one note. Neighbours on the staircase share three of their four notes, which is why they can replace each other with so little disturbance.</p>
+  <div class="card">
+    <div class="ctl"><div class="grp"><span class="lab">Key</span><span class="grp" id="k1"></span></div></div>
+    <div class="scroll"><div class="mx" id="mx"></div></div>
+    <div class="legend">
+      <span><i class="sw" style="background:var(--go)"></i>Tonic</span>
+      <span><i class="sw" style="background:var(--perfect)"></i>Subdominant</span>
+      <span><i class="sw" style="background:var(--tritone)"></i>Dominant</span>
+    </div>
+    <p class="cap">Columns are the notes of the key arranged in thirds. R, 3, 5 and 7 show each note's role in that chord.</p>
+  </div>
+  <ul>
+    <li><b>For I:</b> try vi or iii. The melody note usually decides which one works.</li>
+    <li><b>For IV:</b> try ii. In jazz the ii chord is the default and IV is the alternative.</li>
+    <li><b>For V:</b> try vii°. It is a V7 chord with the root removed.</li>
+  </ul>
+</section>
+
+<section id="lesson-2">
+  <div class="lhd"><span class="num">2</span><span class="badge core">Core</span></div>
+  <h2>Secondary dominants</h2>
+  <p>The V7 chord pulls strongly toward I. You can borrow that pull for any other major or minor chord in the key by placing <b>its own</b> V7 in front of it, as if that chord were briefly the tonic. Each secondary dominant brings in at least one note from outside the key, and that note is the sound of the device.</p>
+  <div class="card">
+    <div class="ctl"><div class="grp"><span class="lab">Key</span><span class="grp" id="k2"></span></div></div>
+    <div class="sd" id="sd"></div>
+    <p class="cap">Read "V7/ii" as "five-seven of two": the dominant 7th chord built a 5th above the ii chord.</p>
+  </div>
+  <div class="tip"><b>On the neck.</b> The dominant's root is a 5th above its target, which is the same fret on the next thicker string. If your target chord has its root on the A string, its secondary dominant has its root at the same fret on the low E string.</div>
+  <div class="tip"><b>Go one step further.</b> Any dominant 7 can be turned into a ii–V by putting the minor 7 chord a 5th above it in front. One bar of V7 becomes half a bar of ii7 and half a bar of V7.</div>
+</section>
+
+<section id="lesson-3">
+  <div class="lhd"><span class="num">3</span><span class="badge deep">Go deeper</span></div>
+  <h2>Tritone substitution</h2>
+  <p>The tension in a dominant 7 chord comes from its 3rd and 7th, which sit a tritone apart. The dominant 7 chord whose root is a tritone away contains the same two notes with their roles swapped. So one can replace the other, and the bass line turns from a leap into a half-step slide.</p>
+  <div class="card">
+    <div class="ctl"><div class="grp"><span class="lab">Key</span><span class="grp" id="k3"></span></div></div>
+    <div class="two">
+      <div class="triads" id="tt"></div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <span class="lab2">Original <span id="ttP1"></span></span><div class="prog" id="tt1" style="min-width:0"></div>
+        <span class="lab2">With the substitute <span id="ttP2"></span></span><div class="prog" id="tt2" style="min-width:0"></div>
+        <p class="cap" id="ttNote"></p>
+      </div>
+    </div>
+  </div>
+  <div class="tip"><b>On the neck.</b> In a shell voicing the 3rd and 7th stay on exactly the same two frets. Only the bass note moves, and it lands one fret above the root of the I chord you are heading for.</div>
+</section>
+
+<section id="lesson-4">
+  <div class="lhd"><span class="num">4</span><span class="badge core">Core</span></div>
+  <h2>Borrowing from the parallel minor</h2>
+  <p>A major key can borrow chords from the minor key that shares its home note. This is called modal mixture. The borrowed chords bring in the lowered 3rd, 6th and 7th, which darken the colour without leaving the key centre.</p>
+  <div class="card">
+    <div class="ctl"><div class="grp"><span class="lab">Key</span><span class="grp" id="k4"></span></div></div>
+    <div class="rel">
+      <span class="rl">Major key</span><div class="chips" id="bmaj"></div>
+      <span class="rl">Parallel minor</span><div class="chips" id="bmin"></div>
+    </div>
+    <p class="cap">Purple chords are the ones most often borrowed into the major key.</p>
+    <div class="sd" id="bor"></div>
+    <h3>Try these</h3>
+    <ul id="borEx"></ul>
+  </div>
+</section>
+
+<section id="lesson-5">
+  <div class="lhd"><span class="num">5</span><span class="badge deep">Go deeper</span></div>
+  <h2>Diminished passing chords</h2>
+  <p>When two chords in a key have roots a whole step apart, a diminished 7 chord fits on the fret between them. It works because it is really the secondary dominant of the chord you are heading to, with its root left out, so the bass climbs by half steps.</p>
+  <div class="card">
+    <div class="ctl"><div class="grp"><span class="lab">Key</span><span class="grp" id="k6"></span></div></div>
+    <div id="dimOut" style="display:flex;flex-direction:column;gap:10px"></div>
+    <p class="cap">A diminished 7 chord repeats every three frets, so any of its four notes can be treated as the root.</p>
+  </div>
+</section>
+
+<section id="lesson-6">
+  <div class="lhd"><span class="num">6</span><span class="badge core">Core</span></div>
+  <h2>Reharmonising cheat sheet</h2>
+  <p>The six moves from this chapter in one place, spelled out in the key you have selected. Apply one at a time to a progression you already know and listen to what changes.</p>
+  <div class="card">
+    <div class="ctl"><div class="grp"><span class="lab">Key</span><span class="grp" id="k5"></span></div></div>
+    <div class="scroll"><div class="cheat" id="cheat"></div></div>
+  </div>
+  <div class="tip"><b>Practice loop.</b> Take I – vi – ii – V in one key. Play it plain, then swap one chord per pass using a different move each time. Keep the top note of your voicings as still as you can, so you hear the harmony change underneath it.</div>
+</section>
+<section id="lesson-7">
+  <div class="lhd"><span class="num">7</span><span class="badge check">Checkpoint</span></div>
+  <h2>Chapter 4 checkpoint</h2>
+  <div class="card">
+    <h3>You are ready to move on when you can</h3>
+    <ul>
+      <li>Replace a I chord with vi or iii and hear why it still works.</li>
+      <li>Find the secondary dominant of any major or minor chord in a key.</li>
+      <li>Explain why a tritone substitute works, and play it inside a ii – V – I.</li>
+      <li>Name the four chords most often borrowed from the parallel minor.</li>
+      <li>Place a diminished passing chord between I and ii.</li>
+    </ul>
+    <h3>A ten-minute routine</h3>
+    <ol>
+      <li>Two minutes: play I – vi – ii – V plain, in one key.</li>
+      <li>Three minutes: add a secondary dominant before the ii, then before the vi.</li>
+      <li>Three minutes: swap the V for its tritone substitute, then try iv in place of ii.</li>
+      <li>Two minutes: play your favourite version from memory in a second key.</li>
+    </ol>
+  </div>
+</section>
+
+<div class="pager"><a class="ghost" href="chapter-3.html">← Chapter 3</a><a href="index.html">Back to all chapters →</a></div>
+<footer>Guitar Theory Maps · Chapter 4: Substitution and Borrowed Chords</footer>
+</main>
+<script src="common.js"></script>
+<script>(function(){
+const pc2=n=>{let p=NAT[L.indexOf(n[0])];for(const c of n.slice(1))p+=c==='♯'?1:-1;return ((p%12)+12)%12};
+const sp=(root,lo,semi)=>{const li=(L.indexOf(root[0])+lo)%7;let d=(((pc2(root)+semi)%12-NAT[li])%12+12)%12;if(d>6)d-=12;return L[li]+(d>0?'♯'.repeat(d):'♭'.repeat(-d))};
+const simp=n=>{if(!n.includes('♭♭'))return n;const li=(L.indexOf(n[0])+6)%7;let d=((pc2(n)-NAT[li])%12+12)%12;if(d>6)d-=12;return L[li]+(d>0?'♯'.repeat(d):'♭'.repeat(-d))};
+const FN=['go','perfect','go','perfect','tritone','go','tritone'];
+const RNT=['I','ii','iii','IV','V','vi','vii°'],TS=['','m','m','','','m','°'],SS=['maj7','m7','m7','maj7','7','m7','m7♭5'],RS=['Imaj7','ii7','iii7','IVmaj7','V7','vi7','viiø7'];
+const dom=r=>[[0,0],[4,2],[7,4],[10,6]].map(([s,lo])=>sp(r,lo,s));
+const tri=(r,min)=>[[0,0],[min?3:4,2],[7,4]].map(([s,lo])=>sp(r,lo,s));
+let K=0;
+function render(){const key=RMAJ[K],n=MAJ.map((x,i)=>sp(key,i,x)),keypc=n.map(pc2);const bm=48+pc2(key),dm=(r,ks)=>ks.map(k=>bm+MAJ[(r+k)%7]+(r+k>6?12:0)),d7=m=>[m,m+4,m+7,m+10],cm=(root,min)=>[0,min?3:4,7].map(x=>48+pc2(root)+x),cs=c=>cm(c.replace(/m$/,''),/m$/.test(c)),seq=l=>'c'.repeat(l.length)+':'+l.map(x=>x.join(',')).join('|');
+ ['k1','k2','k3','k4','k5','k6'].forEach(id=>btns(id,RMAJ,K,i=>{K=i;render()}));
+ // staircase matrix
+ const cols=[3,5,0,2,4,6,1],rows=[1,3,5,0,2,4,6];
+ let h='<span></span>'+cols.map(c=>`<span class="mh">${n[c]}</span>`).join('');
+ rows.forEach(r=>{h+=`<span class="ml">${PB(BOTH(dm(r,[0,2,4,6])),"Play "+n[r]+SS[r])} <b>${RS[r]}</b> ${n[r]}${SS[r]}</span>`;const tones=[0,2,4,6].map(k=>(r+k)%7);
+  cols.forEach(c=>{const t=tones.indexOf(c);h+=t<0?'<span class="mc"></span>':`<span class="mc on" style="background:${col(FN[r])}">${'R357'[t]}</span>`})});
+ document.getElementById('mx').innerHTML=h;
+ // secondary dominants
+ document.getElementById('sd').innerHTML=[1,2,3,4,5].map(i=>{const r=sp(n[i],4,7),t=dom(r),nw=t.filter(x=>!keypc.includes(pc2(x)));
+  return `<div class="sdc"><span class="rn">V7/${RNT[i]}</span><span class="cn">${r}7 <i>→</i> ${n[i]}${TS[i]}</span><span class="ns">${t.map(x=>nw.includes(x)?`<b>${x}</b>`:x).join(' ')}</span><span class="cap">outside note: ${nw.join(', ')}</span>${PB(seq([d7(bm+MAJ[i]-5),dm(i,[0,2,4])]),"Play "+r+"7 to "+n[i]+TS[i])}</div>`}).join('');
+ // tritone sub
+ const V=n[4],S=simp(sp(key,1,1)),tv=dom(V),ts=dom(S),lab=['R','3','5','♭7'];
+ const stack=(name,t,mid)=>{let s='';for(let i=3;i>=0;i--){const f=i===0?'root':(i===2?'ghost':'tritone');s+=`<div class="note" style="background:${col(f)};${i?'':'color:var(--root-ink)'};margin-bottom:5px"><span>${t[i]}</span><span>${lab[i]}</span></div>`}
+  return `<div class="triad"><h3>${name} ${PB(BOTH(mid),"Play "+name)}</h3><div class="stack">${s}</div></div>`};
+ document.getElementById('tt').innerHTML=stack(V+'7',tv,d7(bm+7))+stack(S+'7',ts,d7(bm+1));
+ const card=(f,rn,nm)=>`<div class="deg" style="background:${col(f)}"><span class="rn" style="font-size:1.15rem">${rn}</span><span class="cn">${nm}</span></div>`,ar='<span class="arrow" aria-hidden="true">→</span>';
+ document.getElementById('tt1').innerHTML=[card('perfect','ii7',n[1]+'m7'),card('tritone','V7',V+'7'),card('go','Imaj7',n[0]+'maj7')].join(ar);
+ document.getElementById('ttP1').innerHTML=PB(seq([dm(1,[0,2,4,6]),d7(bm+7),dm(0,[0,2,4,6])]),'Play original');document.getElementById('ttP2').innerHTML=PB(seq([dm(1,[0,2,4,6]),d7(bm+1),dm(0,[0,2,4,6])]),'Play with substitute');
+ document.getElementById('tt2').innerHTML=[card('perfect','ii7',n[1]+'m7'),card('tritone','♭II7',S+'7'),card('go','Imaj7',n[0]+'maj7')].join(ar);
+ const same=(a,b)=>a===b?a:`${a} (written ${b} in ${S}7)`;
+ document.getElementById('ttNote').textContent=`Shared notes: ${same(tv[1],ts[3])} and ${same(tv[3],ts[1])}. Bass line changes from ${n[1]} → ${V} → ${n[0]} to ${n[1]} → ${S} → ${n[0]}, stepping down one fret at a time.`;
+ // borrowed
+ const b3=simp(sp(key,2,3)),b6=simp(sp(key,5,8)),b7=simp(sp(key,6,10)),chip=(t,on)=>`<span class="nchip" style="${on?'background:var(--minor);color:#fff':''}">${t}</span>`;
+ document.getElementById('bmaj').innerHTML=n.map((x,i)=>chip(x+TS[i])).join('');
+ document.getElementById('bmin').innerHTML=[[n[0]+'m',0],[n[1]+'°',0],[b3,1],[n[3]+'m',1],[n[4]+'m',0],[b6,1],[b7,1]].map(([t,o])=>chip(t,o)).join('');
+ const B=[['♭III',b3,tri(b3),'A bold lift, common in rock'],['iv',n[3]+'m',tri(n[3],1),'A wistful turn just before home'],['♭VI',b6,tri(b6),'Dramatic and cinematic'],['♭VII',b7,tri(b7),'A softer approach to I than V']];
+ document.getElementById('bor').innerHTML=B.map(([rn,nm,t,use])=>`<div class="sdc" style="border-top-color:var(--minor)"><span class="rn">${rn}</span><span class="cn">${nm}</span><span class="ns">${t.join(' ')}</span><span class="cap">${use}</span>${PB(BOTH(cs(nm)),"Play "+nm)}</div>`).join('');
+ document.getElementById('borEx').innerHTML=[['I – IV – iv – I',[n[0],n[3],n[3]+'m',n[0]]],['I – ♭VII – IV – I',[n[0],b7,n[3],n[0]]],['♭VI – ♭VII – I',[b6,b7,n[0]]],['I – ♭III – IV – I',[n[0],b3,n[3],n[0]]]].map(([a,c])=>`<li><b>${a}</b>: ${c.join(' → ')} ${PB(seq(c.map(cs)),'Play '+a)}</li>`).join('');
+ // diminished passing chords
+ const up=x=>{const u=sp(x,0,1);return u.includes('♯♯')?sp(x,1,1):u};
+ document.getElementById('dimOut').innerHTML=[[0,1,'♯I°7'],[1,2,'♯II°7'],[3,4,'♯IV°7'],[4,5,'♯V°7']].map(([a,b,rn])=>{const r=bm+MAJ[a]+1;return `<div class="prog" style="min-width:0">${card(FN[a],RNT[a],n[a]+TS[a])}${ar}${card('tritone',rn,up(n[a])+'°7')}${ar}${card(FN[b],RNT[b],n[b]+TS[b])}${PB(seq([dm(a,[0,2,4]),[r,r+3,r+6,r+9],dm(b,[0,2,4])]),'Play this passing chord')}</div>`}).join('');
+ // cheat sheet
+ const C=[['Same-job swap','Replace a chord with another from its function group',`${n[0]} → ${n[5]}m or ${n[2]}m`],
+  ['Secondary dominant','Put the V7 of the target chord in front of it',`${n[1]}m → ${sp(n[1],4,7)}7 ${n[1]}m`],
+  ['Add the ii','Turn a dominant 7 into a ii–V',`${V}7 → ${n[1]}m7 ${V}7`],
+  ['Tritone substitution','Replace V7 with the dominant 7 a tritone away',`${V}7 → ${S}7`],
+  ['Borrow from parallel minor','Use iv in place of IV, or approach I through ♭VI and ♭VII',`${n[3]} → ${n[3]}m · ${b6} ${b7} ${n[0]}`],
+  ['Diminished passing chord','Slip a diminished 7 between two chords whose roots are a whole step apart',`${n[0]} → ${up(n[0])}°7 → ${n[1]}m`]];
+ document.getElementById('cheat').innerHTML='<div class="crow lhead"><span>Move</span><span>What you do</span><span>In this key</span></div>'+C.map(([a,b,c],i)=>`<div class="crow"><b><span class="cn2">${i+1}</span>${a}</b><span>${b}</span><span class="ex">${c}</span></div>`).join('')}
+render();
+})();
+</script>
+</body>
+</html>
