@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guitar Theory Maps Chapter 9</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<nav aria-label="Guide"><a href="index.html">← All chapters</a><span class="here">Chapter 9 of 13</span><span class="metro"></span><span style="display:flex;gap:8px"><a href="chapter-8.html">← Prev</a><a href="chapter-10.html">Next →</a></span></nav>
+<div class="chap" id="chapter-9" style="background:#b45309"><span>Chapter 9</span><h2>Rhythm and Feel</h2><p>When to play matters as much as what to play. Beats, subdivisions, time signatures, strumming, syncopation and swing, all playable.</p></div>
+<div class="legend"><span><i class="sw" style="background:var(--root)"></i>Root</span><span><i class="sw" style="background:var(--perfect)"></i>Perfect</span><span><i class="sw" style="background:var(--major)"></i>Major</span><span><i class="sw" style="background:var(--minor)"></i>Minor</span><span><i class="sw" style="background:var(--tritone)"></i>Tritone / altered</span><span class="cap">Click any note, chord or ▶ to hear it.</span></div>
+<div class="card"><h3>In this chapter</h3><ol class="toc"><li><span class="n">1</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-1">Beat, bar and tempo</a></li><li><span class="n">2</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-2">Note lengths and subdivision</a></li><li><span class="n">3</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-3">Time signatures</a></li><li><span class="n">4</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-4">Strumming patterns</a></li><li><span class="n">5</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-5">Syncopation</a></li><li><span class="n">6</span><i class="dotc" style="background:var(--minor)"></i><a href="#lesson-6">Straight and swing</a></li><li><span class="n">7</span><i class="dotc" style="background:var(--minor)"></i><a href="#lesson-7">Moving an idea in time</a></li><li><span class="n">8</span><i class="dotc" style="background:var(--major)"></i><a href="#lesson-8">Chapter 9 checkpoint</a></li></ol><p class="cap"><i class="dotc" style="background:var(--go)"></i> Core: do these on a first pass. <i class="dotc" style="background:var(--minor)"></i> Go deeper: safe to skip and come back to. <i class="dotc" style="background:var(--major)"></i> Checkpoint.</p></div>
+
+<section id="lesson-1">
+  <div class="lhd"><span class="num">1</span><span class="badge core">Core</span></div>
+  <h2>Beat, bar and tempo</h2>
+  <p>The <b>beat</b> is the steady pulse you tap your foot to. Beats are grouped into <b>bars</b> (also called measures), most often four at a time, with the first beat of each bar felt a little stronger. <b>Tempo</b> is how fast the beats go, measured in beats per minute.</p>
+  <div class="card">
+    <div class="rgrid" id="btGrid"></div>
+    <div class="ctl"><span class="lab">Hear two bars at</span><span class="grp" id="btBtns"></span></div>
+    <p class="cap">Count "one, two, three, four" along with the clicks. The metronome in the top bar keeps this going for as long as you like.</p>
+  </div>
+</section>
+<section id="lesson-2">
+  <div class="lhd"><span class="num">2</span><span class="badge core">Core</span></div>
+  <h2>Note lengths and subdivision</h2>
+  <p>Every rhythm is made by dividing the beat into equal parts or by holding a note across several beats. Each division has a name and a way of counting it out loud. Counting aloud while you play is the single most effective rhythm exercise there is.</p>
+  <div class="card">
+    <div id="sbOut" style="display:flex;flex-direction:column;gap:12px"></div>
+    <p class="cap">Each row is one bar of four beats. ▶ plays the note against the click.</p>
+  </div>
+</section>
+<section id="lesson-3">
+  <div class="lhd"><span class="num">3</span><span class="badge core">Core</span></div>
+  <h2>Time signatures</h2>
+  <p>The two numbers at the start of a piece say how the beats are grouped. The top number is how many beats are in a bar; the bottom number is which note length counts as one beat (4 means quarter note, 8 means eighth note).</p>
+  <div class="card">
+    <div class="ctl"><div class="grp"><span class="lab">Time</span><span class="grp" id="tsBtns"></span></div><button type="button" class="pbtn" id="tsPlay">▶ Play two bars</button></div>
+    <div class="rgrid" id="tsGrid"></div>
+    <p id="tsInfo"></p>
+  </div>
+</section>
+<section id="lesson-4">
+  <div class="lhd"><span class="num">4</span><span class="badge core">Core</span></div>
+  <h2>Strumming patterns</h2>
+  <p>Good strumming comes from one rule: the hand never stops. It swings down on every numbered beat and up on every "and", like a pendulum. A pattern is simply a choice of which swings touch the strings and which pass by in the air.</p>
+  <div class="card">
+    <div class="ctl"><div class="grp"><span class="lab">Pattern</span><span class="grp" id="stPre"></span></div><button type="button" class="pbtn" id="stPlay">▶ Play</button></div>
+    <div class="rgrid" id="stGrid"></div>
+    <p class="cap">Click any box to switch that strum on or off and build your own pattern. Filled boxes are played; empty ones are a silent swing of the hand. ↓ is a downstroke, ↑ an upstroke.</p>
+  </div>
+  <div class="tip"><b>Practise it muted first.</b> Lay your fretting hand lightly across the strings and strum the pattern as pure rhythm. Add the chord once your hand can keep the pendulum going on its own.</div>
+</section>
+<section id="lesson-5">
+  <div class="lhd"><span class="num">5</span><span class="badge core">Core</span></div>
+  <h2>Syncopation</h2>
+  <p>A rhythm that puts its weight on the beats sounds square and steady. Shift the accents onto the "ands", or let a chord arrive just before the beat, and the rhythm starts to push and pull against the pulse. That displacement is <b>syncopation</b>, and it is most of what makes funk, reggae, Latin and pop grooves feel alive.</p>
+  <div class="card">
+    <div id="syOut" style="display:flex;flex-direction:column;gap:14px"></div>
+    <p class="cap">Dark boxes are accented strums. Listen for where the weight falls compared with the click.</p>
+  </div>
+</section>
+<section id="lesson-6">
+  <div class="lhd"><span class="num">6</span><span class="badge deep">Go deeper</span></div>
+  <h2>Straight and swing</h2>
+  <p>Eighth notes can be played evenly, splitting the beat exactly in half, or with a long-short lilt, where the first of each pair lasts about twice as long as the second. The second way is <b>swing</b>, the basic feel of blues, jazz and shuffle rhythms. It is usually not written differently; you are simply told to swing.</p>
+  <div class="card">
+    <div class="ctl"><span class="grp" id="swBtns"></span></div>
+    <div class="rgrid" id="swGrid"></div>
+    <p class="cap">The same sixteen notes both times. Only the placement of every second note changes.</p>
+  </div>
+</section>
+<section id="lesson-7">
+  <div class="lhd"><span class="num">7</span><span class="badge deep">Go deeper</span></div>
+  <h2>Moving an idea in time</h2>
+  <p>A short phrase sounds different depending on where in the bar it starts. Begin it on beat one and it is a statement. Begin it half a beat late and it becomes a syncopated answer. Moving a phrase like this, without changing a note, is one of the simplest ways to develop a solo.</p>
+  <div class="card">
+    <div id="dpOut" style="display:flex;flex-direction:column;gap:14px"></div>
+    <p class="cap">One three-note idea, started in three different places.</p>
+  </div>
+</section>
+<section id="lesson-8">
+  <div class="lhd"><span class="num">8</span><span class="badge check">Checkpoint</span></div>
+  <h2>Chapter 9 checkpoint</h2>
+  <div class="card">
+    <h3>You are ready to move on when you can</h3>
+    <ul>
+      <li>Count quarter notes, eighth notes, triplets and sixteenth notes aloud against a click.</li>
+      <li>Tell 4/4, 3/4 and 6/8 apart by ear.</li>
+      <li>Strum a pattern with a missed downstroke while your hand keeps moving.</li>
+      <li>Play the same line straight and then swung.</li>
+    </ul>
+    <h3>A ten-minute routine</h3>
+    <ol>
+      <li>Two minutes: metronome at 70. Muted strums in quarters, then eighths, then sixteenths, counting aloud.</li>
+      <li>Three minutes: one strumming pattern over a two-chord change, without stopping at the change.</li>
+      <li>Three minutes: the off-beat pattern from lesson 5, slowly, then faster.</li>
+      <li>Two minutes: a scale in swung eighth notes.</li>
+    </ol>
+  </div>
+</section>
+
+<div class="pager"><a class="ghost" href="chapter-8.html">← Chapter 8</a><a href="chapter-10.html">Chapter 10: Ear Training and Real Songs →</a></div>
+<footer>Guitar Theory Maps · Chapter 9: Rhythm and Feel</footer>
+</main>
+<script src="common.js"></script>
+<script src="neck.js"></script>
+<script>(function(){
+let busy=false;
+function rc(when,acc){try{ac=ac||new (window.AudioContext||window.webkitAudioContext)();if(ac.state==='suspended')ac.resume();const t=ac.currentTime+.03+when,o=ac.createOscillator(),g=ac.createGain();o.frequency.value=acc?1600:1050;g.gain.setValueAtTime(acc?.28:.16,t);g.gain.exponentialRampToValueAtTime(.001,t+.05);o.connect(g);g.connect(ac.destination);o.start(t);o.stop(t+.07)}catch(e){}}
+function strum(w,up,acc){(up?[64,59,55]:acc?[40,47,52,55,59,64]:[52,55,59,64]).forEach((n,i)=>tone(n,w+i*.012,up?.22:acc?.45:.3))}
+// steps: 0 silent, 1 hit, 2 accented hit. o: bpm, div (steps per beat), beats (per bar), loops, swing, click, notes, snd, cells
+function run(steps,o){if(busy)return;busy=true;const sd=60/o.bpm/o.div,n=steps.length,loops=o.loops||1;let k=0;
+ for(let l=0;l<loops;l++)for(let i=0;i<n;i++){let w=(l*n+i)*sd;if(o.swing&&i%2===1)w+=sd/3;
+  if(o.click!==false&&i%o.div===0)rc(w,(i/o.div)%(o.beats||4)===0);
+  const s=steps[i];if(s){if(o.snd)o.snd(w,s);else if(o.notes)tone(o.notes[k++%o.notes.length],w,.45);else strum(w,i%2===1&&o.div===2,s===2)}
+  if(o.cells){const c=o.cells[i];setTimeout(()=>{c.classList.add('now');setTimeout(()=>c.classList.remove('now'),Math.max(90,sd*700))},(w+.03)*1000)}}
+ setTimeout(()=>busy=false,loops*n*sd*1000+150)}
+const cell=(top,bot,cls,extra)=>`<span class="rc ${cls||''}" ${extra||''}><b>${top}</b><small>${bot||''}</small></span>`;
+const kids=id=>[...$(id).querySelectorAll('.rc')];
+// 1. beat
+$('btGrid').innerHTML=[1,2,3,4].map(i=>cell(i,i===1?'strong':'',i===1?'acc':'on')).join('');$('btGrid').style.gridTemplateColumns='repeat(4,1fr)';
+$('btBtns').innerHTML=[60,90,120,160].map(b=>`<button type="button" class="pbtn" data-bpm="${b}">▶ ${b} bpm</button>`).join('');
+$('btBtns').onclick=e=>{const b=e.target.closest('[data-bpm]');if(b)run([0,0,0,0],{bpm:+b.dataset.bpm,div:1,loops:2,cells:kids('btGrid')})};
+// 2. subdivisions
+const SB=[['Whole note','4 beats',1,[1,0,0,0],['1','(2)','(3)','(4)']],['Half notes','2 beats each',1,[1,0,1,0],['1','(2)','3','(4)']],['Quarter notes','1 beat each',1,[1,1,1,1],['1','2','3','4']],['Eighth notes','2 per beat',2,[1,1,1,1,1,1,1,1],['1','&','2','&','3','&','4','&']],['Triplets','3 per beat',3,Array(12).fill(1),['1','trip','let','2','trip','let','3','trip','let','4','trip','let']],['Sixteenth notes','4 per beat',4,Array(16).fill(1),['1','e','&','a','2','e','&','a','3','e','&','a','4','e','&','a']]];
+$('sbOut').innerHTML=SB.map(([n,d,div,st,lab],r)=>`<div><div class="ctl"><b>${n}</b><span class="cap">${d}</span><button type="button" class="pbtn" data-sb="${r}">▶</button></div><div class="rgrid" id="sb${r}" style="grid-template-columns:repeat(${st.length},1fr);margin-top:6px">${st.map((s,i)=>cell(lab[i],'',s?(i%div===0?'acc':'on'):'')).join('')}</div></div>`).join('');
+$('sbOut').onclick=e=>{const b=e.target.closest('[data-sb]');if(!b)return;const r=+b.dataset.sb;run(SB[r][3],{bpm:72,div:SB[r][2],notes:[64],cells:kids('sb'+r)})};
+// 3. time signatures
+const TS=[['4/4',[2,1,1,1],100,'Four quarter-note beats. By far the most common: rock, pop, blues, funk.'],['3/4',[2,1,1],110,'Three quarter-note beats. The waltz feel: strong, weak, weak.'],['6/8',[2,1,1,2,1,1],190,'Six eighth notes felt as two groups of three. A rolling, swaying feel. It has the same six eighths as 3/4 but groups them differently.'],['2/4',[2,1],110,'Two beats. Marches and polkas.'],['12/8',[2,1,1,2,1,1,2,1,1,2,1,1],200,'Four groups of three. The slow blues and doo-wop feel.'],['5/4',[2,1,1,2,1],130,'Five beats, usually felt as three plus two. Uneven on purpose.']];
+let Ts=0;
+function drawTS(){btns('tsBtns',TS.map(x=>x[0]),Ts,i=>{Ts=i;drawTS()});const t=TS[Ts];let c=0;
+ $('tsGrid').style.gridTemplateColumns=`repeat(${t[1].length},1fr)`;$('tsGrid').innerHTML=t[1].map((s,i)=>cell(i+1,s===2?'strong':'',s===2?'acc':'on')).join('');$('tsInfo').innerHTML=`<b>${t[0]}.</b> ${t[3]}`}
+drawTS();$('tsPlay').onclick=()=>{const t=TS[Ts];run(t[1],{bpm:t[2],div:1,loops:2,click:false,snd:(w,s)=>rc(w,s===2),cells:kids('tsGrid')})};
+// 4. strumming
+const PRE=[['All downstrokes',[1,0,1,0,1,0,1,0]],['Down-up',[1,1,1,1,1,1,1,1]],['Folk / pop',[1,0,1,1,0,1,1,1]],['Rock',[1,0,1,0,1,1,1,1]],['Ballad',[1,0,0,1,1,0,1,0]]],CNT=['1','&','2','&','3','&','4','&'];
+let St=PRE[2][1].slice(),pre=2;
+function drawSt(){btns('stPre',PRE.map(x=>x[0]),pre,i=>{pre=i;St=PRE[i][1].slice();drawSt()});
+ $('stGrid').style.gridTemplateColumns='repeat(8,1fr)';$('stGrid').innerHTML=St.map((s,i)=>`<button type="button" class="rc ${s?(i%2?'on':'acc'):''}" data-st="${i}" aria-pressed="${!!s}" aria-label="${i%2?'Up':'Down'}stroke on ${CNT[i]}"><b>${i%2?'↑':'↓'}</b><small>${CNT[i]}</small></button>`).join('')}
+drawSt();$('stGrid').onclick=e=>{const b=e.target.closest('[data-st]');if(!b)return;const i=+b.dataset.st;St[i]=St[i]?0:1;pre=-1;drawSt()};
+$('stPlay').onclick=()=>run(St.map((s,i)=>s?(i===0?2:1):0),{bpm:92,div:2,loops:2,cells:kids('stGrid')});
+// 5. syncopation
+const SY=[['On the beat',[2,0,2,0,2,0,2,0],'Every accent lands with the click. Steady and plain.'],['Off the beat',[0,2,0,2,0,2,0,2],'Nothing on the beat at all, only the "ands". The reggae and ska chop.'],['Mixed',[2,0,0,2,0,2,1,0],'Starts on the beat, then leans onto the "ands". A typical pop and funk shape.'],['Charleston',[2,0,0,2,0,0,0,0],'A long chord on beat 1 and a short one on the "and" of 2, then space. The classic jazz accompaniment figure.'],['The push',[2,0,1,0,1,0,0,2],'The last strum arrives half a beat early and belongs to the next bar. Very common at chord changes.']];
+$('syOut').innerHTML=SY.map(([n,st,d],r)=>`<div><div class="ctl"><b>${n}</b><button type="button" class="pbtn" data-sy="${r}">▶</button><span class="cap">${d}</span></div><div class="rgrid" id="sy${r}" style="grid-template-columns:repeat(8,1fr);margin-top:6px">${st.map((s,i)=>cell(i%2?'↑':'↓',CNT[i],s===2?'acc':s?'on':'')).join('')}</div></div>`).join('');
+$('syOut').onclick=e=>{const b=e.target.closest('[data-sy]');if(!b)return;const r=+b.dataset.sy;run(SY[r][1],{bpm:92,div:2,loops:2,cells:kids('sy'+r)})};
+// 6. swing
+const LINE=[57,60,62,63,64,67,69,67,64,62,60,57,55,57,60,57];
+$('swGrid').style.gridTemplateColumns='repeat(16,1fr)';$('swGrid').innerHTML=LINE.map((n,i)=>cell(i%2?'&':(i/2)%4+1,'',i%2?'on':'acc')).join('');
+$('swBtns').innerHTML='<button type="button" class="pbtn" data-sw="0">▶ Straight</button><button type="button" class="pbtn" data-sw="1">▶ Swing</button>';
+$('swBtns').onclick=e=>{const b=e.target.closest('[data-sw]');if(b)run(Array(16).fill(1),{bpm:104,div:2,swing:b.dataset.sw==='1',notes:LINE,cells:kids('swGrid')})};
+// 7. displacement
+const DP=[['Starting on beat 1',0],['Starting on the "and" of 1',1],['Starting on beat 2',2]];
+$('dpOut').innerHTML=DP.map(([n,s],r)=>`<div><div class="ctl"><b>${n}</b><button type="button" class="pbtn" data-dp="${r}">▶</button></div><div class="rgrid" id="dp${r}" style="grid-template-columns:repeat(8,1fr);margin-top:6px">${CNT.map((c,i)=>cell(c,'',i>=s&&i<s+3?'acc':'')).join('')}</div></div>`).join('');
+$('dpOut').onclick=e=>{const b=e.target.closest('[data-dp]');if(!b)return;const r=+b.dataset.dp,s=DP[r][1];run(CNT.map((c,i)=>i>=s&&i<s+3?1:0),{bpm:96,div:2,loops:2,notes:[69,67,64],cells:kids('dp'+r)})};
+})();
+</script>
+<script src="metro.js"></script>
+</body>
+</html>

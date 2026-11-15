@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guitar Theory Maps Chapter 10</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<nav aria-label="Guide"><a href="index.html">← All chapters</a><span class="here">Chapter 10 of 13</span><span class="metro"></span><span style="display:flex;gap:8px"><a href="chapter-9.html">← Prev</a><a href="chapter-11.html">Next →</a></span></nav>
+<div class="chap" id="chapter-10" style="background:#047857"><span>Chapter 10</span><h2>Ear Training and Real Songs</h2><p>Connecting everything to music you actually hear: recognising intervals, chords and progressions by ear, finding a song's key, and using a capo.</p></div>
+<div class="legend"><span><i class="sw" style="background:var(--root)"></i>Root</span><span><i class="sw" style="background:var(--perfect)"></i>Perfect</span><span><i class="sw" style="background:var(--major)"></i>Major</span><span><i class="sw" style="background:var(--minor)"></i>Minor</span><span><i class="sw" style="background:var(--tritone)"></i>Tritone / altered</span><span class="cap">Click any note, chord or ▶ to hear it.</span></div>
+<div class="card"><h3>In this chapter</h3><ol class="toc"><li><span class="n">1</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-1">Intervals by ear</a></li><li><span class="n">2</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-2">Chord qualities by ear</a></li><li><span class="n">3</span><i class="dotc" style="background:var(--minor)"></i><a href="#lesson-3">Progressions by ear</a></li><li><span class="n">4</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-4">Finding the key of a song</a></li><li><span class="n">5</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-5">Capo and transposing</a></li><li><span class="n">6</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-6">Learning a song from start to finish</a></li><li><span class="n">7</span><i class="dotc" style="background:var(--major)"></i><a href="#lesson-7">Chapter 10 checkpoint</a></li></ol><p class="cap"><i class="dotc" style="background:var(--go)"></i> Core: do these on a first pass. <i class="dotc" style="background:var(--minor)"></i> Go deeper: safe to skip and come back to. <i class="dotc" style="background:var(--major)"></i> Checkpoint.</p></div>
+
+<section id="lesson-1">
+  <div class="lhd"><span class="num">1</span><span class="badge core">Core</span></div>
+  <h2>Intervals by ear</h2>
+  <p>Theory becomes useful when you can hear it. The first step is recognising intervals, because melodies are chains of intervals and chords are stacks of them. Start with a few very different ones and add more as they become easy.</p>
+  <div class="card"><div id="qzInt"></div></div>
+  <div class="tip"><b>Sing it back.</b> Before you answer, hum both notes. If you can sing an interval you can recognise it, and the other way round.</div>
+</section>
+<section id="lesson-2">
+  <div class="lhd"><span class="num">2</span><span class="badge core">Core</span></div>
+  <h2>Chord qualities by ear</h2>
+  <p>Next, learn the colour of each chord type. Do not try to pick out individual notes. Listen to the overall mood: bright, dark, tense or unsettled.</p>
+  <div class="card"><div id="qzCh"></div></div>
+</section>
+<section id="lesson-3">
+  <div class="lhd"><span class="num">3</span><span class="badge deep">Go deeper</span></div>
+  <h2>Progressions by ear</h2>
+  <p>The same handful of progressions appear in thousands of songs. Once you know their sound in numerals, you can often name a song's chords on first hearing, in whatever key it happens to be in.</p>
+  <div class="card"><div id="qzPr"></div></div>
+  <div class="tip"><b>Follow the bass.</b> The lowest note usually plays the root of each chord. Hum the bass line and you have the progression's shape.</div>
+</section>
+<section id="lesson-4">
+  <div class="lhd"><span class="num">4</span><span class="badge core">Core</span></div>
+  <h2>Finding the key of a song</h2>
+  <p>To work out what key a song is in, collect its chords and see which key contains them.</p>
+  <div class="card">
+    <div class="flow">
+      <div class="step"><b>1. List the chords</b>Write down every chord in the song, major and minor.</div>
+      <div class="arrow" aria-hidden="true">→</div>
+      <div class="step"><b>2. Match a key</b>Find the key whose seven chords include them all.</div>
+      <div class="arrow" aria-hidden="true">→</div>
+      <div class="step"><b>3. Find home</b>Major or relative minor? The chord the song ends on, or keeps returning to, is the answer.</div>
+    </div>
+    <h3>Key finder</h3>
+    <p>Select the chords in your song.</p>
+    <div class="ctl"><div class="grp"><span class="lab">Major</span><span class="grp" id="kfMaj"></span></div></div>
+    <div class="ctl"><div class="grp"><span class="lab">Minor</span><span class="grp" id="kfMin"></span></div><button type="button" class="pbtn" id="kfClear">Clear</button></div>
+    <div id="kfOut" style="display:flex;flex-direction:column;gap:8px"></div>
+  </div>
+</section>
+<section id="lesson-5">
+  <div class="lhd"><span class="num">5</span><span class="badge core">Core</span></div>
+  <h2>Capo and transposing</h2>
+  <p>A capo clamps across a fret and raises every open string by that many half steps. It lets you keep easy open-chord shapes while the music sounds in a different key, which is useful for matching a singer's range. Thinking in numerals makes the conversion mechanical: the shapes are the numerals of one key, the sound is the numerals of another.</p>
+  <div class="card">
+    <div class="ctl"><div class="grp"><span class="lab">I want to sound in</span><span class="grp" id="cpKey"></span></div></div>
+    <div class="scroll"><div class="cheat" id="cpOut"></div></div>
+    <p class="cap">Each row is one way to get that key with open-chord shapes. "Shapes" are what your hands play; the sounding chords are what the listener hears.</p>
+  </div>
+</section>
+<section id="lesson-6">
+  <div class="lhd"><span class="num">6</span><span class="badge core">Core</span></div>
+  <h2>Learning a song from start to finish</h2>
+  <p>A repeatable method, drawing on every chapter.</p>
+  <div class="card"><div class="scroll"><div class="cheat">
+    <div class="crow lhead"><span>Step</span><span>What to do</span><span>Where it is covered</span></div>
+    <div class="crow"><b><span class="cn2">1</span>Key</b><span>List the chords and find the key and its home chord.</span><span class="ex">This chapter, lesson 4</span></div>
+    <div class="crow"><b><span class="cn2">2</span>Numerals</b><span>Rewrite the chords as Roman numerals. Notice any chord from outside the key.</span><span class="ex">Chapters 3 and 4</span></div>
+    <div class="crow"><b><span class="cn2">3</span>Form</b><span>Mark the sections: verse, chorus, bridge. Most songs repeat two or three short progressions.</span><span class="ex">Chapter 3</span></div>
+    <div class="crow"><b><span class="cn2">4</span>Rhythm</b><span>Find the time signature and a strumming pattern that matches the feel.</span><span class="ex">Chapter 9</span></div>
+    <div class="crow"><b><span class="cn2">5</span>Voicings</b><span>Choose where on the neck to play the chords so the changes are small.</span><span class="ex">Chapter 5</span></div>
+    <div class="crow"><b><span class="cn2">6</span>Melody and solo</b><span>Find the melody inside the key's scale position, then improvise around its chord tones.</span><span class="ex">Chapters 6 and 7</span></div>
+  </div></div></div>
+</section>
+<section id="lesson-7">
+  <div class="lhd"><span class="num">7</span><span class="badge check">Checkpoint</span></div>
+  <h2>Chapter 10 checkpoint</h2>
+  <div class="card">
+    <h3>You have finished the guide when you can</h3>
+    <ul>
+      <li>Score eight out of ten on the easy interval and triad trainers.</li>
+      <li>Recognise I – IV – V – I and I – V – vi – IV by ear.</li>
+      <li>Find the key of a song from its chord list.</li>
+      <li>Move a song to a new key, with and without a capo.</li>
+      <li>Take one song through all six steps of the method above.</li>
+    </ul>
+    <h3>A ten-minute routine</h3>
+    <ol>
+      <li>Three minutes: interval trainer, one level harder than is comfortable.</li>
+      <li>Two minutes: chord trainer.</li>
+      <li>Five minutes: put on a song you like and find its key and first two chords by ear.</li>
+    </ol>
+  </div>
+</section>
+
+<div class="pager"><a class="ghost" href="chapter-9.html">← Chapter 9</a><a href="chapter-11.html">Chapter 11: Advanced Voicings →</a></div>
+<footer>Guitar Theory Maps · Chapter 10: Ear Training and Real Songs</footer>
+</main>
+<script src="common.js"></script>
+<script src="neck.js"></script>
+<script>(function(){
+const rnd=n=>Math.floor(Math.random()*n);
+// generic ear trainer. levels: [{n, items:[{l, spec(): play string}]}]
+function quiz(id,levels,prompt){let lv=0,cur=-1,spec='',done=true,score=0,total=0;const el=$(id);
+ function draw(msg,pick){const L=levels[lv];el.innerHTML=`<div class="ctl"><div class="grp"><span class="lab">Level</span>${levels.map((x,i)=>`<button type="button" data-lv="${i}" aria-pressed="${i===lv}">${x.n}</button>`).join('')}</div></div>
+  <div class="ctl"><button type="button" class="big" data-act="next" style="border:0;cursor:pointer">${cur<0?'▶ Start':'▶ Next one'}</button>${cur>=0?'<button type="button" class="pbtn" data-act="again">▶ Hear it again</button>':''}<span class="cap">Score: <b>${score}</b> of ${total}</span></div>
+  <p>${cur<0?prompt:done?msg:'What did you hear?'}</p>
+  <div class="grp">${L.items.map((x,i)=>`<button type="button" data-ans="${i}" ${cur<0?'disabled':''} style="${done&&cur>=0&&i===cur?'background:var(--go);color:#fff;border-color:var(--go)':done&&i===pick?'background:var(--tritone);color:#fff;border-color:var(--tritone)':''}">${x.l}</button>`).join('')}</div>`}
+ el.onclick=e=>{const t=e.target.closest('button');if(!t)return;const L=levels[lv];
+  if(t.dataset.lv!=null){lv=+t.dataset.lv;cur=-1;done=true;score=0;total=0;draw()}
+  else if(t.dataset.act==='next'){let n;do{n=rnd(L.items.length)}while(L.items.length>1&&n===cur);cur=n;spec=L.items[cur].spec();done=false;play(spec);draw()}
+  else if(t.dataset.act==='again'){play(spec)}
+  else if(t.dataset.ans!=null&&!done){const a=+t.dataset.ans;done=true;total++;if(a===cur)score++;draw(a===cur?`<b style="color:var(--go)">Correct.</b> That was ${L.items[cur].l}.`:`<b style="color:var(--tritone)">Not this time.</b> It was ${L.items[cur].l}.`,a)}};
+ draw()}
+const IN=['','Minor 2nd','Major 2nd','Minor 3rd','Major 3rd','Perfect 4th','Tritone','Perfect 5th','Minor 6th','Major 6th','Minor 7th','Major 7th','Octave'];
+const iv=n=>({l:IN[n],spec:()=>{const r=55+rnd(10);return `mc:${r},${r+n}|${r},${r+n}`}});
+quiz('qzInt',[{n:'Easy (4)',items:[3,4,7,12].map(iv)},{n:'Medium (7)',items:[2,3,4,5,7,9,12].map(iv)},{n:'All 12',items:[1,2,3,4,5,6,7,8,9,10,11,12].map(iv)}],'Press Start. You will hear two notes one after the other, then together.');
+const ch=(l,s)=>({l,spec:()=>{const r=52+rnd(10);return BOTH(s.map(x=>r+x))}});
+quiz('qzCh',[{n:'Major or minor',items:[ch('Major',[0,4,7]),ch('Minor',[0,3,7])]},{n:'Four triads',items:[ch('Major',[0,4,7]),ch('Minor',[0,3,7]),ch('Diminished',[0,3,6]),ch('Augmented',[0,4,8])]},{n:'Seventh chords',items:[ch('Major 7',[0,4,7,11]),ch('Dominant 7',[0,4,7,10]),ch('Minor 7',[0,3,7,10]),ch('Half-diminished',[0,3,6,10])]}],'Press Start. You will hear a chord broken up, then together.');
+const pr=(l,list)=>({l,spec:()=>{const key=RMAJ[rnd(12)],c=list.map(([lo,s,q])=>chordOf(key,lo,s,q).midi.join(','));return 'c'.repeat(c.length)+':'+c.join('|')}});
+quiz('qzPr',[{n:'Two classics',items:[pr('I – IV – V – I',[[0,0,'M'],[3,5,'M'],[4,7,'M'],[0,0,'M']]),pr('I – V – vi – IV',[[0,0,'M'],[4,7,'M'],[5,9,'m'],[3,5,'M']])]},{n:'Five progressions',items:[pr('I – IV – V – I',[[0,0,'M'],[3,5,'M'],[4,7,'M'],[0,0,'M']]),pr('I – V – vi – IV',[[0,0,'M'],[4,7,'M'],[5,9,'m'],[3,5,'M']]),pr('I – vi – IV – V',[[0,0,'M'],[5,9,'m'],[3,5,'M'],[4,7,'M']]),pr('ii – V – I',[[1,2,'m7'],[4,7,'7'],[0,0,'maj7']]),pr('i – ♭VII – ♭VI – V',[[0,0,'m'],[6,10,'M'],[5,8,'M'],[4,7,'M']])]}],'Press Start. You will hear a progression in a random key.');
+// key finder
+const sel=new Set(),DEGS=[[0,0,'I'],[2,1,'ii'],[4,1,'iii'],[5,0,'IV'],[7,0,'V'],[9,1,'vi']],nm=k=>{const[p,m]=k.split('-').map(Number);return RMAJ[p]+(m?'m':'')};
+function drawKF(){const mk=(id,m)=>{$(id).innerHTML=RMAJ.map((r,i)=>`<button type="button" data-kf="${i}-${m}" aria-pressed="${sel.has(i+'-'+m)}">${r}${m?'m':''}</button>`).join('')};mk('kfMaj',0);mk('kfMin',1);
+ if(!sel.size){$('kfOut').innerHTML='<p class="cap">Nothing selected yet. Try G, C, D and Em.</p>';return}
+ const res=RMAJ.map((r,k)=>{const map={};DEGS.forEach(([s,m,rn])=>map[mod12(k+s)+'-'+m]=rn);const hit=[...sel].filter(c=>map[c]);return{k,hit,map,miss:[...sel].filter(c=>!map[c])}}),best=Math.max(...res.map(x=>x.hit.length)),full=res.filter(x=>x.hit.length===sel.size);
+ const row=x=>`<div class="tip" style="border-left-color:var(--${x.miss.length?'major':'go'})"><b style="color:var(--ink)">${RMAJ[x.k]} major</b> or its relative minor <b style="color:var(--ink)">${RMIN[mod12(x.k+9)]} minor</b>: ${x.hit.map(c=>`${nm(c)} = ${x.map[c]}`).join(', ')}${x.miss.length?`. Outside the key: ${x.miss.map(nm).join(', ')}`:''}</div>`;
+ $('kfOut').innerHTML=full.length?`<p><b>${full.length===1?'One key fits':'These keys fit'} all ${sel.size} chord${sel.size>1?'s':''}.</b>${full.length>1?' Add more chords to narrow it down.':''}</p>`+full.map(row).join(''):`<p><b>No single key contains all of these.</b> The closest fits are below. A chord outside the key is usually borrowed from the parallel minor or is a secondary dominant (chapter 4).</p>`+res.filter(x=>x.hit.length===best).slice(0,3).map(row).join('')}
+function mod12(x){return((x%12)+12)%12}
+drawKF();document.addEventListener('click',e=>{const b=e.target.closest&&e.target.closest('[data-kf]');if(b){const k=b.dataset.kf;sel.has(k)?sel.delete(k):sel.add(k);drawKF()}});$('kfClear').onclick=()=>{sel.clear();drawKF()};
+// capo
+let Cp=11;const SHP=['C','A','G','E','D'];
+function drawCapo(){const key=RMAJ[Cp],kp=pcOf(key);btns('cpKey',RMAJ,Cp,i=>{Cp=i;drawCapo()});
+ const four=k=>[[0,0,'M'],[3,5,'M'],[4,7,'M'],[5,9,'m']].map(([lo,s,q])=>chordOf(k,lo,s,q).name).join('  ');
+ const rows=SHP.map(s=>({s,f:mod12(kp-pcOf(s))})).filter(x=>x.f<=9).sort((a,b)=>a.f-b.f);
+ $('cpOut').innerHTML='<div class="crow lhead"><span>Capo</span><span>Shapes you play (I IV V vi)</span><span>What it sounds like</span></div>'+rows.map(x=>`<div class="crow"><b>${x.f?'Capo on fret '+x.f:'No capo'}</b><span>${x.s} shapes: ${four(x.s)}</span><span class="ex">${four(key)}</span></div>`).join('')}
+drawCapo();
+})();
+</script>
+<script src="metro.js"></script>
+</body>
+</html>
