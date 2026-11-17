@@ -2,7 +2,7 @@
 
 An interactive visual study guide to music theory for guitar, with a piano reference beside every fretboard and clickable sound throughout.
 
-Thirteen chapters, 112 lessons, one page per chapter. Chapters 1 to 10 are the course; 11 to 13 are advanced reference and practice material.
+Thirteen chapters, 108 lessons, one page per chapter. Chapters 1 to 10 are the course; 11 to 13 are advanced reference and practice material.
 
 1. Intervals, keys and triads
 2. Seventh chords and minor keys
