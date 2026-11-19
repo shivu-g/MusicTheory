@@ -2,28 +2,15 @@
 /* Layout idea: one reading column of numbered lessons; each lesson = short text + one big colour-coded diagram.
    Colour encodes interval family everywhere: root, perfect, major, minor, tritone. */
 :root{
-  --bg:#f3f5fb; --card:#ffffff; --ink:#1a1d3a; --muted:#5b6080; --line:#d6daea;
-  --root:#1a1d3a; --root-ink:#ffffff;
-  --perfect:#1f8fe0; --major:#f08a1c; --minor:#8b52e0; --tritone:#e23d5b; --go:#17a57a; --ghost:#9499b5;
-  --wood:#f6e9d3; --string:#8a8fa8; --key-white:#ffffff; --key-black:#23264a;
+  color-scheme:dark;
+  /* palette: charcoal, dusty purple, gold */
+  --charcoal:#2B2B2E; --purple:#6B5B7B; --lilac:#b9a6d0; --gold:#F2C14E;
+  --bg:#1f1f22; --card:#2B2B2E; --ink:#f6f1e7; --muted:#b9b2c4; --line:#47424f;
+  --root:#f6f1e7; --root-ink:#2B2B2E;
+  --perfect:#6fb8ff; --major:#F2C14E; --minor:#b9a6d0; --tritone:#ff7b8f; --go:#4fd1a5; --ghost:#6f6a7c;
+  --wood:#3a3540; --string:#8d8799; --key-white:#ece6da; --key-black:#17171a;
   --display:"Bricolage Grotesque","Trebuchet MS",sans-serif;
   --body:"Figtree","Segoe UI",system-ui,sans-serif;
-}
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
-    color-scheme:dark;
-    --bg:#12142a; --card:#1c1f3d; --ink:#eef0ff; --muted:#a4a9cc; --line:#343861;
-    --root:#eef0ff; --root-ink:#12142a;
-    --perfect:#4fb0ff; --major:#ffa544; --minor:#b088ff; --tritone:#ff6a85; --go:#3fd0a2; --ghost:#5d6290;
-    --wood:#2a2742; --string:#7a7fa6; --key-white:#e9ebfa; --key-black:#0c0d1c;
-  }
-}
-:root[data-theme="dark"]{
-  color-scheme:dark;
-  --bg:#12142a; --card:#1c1f3d; --ink:#eef0ff; --muted:#a4a9cc; --line:#343861;
-  --root:#eef0ff; --root-ink:#12142a;
-  --perfect:#4fb0ff; --major:#ffa544; --minor:#b088ff; --tritone:#ff6a85; --go:#3fd0a2; --ghost:#5d6290;
-  --wood:#2a2742; --string:#7a7fa6; --key-white:#e9ebfa; --key-black:#0c0d1c;
 }
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
@@ -41,7 +28,7 @@ header{display:flex;flex-direction:column;gap:12px}
 .legend span{display:inline-flex;align-items:center;gap:6px}
 .sw{width:14px;height:14px;border-radius:50%;display:inline-block}
 section{display:flex;flex-direction:column;gap:16px}
-.num{font-family:var(--display);font-weight:800;font-size:.95rem;color:var(--root-ink);background:var(--root);border-radius:999px;padding:3px 12px;align-self:flex-start}
+.num{font-family:var(--display);font-weight:800;font-size:.95rem;color:var(--charcoal);background:var(--gold);border-radius:999px;padding:3px 12px;align-self:flex-start}
 .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:14px}
 .scroll{overflow-x:auto}
 .tip{border-left:6px solid var(--go);background:var(--card);border-radius:0 12px 12px 0;padding:12px 16px}
@@ -104,7 +91,7 @@ footer{color:var(--muted);font-size:.9rem}
 .step u{text-decoration-thickness:2px;text-underline-offset:3px}
 nav{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 0;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
 nav a{font:700 .9rem var(--body);color:var(--ink);text-decoration:none;border:1.5px solid var(--line);border-radius:999px;padding:5px 14px;background:var(--card)}
-nav a:hover{border-color:var(--ink)} nav a:focus-visible{outline:3px solid var(--perfect);outline-offset:2px}
+nav a:hover{border-color:var(--gold)} nav a:focus-visible{outline:3px solid var(--perfect);outline-offset:2px}
 .chap{scroll-margin-top:70px;border-radius:18px;padding:22px;color:#fff;display:flex;flex-direction:column;gap:8px;margin-top:10px}
 .chap span{font:700 .82rem var(--body);text-transform:uppercase;letter-spacing:.1em;opacity:.9}
 .chap h2{font-size:clamp(1.7rem,5vw,2.6rem)} .chap p{font-size:1.05rem}
@@ -211,4 +198,10 @@ nav{gap:8px 16px}
 .toc.tpills{display:flex;flex-wrap:wrap;gap:8px}
 .toc.tpills li{margin:0;border:1.5px solid var(--line);border-radius:999px;padding:5px 14px;background:var(--card)}
 .toc.tpills li:hover{border-color:var(--ink)}
-nav a[aria-current="page"]{border-color:var(--ink)}
+nav a[aria-current="page"]{border-color:var(--gold);color:var(--gold)}
+
+/* theme: charcoal / dusty purple / gold */
+body{background:radial-gradient(900px 500px at 85% -10%,rgba(107,91,123,.35),transparent 70%),var(--bg)}
+::selection{background:var(--gold);color:var(--charcoal)}
+nav{background:rgba(31,31,34,.94)}
+.chap{border-bottom:4px solid var(--gold)}

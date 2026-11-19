@@ -34,7 +34,7 @@
 
   /* --------------------------------------------------------- chord explorer */
   var OPEN = [64, 59, 55, 50, 45, 40]; // e B G D A E (high to low)
-  var COL = { root: '#ffb27a', perfect: '#8fb4ff', major: '#6ee7a8', minor: '#c4a8ff', tritone: '#ff8f8f' };
+  var COL = { root: '#f6f1e7', perfect: '#8fb4ff', major: '#F2C14E', minor: '#b9a6d0', tritone: '#ff8f8f' };
   var ROLE = { 0: ['R', 'root'], 3: ['♭3', 'minor'], 4: ['3', 'major'], 7: ['5', 'perfect'], 10: ['♭7', 'minor'] };
   var FORM = { 0: 'root', 3: 'minor third', 4: 'major third', 7: 'fifth', 10: 'minor seventh' };
   var NAMES = ['C', 'C♯', 'D', 'E♭', 'E', 'F', 'F♯', 'G', 'A♭', 'A', 'B♭', 'B'];
