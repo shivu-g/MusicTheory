@@ -8,225 +8,197 @@
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body data-page="ch5">
 <main>
-<nav aria-label="Guide"><a href="index.html">← All chapters</a><span class="here">Chapter 5 of 13</span><span class="metro"></span><span style="display:flex;gap:8px"><a href="chapter-4.html">← Prev</a><a href="chapter-6.html">Next →</a></span></nav>
-<div class="chap" id="chapter-5" style="background:var(--tritone)"><span>Chapter 5</span><h2>Chords Across the Neck</h2><p>How to find any chord in several places, put a different note in the bass, and move from chord to chord smoothly.</p></div>
+<nav aria-label="Guide"><a href="index.html">← All chapters</a><a href="tools.html">Tools</a><span class="here">Module II · Chapter 5 of 13</span><span class="metro"></span><span style="display:flex;gap:8px"><a href="chapter-4.html">← Prev</a><a href="chapter-6.html">Next →</a></span></nav>
+<div class="chap" id="chapter-5" style="background:var(--minor)"><span>Chapter 5</span><h2>Chord Function, Progressions and Minor Keys</h2><p>What job each chord does in a key, how to read progressions in Roman numerals, and why minor keys use three different scales.</p></div>
 <div class="legend"><span><i class="sw" style="background:var(--root)"></i>Root</span><span><i class="sw" style="background:var(--perfect)"></i>Perfect</span><span><i class="sw" style="background:var(--major)"></i>Major</span><span><i class="sw" style="background:var(--minor)"></i>Minor</span><span><i class="sw" style="background:var(--tritone)"></i>Tritone / altered</span><span class="cap">Click any note, chord or ▶ to hear it.</span></div>
-<div class="card"><h3>In this chapter</h3><ol class="toc"><li><span class="n">1</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-1">Five shapes cover the whole neck</a></li><li><span class="n">2</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-2">Barre chords from the E and A shapes</a></li><li><span class="n">3</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-3">Slash chords and inversions</a></li><li><span class="n">4</span><i class="dotc" style="background:var(--minor)"></i><a href="#lesson-4">Spread triads and pedal points</a></li><li><span class="n">5</span><i class="dotc" style="background:var(--minor)"></i><a href="#lesson-5">Drop 2 and drop 3 voicings</a></li><li><span class="n">6</span><i class="dotc" style="background:var(--minor)"></i><a href="#lesson-6">A scale of chords up the neck</a></li><li><span class="n">7</span><i class="dotc" style="background:var(--minor)"></i><a href="#lesson-7">Voicings built in fourths</a></li><li><span class="n">8</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-8">Voice leading: the shortest path</a></li><li><span class="n">9</span><i class="dotc" style="background:var(--major)"></i><a href="#lesson-9">Chapter 5 checkpoint</a></li></ol><p class="cap"><i class="dotc" style="background:var(--go)"></i> Core: do these on a first pass. <i class="dotc" style="background:var(--minor)"></i> Go deeper: safe to skip and come back to. <i class="dotc" style="background:var(--major)"></i> Checkpoint.</p></div>
+<div class="card"><h3>In this chapter</h3><ol class="toc"><li><span class="n">1</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-1">Chord function: home, away, tension</a></li><li><span class="n">2</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-2">Progressions in Roman numerals</a></li><li><span class="n">3</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-3">Cadences: how phrases end</a></li><li><span class="n">4</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-4">Relative and parallel minor</a></li><li><span class="n">5</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-5">Why there are three minor scales</a></li><li><span class="n">6</span><i class="dotc" style="background:var(--minor)"></i><a href="#lesson-6">The practical minor key</a></li><li><span class="n">7</span><i class="dotc" style="background:var(--major)"></i><a href="#lesson-7">Chapter 5 checkpoint</a></li></ol></div>
 
 <section id="lesson-1">
   <div class="lhd"><span class="num">1</span><span class="badge core">Core</span></div>
-  <h2>Five shapes cover the whole neck</h2>
-  <p>The five open major chords every guitarist learns first are C, A, G, E and D. Each one is a movable shape: slide it up the neck, let your index finger do the job the nut was doing, and it becomes a different chord. Placed in the order C, A, G, E, D, the five shapes link end to end, so any chord can be played in five positions. This is often called the CAGED system.</p>
-  <div class="card">
-    <div class="ctl"><div class="grp"><span class="lab">Chord</span><span class="grp" id="cgRoot"></span></div><div class="grp"><span class="grp" id="cgQual"></span></div></div>
-    <div class="ctl"><div class="grp"><span class="lab">Shape</span><span class="grp" id="cgShape"></span></div></div>
-    <div class="scroll"><div id="cgNeck" style="min-width:720px"></div></div>
-    <div class="two"><div id="cgBox" style="max-width:260px"></div><p id="cgInfo"></p></div>
-    <p class="cap">Bright dots are the selected shape; faded dots are the other four. R marks every root. Click the small diagram to hear the chord.</p>
+  <h2>Chord function: home, away, tension</h2>
+  <p>The seven chords of a key do three jobs. Some feel like home, some move away from it, and some create tension that wants to fall back home. Chords that do the same job can often stand in for one another, which is the basis of chord substitution.</p>
+  <div class="two">
+    <div id="func"></div>
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <ul>
+        <li><b style="color:var(--go)">Tonic</b> (I, iii, vi): rest. iii and vi each share two of the three notes of the I chord, so they sound like shades of home.</li>
+        <li><b style="color:var(--perfect)">Subdominant</b> (ii, IV): motion. They contain the 4th note of the key, which pulls gently away from home.</li>
+        <li><b style="color:var(--tritone)">Dominant</b> (V, vii°): tension. They contain the 7th note, a half step below home, and in their seventh-chord form a tritone that wants to resolve.</li>
+      </ul>
+      <p>Most progressions travel around this triangle in the direction of the arrows, although skipping a corner or doubling back is common.</p>
+      <button type="button" class="pbtn" style="align-self:flex-start" data-play="cccc:48,52,55,60|53,57,60,65|55,59,62,65|48,52,55,60">▶ Hear home → away → tension → home</button>
+    </div>
   </div>
-  <div class="tip"><b>Why it matters.</b> The shapes are also landmarks. Each one has a scale position and an arpeggio wrapped around it, which is how chapter 6 organises the neck.</div>
+  <div class="card">
+    <h3>Names of the seven scale degrees</h3>
+    <div class="scroll"><div class="dia" id="degnames"></div></div>
+    <p class="cap">These names apply in every key. Colour shows the job of the chord built on that degree. Click one to hear it in C major.</p>
+  </div>
 </section>
 <section id="lesson-2">
   <div class="lhd"><span class="num">2</span><span class="badge core">Core</span></div>
-  <h2>Barre chords from the E and A shapes</h2>
-  <p>Two of the five shapes do most of the everyday work. The E shape has its root on the low E string and the A shape has its root on the A string. Know the note names on those two strings and you can play any major, minor or seventh chord anywhere.</p>
+  <h2>Progressions in Roman numerals</h2>
+  <p>Numerals describe a progression by position in the key, so one description works in all twelve keys. To analyse any chord chart, work through four questions.</p>
   <div class="card">
-    <div class="ctl"><div class="grp"><span class="lab">Root</span><span class="grp" id="brRoot"></span></div></div>
-    <div class="ctl"><div class="grp"><span class="lab">Type</span><span class="grp" id="brType"></span></div></div>
-    <div class="shapes" id="brOut" style="grid-template-columns:repeat(auto-fit,minmax(230px,1fr))"></div>
-    <h3>Root finder: the two bottom strings</h3>
-    <div class="scroll"><div id="brNeck" style="min-width:720px"></div></div>
-    <p class="cap">The dark dots are your chosen root. The root sits under your index finger in both shapes.</p>
+    <div class="flow">
+      <div class="step"><b>1. Find the key</b>Look for the chord that feels like the end of a phrase, and check the key signature.</div>
+      <div class="arrow" aria-hidden="true">→</div>
+      <div class="step"><b>2. Number the roots</b>Count each chord's root up from the key note: 1 to 7.</div>
+      <div class="arrow" aria-hidden="true">→</div>
+      <div class="step"><b>3. Mark the quality</b>Upper case for major, lower case for minor, ° for diminished, then any 7.</div>
+      <div class="arrow" aria-hidden="true">→</div>
+      <div class="step"><b>4. Label the job</b>Tonic, subdominant or dominant. The pattern of jobs is the shape of the song.</div>
+    </div>
   </div>
-  <div class="tip"><b>Power chords.</b> Play only the lowest two or three notes of either shape (root, 5th and the octave) and you have a power chord. With no 3rd in it, it is neither major nor minor, which is why it works over both.</div>
+  <div class="card">
+    <h3>Progression explorer</h3>
+    <div class="ctl"><div class="grp"><span class="lab">Key</span><span class="grp" id="pKeys"></span></div></div>
+    <div class="ctl"><div class="grp"><span class="lab">Major key</span><span class="grp" id="pSets"></span></div></div>
+    <div class="ctl"><div class="grp"><span class="lab">Minor key</span><span class="grp" id="pSetsMin"></span></div>
+    <button type="button" class="pbtn" id="pPlay">▶ Play progression</button></div>
+    <div class="scroll"><div class="prog" id="prog"></div></div>
+    <p id="pNote"></p>
+    <div class="legend">
+      <span><i class="sw" style="background:var(--go)"></i>Tonic</span>
+      <span><i class="sw" style="background:var(--perfect)"></i>Subdominant</span>
+      <span><i class="sw" style="background:var(--tritone)"></i>Dominant</span>
+    </div>
+  </div>
+  <div class="tip"><b>Transposing drill.</b> Pick one progression and play it in three keys without writing anything down. Think in numerals, find the I chord, and let the shapes from chapters 3, 4 and 8 supply the rest.</div>
 </section>
 <section id="lesson-3">
   <div class="lhd"><span class="num">3</span><span class="badge core">Core</span></div>
-  <h2>Slash chords and inversions</h2>
-  <p>A slash chord names a chord and then the bass note to play under it: C/E is a C chord with E as the lowest note. When the bass note belongs to the chord it is an <b>inversion</b>. When it does not, the bass adds a new colour to the chord.</p>
-  <div class="card">
-    <h3>Slash chord explorer</h3>
-    <div class="ctl"><div class="grp"><span class="lab">Chord</span><span class="grp" id="slRoot"></span></div><div class="grp"><span class="grp" id="slQual"></span></div></div>
-    <div class="ctl"><div class="grp"><span class="lab">Bass note</span><span class="grp" id="slBass"></span></div></div>
-    <div id="slOut" class="nmout"></div>
-  </div>
-  <div class="card">
-    <h3>What they are for: a walking bass line</h3>
-    <div class="ctl"><div class="grp"><span class="lab">Key</span><span class="grp" id="slKey"></span></div><button type="button" class="pbtn" id="slPlay">▶ Play the line</button></div>
-    <div class="scroll"><div class="prog" id="slProg" style="min-width:860px"></div></div>
-    <p class="cap">The chords are ordinary ones from the key. The slash chords exist only to let the bass walk down the scale one step at a time.</p>
-  </div>
+  <h2>Cadences: how phrases end</h2>
+  <p>A cadence is the pair of chords at the end of a phrase. It works like punctuation: some endings sound finished, some sound like a pause, and one deliberately misleads the ear.</p>
+  <div class="card"><div class="sd">
+    <div class="sdc" style="border-top-color:var(--go)"><span class="rn">V → I</span><span class="cn">Authentic</span><span class="ns">G7 → C</span><span class="cap">A full stop. The strongest way to end.</span><button type="button" class="pbtn" data-play="ccc:48,52,55,60|55,59,62,65|48,52,55,60" aria-label="Play authentic cadence">▶</button></div>
+    <div class="sdc" style="border-top-color:var(--perfect)"><span class="rn">IV → I</span><span class="cn">Plagal</span><span class="ns">F → C</span><span class="cap">The "amen" ending. Gentle and settled.</span><button type="button" class="pbtn" data-play="ccc:48,52,55,60|53,57,60,65|48,52,55,60" aria-label="Play plagal cadence">▶</button></div>
+    <div class="sdc" style="border-top-color:var(--tritone)"><span class="rn">… → V</span><span class="cn">Half</span><span class="ns">C → F → G</span><span class="cap">A comma. The phrase stops on tension and needs an answer.</span><button type="button" class="pbtn" data-play="ccc:48,52,55,60|53,57,60,65|55,59,62,67" aria-label="Play half cadence">▶</button></div>
+    <div class="sdc" style="border-top-color:var(--minor)"><span class="rn">V → vi</span><span class="cn">Deceptive</span><span class="ns">G7 → Am</span><span class="cap">A surprise. You expect I and get its darker stand-in.</span><button type="button" class="pbtn" data-play="ccc:48,52,55,60|55,59,62,65|57,60,64,69" aria-label="Play deceptive cadence">▶</button></div>
+  </div><p class="cap">Shown in C major. Each example starts on the I chord so you hear the key first.</p></div>
 </section>
 <section id="lesson-4">
-  <div class="lhd"><span class="num">4</span><span class="badge deep">Go deeper</span></div>
-  <h2>Spread triads and pedal points</h2>
-  <p>Two more things to do with three notes and a bass. A <b>spread triad</b> takes the middle note of a triad and moves it up an octave, so the chord covers more than an octave. It sounds open and piano-like. A <b>pedal point</b> does the opposite job: the bass holds one note while the chords above it change, building tension until the bass finally moves.</p>
+  <div class="lhd"><span class="num">4</span><span class="badge core">Core</span></div>
+  <h2>Relative and parallel minor</h2>
+  <p>Every major key has two different minor partners, and they are easy to confuse.</p>
   <div class="card">
-    <h3>Spread triads</h3>
-    <div class="ctl"><div class="grp"><span class="lab">Chord</span><span class="grp" id="spRoot"></span></div><div class="grp"><span class="grp" id="spQual"></span></div></div>
-    <div class="shapes" id="spOut" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr))"></div>
+    <div class="rel">
+      <span class="rl">C major</span><div class="chips" id="rMaj"></div>
+      <span class="rl">A minor <i>relative</i></span><div class="chips" id="rRel"></div>
+      <span class="rl">C minor <i>parallel</i></span><div class="chips" id="rPar"></div>
+    </div>
+    <p class="cap">Dark chip = home note. Purple chips = notes lowered by a half step compared with C major.</p>
   </div>
-  <div class="card">
-    <h3>Pedal point</h3>
-    <div class="ctl"><div class="grp"><span class="lab">Key</span><span class="grp" id="pdKey"></span></div><button type="button" class="pbtn" id="pdPlay">▶ Play</button></div>
-    <div class="scroll"><div class="prog" id="pdProg" style="min-width:560px"></div></div>
-    <p class="cap">I, IV, V and the borrowed iv, all over the key note in the bass.</p>
-  </div>
+  <ul>
+    <li><b>Relative minor</b> uses exactly the same seven notes and the same key signature, but treats the 6th note as home. C major and A minor are relatives.</li>
+    <li><b>Parallel minor</b> keeps the same home note and lowers the 3rd, 6th and 7th. C major and C minor are parallel.</li>
+  </ul>
+  <div class="tip"><b>On the neck.</b> The relative minor root is three frets below the major root on the same string: C at fret 8 of the low E string, A at fret 5. Going the other way, the relative major is three frets above the minor root.</div>
 </section>
 <section id="lesson-5">
-  <div class="lhd"><span class="num">5</span><span class="badge deep">Go deeper</span></div>
-  <h2>Drop 2 and drop 3 voicings</h2>
-  <p>Seventh chords stacked in plain thirds are often unplayable on guitar. The fix is to take the second note from the top and drop it an octave. The result, a <b>drop 2</b> voicing, fits neatly on four neighbouring strings. There are three such string sets: the top four, the middle four and the bottom four. Each chord has four of them, one for each chord tone in the bass, and together they walk up the neck.</p>
+  <div class="lhd"><span class="num">5</span><span class="badge core">Core</span></div>
+  <h2>Why there are three minor scales</h2>
+  <p>Natural minor has one weakness: its 7th note sits a whole step below home, so the chord built on the 5th degree is a minor chord with little pull. Composers fixed that by raising notes, and each fix became a scale of its own.</p>
   <div class="card">
-    <div class="ctl"><div class="grp"><span class="lab">Root</span><span class="grp" id="d2Root"></span></div></div>
-    <div class="ctl"><div class="grp"><span class="lab">Voicing</span><span class="grp" id="d2Kind"></span></div><div class="grp"><span class="lab">Type</span><span class="grp" id="d2Type"></span></div><div class="grp"><span class="lab">Strings</span><span class="grp" id="d2Set"></span></div></div>
-    <div class="shapes" id="d2Out" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr))"></div>
-    <p class="cap">Ordered from lowest to highest position. Click a diagram to hear it.</p>
+    <div class="flow">
+      <div class="step"><b>Natural minor <button type="button" class="pbtn" data-play="m:60,62,63,65,67,68,70,72" aria-label="Play C natural minor">▶</button></b>1 2 ♭3 4 5 ♭6 ♭7<br>Soft, modal sound. The v chord is minor, so the return home is gentle.</div>
+      <div class="arrow" aria-hidden="true">→</div>
+      <div class="step"><b>Harmonic minor <button type="button" class="pbtn" data-play="m:60,62,63,65,67,68,71,72" aria-label="Play C harmonic minor">▶</button></b>1 2 ♭3 4 5 ♭6 <u>7</u><br>Raise the 7th. Now the V chord is a dominant 7 and pulls hard to i. Side effect: a three-fret jump from ♭6 to 7.</div>
+      <div class="arrow" aria-hidden="true">→</div>
+      <div class="step"><b>Melodic minor <button type="button" class="pbtn" data-play="m:60,62,63,65,67,69,71,72" aria-label="Play C melodic minor">▶</button></b>1 2 ♭3 4 5 <u>6</u> <u>7</u><br>Raise the 6th too. The jump disappears and lines run smoothly. It is a major scale with a lowered 3rd.</div>
+    </div>
+    <p class="cap">Underlined degrees are the raised notes. ▶ plays each scale from C. Real minor-key music mixes all three freely, often within one phrase.</p>
   </div>
-  <p><b>Drop 3</b> works the same way but drops the third note from the top. The bass note ends up one string further away, with a string skipped in between, which gives a wider, fuller sound suited to playing alone or with a singer.</p>
 </section>
 <section id="lesson-6">
   <div class="lhd"><span class="num">6</span><span class="badge deep">Go deeper</span></div>
-  <h2>A scale of chords up the neck</h2>
-  <p>Take one kind of voicing and move it through all seven chords of a key, and you have a <b>chord scale</b>: the harmonised scale from chapter 2, laid out along one set of strings. It is the fastest way to learn where every chord of a key sits, and it gives you a chord for any melody note.</p>
+  <h2>The practical minor key</h2>
+  <p>Because the three minor scales are mixed freely, a minor key in real music has more than seven chords to choose from. This is the palette you will actually meet, with the scale each chord comes from.</p>
   <div class="card">
-    <div class="ctl"><div class="grp"><span class="lab">Key</span><span class="grp" id="csKey"></span></div><div class="grp"><span class="lab">Strings</span><span class="grp" id="csSet"></span></div><button type="button" class="pbtn" id="csPlay">▶ Play up the scale</button></div>
-    <div class="shapes" id="csOut" style="grid-template-columns:repeat(auto-fit,minmax(190px,1fr))"></div>
-    <p class="cap">Drop 2 voicings with the root in the bass, in order up the neck, starting from whichever chord of the key sits lowest on these strings.</p>
+    <div class="ctl"><div class="grp"><span class="lab">Key</span><span class="grp" id="mkRoots"></span></div>
+    <button type="button" class="pbtn" id="mkPlay">▶ Play ii – V – i</button></div>
+    <div class="sd" id="mkOut"></div>
+    <p class="cap">Click ▶ on a card to hear the chord. Green cards are the minor ii – V – i, the minor-key version of the most common cadence in jazz.</p>
   </div>
+  <ul>
+    <li><b>V7 instead of v:</b> the raised 7th from harmonic minor is used on the V chord almost every time the music wants to return home.</li>
+    <li><b>♭III, ♭VI and ♭VII:</b> the three major chords from natural minor. They give minor-key rock and pop its sound.</li>
+    <li><b>iiø7 – V7 – i:</b> the half-diminished chord on ii leads to V7, which leads home.</li>
+  </ul>
 </section>
 <section id="lesson-7">
-  <div class="lhd"><span class="num">7</span><span class="badge deep">Go deeper</span></div>
-  <h2>Voicings built in fourths</h2>
-  <p>Chords do not have to be built in thirds. Stack notes of a scale a 4th apart and you get open, modern-sounding voicings that do not state major or minor as plainly. They are called <b>quartal</b> voicings, and moving one shape up through a scale gives seven of them.</p>
-  <div class="card">
-    <div class="ctl"><div class="grp"><span class="lab">Dorian on</span><span class="grp" id="q4Root"></span></div><button type="button" class="pbtn" id="q4Play">▶ Play all seven</button></div>
-    <div class="shapes" id="q4Out" style="grid-template-columns:repeat(auto-fit,minmax(150px,1fr))"></div>
-    <p class="cap">Three-note stacks through the Dorian mode. Most are two perfect 4ths (a straight line across the strings); the ones marked in red contain a tritone.</p>
-  </div>
-  <div class="tip"><b>How to use them.</b> Over a single minor 7 chord, any of the seven shapes from that chord's Dorian mode will work. Slide between two neighbours for movement without changing the harmony.</div>
-</section>
-<section id="lesson-8">
-  <div class="lhd"><span class="num">8</span><span class="badge core">Core</span></div>
-  <h2>Voice leading: the shortest path</h2>
-  <p>Good chord playing is less about the shapes and more about how you get from one to the next. Treat each note in a chord as a singer: if a note is shared with the next chord, keep it; otherwise move it to the nearest note of the next chord. In a ii – V – I, the 3rd and 7th of each chord do this almost by themselves.</p>
-  <div class="card">
-    <div class="ctl"><div class="grp"><span class="lab">Key</span><span class="grp" id="vlKey"></span></div><button type="button" class="pbtn" id="vlPlay">▶ Play ii – V – I</button></div>
-    <div class="shapes" id="vlBoxes" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr))"></div>
-    <div id="vlTable" style="display:flex;flex-direction:column;gap:8px"></div>
-    <p class="cap">Shell voicings from chapter 2. Each voice either stays where it is or falls by one step.</p>
-  </div>
-</section>
-<section id="lesson-9">
-  <div class="lhd"><span class="num">9</span><span class="badge check">Checkpoint</span></div>
+  <div class="lhd"><span class="num">7</span><span class="badge check">Checkpoint</span></div>
   <h2>Chapter 5 checkpoint</h2>
   <div class="card">
     <h3>You are ready to move on when you can</h3>
-    <ul>
-      <li>Play one major chord in all five shapes, in order up the neck.</li>
-      <li>Find any major, minor or dominant 7 chord as an E-shape and an A-shape barre.</li>
-      <li>Explain what C/E and C/G are, and play a descending bass line under a chord progression.</li>
-      <li>Play a ii – V – I with shell voicings where the upper notes move by a step or not at all.</li>
-    </ul>
+    <ul><li>Say whether each of the seven chords in a key is tonic, subdominant or dominant.</li><li>Write a progression in Roman numerals and play it in a second key.</li><li>Tell the four cadences apart by ear.</li><li>Find the relative minor of any major key, and explain how it differs from the parallel minor.</li><li>Say which note harmonic minor raises, which two melodic minor raises, and why.</li><li>Name the three chords of a ii – V – i in a minor key.</li></ul>
     <h3>A ten-minute routine</h3>
-    <ol>
-      <li>Three minutes: one chord, five shapes, up and back. Change the chord each day.</li>
-      <li>Three minutes: I – IV – V in one key using only E-shape and A-shape barres, staying within five frets.</li>
-      <li>Two minutes: the walking bass line from lesson 3 in two keys.</li>
-      <li>Two minutes: ii – V – I shells in three keys, watching the 3rds and 7ths.</li>
-    </ol>
+    <ol><li>Two minutes: play I – IV – V – I in two keys, saying each chord's job aloud.</li><li>Three minutes: play I – V – vi – IV, then its minor twin i – ♭VI – ♭III – ♭VII.</li><li>Three minutes: in one minor key, play i, iv and V7, then the minor ii – V – i.</li><li>Two minutes: play the four cadences back to back and name each one.</li></ol>
   </div>
 </section>
 
-<div class="pager"><a class="ghost" href="chapter-4.html">← Chapter 4</a><a href="chapter-6.html">Chapter 6: Scales and Arpeggios Across the Neck →</a></div>
-<footer>Guitar Theory Maps · Chapter 5: Chords Across the Neck</footer>
+<div class="pager"><a class="ghost" href="chapter-4.html">← Chapter 4</a><a href="chapter-6.html">Chapter 6: Pentatonics, Scale Positions and The Blues →</a></div>
+<footer>Guitar Theory Maps · Chapter 5: Chord Function, Progressions and Minor Keys</footer>
 </main>
 <script src="common.js"></script>
 <script src="neck.js"></script>
-<script>(function(){
-// 1. five shapes
-let G={root:0,q:0,sh:3};
-function drawCaged(){const r=RMAJ[G.root],pc=pcOf(r),k=G.q?'m':'M';
- btns('cgRoot',RMAJ,G.root,i=>{G.root=i;drawCaged()});btns('cgQual',['Major','Minor'],G.q,i=>{G.q=i;drawCaged()});btns('cgShape',CAGED.map(s=>s.n+' shape'),G.sh,i=>{G.sh=i;drawCaged()});
- const seen={},dots=[];CAGED.map((s,i)=>i).sort((a,b)=>(a===G.sh?-1:0)-(b===G.sh?-1:0)).forEach(i=>{shapeDots(CAGED[i][k],shapeShift(CAGED[i],pc),pc).forEach(d=>{const key=d.s+'-'+d.f;if(seen[key])return;seen[key]=1;d.dim=i!==G.sh;dots.push(d)})});
- const s=CAGED[G.sh],b=shapeShift(s,pc),sel=shapeDots(s[k],b,pc);
- neck('cgNeck',dots,r+(G.q?' minor':' major')+' in five shapes');
- $('cgBox').innerHTML=box(sel,r+(G.q?'m':'')+' '+s.n+' shape');
- const order=CAGED.map((x,i)=>[shapeShift(x,pc),x.n]).sort((a,b)=>a[0]-b[0]).map(x=>x[1]).join(' → ');
- $('cgInfo').innerHTML=`<b>${r}${G.q?'m':''}, ${s.n} shape.</b> ${b?`The open ${s.n}${G.q?'m':''} chord moved up ${b} fret${b>1?'s':''}, with a barre or fingered notes where the open strings were.`:`This is the ordinary open ${s.n}${G.q?'m':''} chord.`} Notes: ${sel.map(d=>d.txt).join(' ')}.<br><span class="cap">Going up the neck from the nut, ${r}${G.q?'m':''} appears as: ${order}.</span>`}
-drawCaged();
-// 2. barre chords
-const BT=[['major','',[0,2,2,1,0,0],[null,0,2,2,2,0]],['minor','m',[0,2,2,0,0,0],[null,0,2,2,1,0]],['7','7',[0,2,0,1,0,0],[null,0,2,0,2,0]],['m7','m7',[0,2,0,0,0,0],[null,0,2,0,1,0]],['maj7','maj7',[0,2,1,1,0,0],[null,0,2,1,2,0]]];
-let B={root:7,t:0};
-function drawBarre(){const r=RMAJ[B.root],pc=pcOf(r),t=BT[B.t];btns('brRoot',RMAJ,B.root,i=>{B.root=i;drawBarre()});btns('brType',BT.map(x=>x[0]),B.t,i=>{B.t=i;drawBarre()});
- const e=mod12(pc-4),a=mod12(pc-9),cell=(nm,fr,sh,str)=>`<div class="shape">${box(shapeDots(fr,sh,pc),r+t[1]+' '+nm)}<b>${r}${t[1]} · ${nm}</b><span>${sh?`barre at fret ${sh}`:'open position, no barre'} · root on the ${str} string</span></div>`;
- $('brOut').innerHTML=cell('E shape',t[2],e,'low E')+cell('A shape',t[3],a,'A');
- const dots=[];[0,1].forEach(s=>{for(let f=0;f<=12;f++){const p=mod12(LOWM[s]+f),n=['C','C♯','D','E♭','E','F','F♯','G','A♭','A','B♭','B'][p];dots.push({s,f,txt:n,fam:p===pc?'root':n.length>1?'ghost':'perfect'})}});
- neck('brNeck',dots,'Note names on the low E and A strings',{frets:12})}
-drawBarre();
-// 3. slash chords
-let S={root:0,q:0,bass:4,key:0};
-function drawSlash(){const r=RMAJ[S.root],pc=pcOf(r),bp=pcOf(RMAJ[S.bass]),iv=mod12(bp-pc),third=S.q?3:4;
- btns('slRoot',RMAJ,S.root,i=>{S.root=i;drawSlash()});btns('slQual',['Major','Minor'],S.q,i=>{S.q=i;drawSlash()});btns('slBass',RMAJ,S.bass,i=>{S.bass=i;drawSlash()});
- const ch=chordOf(r,0,0,S.q?'m':'M'),inC=[0,third,7].includes(iv),nm=iv?`${ch.name}/${RMAJ[S.bass]}`:ch.name;
- const what=iv===0?'Root position. The root is already the lowest note, so no slash is needed.':iv===third?'First inversion: the 3rd is in the bass. Lighter and less final than root position.':iv===7?'Second inversion: the 5th is in the bass. Often used as a passing chord.':`Not an inversion. ${RMAJ[S.bass]} is not in the chord: it is the ${IVL[iv]} above the root, so the bass adds a new colour.`+(iv===10?` This one sounds like ${r}${S.q?'m7':'7'} with its 7th in the bass.`:iv===2?` With the bass as the new root it is heard as a suspended chord on ${RMAJ[S.bass]}.`:'');
- const fam=iv===0?'go':inC?'perfect':'tritone';
- $('slOut').innerHTML=`<div class="flow"><div class="step" style="border-top-color:${col(fam)}"><b style="font-size:1.5rem">${nm}</b>${ch.notes} over ${RMAJ[S.bass]} in the bass ${PB('c:'+[36+bp].concat(ch.midi.map(m=>m+(m<48+0?12:0))).join(','),'Play '+nm)}</div><div class="step" style="border-top-color:${col(fam)}"><b>${iv===0?'Root position':inC?'Inversion':'New colour'}</b>${what}</div></div>`;
- const key=RMAJ[S.key];btns('slKey',RMAJ,S.key,i=>{S.key=i;drawSlash()});const n=MAJ.map((x,i)=>spell(key,i,x)),kb=36+pcOf(key);
- const L=[[0,'M',12,'I'],[4,'M',11,'V/7'],[5,'m',9,'vi'],[5,'m',7,'vi/5'],[3,'M',5,'IV'],[0,'M',4,'I/3'],[1,'m',2,'ii'],[4,'M',7,'V']].map(([d,q,bo,rn])=>{const c=chordOf(key,d,MAJ[d],q),bn=n[[0,2,4,5,7,9,11].indexOf(bo%12)],sl=bn!==n[d];return{rn,name:c.name+(sl?'/'+bn:''),bass:bn,sl,midi:[kb+bo].concat(c.midi)}});
- $('slProg').innerHTML=L.map(c=>`<button type="button" class="deg" data-play="c:${c.midi.join(',')}" style="background:${col(c.sl?'perfect':'go')}"><span class="cn">${c.name}</span><span class="ns">bass: ${c.bass}</span></button>`).join('<span class="arrow" aria-hidden="true">→</span>');
- $('slPlay').dataset.play='c'.repeat(L.length)+':'+L.map(c=>c.midi.join(',')).join('|')}
-drawSlash();
-// 4. drop 2
-let D={root:0,t:0,set:0,kind:0};const DT=['maj7','7','m7','ø','°7'],DSS=[[[2,3,4,5],[1,2,3,4],[0,1,2,3]],[[0,2,3,4],[1,3,4,5]]],DSL=[['D G B E','A D G B','E A D G'],['E · D G B','A · G B E']];
-// one voicing: pitch classes ord (low to high) on the given strings, as low on the neck as possible
-function voice(pc,iv,ord,set){let prev=0;const ms=ord.map((t,j)=>{let m=j?prev+1:LOWM[set[0]];while(mod12(m)!==mod12(pc+iv[t]))m++;prev=m;return m});let fr=ms.map((m,j)=>m-LOWM[set[j]]);if(Math.min(...fr)<0)fr=fr.map(f=>f+12);if(Math.min(...fr)>=12)fr=fr.map(f=>f-12);return fr}
-const vdots=(fr,ord,iv,set)=>fr.map((f,j)=>{const x=iv[ord[j]]%12;return{s:set[j],f,txt:IVL[x],fam:famOf(x)}});
-function drawDrop(){const r=RMAJ[D.root],pc=pcOf(r),iv=CQ[DT[D.t]][0],set=DSS[D.kind][D.set],nm=r+CQ[DT[D.t]][1];btns('d2Kind',['Drop 2','Drop 3'],D.kind,i=>{D.kind=i;D.set=0;drawDrop()});
- btns('d2Root',RMAJ,D.root,i=>{D.root=i;drawDrop()});btns('d2Type',DT.map(x=>CQ[x][1]),D.t,i=>{D.t=i;drawDrop()});btns('d2Set',DSL[D.kind],D.set,i=>{D.set=i;drawDrop()});
- const vs=[0,1,2,3].map(k=>{const close=[0,1,2,3].map(j=>(k+j)%4),ord=D.kind?[close[1],close[0],close[2],close[3]]:[close[2],close[0],close[1],close[3]],fr=voice(pc,iv,ord,set);return{bass:ord[0],dots:vdots(fr,ord,iv,set),lo:Math.min(...fr)}}).sort((a,b)=>a.lo-b.lo);
- $('d2Out').innerHTML=vs.map(v=>`<div class="shape">${box(v.dots,nm+' drop voicing')}<b>${nm}</b><span>${['root','3rd','5th','7th'][v.bass]} in the bass · frets ${v.dots.map(d=>d.f).join(' ')}</span></div>`).join('')}
-drawDrop();
-// chord scale up the neck
-let CS={k:0,set:0};
-function drawCS(){const key=RMAJ[CS.k],kp=pcOf(key),set=DSS[0][CS.set],Q=['maj7','m7','m7','maj7','7','m7','ø'],RN=['Imaj7','ii7','iii7','IVmaj7','V7','vi7','viiø7'];btns('csKey',RMAJ,CS.k,i=>{CS.k=i;drawCS()});btns('csSet',DSL[0],CS.set,i=>{CS.set=i;drawCS()});
- const rows=MAJ.map((s,d)=>{const iv=CQ[Q[d]][0],ord=[0,2,3,1],fr=voice(kp+s,iv,ord,set);return{d,fr,dots:vdots(fr,ord,iv,set),c:chordOf(key,d,MAJ[d],Q[d])}}).sort((x,y)=>Math.min(...x.fr)-Math.min(...y.fr));
- $('csOut').innerHTML=rows.map(x=>`<div class="shape">${box(x.dots,x.c.name)}<b>${RN[x.d]} · ${x.c.name}</b><span>frets ${x.fr.join(' ')}</span></div>`).join('');
- $('csPlay').dataset.play='c'.repeat(rows.length)+':'+rows.map(x=>x.dots.map(q=>LOWM[q.s]+q.f).join(',')).join('|')}
-drawCS();
-// spread triads and pedal point
-let SP={root:7,q:0,key:0};
-function drawSP(){const r=RMAJ[SP.root],pc=pcOf(r),iv=CQ[SP.q?'m':'M'][0];btns('spRoot',RMAJ,SP.root,i=>{SP.root=i;drawSP()});btns('spQual',['Major','Minor'],SP.q,i=>{SP.q=i;drawSP()});
- $('spOut').innerHTML=[0,1,2].map(k=>{const ord=[k,(k+2)%3,(k+1)%3];let best=null;[[0,1,3],[1,2,4],[2,3,5]].forEach(set=>{const fr=voice(pc,iv,ord,set),sp=Math.max(...fr)-Math.min(...fr);if(!best||sp<best.sp||(sp===best.sp&&Math.min(...fr)<Math.min(...best.fr)))best={fr,set,sp}});
-  return `<div class="shape">${box(vdots(best.fr,ord,iv,best.set),r+' spread triad')}<b>${r}${SP.q?'m':''}</b><span>${['root','3rd','5th'][k]} in the bass · frets ${best.fr.join(' ')}</span></div>`}).join('');
- const key=RMAJ[SP.key],kb=36+pcOf(key);btns('pdKey',RMAJ,SP.key,i=>{SP.key=i;drawSP()});
- const ch=[[0,'M'],[3,'M'],[4,'M'],[3,'m'],[0,'M']].map(([d,q])=>chordOf(key,d,d===3&&q==='m'?5:MAJ[d],q)),tn=spell(key,0,0);
- $('pdProg').innerHTML=ch.map((c,i)=>`<button type="button" class="deg" data-play="c:${[kb].concat(c.midi).join(',')}" style="background:${col(c.name===tn?'go':'perfect')}"><span class="cn">${c.name===tn?c.name:c.name+'/'+tn}</span><span class="ns">bass: ${tn}</span></button>`).join('<span class="arrow" aria-hidden="true">→</span>');
- $('pdPlay').dataset.play='c'.repeat(ch.length)+':'+ch.map(c=>[kb].concat(c.midi).join(',')).join('|')}
-drawSP();
-// 5. quartal
-let Q=2;const DOR=[0,2,3,5,7,9,10];
-function drawQuartal(){const r=RMAJ[Q],pc=pcOf(r);btns('q4Root',RMAJ,Q,i=>{Q=i;drawQuartal()});
- let f0=mod12(pc-9),set=[1,2,3];if(f0>=7){f0-=7;set=[0,1,2]}
- const all=[];$('q4Out').innerHTML=DOR.map((x,i)=>{let prev=LOWM[set[0]]+f0+x;const ms=[prev];[3,6].forEach((st,j)=>{const p=mod12(pc+DOR[(i+st)%7]);let m=prev+1;while(mod12(m)!==p)m++;ms.push(m);prev=m});
-  const tt=(ms[1]-ms[0]===6)||(ms[2]-ms[1]===6),dots=ms.map((m,j)=>{const v=mod12(m-pc);return{s:set[j],f:m-LOWM[set[j]],txt:IVL[v],fam:tt?'tritone':famOf(v)}});all.push(ms);
-  return `<div class="shape">${box(dots,'Quartal voicing '+(i+1))}<b>${i+1}. from ${spell(r,i,x)}</b><span>${tt?'contains a tritone':'two perfect 4ths'}</span></div>`}).join('');
- $('q4Play').dataset.play='c'.repeat(7)+':'+all.map(m=>m.join(',')).join('|')}
-drawQuartal();
-// 6. voice leading
-let V=0;
-function drawVL(){const key=RMAJ[V],kp=pcOf(key);btns('vlKey',RMAJ,V,i=>{V=i;drawVL()});
- let a=mod12(kp+2-9);if(a<3)a+=12;const g=a-2;
- const mk=(root,list)=>list.map(([s,f])=>{const iv=mod12(LOWM[s]+f-root);return{s,f,txt:IVL[iv],fam:famOf(iv)}});
- const ch=[['ii7',chordOf(key,1,2,'m7'),mk(kp+2,[[1,a],[3,a],[4,a+1]])],['V7',chordOf(key,4,7,'7'),mk(kp+7,[[0,g],[2,g],[3,g+1]])],['Imaj7',chordOf(key,0,0,'maj7'),mk(kp,[[1,g],[3,g+1],[4,g+2]])]];
- $('vlBoxes').innerHTML=ch.map(([rn,c,d])=>`<div class="shape">${box(d,c.name+' shell')}<b>${rn} · ${c.name}</b><span>frets ${d.map(x=>x.f).join(' ')}</span></div>`).join('');
- const n=x=>x.notes.split(' '),ii=n(ch[0][1]),v=n(ch[1][1]),I=n(ch[2][1]),chip=(t,l,f)=>`<span class="nchip" style="background:${col(f)};color:#fff">${t}<small style="display:block;font-size:.68rem;font-weight:600">${l}</small></span>`;
- const row=(a,b,c)=>`<div class="chain">${a}<i>${b[0]} →</i>${b[1]}<i>${c[0]} →</i>${c[1]}</div>`;
- $('vlTable').innerHTML=row(chip(ii[3],'7th of '+ch[0][1].name,'minor'),['down a half step',chip(v[1],'3rd of '+ch[1][1].name,'major')],['stays',chip(I[3],'7th of '+ch[2][1].name,'major')])+row(chip(ii[1],'3rd of '+ch[0][1].name,'minor'),['stays',chip(v[3],'7th of '+ch[1][1].name,'minor')],['down a half step',chip(I[1],'3rd of '+ch[2][1].name,'major')]);
- $('vlPlay').dataset.play='ccc:'+ch.map(c=>c[2].slice().sort((p,q)=>p.s-q.s).map(d=>LOWM[d.s]+d.f).join(',')).join('|')}
-drawVL();
+<script>
+// from old chapter 3, lessons 1, 2, 3
+(function(){
+const FN=['go','perfect','go','perfect','tritone','go','tritone'];
+(function(){const N=[[260,78,'go','Tonic','I · iii · vi','home, rest'],[105,250,'perfect','Subdominant','ii · IV','moving away'],[415,250,'tritone','Dominant','V · vii°','tension']],r=66;
+ let s='<svg viewBox="0 0 520 330" role="img" aria-label="Tonic leads to subdominant, subdominant to dominant, dominant back to tonic"><defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="var(--muted)"/></marker></defs>';
+ [[0,1],[1,2],[2,0]].forEach(([a,b])=>{const [x1,y1]=N[a],[x2,y2]=N[b],d=Math.hypot(x2-x1,y2-y1),ux=(x2-x1)/d,uy=(y2-y1)/d;
+  s+=`<line x1="${x1+ux*(r+8)}" y1="${y1+uy*(r+8)}" x2="${x2-ux*(r+12)}" y2="${y2-uy*(r+12)}" stroke="var(--muted)" stroke-width="4" marker-end="url(#ah)"/>`});
+ N.forEach(([x,y,f,t,c,d])=>{s+=`<circle cx="${x}" cy="${y}" r="${r}" fill="${col(f)}"/><text x="${x}" y="${y-12}" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">${t}</text><text x="${x}" y="${y+10}" text-anchor="middle" font-size="16" font-weight="700" fill="#fff" style="font-family:var(--display)">${c}</text><text x="${x}" y="${y+30}" text-anchor="middle" font-size="12" font-weight="600" fill="#fff">${d}</text>`});
+ document.getElementById('func').innerHTML=s+'</svg>'})();
+const RNT=['I','ii','iii','IV','V','vi','vii°'],DN=['Tonic','Supertonic','Mediant','Subdominant','Dominant','Submediant','Leading tone'];
+document.getElementById('degnames').innerHTML=RNT.map((n,i)=>`<button type="button" class="deg" data-play="${BOTH([0,2,4].map(k=>48+MAJ[(i+k)%7]+(i+k>6?12:0)))}" style="background:${col(FN[i])}"><span class="rn">${n}</span><span class="cn">${DN[i]}</span><span class="ns">degree ${i+1}</span></button>`).join('');
+const RS=['Imaj7','ii7','iii7','IVmaj7','V7','vi7','viiø7'],QT=['M','m','m','M','M','m','°'],QS=['maj7','m7','m7','maj7','7','m7','ø'];
+const dia=(d,sev)=>key=>d.map(i=>({rn:sev?RS[i]:RNT[i],fn:FN[i],...chordOf(key,i,MAJ[i],sev?QS[i]:QT[i])}));
+const mn=list=>key=>list.map(([rn,lo,s,q,fn])=>({rn,fn,...chordOf(key,lo,s,q)}));
+const PS=[
+ {n:'I – IV – V – I',ch:dia([0,3,4,0]),note:'The three major chords of the key. Tonic, away, tension, home: the triangle in its simplest form.'},
+ {n:'I – V – vi – IV',ch:dia([0,4,5,3]),note:'Four chords behind a very large number of pop songs. The vi chord acts as a darker stand-in for the tonic.'},
+ {n:'I – vi – IV – V',ch:dia([0,5,3,4]),note:'The classic 1950s loop. It visits tonic twice, then subdominant, then dominant, and repeats.'},
+ {n:'ii – V – I',ch:dia([1,4,0],1),note:'The core cadence of jazz. Roots rise a 4th each time, so with shell voicings the root simply alternates between the A and low E strings in one position.'},
+ {n:'I – vi – ii – V',ch:dia([0,5,1,4],1),note:'A turnaround: it leaves home and sets up the return, so it loops back to I. Three of the four root moves are a 4th up.'},
+ {n:'iii – vi – ii – V – I',ch:dia([2,5,1,4,0],1),note:'Every root moves up a 4th, which is one step counter-clockwise on the circle of fifths. Approaching home through a chain like this is sometimes called back-cycling.'},
+ {n:'12-bar blues',blues:1,ch:key=>[0,0,0,0,3,3,0,0,4,3,0,0].map(i=>({rn:['I7','','','IV7','V7'][i],fn:FN[i],...chordOf(key,i,MAJ[i],'7')})),note:'Twelve bars, three chords, and all three are played as dominant 7ths. That breaks the rule of one dominant chord per key, and it is exactly what gives the blues its sound.'},
+ {n:'i – iv – V7 – i',minor:1,ch:mn([['i',0,0,'m','go'],['iv',3,5,'m','perfect'],['V7',4,7,'7','tritone'],['i',0,0,'m','go']]),note:'The minor-key version of I – IV – V. The V chord borrows the raised 7th from harmonic minor so that it pulls home.'},
+ {n:'i – ♭VII – ♭VI – V7',minor:1,ch:mn([['i',0,0,'m','go'],['♭VII',6,10,'M','tritone'],['♭VI',5,8,'M','perfect'],['V7',4,7,'7','tritone']]),note:'A descending bass line from home down to the V chord, heard in flamenco, surf rock and countless rock songs.'},
+ {n:'i – ♭VI – ♭III – ♭VII',minor:1,ch:mn([['i',0,0,'m','go'],['♭VI',5,8,'M','perfect'],['♭III',2,3,'M','go'],['♭VII',6,10,'M','tritone']]),note:'All four chords come from natural minor. It is the minor-key twin of I – V – vi – IV.'},
+ {n:'iiø7 – V7 – i',minor:1,ch:mn([['iiø7',1,2,'ø','perfect'],['V7',4,7,'7','tritone'],['i7',0,0,'m7','go']]),note:'The minor ii – V – i. The ii chord is half-diminished and the V7 comes from harmonic minor.'}];
+let P={key:0,set:0};
+function renderP(){const p=PS[P.set],roots=p.minor?RMIN:RMAJ,key=roots[P.key],ch=p.ch(key),nMaj=PS.filter(x=>!x.minor).length;
+ btns('pKeys',roots,P.key,i=>{P.key=i;renderP()});
+ btns('pSets',PS.slice(0,nMaj).map(x=>x.n),P.set<nMaj?P.set:-1,i=>{P.set=i;renderP()});btns('pSetsMin',PS.slice(nMaj).map(x=>x.n),P.set-nMaj,i=>{P.set=nMaj+i;renderP()});
+ const el=document.getElementById('prog');
+ const card=(c,b)=>`<button type="button" class="deg" data-play="c:${c.midi.join(',')}" style="background:${col(c.fn)}">${b?`<span class="ns">bar ${b}</span>`:''}<span class="rn">${c.rn}</span><span class="cn">${c.name}</span>${b?'':`<span class="ns">${c.notes}</span>`}</button>`;
+ if(p.blues){el.className='prog blues';el.innerHTML=ch.map((c,i)=>card(c,i+1)).join('')}
+ else{el.className='prog';el.innerHTML=ch.map(c=>card(c)).join('<span class="arrow" aria-hidden="true">→</span>')}
+ document.getElementById('pNote').innerHTML=`<b>${key} ${p.minor?'minor':'major'}.</b> ${p.note}`;
+ document.getElementById('pPlay').dataset.play='c'.repeat(ch.length)+':'+ch.map(c=>c.midi.join(',')).join('|')}
+renderP();
+})();
+// from old chapter 2, lessons 5, 6, 8
+(function(){
+(function(){const chip=(n,c)=>`<span class="nchip" style="background:${c==='root'?'var(--root)':c?col(c):'var(--bg)'};color:${c==='root'?'var(--root-ink)':c?'#fff':'var(--ink)'}">${n}</span>`;
+ document.getElementById('rMaj').innerHTML='C D E F G A B'.split(' ').map((n,i)=>chip(n,i?'':'root')).join('')+PB('m:60,62,64,65,67,69,71,72','Play scale');
+ document.getElementById('rRel').innerHTML='A B C D E F G'.split(' ').map((n,i)=>chip(n,i?'':'root')).join('')+PB('m:57,59,60,62,64,65,67,69','Play scale');
+ document.getElementById('rPar').innerHTML='C D E♭ F G A♭ B♭'.split(' ').map((n,i)=>chip(n,i?([2,5,6].includes(i)?'minor':''):'root')).join('')+PB('m:60,62,63,65,67,68,70,72','Play scale')})();
+})();
+// from old chapter 2, lessons 5, 6, 8
+(function(){
+let MK=9;
+const PAL=[['i',0,0,'m','all three scales','go'],['iiø7',1,2,'ø','natural, harmonic','go'],['♭III',2,3,'M','natural','major'],['iv',3,5,'m','natural, harmonic','minor'],['v',4,7,'m','natural','minor'],['V7',4,7,'7','harmonic, melodic','go'],['♭VI',5,8,'M','natural, harmonic','major'],['♭VII',6,10,'M','natural','major'],['vii°7',6,11,'°7','harmonic','tritone']];
+function renderMK(){const key=RMIN[MK];btns('mkRoots',RMIN,MK,i=>{MK=i;renderMK()});
+ const ch=PAL.map(([rn,lo,s,q,src,f])=>({rn,src,f,...chordOf(key,lo,s,q)}));
+ document.getElementById('mkOut').innerHTML=ch.map(c=>`<div class="sdc" style="border-top-color:${col(c.f)}"><span class="rn">${c.rn}</span><span class="cn">${c.name}</span><span class="ns">${c.notes}</span><span class="cap">from: ${c.src}</span>${PB(BOTH(c.midi),'Play '+c.name)}</div>`).join('');
+ const i7=chordOf(key,0,0,'m7');document.getElementById('mkPlay').dataset.play='ccc:'+[ch[1].midi,ch[5].midi,i7.midi].map(m=>m.join(',')).join('|')}
+renderMK();
 })();
 </script>
 <script src="metro.js"></script>

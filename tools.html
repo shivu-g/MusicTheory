@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guitar Theory Maps Tools</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="tools">
+<main>
+<nav aria-label="Guide"><a href="index.html">← All chapters</a><a href="tools.html" aria-current="page">Tools</a><span class="here">Module V · Toolkit</span><span class="metro"></span><span style="display:flex;gap:8px"><a href="chapter-13.html">← Prev</a><a href="index.html">Next →</a></span></nav>
+<div class="chap" id="tools-top" style="background:#0f172a"><span>Module V · Tools</span><h2>Interactive Reference Toolkit</h2><p>Eight calculators for looking things up while you practise: harmonize any scale, build voicings and arpeggios, and explore every melodic and harmonic minor mode.</p></div>
+<div class="legend"><span><i class="sw" style="background:var(--root)"></i>Root</span><span><i class="sw" style="background:var(--perfect)"></i>Perfect</span><span><i class="sw" style="background:var(--major)"></i>Major</span><span><i class="sw" style="background:var(--minor)"></i>Minor</span><span><i class="sw" style="background:var(--tritone)"></i>Tritone / altered</span><span class="cap">Click any note, chord or ▶ to hear it.</span></div>
+<div class="card"><h3>Jump to a tool</h3><ol class="toc tpills"><li><span class="n">1</span><i class="dotc" style="background:var(--perfect)"></i><a href="#lesson-1">The Scale Harmonizer</a></li><li><span class="n">2</span><i class="dotc" style="background:var(--perfect)"></i><a href="#lesson-2">The Drop Voicing Builder</a></li><li><span class="n">3</span><i class="dotc" style="background:var(--perfect)"></i><a href="#lesson-3">Open-String Chord Finder</a></li><li><span class="n">4</span><i class="dotc" style="background:var(--perfect)"></i><a href="#lesson-4">Quartal Voicing Generator</a></li><li><span class="n">5</span><i class="dotc" style="background:var(--perfect)"></i><a href="#lesson-5">Arpeggio Library</a></li><li><span class="n">6</span><i class="dotc" style="background:var(--perfect)"></i><a href="#lesson-6">2, 3 and 4 Notes-Per-String Explorer</a></li><li><span class="n">7</span><i class="dotc" style="background:var(--perfect)"></i><a href="#lesson-7">All 14 Melodic & Harmonic Minor Modes</a></li><li><span class="n">8</span><i class="dotc" style="background:var(--perfect)"></i><a href="#lesson-8">Twelve-Tone Triad Combinatorics</a></li></ol></div>
+
+<section id="lesson-1">
+  <div class="lhd"><span class="num">1</span><span class="badge tool">Tool</span></div>
+  <h2>The Scale Harmonizer</h2>
+  <p>Choose a scale and a key. The row of cards shows the chord built on each degree using only notes from that scale, with its Roman numeral and the mode that starts on that degree. Click a card to hear the chord. The fretboard and piano show the scale itself.</p>
+  <div class="card">
+    <div class="ctl">
+      <div class="grp"><span class="lab">Scale</span><span class="grp" id="bScales"></span></div>
+      <div class="grp"><span class="lab">Chords</span><span class="grp" id="bSev"></span></div>
+      <button type="button" class="pbtn" id="bPlayScale">▶ Scale</button><button type="button" class="pbtn" id="bPlayAll">▶ All seven chords</button>
+    </div>
+    <div class="ctl"><div class="grp"><span class="lab">Key</span><span class="grp" id="bRoots"></span></div></div>
+    <div class="chain" id="bSteps"></div>
+    <div class="scroll"><div class="dia" id="bDia" style="min-width:820px"></div></div>
+    <div class="legend">
+      <span><i class="sw" style="background:var(--major)"></i>Major type</span>
+      <span><i class="sw" style="background:var(--minor)"></i>Minor type</span>
+      <span><i class="sw" style="background:var(--go)"></i>Dominant 7</span>
+      <span><i class="sw" style="background:var(--tritone)"></i>Diminished or augmented</span>
+    </div>
+    <div class="scroll"><div id="bFret" style="min-width:720px"></div></div>
+    <div class="scroll"><div id="bPiano" style="min-width:420px;max-width:620px"></div></div>
+    <p class="cap">W = whole step (2 frets), H = half step (1 fret), W+H = 3 frets. Harmonic major and double harmonic are rarer scales included for completeness; a chord marked * is an altered stack outside the basic chord types. A ♭ before a numeral means that degree is a half step lower than in the major scale.</p>
+  </div>
+  <h3>What to notice</h3>
+  <ul>
+    <li><b>Major scale:</b> only one dominant 7 chord, on V. That is why V7 points so clearly at I.</li>
+    <li><b>Natural minor:</b> the same seven chords as its relative major, renumbered from a new home. The dominant 7 moves to ♭VII.</li>
+    <li><b>Harmonic minor:</b> V becomes a dominant 7 and vii becomes a fully diminished 7. Both lead strongly back to i. The i chord gains a major 7th on top of a minor triad.</li>
+    <li><b>Melodic minor:</b> two dominant 7 chords side by side on IV and V, and two half-diminished chords on vi and vii. Its modes supply many of the scales jazz players use over altered dominants.</li>
+  </ul>
+  <div class="tip"><b>Practice loop.</b> Set the harmonizer to seventh chords, pick one key, and play i, iv and V from each of the three minor scales with the shell voicings from chapter 8. Listen for how the V chord changes the moment the 7th of the scale is raised.</div>
+</section>
+<section id="lesson-2">
+  <div class="lhd"><span class="num">2</span><span class="badge tool">Tool</span></div>
+  <h2>The Drop Voicing Builder</h2>
+  <p>Chapter 8 introduced drop 2 and drop 3. They belong to a family. Start with a seventh chord stacked in thirds (close position), number its notes from the top, and drop one or two of them an octave. Each recipe spreads the chord differently, and each one gives four inversions.</p>
+  <div class="card">
+    <div class="ctl"><div class="grp"><span class="lab">Root</span><span class="grp" id="vbRoot"></span></div></div>
+    <div class="ctl"><div class="grp"><span class="lab">Chord</span><span class="grp" id="vbType"></span></div></div>
+    <div class="ctl"><div class="grp"><span class="lab">Recipe</span><span class="grp" id="vbKind"></span></div><div class="grp"><span class="lab">Strings</span><span class="grp" id="vbSet"></span></div></div>
+    <p id="vbInfo"></p>
+    <div class="shapes" id="vbOut" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr))"></div>
+    <p class="cap">Only string groups where all four inversions are reachable are offered. Click a diagram to hear it.</p>
+  </div>
+</section>
+<section id="lesson-3">
+  <div class="lhd"><span class="num">3</span><span class="badge tool">Tool</span></div>
+  <h2>Open-String Chord Finder</h2>
+  <p>Letting open strings ring against fretted notes higher up the neck gives a shimmering sound that no barre chord can produce. There is no fixed system for these, so this finder searches for them: it looks for shapes with the root in the bass where every open string used is a note of the chord.</p>
+  <div class="card">
+    <div class="ctl"><div class="grp"><span class="lab">Root</span><span class="grp" id="osRoot"></span></div></div>
+    <div class="ctl"><div class="grp"><span class="lab">Chord</span><span class="grp" id="osType"></span></div></div>
+    <p id="osInfo"></p>
+    <div class="shapes" id="osOut" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr))"></div>
+    <p class="cap">Small dots to the left of the nut are open strings. Keys with sharps that match the open strings (E, A, D, G) give the most results.</p>
+  </div>
+</section>
+<section id="lesson-4">
+  <div class="lhd"><span class="num">4</span><span class="badge tool">Tool</span></div>
+  <h2>Quartal Voicing Generator</h2>
+  <p>The fourth voicings of chapter 10 can be built from any seven-note scale and with more notes. Three-note stacks are light and mobile; four-note stacks are fuller. Melodic and harmonic minor produce more stacks with a tritone or an unusual gap, which is the source of their darker colour.</p>
+  <div class="card">
+    <div class="ctl"><div class="grp"><span class="lab">Scale</span><span class="grp" id="qxScale"></span></div><div class="grp"><span class="lab">Notes</span><span class="grp" id="qxParts"></span></div></div>
+    <div class="ctl"><div class="grp"><span class="lab">Root</span><span class="grp" id="qxRoot"></span></div><button type="button" class="pbtn" id="qxPlay">▶ Play all seven</button></div>
+    <div class="shapes" id="qxOut" style="grid-template-columns:repeat(auto-fit,minmax(160px,1fr))"></div>
+  </div>
+</section>
+<section id="lesson-5">
+  <div class="lhd"><span class="num">5</span><span class="badge tool">Tool</span></div>
+  <h2>Arpeggio Library</h2>
+  <p>Every chord type from this guide as an arpeggio, in each of the five positions. Work through one type at a time; the shapes for related chords differ by a single note, just as the chords do.</p>
+  <div class="card">
+    <div class="ctl"><div class="grp"><span class="lab">Root</span><span class="grp" id="alRoot"></span></div></div>
+    <div class="ctl"><div class="grp"><span class="lab">Chord</span><span class="grp" id="alType"></span></div></div>
+    <div class="ctl"><div class="grp"><span class="lab">Position</span><span class="grp" id="alPos"></span></div><button type="button" class="pbtn" id="alPlay">▶ Play arpeggio</button></div>
+    <p id="alInfo"></p>
+    <div class="scroll"><div id="alNeck" style="min-width:720px"></div></div>
+  </div>
+</section>
+<section id="lesson-6">
+  <div class="lhd"><span class="num">6</span><span class="badge tool">Tool</span></div>
+  <h2>2, 3 and 4 Notes-Per-String Explorer</h2>
+  <p>How many notes you play on each string decides the shape of a scale. Three per string gives the even patterns of chapter 6. Two per string makes a compact shape that drifts toward the nut as it climbs. Four per string covers a huge range by sliding up the neck, useful for long runs that travel.</p>
+  <div class="card">
+    <div class="ctl"><div class="grp"><span class="lab">Scale</span><span class="grp" id="npScale"></span></div><div class="grp"><span class="lab">Per string</span><span class="grp" id="npN"></span></div></div>
+    <div class="ctl"><div class="grp"><span class="lab">Key</span><span class="grp" id="npRoot"></span></div><div class="grp"><span class="lab">Start on degree</span><span class="grp" id="npDeg"></span></div><button type="button" class="pbtn" id="npPlay">▶ Play</button></div>
+    <div class="scroll"><div id="npNeck" style="min-width:820px"></div></div>
+    <p class="cap">Numbers are scale degrees. Four-per-string patterns need a position shift on every string.</p>
+  </div>
+</section>
+<section id="lesson-7">
+  <div class="lhd"><span class="num">7</span><span class="badge tool">Tool</span></div>
+  <h2>All 14 Melodic & Harmonic Minor Modes</h2>
+  <p>Chapter 11 picked out the handful of these that get used most. Here are all fourteen. Each is its parent scale started from a different note, and each has its own home chord.</p>
+  <div class="card">
+    <div class="ctl"><div class="grp"><span class="lab">Parent</span><span class="grp" id="mmFam"></span></div></div>
+    <div class="ctl"><div class="grp"><span class="lab">Mode</span><span class="grp" id="mmMode"></span></div></div>
+    <div class="ctl"><div class="grp"><span class="lab">Root</span><span class="grp" id="mmRoot"></span></div><button type="button" class="pbtn" id="mmPlay">▶ Chord, then scale</button></div>
+    <p id="mmInfo"></p>
+    <div class="scroll"><div id="mmFret" style="min-width:720px"></div></div>
+    <div class="scroll"><div id="mmPiano" style="min-width:420px;max-width:620px"></div></div>
+  </div>
+</section>
+<section id="lesson-8">
+  <div class="lhd"><span class="num">8</span><span class="badge tool">Tool</span></div>
+  <h2>Twelve-Tone Triad Combinatorics</h2>
+  <p>A more experimental idea: some sets of four triads use all twelve notes with none repeated. Playing through such a set touches every note exactly once while each fragment still sounds like an ordinary chord, which gives lines that are free of any key but never random.</p>
+  <div class="card">
+    <div class="ctl"><div class="grp"><span class="lab">Start on</span><span class="grp" id="ttRoot"></span></div><div class="grp"><span class="lab">Set</span><span class="grp" id="ttSet"></span></div><button type="button" class="pbtn" id="ttPlay">▶ Play the set</button></div>
+    <div class="sd" id="ttOut"></div>
+    <p class="cap" id="ttInfo"></p>
+  </div>
+</section>
+
+<div class="pager"><a class="ghost" href="chapter-13.html">← Chapter 13</a><a href="index.html">All chapters →</a></div>
+<footer>Guitar Theory Maps · Interactive Reference Toolkit</footer>
+</main>
+<script src="common.js"></script>
+<script src="neck.js"></script>
+<script>
+// from old chapter 2, lessons 7
+(function(){
+const SC=[
+ {n:'Major',s:MAJ,minor:0,m:['Ionian','Dorian','Phrygian','Lydian','Mixolydian','Aeolian','Locrian']},
+ {n:'Natural minor',s:[0,2,3,5,7,8,10],minor:1,m:['Aeolian','Locrian','Ionian','Dorian','Phrygian','Lydian','Mixolydian']},
+ {n:'Harmonic minor',s:[0,2,3,5,7,8,11],minor:1,m:['Harmonic minor','Locrian ♮6','Ionian ♯5','Dorian ♯4','Phrygian dominant','Lydian ♯2','Ultralocrian']},
+ {n:'Melodic minor',s:[0,2,3,5,7,9,11],minor:1,m:['Melodic minor','Dorian ♭2','Lydian augmented','Lydian dominant','Mixolydian ♭6','Locrian ♮2','Altered']},
+ {n:'Harmonic major',s:[0,2,4,5,7,8,11],minor:0,m:['Harmonic major','Dorian ♭5','Phrygian ♭4','Lydian ♭3','Mixolydian ♭2','Lydian augmented ♯2','Locrian ♭♭7']},
+ {n:'Double harmonic',s:[0,1,4,5,7,8,11],minor:0,m:['Double harmonic major','Lydian ♯2 ♯6','Ultraphrygian','Hungarian minor','Oriental','Ionian ♯2 ♯5','Locrian ♭♭3 ♭♭7']}];
+const DEG=['1','♭2','2','♭3','3','4','♭5','5','♭6','6','♭7','7'], RN=['I','II','III','IV','V','VI','VII'];
+let B={scale:0,root:0,sev:1};
+function renderB(){const sc=SC[B.scale],roots=sc.minor?RMIN:RMAJ,r=roots[B.root],s=sc.s;
+ btns('bScales',SC.map(x=>x.n),B.scale,i=>{B.scale=i;renderB()});btns('bSev',['Triads','Seventh chords'],B.sev,i=>{B.sev=i;renderB()});btns('bRoots',roots,B.root,i=>{B.root=i;renderB()});
+ const names=s.map((x,i)=>spell(r,i,x));const bm=48+pcOf(r),cm=i=>[0,2,4].concat(B.sev?[6]:[]).map(k=>bm+s[(i+k)%7]+(i+k>6?12:0));
+ document.getElementById('bPlayScale').dataset.play='m:'+s.concat(12).map(x=>bm+x).join(',');document.getElementById('bPlayAll').dataset.play='ccccccc:'+s.map((x,i)=>cm(i).join(',')).join('|');
+ let st='';s.forEach((x,i)=>{st+=`<span class="nchip" style="background:${i?col(FAM[x]):'var(--root)'};color:${i?'#fff':'var(--root-ink)'}">${DEG[x]}</span>`;const g=(i<6?s[i+1]:12)-x;st+=`<i>${g===1?'H':g===2?'W':'W+H'}</i>`});
+ st+=`<span class="nchip" style="background:var(--root);color:var(--root-ink)">1</span>`;document.getElementById('bSteps').innerHTML=st;
+ const iv=(i,k)=>((s[(i+k)%7]-s[i])%12+12)%12;
+ document.getElementById('bDia').innerHTML=s.map((x,i)=>{const t=iv(i,2),f=iv(i,4),v=iv(i,6);
+  const tri=t===4?(f===7?'maj':'aug'):(f===7?'min':'dim');let suf,rs,fam;const odd=![3,4].includes(t)||(t===4&&![7,8].includes(f))||(t===3&&![6,7].includes(f))||(B.sev&&!({maj:[10,11],min:[10,11],dim:[9,10],aug:[11]})[tri].includes(v));
+  if(odd){suf=' *';rs='';fam='ghost'}else if(!B.sev){suf={maj:'',min:'m',dim:'°',aug:'+'}[tri];rs={maj:'',min:'',dim:'°',aug:'+'}[tri];fam={maj:'major',min:'minor',dim:'tritone',aug:'tritone'}[tri]}
+  else if(tri==='maj'){if(v===11){suf='maj7';rs='maj7';fam='major'}else{suf='7';rs='7';fam='go'}}
+  else if(tri==='min'){if(v===10){suf='m7';rs='7';fam='minor'}else{suf='m(maj7)';rs='(maj7)';fam='minor'}}
+  else if(tri==='dim'){if(v===10){suf='m7♭5';rs='ø7';fam='tritone'}else{suf='°7';rs='°7';fam='tritone'}}
+  else{suf='maj7♯5';rs='+maj7';fam='tritone'}
+  let rn=RN[i];if(t===3)rn=rn.toLowerCase();rn=(x<MAJ[i]?'♭':'')+rn;
+  const ns=[0,2,4].concat(B.sev?[6]:[]).map(k=>names[(i+k)%7]).join(' ');
+  return `<button type="button" class="deg" data-play="${BOTH(cm(i))}" style="background:${col(fam)}"><span class="rn">${rn}<small>${rs}</small></span><span class="cn">${names[i]}${suf}</span><span class="ns">${ns}</span><span class="md">${sc.m[i]}</span></button>`}).join('');
+ const map={};s.forEach((x,i)=>map[x]=[DEG[x],i?FAM[x]:'root']);
+ drawFret('bFret',pcOf(r),map,r+' '+sc.n+' scale');drawPiano('bPiano',pcOf(r),map,r+' '+sc.n+' scale')}
+renderB();
+})();
+// from old chapter 11, lessons 1, 2, 3
+(function(){
+const VT=[['maj7',[0,4,7,11]],['7',[0,4,7,10]],['m7',[0,3,7,10]],['m7♭5',[0,3,6,10]],['°7',[0,3,6,9]],['m(maj7)',[0,3,7,11]],['maj7♯5',[0,4,8,11]],['7♯5',[0,4,8,10]],['7♭5',[0,4,6,10]],['7sus4',[0,5,7,10]],['6',[0,4,7,9]],['m6',[0,3,7,9]]];
+const KD=[['Drop 2',[2,0,1,3],'the 2nd note from the top'],['Drop 3',[1,0,2,3],'the 3rd note from the top'],['Drop 2 and 3',[1,2,0,3],'the 2nd and 3rd notes from the top'],['Drop 2 and 4',[0,2,1,3],'the 2nd and 4th notes from the top']];
+const COMBOS=[];
+for(let a=0;a<3;a++)for(let b=a+1;b<4;b++)for(let c=b+1;c<5;c++)for(let d=c+1;d<6;d++)COMBOS.push([a,b,c,d]);
+const lab=(iv,x)=>({8:iv.includes(7)?'♭6':'♯5',6:iv.includes(7)?'♯4':'♭5',9:iv.includes(10)||iv.includes(11)?'13':iv.includes(6)?'°7':'6'})[x]||IVL[x];
+let V={root:0,t:0,k:0,set:0};
+function inv(pc,iv,k,set){return[0,1,2,3].map(r=>{const close=[0,1,2,3].map(j=>(r+j)%4),ord=KD[k][1].map(i=>close[i]),fr=voiceOn(pc,iv,ord,set);return{ord,fr,span:Math.max(...fr)-Math.min(...fr)}})}
+function drawVB(){const r=RMAJ[V.root],pc=pcOf(r),[nm,iv]=VT[V.t];
+ const sets=COMBOS.filter(s=>inv(pc,iv,V.k,s).every(x=>x.span<=4)).sort((a,b)=>(a[3]-a[0])-(b[3]-b[0])||b[0]-a[0]);if(V.set>=sets.length)V.set=0;
+ btns('vbRoot',RMAJ,V.root,i=>{V.root=i;drawVB()});btns('vbType',VT.map(x=>x[0]),V.t,i=>{V.t=i;drawVB()});btns('vbKind',KD.map(x=>x[0]),V.k,i=>{V.k=i;V.set=0;drawVB()});
+ btns('vbSet',sets.map(s=>s.map(i=>SNM[i].toUpperCase()).join(' ')),V.set,i=>{V.set=i;drawVB()});
+ $('vbInfo').innerHTML=`<b>${r}${nm}, ${KD[V.k][0].toLowerCase()}</b>: take the close-position chord and lower ${KD[V.k][2]} by an octave.`;
+ if(!sets.length){$('vbOut').innerHTML='<p class="cap">No comfortable string group for this combination.</p>';return}
+ const set=sets[V.set];$('vbOut').innerHTML=inv(pc,iv,V.k,set).sort((a,b)=>Math.min(...a.fr)-Math.min(...b.fr)).map(x=>{const dots=x.fr.map((f,j)=>{const v=iv[x.ord[j]];return{s:set[j],f,txt:lab(iv,v),fam:v===0?'root':[6,8].includes(v)?'tritone':FAM[v]}});
+  return `<div class="shape">${box(dots,r+nm)}<b>${r}${nm}</b><span>${['root',iv[1]===5?'4th':'3rd','5th',iv[3]===9&&!iv.includes(6)?'6th':'7th'][x.ord[0]]} in the bass · frets ${x.fr.join(' ')}</span></div>`}).join('')}
+drawVB();
+const OT=[['major',[4],[0,4,7]],['minor',[3],[0,3,7]],['add9',[4,2],[0,2,4,7]],['maj7',[4,11],[0,4,7,11,2]],['6/9',[4,9],[0,2,4,7,9]],['sus2',[2],[0,2,7]],['sus4',[5],[0,5,7]],['m7',[3,10],[0,3,7,10,5]],['m9',[3,10,2],[0,2,3,7,10]],['7',[4,10],[0,4,7,10,2]],['maj7♯11',[4,11,6],[0,4,6,7,11,2]]];
+let O={root:4,t:2};
+function drawOS(){const r=RMAJ[O.root],pc=pcOf(r),[nm,req,ok]=OT[O.t];btns('osRoot',RMAJ,O.root,i=>{O.root=i;drawOS()});btns('osType',OT.map(x=>x[0]),O.t,i=>{O.t=i;drawOS()});
+ const found={};for(let b=0;b<3;b++){const rf=mod12(pc-LOWM[b]);if(rf>9)continue;for(let w=Math.max(1,rf-2);w<=Math.max(1,rf)+1&&w<=10;w++){
+  const opts=[];for(let s=b+1;s<6;s++){const o=[];if(ok.includes(mod12(LOWM[s]-pc)))o.push(0);for(let f=w;f<=w+3;f++)if(ok.includes(mod12(LOWM[s]+f-pc)))o.push(f);opts.push(o)}
+  if(opts.some(o=>!o.length))continue;const rec=(i,cur)=>{if(i===opts.length){const fr=[rf].concat(cur),tones=new Set(fr.map((f,j)=>mod12(LOWM[b+j]+f-pc))),opens=cur.filter(f=>f===0).length,fretted=fr.filter(f=>f>0);
+    if(!req.every(x=>tones.has(x))||opens<1||fretted.length<1||fretted.length>4)return;const span=Math.max(...fretted)-Math.min(...fretted);if(span>3||(rf>0&&Math.min(...fretted)<rf-2))return;
+    if(Math.max(...fretted)<4&&rf===0&&opens>3)return;const key=b+':'+fr.join(','),score=tones.size*3+opens*2-span+(Math.max(...fretted)>=4?3:0);found[key]={b,fr,score};return}
+   opts[i].forEach(f=>rec(i+1,cur.concat(f)))};rec(0,[])}}
+ const list=Object.values(found).sort((x,y)=>y.score-x.score).slice(0,6);
+ $('osInfo').innerHTML=`<b>${r}${nm==='major'?'':nm==='minor'?'m':nm}</b>: ${list.length?`${list.length} shape${list.length>1?'s':''} found.`:'no shapes found. This chord shares too few notes with the open strings; try a root of E, A, D or G.'}`;
+ $('osOut').innerHTML=list.map(x=>{const dots=x.fr.map((f,j)=>{const v=mod12(LOWM[x.b+j]+f-pc);return{s:x.b+j,f,txt:v===0?'R':TENS[v],fam:v===0?'root':FAM[v]}});return `<div class="shape">${box(dots,r+nm+' with open strings')}<b>${r}${nm==='major'?'':nm==='minor'?'m':nm}</b><span>frets ${'×'.repeat(x.b).split('').concat(x.fr).join(' ')}</span></div>`}).join('')}
+drawOS();
+const QS=[['Major',[0,2,4,5,7,9,11]],['Melodic minor',[0,2,3,5,7,9,11]],['Harmonic minor',[0,2,3,5,7,8,11]]];
+let Q={sc:0,parts:0,root:0};
+function drawQX(){const r=(Q.sc?RMIN:RMAJ)[Q.root],pc=pcOf(r),S=QS[Q.sc][1],n=Q.parts?4:3;btns('qxScale',QS.map(x=>x[0]),Q.sc,i=>{Q.sc=i;drawQX()});btns('qxParts',['3','4'],Q.parts,i=>{Q.parts=i;drawQX()});btns('qxRoot',Q.sc?RMIN:RMAJ,Q.root,i=>{Q.root=i;drawQX()});
+ let f0=mod12(pc-9),set=[1,2,3,4];if(f0>=7){f0-=7;set=[0,1,2,3]}set=set.slice(0,n);const all=[];
+ $('qxOut').innerHTML=S.map((x,i)=>{let prev=LOWM[set[0]]+f0+x;const ms=[prev];for(let k=1;k<n;k++){const p=mod12(pc+S[(i+3*k)%7]);let m=prev+1;while(mod12(m)!==p)m++;ms.push(m);prev=m}
+  const gaps=ms.slice(1).map((m,j)=>m-ms[j]),odd=gaps.some(g=>g!==5),dots=ms.map((m,j)=>{const v=mod12(m-pc);return{s:set[j],f:m-LOWM[set[j]],txt:lbl7(S,S.indexOf(v)),fam:odd?'tritone':v?FAM[v]:'root'}});all.push(ms);
+  return `<div class="shape">${box(dots,'Fourth voicing '+(i+1))}<b>${i+1}. from ${spell(r,i,x)}</b><span>${odd?'gaps of '+gaps.join(', ')+' half steps':'all perfect 4ths'}</span></div>`}).join('');
+ $('qxPlay').dataset.play='c'.repeat(7)+':'+all.map(m=>m.join(',')).join('|')}
+function lbl7(S,i){const d=S[i]-MAJ[i];return i?(d<0?'♭':d>0?'♯':'')+(i+1):'R'}
+drawQX();
+})();
+// from old chapter 12, lessons 3, 1, 2, 6
+(function(){
+const lbl=(S,i)=>{const d=S[i]-MAJ[i];return i?(d<0?(d<-1?'♭♭':'♭'):d>0?'♯':'')+(i+1):'R'};
+const NS=[['Major',[0,2,4,5,7,9,11]],['Natural minor',[0,2,3,5,7,8,10]],['Melodic minor',[0,2,3,5,7,9,11]],['Harmonic minor',[0,2,3,5,7,8,11]]];
+let N={sc:0,n:0,root:0,deg:0};
+function drawNP(){const S=NS[N.sc][1],roots=N.sc?RMIN:RMAJ,r=roots[N.root],pc=pcOf(r),k=[2,3,4][N.n];
+ btns('npScale',NS.map(x=>x[0]),N.sc,i=>{N.sc=i;drawNP()});btns('npN',['2','3','4'],N.n,i=>{N.n=i;drawNP()});btns('npRoot',roots,N.root,i=>{N.root=i;drawNP()});btns('npDeg',[1,2,3,4,5,6,7].map(String),N.deg,i=>{N.deg=i;drawNP()});
+ let m=40+mod12(pc+S[N.deg]-4),d=N.deg;if(k===2&&m-40<5)m+=12;const ms=[];for(let i=0;i<6*k;i++){ms.push([m,d%7]);m+=mod12(S[(d+1)%7]-S[d%7])||12;d++}
+ let dots=ms.map(([mm,dg],i)=>{const s=Math.floor(i/k);return{s,f:mm-LOWM[s],txt:dg?String(dg+1):'R',fam:dg?FAM[S[dg]]:'root'}});
+ const mn=Math.min(...dots.map(x=>x.f));if(mn<0)dots=dots.map(x=>({...x,f:x.f+12}));const cut=dots.findIndex(x=>x.f>20);if(cut>=0)dots=dots.slice(0,Math.floor(cut/k)*k);
+ neck('npNeck',dots,r+' '+NS[N.sc][0]+', '+k+' notes per string',{frets:20});$('npPlay').dataset.play='m:'+dots.map(x=>LOWM[x.s]+x.f).join(',')}
+drawNP();
+const FAMS=[['Melodic minor',[0,2,3,5,7,9,11],['Melodic minor','Dorian ♭2','Lydian augmented','Lydian dominant','Mixolydian ♭6','Locrian ♮2','Altered']],['Harmonic minor',[0,2,3,5,7,8,11],['Harmonic minor','Locrian ♮6','Ionian ♯5','Dorian ♯4','Phrygian dominant','Lydian ♯2','Ultralocrian']]];
+let M={f:0,m:0,root:0};
+function drawMM(){const [fn,P,names]=FAMS[M.f],r=RMAJ[M.root],pc=pcOf(r),S=P.map((x,i)=>mod12(P[(i+M.m)%7]-P[M.m])),b=48+pc,map={};
+ btns('mmFam',FAMS.map(x=>x[0]),M.f,i=>{M.f=i;drawMM()});btns('mmMode',names,M.m,i=>{M.m=i;drawMM()});btns('mmRoot',RMAJ,M.root,i=>{M.root=i;drawMM()});
+ const ct=[S[0],S[2],S[4],S[6]],t=ct[1],f=ct[2],v=ct[3];
+ const cn=t===4?(f===8?(v===11?'maj7♯5':'7♯5'):f===6?(v===10?'7♭5':'maj7♭5'):(v===11?'maj7':'7')):t===3?(f===6?(v===9?'°7':v===10?'m7♭5':'°(maj7)'):(v===11?'m(maj7)':'m7')):'(unusual stack)';
+ S.forEach((x,i)=>map[x]=[lbl(S,i),i?(i%2===0?(([6,8].includes(x)||(i===6&&x===9))?'tritone':FAM[x]):'ghost'):'root']);
+ drawFret('mmFret',pc,map,r+' '+names[M.m]);drawPiano('mmPiano',pc,map,r+' '+names[M.m]);
+ $('mmPlay').dataset.play='cm:'+ct.map(x=>b+x).join(',')+'|'+S.concat(12).map(x=>b+x).join(',');
+ $('mmInfo').innerHTML=`<b>${r} ${names[M.m]}</b>: ${S.map((x,i)=>lbl(S,i)==='R'?'1':lbl(S,i)).join(' ')}. Notes: ${S.map((x,i)=>spell(r,i,x)).join(' ')}. Home chord: <b>${r}${cn}</b>. ${M.m?`Same notes as ${RMAJ[mod12(pc-P[M.m])]} ${fn.toLowerCase()}, started from its ${['1st','2nd','3rd','4th','5th','6th','7th'][M.m]} note.`:''}${names[M.m]==='Altered'?' In practice it is played over '+r+'7alt: its ♭4 sounds as the major 3rd of that chord.':''}<br><span class="cap">Coloured dots are the home chord's tones; grey dots are the other scale notes.</span>`}
+drawMM();
+const AL=[['major',[0,4,7]],['minor',[0,3,7]],['diminished',[0,3,6]],['augmented',[0,4,8]],['sus4',[0,5,7]],['6',[0,4,7,9]],['m6',[0,3,7,9]],['maj7',[0,4,7,11]],['7',[0,4,7,10]],['m7',[0,3,7,10]],['m7♭5',[0,3,6,10]],['°7',[0,3,6,9]],['m(maj7)',[0,3,7,11]],['maj7♯5',[0,4,8,11]],['7sus4',[0,5,7,10]],['add9',[0,2,4,7]]],ORD=[3,4,0,1,2];
+let A={root:0,t:7,pos:0};
+function drawAL(){const r=RMAJ[A.root],pc=pcOf(r),[nm,iv]=AL[A.t],win=posWin(CAGED[ORD[A.pos]],pc),map={};btns('alRoot',RMAJ,A.root,i=>{A.root=i;drawAL()});btns('alType',AL.map(x=>x[0]),A.t,i=>{A.t=i;drawAL()});btns('alPos',ORD.map((o,i)=>`${i+1} (${CAGED[o].n} shape)`),A.pos,i=>{A.pos=i;drawAL()});
+ const L=x=>({8:'♯5',6:'♭5',9:iv.includes(6)?'°7':'6',2:'9'})[x]||IVL[x];iv.forEach(x=>map[x]=[L(x),x?([6,8].includes(x)?'tritone':FAM[x]):'root']);
+ const dots=scaleDots(pc,map,win).filter(d=>d.f>=win[0]&&d.f<=win[1]).map(d=>({...d,dim:false}));
+ neck('alNeck',dots,r+' '+nm+' arpeggio',{win});$('alPlay').dataset.play='m:'+dots.map(d=>LOWM[d.s]+d.f).sort((a,b)=>a-b).filter((x,i,a)=>x!==a[i-1]).join(',');
+ $('alInfo').innerHTML=`<b>${r} ${nm}</b>: ${iv.map(L).join(' ')}. Position ${A.pos+1}, frets ${win[0]} to ${win[1]}.`}
+drawAL();
+const TRI=[];
+for(let p=0;p<12;p++){TRI.push({p,q:'',n:[p,(p+4)%12,(p+7)%12]});TRI.push({p,q:'m',n:[p,(p+3)%12,(p+7)%12]})}
+const SETS=[];
+(function find(start,used,cur){if(cur.length===4){SETS.push(cur.slice());return}for(let i=start;i<TRI.length;i++){const t=TRI[i];if(t.n.some(x=>used.has(x)))continue;t.n.forEach(x=>used.add(x));cur.push(t);find(i+1,used,cur);cur.pop();t.n.forEach(x=>used.delete(x))}})(0,new Set(),[]);
+const SIG=s=>{const z=s.find(t=>t.n.includes(0)&&t.p===0);return z?s.map(t=>mod12(t.p)+t.q).sort().join(' '):null},UNI=[...new Map(SETS.filter(s=>s.some(t=>t.p===0)).map(s=>[SIG(s),s])).values()].slice(0,6);
+let Tt={root:0,set:0};
+function drawTT(){const pc=pcOf(RMAJ[Tt.root]);btns('ttRoot',RMAJ,Tt.root,i=>{Tt.root=i;drawTT()});btns('ttSet',UNI.map((x,i)=>String(i+1)),Tt.set,i=>{Tt.set=i;drawTT()});
+ const s=UNI[Tt.set].slice().sort((a,b)=>a.p-b.p),ch=s.map(t=>chordOf(RMAJ[mod12(pc+t.p)],0,0,t.q?'m':'M'));
+ $('ttOut').innerHTML=ch.map(c=>`<div class="sdc" style="border-top-color:var(--perfect)"><span class="rn">${c.name}</span><span class="ns">${c.notes}</span>${PB(BOTH(c.midi),'Play '+c.name)}</div>`).join('');
+ $('ttPlay').dataset.play='mmmm:'+ch.map(c=>c.midi.join(',')).join('|');$('ttInfo').textContent=`${SETS.length} such sets exist using only major and minor triads; ${UNI.length} that include a triad on the starting note are shown. Between them the four triads contain all twelve notes once each.`}
+drawTT();
+})();
+</script>
+<script src="metro.js"></script>
+</body>
+</html>

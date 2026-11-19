@@ -8,154 +8,258 @@
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body data-page="ch9">
 <main>
-<nav aria-label="Guide"><a href="index.html">← All chapters</a><span class="here">Chapter 9 of 13</span><span class="metro"></span><span style="display:flex;gap:8px"><a href="chapter-8.html">← Prev</a><a href="chapter-10.html">Next →</a></span></nav>
-<div class="chap" id="chapter-9" style="background:#b45309"><span>Chapter 9</span><h2>Rhythm and Feel</h2><p>When to play matters as much as what to play. Beats, subdivisions, time signatures, strumming, syncopation and swing, all playable.</p></div>
+<nav aria-label="Guide"><a href="index.html">← All chapters</a><a href="tools.html">Tools</a><span class="here">Module III · Chapter 9 of 13</span><span class="metro"></span><span style="display:flex;gap:8px"><a href="chapter-8.html">← Prev</a><a href="chapter-10.html">Next →</a></span></nav>
+<div class="chap" id="chapter-9" style="background:var(--major)"><span>Chapter 9</span><h2>Substitution and Borrowed Chords</h2><p>Six ways to change the chords of a progression without changing where it is going: functional swaps, secondary dominants, tritone subs and modal mixture.</p></div>
 <div class="legend"><span><i class="sw" style="background:var(--root)"></i>Root</span><span><i class="sw" style="background:var(--perfect)"></i>Perfect</span><span><i class="sw" style="background:var(--major)"></i>Major</span><span><i class="sw" style="background:var(--minor)"></i>Minor</span><span><i class="sw" style="background:var(--tritone)"></i>Tritone / altered</span><span class="cap">Click any note, chord or ▶ to hear it.</span></div>
-<div class="card"><h3>In this chapter</h3><ol class="toc"><li><span class="n">1</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-1">Beat, bar and tempo</a></li><li><span class="n">2</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-2">Note lengths and subdivision</a></li><li><span class="n">3</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-3">Time signatures</a></li><li><span class="n">4</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-4">Strumming patterns</a></li><li><span class="n">5</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-5">Syncopation</a></li><li><span class="n">6</span><i class="dotc" style="background:var(--minor)"></i><a href="#lesson-6">Straight and swing</a></li><li><span class="n">7</span><i class="dotc" style="background:var(--minor)"></i><a href="#lesson-7">Moving an idea in time</a></li><li><span class="n">8</span><i class="dotc" style="background:var(--major)"></i><a href="#lesson-8">Chapter 9 checkpoint</a></li></ol><p class="cap"><i class="dotc" style="background:var(--go)"></i> Core: do these on a first pass. <i class="dotc" style="background:var(--minor)"></i> Go deeper: safe to skip and come back to. <i class="dotc" style="background:var(--major)"></i> Checkpoint.</p></div>
+<div class="card"><h3>In this chapter</h3><ol class="toc"><li><span class="n">1</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-1">Swapping chords that do the same job</a></li><li><span class="n">2</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-2">Secondary dominants</a></li><li><span class="n">3</span><i class="dotc" style="background:var(--minor)"></i><a href="#lesson-3">Tritone substitution</a></li><li><span class="n">4</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-4">Borrowing from the parallel minor</a></li><li><span class="n">5</span><i class="dotc" style="background:var(--minor)"></i><a href="#lesson-5">Diminished passing chords</a></li><li><span class="n">6</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-6">The full palette of a key</a></li><li><span class="n">7</span><i class="dotc" style="background:var(--minor)"></i><a href="#lesson-7">Turnarounds and their upgrades</a></li><li><span class="n">8</span><i class="dotc" style="background:var(--minor)"></i><a href="#lesson-8">Two standard forms, reharmonised</a></li><li><span class="n">9</span><i class="dotc" style="background:var(--minor)"></i><a href="#lesson-9">One note, many chords</a></li><li><span class="n">10</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-10">Reharmonising cheat sheet</a></li><li><span class="n">11</span><i class="dotc" style="background:var(--major)"></i><a href="#lesson-11">Chapter 9 checkpoint</a></li></ol></div>
 
 <section id="lesson-1">
   <div class="lhd"><span class="num">1</span><span class="badge core">Core</span></div>
-  <h2>Beat, bar and tempo</h2>
-  <p>The <b>beat</b> is the steady pulse you tap your foot to. Beats are grouped into <b>bars</b> (also called measures), most often four at a time, with the first beat of each bar felt a little stronger. <b>Tempo</b> is how fast the beats go, measured in beats per minute.</p>
+  <h2>Swapping chords that do the same job</h2>
+  <p>Stack the notes of a key in thirds and the seven seventh chords appear as a staircase: each chord is the one above it shifted along by one note. Neighbours on the staircase share three of their four notes, which is why they can replace each other with so little disturbance.</p>
   <div class="card">
-    <div class="rgrid" id="btGrid"></div>
-    <div class="ctl"><span class="lab">Hear two bars at</span><span class="grp" id="btBtns"></span></div>
-    <p class="cap">Count "one, two, three, four" along with the clicks. The metronome in the top bar keeps this going for as long as you like.</p>
+    <div class="ctl"><div class="grp"><span class="lab">Key</span><span class="grp" id="k1"></span></div></div>
+    <div class="scroll"><div class="mx" id="mx"></div></div>
+    <div class="legend">
+      <span><i class="sw" style="background:var(--go)"></i>Tonic</span>
+      <span><i class="sw" style="background:var(--perfect)"></i>Subdominant</span>
+      <span><i class="sw" style="background:var(--tritone)"></i>Dominant</span>
+    </div>
+    <p class="cap">Columns are the notes of the key arranged in thirds. R, 3, 5 and 7 show each note's role in that chord.</p>
   </div>
+  <ul>
+    <li><b>For I:</b> try vi or iii. The melody note usually decides which one works.</li>
+    <li><b>For IV:</b> try ii. In jazz the ii chord is the default and IV is the alternative.</li>
+    <li><b>For V:</b> try vii°. It is a V7 chord with the root removed.</li>
+  </ul>
 </section>
 <section id="lesson-2">
   <div class="lhd"><span class="num">2</span><span class="badge core">Core</span></div>
-  <h2>Note lengths and subdivision</h2>
-  <p>Every rhythm is made by dividing the beat into equal parts or by holding a note across several beats. Each division has a name and a way of counting it out loud. Counting aloud while you play is the single most effective rhythm exercise there is.</p>
+  <h2>Secondary dominants</h2>
+  <p>The V7 chord pulls strongly toward I. You can borrow that pull for any other major or minor chord in the key by placing <b>its own</b> V7 in front of it, as if that chord were briefly the tonic. Each secondary dominant brings in at least one note from outside the key, and that note is the sound of the device.</p>
   <div class="card">
-    <div id="sbOut" style="display:flex;flex-direction:column;gap:12px"></div>
-    <p class="cap">Each row is one bar of four beats. ▶ plays the note against the click.</p>
+    <div class="ctl"><div class="grp"><span class="lab">Key</span><span class="grp" id="k2"></span></div></div>
+    <div class="sd" id="sd"></div>
+    <p class="cap">Read "V7/ii" as "five-seven of two": the dominant 7th chord built a 5th above the ii chord.</p>
   </div>
+  <div class="tip"><b>On the neck.</b> The dominant's root is a 5th above its target, which is the same fret on the next thicker string. If your target chord has its root on the A string, its secondary dominant has its root at the same fret on the low E string.</div>
+  <div class="tip"><b>Go one step further.</b> Any dominant 7 can be turned into a ii–V by putting the minor 7 chord a 5th above it in front. One bar of V7 becomes half a bar of ii7 and half a bar of V7.</div>
 </section>
 <section id="lesson-3">
-  <div class="lhd"><span class="num">3</span><span class="badge core">Core</span></div>
-  <h2>Time signatures</h2>
-  <p>The two numbers at the start of a piece say how the beats are grouped. The top number is how many beats are in a bar; the bottom number is which note length counts as one beat (4 means quarter note, 8 means eighth note).</p>
+  <div class="lhd"><span class="num">3</span><span class="badge deep">Go deeper</span></div>
+  <h2>Tritone substitution</h2>
+  <p>The tension in a dominant 7 chord comes from its 3rd and 7th, which sit a tritone apart. The dominant 7 chord whose root is a tritone away contains the same two notes with their roles swapped. So one can replace the other, and the bass line turns from a leap into a half-step slide.</p>
   <div class="card">
-    <div class="ctl"><div class="grp"><span class="lab">Time</span><span class="grp" id="tsBtns"></span></div><button type="button" class="pbtn" id="tsPlay">▶ Play two bars</button></div>
-    <div class="rgrid" id="tsGrid"></div>
-    <p id="tsInfo"></p>
+    <div class="ctl"><div class="grp"><span class="lab">Key</span><span class="grp" id="k3"></span></div></div>
+    <div class="two">
+      <div class="triads" id="tt"></div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <span class="lab2">Original <span id="ttP1"></span></span><div class="prog" id="tt1" style="min-width:0"></div>
+        <span class="lab2">With the substitute <span id="ttP2"></span></span><div class="prog" id="tt2" style="min-width:0"></div>
+        <p class="cap" id="ttNote"></p>
+      </div>
+    </div>
   </div>
+  <div class="tip"><b>On the neck.</b> In a shell voicing the 3rd and 7th stay on exactly the same two frets. Only the bass note moves, and it lands one fret above the root of the I chord you are heading for.</div>
 </section>
 <section id="lesson-4">
   <div class="lhd"><span class="num">4</span><span class="badge core">Core</span></div>
-  <h2>Strumming patterns</h2>
-  <p>Good strumming comes from one rule: the hand never stops. It swings down on every numbered beat and up on every "and", like a pendulum. A pattern is simply a choice of which swings touch the strings and which pass by in the air.</p>
+  <h2>Borrowing from the parallel minor</h2>
+  <p>A major key can borrow chords from the minor key that shares its home note. This is called modal mixture. The borrowed chords bring in the lowered 3rd, 6th and 7th, which darken the colour without leaving the key centre.</p>
   <div class="card">
-    <div class="ctl"><div class="grp"><span class="lab">Pattern</span><span class="grp" id="stPre"></span></div><button type="button" class="pbtn" id="stPlay">▶ Play</button></div>
-    <div class="rgrid" id="stGrid"></div>
-    <p class="cap">Click any box to switch that strum on or off and build your own pattern. Filled boxes are played; empty ones are a silent swing of the hand. ↓ is a downstroke, ↑ an upstroke.</p>
+    <div class="ctl"><div class="grp"><span class="lab">Key</span><span class="grp" id="k4"></span></div></div>
+    <div class="rel">
+      <span class="rl">Major key</span><div class="chips" id="bmaj"></div>
+      <span class="rl">Parallel minor</span><div class="chips" id="bmin"></div>
+    </div>
+    <p class="cap">Purple chords are the ones most often borrowed into the major key.</p>
+    <div class="sd" id="bor"></div>
+    <h3>Try these</h3>
+    <ul id="borEx"></ul>
   </div>
-  <div class="tip"><b>Practise it muted first.</b> Lay your fretting hand lightly across the strings and strum the pattern as pure rhythm. Add the chord once your hand can keep the pendulum going on its own.</div>
 </section>
 <section id="lesson-5">
-  <div class="lhd"><span class="num">5</span><span class="badge core">Core</span></div>
-  <h2>Syncopation</h2>
-  <p>A rhythm that puts its weight on the beats sounds square and steady. Shift the accents onto the "ands", or let a chord arrive just before the beat, and the rhythm starts to push and pull against the pulse. That displacement is <b>syncopation</b>, and it is most of what makes funk, reggae, Latin and pop grooves feel alive.</p>
+  <div class="lhd"><span class="num">5</span><span class="badge deep">Go deeper</span></div>
+  <h2>Diminished passing chords</h2>
+  <p>When two chords in a key have roots a whole step apart, a diminished 7 chord fits on the fret between them. It works because it is really the secondary dominant of the chord you are heading to, with its root left out, so the bass climbs by half steps.</p>
   <div class="card">
-    <div id="syOut" style="display:flex;flex-direction:column;gap:14px"></div>
-    <p class="cap">Dark boxes are accented strums. Listen for where the weight falls compared with the click.</p>
+    <div class="ctl"><div class="grp"><span class="lab">Key</span><span class="grp" id="k6"></span></div></div>
+    <div id="dimOut" style="display:flex;flex-direction:column;gap:10px"></div>
+    <p class="cap">A diminished 7 chord repeats every three frets, so any of its four notes can be treated as the root.</p>
   </div>
 </section>
 <section id="lesson-6">
-  <div class="lhd"><span class="num">6</span><span class="badge deep">Go deeper</span></div>
-  <h2>Straight and swing</h2>
-  <p>Eighth notes can be played evenly, splitting the beat exactly in half, or with a long-short lilt, where the first of each pair lasts about twice as long as the second. The second way is <b>swing</b>, the basic feel of blues, jazz and shuffle rhythms. It is usually not written differently; you are simply told to swing.</p>
+  <div class="lhd"><span class="num">6</span><span class="badge core">Core</span></div>
+  <h2>The full palette of a key</h2>
+  <p>Put the last few lessons side by side and you have nearly every chord found in most pop, rock, folk and country songs: the seven chords of the key, the dominant 7 chords that lead into them, and the handful borrowed from the parallel minor. This is the working palette of a songwriter.</p>
   <div class="card">
-    <div class="ctl"><span class="grp" id="swBtns"></span></div>
-    <div class="rgrid" id="swGrid"></div>
-    <p class="cap">The same sixteen notes both times. Only the placement of every second note changes.</p>
+    <div class="ctl"><div class="grp"><span class="lab">Key</span><span class="grp" id="plKey"></span></div></div>
+    <span class="lab2">In the key</span><div class="sd" id="plDia"></div>
+    <span class="lab2">Secondary dominants: each leads to the chord named after the slash</span><div class="sd" id="plSec"></div>
+    <span class="lab2">Borrowed from the parallel minor</span><div class="sd" id="plBor"></div>
+    <p class="cap">Click any chord to hear it. When a song has a chord you cannot explain, it is usually in the second or third row.</p>
   </div>
 </section>
 <section id="lesson-7">
   <div class="lhd"><span class="num">7</span><span class="badge deep">Go deeper</span></div>
-  <h2>Moving an idea in time</h2>
-  <p>A short phrase sounds different depending on where in the bar it starts. Begin it on beat one and it is a statement. Begin it half a beat late and it becomes a syncopated answer. Moving a phrase like this, without changing a note, is one of the simplest ways to develop a solo.</p>
+  <h2>Turnarounds and their upgrades</h2>
+  <p>A <b>turnaround</b> is the short progression at the end of a section that leads back to the top. The basic one is I – vi – ii – V. Each row below applies one substitution from this chapter to it, which is how a plain turnaround becomes a jazz one.</p>
   <div class="card">
-    <div id="dpOut" style="display:flex;flex-direction:column;gap:14px"></div>
-    <p class="cap">One three-note idea, started in three different places.</p>
+    <div class="ctl"><div class="grp"><span class="lab">Key</span><span class="grp" id="taKey"></span></div></div>
+    <div id="taOut" style="display:flex;flex-direction:column;gap:14px"></div>
   </div>
 </section>
 <section id="lesson-8">
-  <div class="lhd"><span class="num">8</span><span class="badge check">Checkpoint</span></div>
+  <div class="lhd"><span class="num">8</span><span class="badge deep">Go deeper</span></div>
+  <h2>Two standard forms, reharmonised</h2>
+  <p>Two chord sequences are used for hundreds of tunes: the 12-bar blues and a 32-bar form known as rhythm changes. Both are testing grounds for substitution. The blues below is shown at three levels of complexity; every added chord is a secondary dominant, a ii – V or a passing diminished chord from earlier in this chapter.</p>
+  <div class="card">
+    <div class="ctl"><div class="grp"><span class="lab">Key</span><span class="grp" id="sfKey"></span></div></div>
+    <div class="ctl"><div class="grp"><span class="lab">Blues</span><span class="grp" id="sfLv"></span></div><button type="button" class="pbtn" id="sfPlay">▶ Play 12 bars</button></div>
+    <div class="scroll"><div class="prog blues" id="sfGrid" style="min-width:560px"></div></div>
+    <p id="sfInfo"></p>
+  </div>
+  <div class="card">
+    <h3>Rhythm changes: the bridge</h3>
+    <p>The main section of rhythm changes is the I – vi – ii – V turnaround repeated. Its middle section, the bridge, is a chain of four dominant 7 chords, each one the V of the next, two bars apiece, ending on the V of the home key.</p>
+    <div class="scroll"><div class="prog" id="rcProg" style="min-width:560px"></div></div>
+  </div>
+</section>
+<section id="lesson-9">
+  <div class="lhd"><span class="num">9</span><span class="badge deep">Go deeper</span></div>
+  <h2>One note, many chords</h2>
+  <p>A melody note can be harmonised by any chord that contains it. Hold the note and change the chord underneath, and the note changes meaning: the root of one chord becomes the 3rd of another and the 7th of a third. Reharmonising a melody this way is called common-tone reharmonisation.</p>
+  <div class="card">
+    <div class="ctl"><div class="grp"><span class="lab">Melody note</span><span class="grp" id="ctNote"></span></div></div>
+    <div class="scroll"><div class="tbl" id="ctTbl"></div></div>
+    <p class="cap">Each cell is a chord with your note on top. Click to hear how the same note feels in each setting.</p>
+  </div>
+</section>
+<section id="lesson-10">
+  <div class="lhd"><span class="num">10</span><span class="badge core">Core</span></div>
+  <h2>Reharmonising cheat sheet</h2>
+  <p>The six moves from this chapter in one place, spelled out in the key you have selected. Apply one at a time to a progression you already know and listen to what changes.</p>
+  <div class="card">
+    <div class="ctl"><div class="grp"><span class="lab">Key</span><span class="grp" id="k5"></span></div></div>
+    <div class="scroll"><div class="cheat" id="cheat"></div></div>
+  </div>
+  <div class="tip"><b>Practice loop.</b> Take I – vi – ii – V in one key. Play it plain, then swap one chord per pass using a different move each time. Keep the top note of your voicings as still as you can, so you hear the harmony change underneath it.</div>
+</section>
+<section id="lesson-11">
+  <div class="lhd"><span class="num">11</span><span class="badge check">Checkpoint</span></div>
   <h2>Chapter 9 checkpoint</h2>
   <div class="card">
     <h3>You are ready to move on when you can</h3>
     <ul>
-      <li>Count quarter notes, eighth notes, triplets and sixteenth notes aloud against a click.</li>
-      <li>Tell 4/4, 3/4 and 6/8 apart by ear.</li>
-      <li>Strum a pattern with a missed downstroke while your hand keeps moving.</li>
-      <li>Play the same line straight and then swung.</li>
+      <li>Replace a I chord with vi or iii and hear why it still works.</li>
+      <li>Find the secondary dominant of any major or minor chord in a key.</li>
+      <li>Explain why a tritone substitute works, and play it inside a ii – V – I.</li>
+      <li>Name the four chords most often borrowed from the parallel minor.</li>
+      <li>Place a diminished passing chord between I and ii.</li>
     </ul>
     <h3>A ten-minute routine</h3>
     <ol>
-      <li>Two minutes: metronome at 70. Muted strums in quarters, then eighths, then sixteenths, counting aloud.</li>
-      <li>Three minutes: one strumming pattern over a two-chord change, without stopping at the change.</li>
-      <li>Three minutes: the off-beat pattern from lesson 5, slowly, then faster.</li>
-      <li>Two minutes: a scale in swung eighth notes.</li>
+      <li>Two minutes: play I – vi – ii – V plain, in one key.</li>
+      <li>Three minutes: add a secondary dominant before the ii, then before the vi.</li>
+      <li>Three minutes: swap the V for its tritone substitute, then try iv in place of ii.</li>
+      <li>Two minutes: play your favourite version from memory in a second key.</li>
     </ol>
   </div>
 </section>
 
-<div class="pager"><a class="ghost" href="chapter-8.html">← Chapter 8</a><a href="chapter-10.html">Chapter 10: Ear Training and Real Songs →</a></div>
-<footer>Guitar Theory Maps · Chapter 9: Rhythm and Feel</footer>
+<div class="pager"><a class="ghost" href="chapter-8.html">← Chapter 8</a><a href="chapter-10.html">Chapter 10: Modal Harmony and Chord Scales →</a></div>
+<footer>Guitar Theory Maps · Chapter 9: Substitution and Borrowed Chords</footer>
 </main>
 <script src="common.js"></script>
 <script src="neck.js"></script>
-<script>(function(){
-let busy=false;
-function rc(when,acc){try{ac=ac||new (window.AudioContext||window.webkitAudioContext)();if(ac.state==='suspended')ac.resume();const t=ac.currentTime+.03+when,o=ac.createOscillator(),g=ac.createGain();o.frequency.value=acc?1600:1050;g.gain.setValueAtTime(acc?.28:.16,t);g.gain.exponentialRampToValueAtTime(.001,t+.05);o.connect(g);g.connect(ac.destination);o.start(t);o.stop(t+.07)}catch(e){}}
-function strum(w,up,acc){(up?[64,59,55]:acc?[40,47,52,55,59,64]:[52,55,59,64]).forEach((n,i)=>tone(n,w+i*.012,up?.22:acc?.45:.3))}
-// steps: 0 silent, 1 hit, 2 accented hit. o: bpm, div (steps per beat), beats (per bar), loops, swing, click, notes, snd, cells
-function run(steps,o){if(busy)return;busy=true;const sd=60/o.bpm/o.div,n=steps.length,loops=o.loops||1;let k=0;
- for(let l=0;l<loops;l++)for(let i=0;i<n;i++){let w=(l*n+i)*sd;if(o.swing&&i%2===1)w+=sd/3;
-  if(o.click!==false&&i%o.div===0)rc(w,(i/o.div)%(o.beats||4)===0);
-  const s=steps[i];if(s){if(o.snd)o.snd(w,s);else if(o.notes)tone(o.notes[k++%o.notes.length],w,.45);else strum(w,i%2===1&&o.div===2,s===2)}
-  if(o.cells){const c=o.cells[i];setTimeout(()=>{c.classList.add('now');setTimeout(()=>c.classList.remove('now'),Math.max(90,sd*700))},(w+.03)*1000)}}
- setTimeout(()=>busy=false,loops*n*sd*1000+150)}
-const cell=(top,bot,cls,extra)=>`<span class="rc ${cls||''}" ${extra||''}><b>${top}</b><small>${bot||''}</small></span>`;
-const kids=id=>[...$(id).querySelectorAll('.rc')];
-// 1. beat
-$('btGrid').innerHTML=[1,2,3,4].map(i=>cell(i,i===1?'strong':'',i===1?'acc':'on')).join('');$('btGrid').style.gridTemplateColumns='repeat(4,1fr)';
-$('btBtns').innerHTML=[60,90,120,160].map(b=>`<button type="button" class="pbtn" data-bpm="${b}">▶ ${b} bpm</button>`).join('');
-$('btBtns').onclick=e=>{const b=e.target.closest('[data-bpm]');if(b)run([0,0,0,0],{bpm:+b.dataset.bpm,div:1,loops:2,cells:kids('btGrid')})};
-// 2. subdivisions
-const SB=[['Whole note','4 beats',1,[1,0,0,0],['1','(2)','(3)','(4)']],['Half notes','2 beats each',1,[1,0,1,0],['1','(2)','3','(4)']],['Quarter notes','1 beat each',1,[1,1,1,1],['1','2','3','4']],['Eighth notes','2 per beat',2,[1,1,1,1,1,1,1,1],['1','&','2','&','3','&','4','&']],['Triplets','3 per beat',3,Array(12).fill(1),['1','trip','let','2','trip','let','3','trip','let','4','trip','let']],['Sixteenth notes','4 per beat',4,Array(16).fill(1),['1','e','&','a','2','e','&','a','3','e','&','a','4','e','&','a']]];
-$('sbOut').innerHTML=SB.map(([n,d,div,st,lab],r)=>`<div><div class="ctl"><b>${n}</b><span class="cap">${d}</span><button type="button" class="pbtn" data-sb="${r}">▶</button></div><div class="rgrid" id="sb${r}" style="grid-template-columns:repeat(${st.length},1fr);margin-top:6px">${st.map((s,i)=>cell(lab[i],'',s?(i%div===0?'acc':'on'):'')).join('')}</div></div>`).join('');
-$('sbOut').onclick=e=>{const b=e.target.closest('[data-sb]');if(!b)return;const r=+b.dataset.sb;run(SB[r][3],{bpm:72,div:SB[r][2],notes:[64],cells:kids('sb'+r)})};
-// 3. time signatures
-const TS=[['4/4',[2,1,1,1],100,'Four quarter-note beats. By far the most common: rock, pop, blues, funk.'],['3/4',[2,1,1],110,'Three quarter-note beats. The waltz feel: strong, weak, weak.'],['6/8',[2,1,1,2,1,1],190,'Six eighth notes felt as two groups of three. A rolling, swaying feel. It has the same six eighths as 3/4 but groups them differently.'],['2/4',[2,1],110,'Two beats. Marches and polkas.'],['12/8',[2,1,1,2,1,1,2,1,1,2,1,1],200,'Four groups of three. The slow blues and doo-wop feel.'],['5/4',[2,1,1,2,1],130,'Five beats, usually felt as three plus two. Uneven on purpose.']];
-let Ts=0;
-function drawTS(){btns('tsBtns',TS.map(x=>x[0]),Ts,i=>{Ts=i;drawTS()});const t=TS[Ts];let c=0;
- $('tsGrid').style.gridTemplateColumns=`repeat(${t[1].length},1fr)`;$('tsGrid').innerHTML=t[1].map((s,i)=>cell(i+1,s===2?'strong':'',s===2?'acc':'on')).join('');$('tsInfo').innerHTML=`<b>${t[0]}.</b> ${t[3]}`}
-drawTS();$('tsPlay').onclick=()=>{const t=TS[Ts];run(t[1],{bpm:t[2],div:1,loops:2,click:false,snd:(w,s)=>rc(w,s===2),cells:kids('tsGrid')})};
-// 4. strumming
-const PRE=[['All downstrokes',[1,0,1,0,1,0,1,0]],['Down-up',[1,1,1,1,1,1,1,1]],['Folk / pop',[1,0,1,1,0,1,1,1]],['Rock',[1,0,1,0,1,1,1,1]],['Ballad',[1,0,0,1,1,0,1,0]]],CNT=['1','&','2','&','3','&','4','&'];
-let St=PRE[2][1].slice(),pre=2;
-function drawSt(){btns('stPre',PRE.map(x=>x[0]),pre,i=>{pre=i;St=PRE[i][1].slice();drawSt()});
- $('stGrid').style.gridTemplateColumns='repeat(8,1fr)';$('stGrid').innerHTML=St.map((s,i)=>`<button type="button" class="rc ${s?(i%2?'on':'acc'):''}" data-st="${i}" aria-pressed="${!!s}" aria-label="${i%2?'Up':'Down'}stroke on ${CNT[i]}"><b>${i%2?'↑':'↓'}</b><small>${CNT[i]}</small></button>`).join('')}
-drawSt();$('stGrid').onclick=e=>{const b=e.target.closest('[data-st]');if(!b)return;const i=+b.dataset.st;St[i]=St[i]?0:1;pre=-1;drawSt()};
-$('stPlay').onclick=()=>run(St.map((s,i)=>s?(i===0?2:1):0),{bpm:92,div:2,loops:2,cells:kids('stGrid')});
-// 5. syncopation
-const SY=[['On the beat',[2,0,2,0,2,0,2,0],'Every accent lands with the click. Steady and plain.'],['Off the beat',[0,2,0,2,0,2,0,2],'Nothing on the beat at all, only the "ands". The reggae and ska chop.'],['Mixed',[2,0,0,2,0,2,1,0],'Starts on the beat, then leans onto the "ands". A typical pop and funk shape.'],['Charleston',[2,0,0,2,0,0,0,0],'A long chord on beat 1 and a short one on the "and" of 2, then space. The classic jazz accompaniment figure.'],['The push',[2,0,1,0,1,0,0,2],'The last strum arrives half a beat early and belongs to the next bar. Very common at chord changes.']];
-$('syOut').innerHTML=SY.map(([n,st,d],r)=>`<div><div class="ctl"><b>${n}</b><button type="button" class="pbtn" data-sy="${r}">▶</button><span class="cap">${d}</span></div><div class="rgrid" id="sy${r}" style="grid-template-columns:repeat(8,1fr);margin-top:6px">${st.map((s,i)=>cell(i%2?'↑':'↓',CNT[i],s===2?'acc':s?'on':'')).join('')}</div></div>`).join('');
-$('syOut').onclick=e=>{const b=e.target.closest('[data-sy]');if(!b)return;const r=+b.dataset.sy;run(SY[r][1],{bpm:92,div:2,loops:2,cells:kids('sy'+r)})};
-// 6. swing
-const LINE=[57,60,62,63,64,67,69,67,64,62,60,57,55,57,60,57];
-$('swGrid').style.gridTemplateColumns='repeat(16,1fr)';$('swGrid').innerHTML=LINE.map((n,i)=>cell(i%2?'&':(i/2)%4+1,'',i%2?'on':'acc')).join('');
-$('swBtns').innerHTML='<button type="button" class="pbtn" data-sw="0">▶ Straight</button><button type="button" class="pbtn" data-sw="1">▶ Swing</button>';
-$('swBtns').onclick=e=>{const b=e.target.closest('[data-sw]');if(b)run(Array(16).fill(1),{bpm:104,div:2,swing:b.dataset.sw==='1',notes:LINE,cells:kids('swGrid')})};
-// 7. displacement
-const DP=[['Starting on beat 1',0],['Starting on the "and" of 1',1],['Starting on beat 2',2]];
-$('dpOut').innerHTML=DP.map(([n,s],r)=>`<div><div class="ctl"><b>${n}</b><button type="button" class="pbtn" data-dp="${r}">▶</button></div><div class="rgrid" id="dp${r}" style="grid-template-columns:repeat(8,1fr);margin-top:6px">${CNT.map((c,i)=>cell(c,'',i>=s&&i<s+3?'acc':'')).join('')}</div></div>`).join('');
-$('dpOut').onclick=e=>{const b=e.target.closest('[data-dp]');if(!b)return;const r=+b.dataset.dp,s=DP[r][1];run(CNT.map((c,i)=>i>=s&&i<s+3?1:0),{bpm:96,div:2,loops:2,notes:[69,67,64],cells:kids('dp'+r)})};
+<script>
+// from old chapter 4, lessons 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+(function(){
+const pc2=n=>{let p=NAT[L.indexOf(n[0])];for(const c of n.slice(1))p+=c==='♯'?1:-1;return ((p%12)+12)%12};
+const sp=(root,lo,semi)=>{const li=(L.indexOf(root[0])+lo)%7;let d=(((pc2(root)+semi)%12-NAT[li])%12+12)%12;if(d>6)d-=12;return L[li]+(d>0?'♯'.repeat(d):'♭'.repeat(-d))};
+const simp=n=>{if(!n.includes('♭♭'))return n;const li=(L.indexOf(n[0])+6)%7;let d=((pc2(n)-NAT[li])%12+12)%12;if(d>6)d-=12;return L[li]+(d>0?'♯'.repeat(d):'♭'.repeat(-d))};
+const FN=['go','perfect','go','perfect','tritone','go','tritone'];
+const RNT=['I','ii','iii','IV','V','vi','vii°'],TS=['','m','m','','','m','°'],SS=['maj7','m7','m7','maj7','7','m7','m7♭5'],RS=['Imaj7','ii7','iii7','IVmaj7','V7','vi7','viiø7'];
+const dom=r=>[[0,0],[4,2],[7,4],[10,6]].map(([s,lo])=>sp(r,lo,s));
+const tri=(r,min)=>[[0,0],[min?3:4,2],[7,4]].map(([s,lo])=>sp(r,lo,s));
+let K=0;
+function render(){const key=RMAJ[K],n=MAJ.map((x,i)=>sp(key,i,x)),keypc=n.map(pc2);const bm=48+pc2(key),dm=(r,ks)=>ks.map(k=>bm+MAJ[(r+k)%7]+(r+k>6?12:0)),d7=m=>[m,m+4,m+7,m+10],cm=(root,min)=>[0,min?3:4,7].map(x=>48+pc2(root)+x),cs=c=>cm(c.replace(/m$/,''),/m$/.test(c)),seq=l=>'c'.repeat(l.length)+':'+l.map(x=>x.join(',')).join('|');
+ ['k1','k2','k3','k4','k5','k6'].forEach(id=>btns(id,RMAJ,K,i=>{K=i;render()}));
+ // staircase matrix
+ const cols=[3,5,0,2,4,6,1],rows=[1,3,5,0,2,4,6];
+ let h='<span></span>'+cols.map(c=>`<span class="mh">${n[c]}</span>`).join('');
+ rows.forEach(r=>{h+=`<span class="ml">${PB(BOTH(dm(r,[0,2,4,6])),"Play "+n[r]+SS[r])} <b>${RS[r]}</b> ${n[r]}${SS[r]}</span>`;const tones=[0,2,4,6].map(k=>(r+k)%7);
+  cols.forEach(c=>{const t=tones.indexOf(c);h+=t<0?'<span class="mc"></span>':`<span class="mc on" style="background:${col(FN[r])}">${'R357'[t]}</span>`})});
+ document.getElementById('mx').innerHTML=h;
+ // secondary dominants
+ document.getElementById('sd').innerHTML=[1,2,3,4,5].map(i=>{const r=sp(n[i],4,7),t=dom(r),nw=t.filter(x=>!keypc.includes(pc2(x)));
+  return `<div class="sdc"><span class="rn">V7/${RNT[i]}</span><span class="cn">${r}7 <i>→</i> ${n[i]}${TS[i]}</span><span class="ns">${t.map(x=>nw.includes(x)?`<b>${x}</b>`:x).join(' ')}</span><span class="cap">outside note: ${nw.join(', ')}</span>${PB(seq([d7(bm+MAJ[i]-5),dm(i,[0,2,4])]),"Play "+r+"7 to "+n[i]+TS[i])}</div>`}).join('');
+ // tritone sub
+ const V=n[4],S=simp(sp(key,1,1)),tv=dom(V),ts=dom(S),lab=['R','3','5','♭7'];
+ const stack=(name,t,mid)=>{let s='';for(let i=3;i>=0;i--){const f=i===0?'root':(i===2?'ghost':'tritone');s+=`<div class="note" style="background:${col(f)};${i?'':'color:var(--root-ink)'};margin-bottom:5px"><span>${t[i]}</span><span>${lab[i]}</span></div>`}
+  return `<div class="triad"><h3>${name} ${PB(BOTH(mid),"Play "+name)}</h3><div class="stack">${s}</div></div>`};
+ document.getElementById('tt').innerHTML=stack(V+'7',tv,d7(bm+7))+stack(S+'7',ts,d7(bm+1));
+ const card=(f,rn,nm)=>`<div class="deg" style="background:${col(f)}"><span class="rn" style="font-size:1.15rem">${rn}</span><span class="cn">${nm}</span></div>`,ar='<span class="arrow" aria-hidden="true">→</span>';
+ document.getElementById('tt1').innerHTML=[card('perfect','ii7',n[1]+'m7'),card('tritone','V7',V+'7'),card('go','Imaj7',n[0]+'maj7')].join(ar);
+ document.getElementById('ttP1').innerHTML=PB(seq([dm(1,[0,2,4,6]),d7(bm+7),dm(0,[0,2,4,6])]),'Play original');document.getElementById('ttP2').innerHTML=PB(seq([dm(1,[0,2,4,6]),d7(bm+1),dm(0,[0,2,4,6])]),'Play with substitute');
+ document.getElementById('tt2').innerHTML=[card('perfect','ii7',n[1]+'m7'),card('tritone','♭II7',S+'7'),card('go','Imaj7',n[0]+'maj7')].join(ar);
+ const same=(a,b)=>a===b?a:`${a} (written ${b} in ${S}7)`;
+ document.getElementById('ttNote').textContent=`Shared notes: ${same(tv[1],ts[3])} and ${same(tv[3],ts[1])}. Bass line changes from ${n[1]} → ${V} → ${n[0]} to ${n[1]} → ${S} → ${n[0]}, stepping down one fret at a time.`;
+ // borrowed
+ const b3=simp(sp(key,2,3)),b6=simp(sp(key,5,8)),b7=simp(sp(key,6,10)),chip=(t,on)=>`<span class="nchip" style="${on?'background:var(--minor);color:#fff':''}">${t}</span>`;
+ document.getElementById('bmaj').innerHTML=n.map((x,i)=>chip(x+TS[i])).join('');
+ document.getElementById('bmin').innerHTML=[[n[0]+'m',0],[n[1]+'°',0],[b3,1],[n[3]+'m',1],[n[4]+'m',0],[b6,1],[b7,1]].map(([t,o])=>chip(t,o)).join('');
+ const B=[['♭III',b3,tri(b3),'A bold lift, common in rock'],['iv',n[3]+'m',tri(n[3],1),'A wistful turn just before home'],['♭VI',b6,tri(b6),'Dramatic and cinematic'],['♭VII',b7,tri(b7),'A softer approach to I than V']];
+ document.getElementById('bor').innerHTML=B.map(([rn,nm,t,use])=>`<div class="sdc" style="border-top-color:var(--minor)"><span class="rn">${rn}</span><span class="cn">${nm}</span><span class="ns">${t.join(' ')}</span><span class="cap">${use}</span>${PB(BOTH(cs(nm)),"Play "+nm)}</div>`).join('');
+ document.getElementById('borEx').innerHTML=[['I – IV – iv – I',[n[0],n[3],n[3]+'m',n[0]]],['I – ♭VII – IV – I',[n[0],b7,n[3],n[0]]],['♭VI – ♭VII – I',[b6,b7,n[0]]],['I – ♭III – IV – I',[n[0],b3,n[3],n[0]]]].map(([a,c])=>`<li><b>${a}</b>: ${c.join(' → ')} ${PB(seq(c.map(cs)),'Play '+a)}</li>`).join('');
+ // diminished passing chords
+ const up=x=>{const u=sp(x,0,1);return u.includes('♯♯')?sp(x,1,1):u};
+ document.getElementById('dimOut').innerHTML=[[0,1,'♯I°7'],[1,2,'♯II°7'],[3,4,'♯IV°7'],[4,5,'♯V°7']].map(([a,b,rn])=>{const r=bm+MAJ[a]+1;return `<div class="prog" style="min-width:0">${card(FN[a],RNT[a],n[a]+TS[a])}${ar}${card('tritone',rn,up(n[a])+'°7')}${ar}${card(FN[b],RNT[b],n[b]+TS[b])}${PB(seq([dm(a,[0,2,4]),[r,r+3,r+6,r+9],dm(b,[0,2,4])]),'Play this passing chord')}</div>`}).join('');
+ // cheat sheet
+ const C=[['Same-job swap','Replace a chord with another from its function group',`${n[0]} → ${n[5]}m or ${n[2]}m`],
+  ['Secondary dominant','Put the V7 of the target chord in front of it',`${n[1]}m → ${sp(n[1],4,7)}7 ${n[1]}m`],
+  ['Add the ii','Turn a dominant 7 into a ii–V',`${V}7 → ${n[1]}m7 ${V}7`],
+  ['Tritone substitution','Replace V7 with the dominant 7 a tritone away',`${V}7 → ${S}7`],
+  ['Borrow from parallel minor','Use iv in place of IV, or approach I through ♭VI and ♭VII',`${n[3]} → ${n[3]}m · ${b6} ${b7} ${n[0]}`],
+  ['Diminished passing chord','Slip a diminished 7 between two chords whose roots are a whole step apart',`${n[0]} → ${up(n[0])}°7 → ${n[1]}m`]];
+ document.getElementById('cheat').innerHTML='<div class="crow lhead"><span>Move</span><span>What you do</span><span>In this key</span></div>'+C.map(([a,b,c],i)=>`<div class="crow"><b><span class="cn2">${i+1}</span>${a}</b><span>${b}</span><span class="ex">${c}</span></div>`).join('')}
+render();
+})();
+// from old chapter 4, lessons 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+(function(){
+const $=id=>document.getElementById(id),QT=['M','m','m','M','M','m','°'],RNT=['I','ii','iii','IV','V','vi','vii°'];
+const card=(c,rn,f)=>`<button type="button" class="deg" data-play="${BOTH(c.midi)}" style="background:${col(f)}"><span class="rn" style="font-size:1.15rem">${rn}</span><span class="cn">${c.name}</span><span class="ns">${c.notes}</span></button>`,ar='<span class="arrow" aria-hidden="true">→</span>';
+const seq=l=>'c'.repeat(l.length)+':'+l.map(c=>c.midi.join(',')).join('|');
+let P=0;
+function drawPal(){const k=RMAJ[P];btns('plKey',RMAJ,P,i=>{P=i;drawPal()});const f=['major','minor','minor','major','major','minor','tritone'];
+ $('plDia').innerHTML=MAJ.map((s,i)=>card(chordOf(k,i,s,QT[i]),RNT[i],f[i])).join('');
+ $('plSec').innerHTML=[1,2,3,4,5].map(d=>card(chordOf(k,(d+4)%7,(MAJ[d]+7)%12,'7'),'V7/'+RNT[d],'go')).join('');
+ $('plBor').innerHTML=[['♭III',2,3,'M'],['iv',3,5,'m'],['♭VI',5,8,'M'],['♭VII',6,10,'M']].map(([rn,lo,s,q])=>card(chordOf(k,lo,s,q),rn,'perfect')).join('')}
+drawPal();
+let T=0;
+const TA=[['Basic',[['Imaj7',0,0,'maj7'],['vi7',5,9,'m7'],['ii7',1,2,'m7'],['V7',4,7,'7']],'All four chords from the key.'],['Dominant on VI',[['Imaj7',0,0,'maj7'],['VI7',5,9,'7'],['ii7',1,2,'m7'],['V7',4,7,'7']],'The vi chord becomes a secondary dominant pulling into ii.'],['Start on iii',[['iii7',2,4,'m7'],['VI7',5,9,'7'],['ii7',1,2,'m7'],['V7',4,7,'7']],'iii replaces I (same job), giving two ii – V pairs in a row.'],['Tritone substitutes',[['Imaj7',0,0,'maj7'],['♭III7',2,3,'7'],['ii7',1,2,'m7'],['♭II7',1,1,'7']],'Both dominants are swapped for the ones a tritone away. The bass now slides down by half steps.'],['Backdoor',[['Imaj7',0,0,'maj7'],['iv7',3,5,'m7'],['♭VII7',6,10,'7'],['Imaj7',0,0,'maj7']],'A borrowed ii – V from the parallel minor side. The ♭VII7 resolves up a whole step to I.']];
+function drawTA(){const k=RMAJ[T];btns('taKey',RMAJ,T,i=>{T=i;drawTA()});
+ $('taOut').innerHTML=TA.map(([n,l,d])=>{const ch=l.map(([rn,lo,s,q])=>[rn,chordOf(k,lo,s,q)]);return `<div><div class="ctl"><b>${n}</b>${PB(seq(ch.map(x=>x[1]).concat([chordOf(k,0,0,'maj7')])),'Play '+n+' turnaround')}<span class="cap">${d}</span></div><div class="prog" style="min-width:0;margin-top:6px">${ch.map(([rn,c])=>card(c,rn,/7$/.test(rn)&&!/maj|m7|ii|vi|iv/.test(rn)?'go':/^I/.test(rn)?'major':'minor')).join(ar)}</div></div>`}).join('')}
+drawTA();
+let S={k:5,lv:0};
+const I7=[0,0,'7'],IV7=[3,5,'7'],V7=[4,7,'7'],VI7=[5,9,'7'],ii7=[1,2,'m7'];
+const BL=[['Basic',[[I7],[IV7],[I7],[I7],[IV7],[IV7],[I7],[I7],[V7],[IV7],[I7],[V7]],'Three dominant 7 chords and nothing else.'],
+ ['Jazz blues',[[I7],[IV7],[I7],[[4,7,'m7'],I7],[IV7],[[3,6,'°7']],[I7],[VI7],[ii7],[V7],[I7,VI7],[ii7,V7]],'Bar 4 becomes a ii – V into the IV chord, bar 6 is a diminished passing chord, bar 8 is a secondary dominant into ii, and the last two bars are a turnaround.'],
+ ['With more ii – Vs',[[[0,0,'maj7']],[[6,11,'ø'],[2,4,'7']],[[5,9,'m7'],[1,2,'7']],[[4,7,'m7'],I7],[IV7],[[3,5,'m7'],[6,10,'7']],[[2,4,'m7'],VI7],[[2,3,'m7'],[5,8,'7']],[ii7],[V7],[[0,0,'maj7'],VI7],[ii7,V7]],'A bebop-era version. Chains of ii – V pairs walk down to the IV chord in bar 5 and again down to the ii chord in bar 9. The three landmarks of the blues (I at bar 1, IV at bar 5, ii – V at bars 9 and 10) are still there.']];
+function drawBlues(){const k=RMAJ[S.k],b=BL[S.lv];btns('sfKey',RMAJ,S.k,i=>{S.k=i;drawBlues()});btns('sfLv',BL.map(x=>x[0]),S.lv,i=>{S.lv=i;drawBlues()});
+ const bars=b[1].map(bar=>bar.map(([lo,s,q])=>chordOf(k,lo,s,q)));
+ $('sfGrid').innerHTML=bars.map((bar,i)=>`<button type="button" class="deg" data-play="${seq(bar)}" style="background:${col(bar.length>1?'minor':'perfect')}"><span class="ns">bar ${i+1}</span><span class="cn">${bar.map(c=>c.name).join('  ')}</span></button>`).join('');
+ $('sfInfo').innerHTML=`<b>${k} blues, ${b[0].toLowerCase()}.</b> ${b[2]}`;$('sfPlay').dataset.play=seq(bars.flat());
+ const br=[[2,4,'7','III7'],[5,9,'7','VI7'],[1,2,'7','II7'],[4,7,'7','V7']].map(([lo,s,q,rn])=>[rn,chordOf(k,lo,s,q)]);
+ $('rcProg').innerHTML=br.map(([rn,c])=>card(c,rn,'go')).join(ar)+PB(seq(br.map(x=>x[1]).concat([chordOf(k,0,0,'maj7')])),'Play the bridge')}
+drawBlues();
+let N=0;
+function drawCT(){const pc=pcOf(RMAJ[N]);btns('ctNote',RMAJ,N,i=>{N=i;drawCT()});
+ const roles=[['Root',{maj7:0,'7':0,m7:0}],['3rd',{maj7:4,'7':4,m7:3}],['5th',{maj7:7,'7':7,m7:7}],['7th',{maj7:11,'7':10,m7:10}],['9th',{maj7:2,'7':2,m7:2}]];
+ $('ctTbl').innerHTML='<div class="trow lhead" style="grid-template-columns:1fr repeat(3,1.4fr)"><span>'+RMAJ[N]+' is the</span><span>of a major 7</span><span>of a dominant 7</span><span>of a minor 7</span></div>'+roles.map(([r,m])=>`<div class="trow" style="grid-template-columns:1fr repeat(3,1.4fr)"><b>${r}</b>${['maj7','7','m7'].map(q=>{const rp=((pc-m[q])%12+12)%12,c=chordOf(RMAJ[rp],0,0,q),top=72+pc;return `<span><button type="button" class="pbtn" data-play="c:${c.midi.map(x=>x>=top?x-12:x).concat(top).join(',')}">▶ ${c.name}</button></span>`}).join('')}</div>`).join('')}
+drawCT();
 })();
 </script>
 <script src="metro.js"></script>

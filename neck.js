@@ -1,4 +1,4 @@
-// shared helpers for chapters 5 to 7 (needs common.js)
+// shared helpers for the neck diagrams, chord boxes and tablature (needs common.js)
 const $=id=>document.getElementById(id);
 const IVL=['R','♭2','2','♭3','3','4','♭5','5','♭6','6','♭7','7'],SNM=['E','A','D','G','B','e'];
 const mod12=x=>((x%12)+12)%12;

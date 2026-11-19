@@ -33,14 +33,54 @@ function btns(id,items,cur,on){const el=document.getElementById(id);el.innerHTML
 const MAJ=[0,2,4,5,7,9,11];
 // ---------- sound ----------
 let ac;
-function tone(m,when,dur){try{ac=ac||new (window.AudioContext||window.webkitAudioContext)();if(ac.state==='suspended')ac.resume();
-  const t=ac.currentTime+.03+when,f=440*Math.pow(2,(m-69)/12),o=ac.createOscillator(),o2=ac.createOscillator(),g=ac.createGain(),g2=ac.createGain(),lp=ac.createBiquadFilter();
+const AUD={nodes:new Set(),timer:null,btn:null};
+function ctx(){ac=ac||new (window.AudioContext||window.webkitAudioContext)();if(ac.state==='suspended')ac.resume();return ac}
+function tone(m,when,dur,t0){try{ctx();
+  const t=(t0!=null?t0:ac.currentTime+.03)+when,f=440*Math.pow(2,(m-69)/12),o=ac.createOscillator(),o2=ac.createOscillator(),g=ac.createGain(),g2=ac.createGain(),lp=ac.createBiquadFilter();
   o.type='triangle';o2.type='sawtooth';o.frequency.value=f;o2.frequency.value=f;g2.gain.value=.22;lp.type='lowpass';
   lp.frequency.setValueAtTime(3400,t);lp.frequency.exponentialRampToValueAtTime(650,t+dur);
   g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(.2,t+.01);g.gain.exponentialRampToValueAtTime(.0008,t+dur);
-  o.connect(lp);o2.connect(g2);g2.connect(lp);lp.connect(g);g.connect(ac.destination);o.start(t);o2.start(t);o.stop(t+dur+.05);o2.stop(t+dur+.05)}catch(e){}}
-function play(spec){const [mode,list]=spec.split(':'),groups=list.split('|').map(g=>g.split(',').map(Number));let t=0;
+  o.connect(lp);o2.connect(g2);g2.connect(lp);lp.connect(g);g.connect(ac.destination);o.start(t);o2.start(t);o.stop(t+dur+.05);o2.stop(t+dur+.05);
+  const n={o,o2,g};AUD.nodes.add(n);o.onended=()=>AUD.nodes.delete(n)}catch(e){}}
+function play(spec,t0){const [mode,list]=spec.split(':'),groups=list.split('|').map(g=>g.split(',').map(Number));let t=0;
  groups.forEach((ns,gi)=>{const m=mode.length>1?mode[gi%mode.length]:mode;
-  if(m==='m'){ns.forEach(n=>{tone(n,t,1.1);t+=.42})}else{ns.forEach((n,i)=>tone(n,t+i*.025,1.9));t+=1.2}
+  if(m==='m'){ns.forEach(n=>{tone(n,t,1.1,t0);t+=.42})}else{ns.forEach((n,i)=>tone(n,t+i*.025,1.9,t0));t+=1.2}
   t+=.15})}
-document.addEventListener('click',e=>{const p=e.target.closest&&e.target.closest('[data-play]');if(p)play(p.dataset.play)});
+// ---------- backing-track looper ----------
+// a progression spec has several groups and starts with c, e.g. "cccc:48,52,55|..."
+const isProg=s=>!!s&&s.includes('|')&&s.charAt(0)==='c';
+const specDur=s=>s.split(':')[1].split('|').length*1.35;
+function stopSound(){if(!ac)return;AUD.nodes.forEach(n=>{try{n.g.gain.cancelScheduledValues(ac.currentTime);n.g.gain.setTargetAtTime(.0001,ac.currentTime,.015);n.o.stop(ac.currentTime+.1);n.o2.stop(ac.currentTime+.1)}catch(e){}});AUD.nodes.clear()}
+function stopLoop(){const was=!!AUD.btn;clearTimeout(AUD.timer);AUD.timer=null;if(AUD.btn){AUD.btn.setAttribute('aria-pressed','false');AUD.btn.textContent='↻ Loop'}AUD.btn=null;if(was)stopSound()}
+function toggleLoop(btn,spec){const same=AUD.btn===btn;stopLoop();if(same)return;
+ const src=()=>(btn._play&&btn._play.dataset.play)||spec;
+ if(!isProg(src()))return;
+ AUD.btn=btn;btn.setAttribute('aria-pressed','true');btn.textContent='■ Stop loop';
+ ctx();let next=ac.currentTime+.05;
+ const cycle=()=>{const s=src();if(AUD.btn!==btn)return;if(!isProg(s)){stopLoop();return}
+  play(s,next);next+=specDur(s);
+  AUD.timer=setTimeout(cycle,Math.max(50,(next-ac.currentTime-.3)*1000))};
+ cycle()}
+document.addEventListener('click',e=>{const t=e.target;if(!t.closest)return;
+ const lb=t.closest('.loop-btn');if(lb){toggleLoop(lb,lb._play&&lb._play.dataset.play);return}
+ const p=t.closest('[data-play]');if(p){stopLoop();play(p.dataset.play)}});
+document.addEventListener('visibilitychange',()=>{if(document.hidden)stopLoop()});
+const LOOPABLE=['pPlay','diaPlay','mkPlay','sfPlay','mvPlay','vlPlay','slPlay','pdPlay'];
+document.addEventListener('DOMContentLoaded',()=>{
+ LOOPABLE.forEach(id=>{const b=document.getElementById(id);if(!b||b.nextElementSibling&&b.nextElementSibling.classList.contains('loop-btn'))return;
+  const l=document.createElement('button');l.type='button';l.className='pbtn loop-btn';l.setAttribute('aria-pressed','false');l.setAttribute('aria-label','Loop this progression');l.textContent='↻ Loop';l._play=b;b.after(l)});
+ // ---------- checkpoint tracker ----------
+ const page=document.body.dataset.page,KEY='gtm_progress_v2';
+ if(!page)return;
+ let st={};try{st=JSON.parse(localStorage.getItem(KEY)||'{}')||{}}catch(e){st={}}
+ const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(st))}catch(e){}};
+ document.querySelectorAll('section').forEach(sec=>{if(!sec.querySelector('.badge.check'))return;
+  const ul=sec.querySelector('ul');if(!ul)return;const head=ul.previousElementSibling&&ul.previousElementSibling.tagName==='H3'?ul.previousElementSibling:sec.querySelector('.card h3');
+  const lis=[...ul.children].filter(x=>x.tagName==='LI');
+  const pill=document.createElement('span');pill.className='chk-pill';pill.setAttribute('role','status');
+  const upd=()=>{const n=lis.filter(l=>l.querySelector('input').checked).length;pill.textContent=n+' / '+lis.length+' completed';pill.classList.toggle('all',n===lis.length)};
+  lis.forEach((li,idx)=>{const id=page+'-'+idx,lab=document.createElement('label'),cb=document.createElement('input'),sp=document.createElement('span');
+   cb.type='checkbox';cb.dataset.chk=id;cb.checked=!!st[id];sp.innerHTML=li.innerHTML;lab.className='chk-item';lab.append(cb,sp);li.innerHTML='';li.append(lab);li.classList.add('chk-li');
+   cb.addEventListener('change',()=>{if(cb.checked)st[id]=true;else delete st[id];save();upd()})});
+  if(head){head.classList.add('chk-head');head.append(pill)}
+  upd()})});

@@ -1,5 +1,36 @@
 # Changelog
 
+## Modular curriculum v2 (branch `feat/modular-curriculum-v2`)
+
+The 13 chapters are regrouped into four Modules plus an interactive Toolkit, with new lessons, persistent checkpoints, a backing-track looper and a calculators page. The site is still plain static HTML/CSS/JS with no build step.
+
+### Structure
+| Module | Chapters |
+|---|---|
+| I. Foundations & Rhythm | 1 Notes, Tuning and Intervals; 2 Rhythm, Time and Feel; 3 The Major Scale, Keys and Triads; 4 Chords Across the Neck: Open, CAGED and Barres |
+| II. Functional Harmony & The Blues | 5 Chord Function, Progressions and Minor Keys; 6 Pentatonics, Scale Positions and The Blues; 7 Ear Training and Real Songs |
+| III. Jazz, Voicings & Modal Harmony | 8 Seventh Chords, Shells and Voice Leading; 9 Substitution and Borrowed Chords; 10 Modal Harmony and Chord Scales; 11 Altered Harmony, Melodic Minor and Symmetrical Scales |
+| IV. Improvisation & Line Workshop | 12 Making Music: Target Tones, Phrasing and Practice; 13 The Jazz Line Workshop |
+| V. Interactive Reference Toolkit | `tools.html`: 8 calculators |
+
+102 lessons across the 13 chapters (59 core) plus 8 tools. Lessons are renumbered within each chapter; every migrated interactive keeps its own script scope (one IIFE per original chapter block), so nothing leaks between lessons.
+
+### New
+- **Lessons:** open chords (chapter 4) and rhythm by ear (chapter 2).
+- **Checkpoints:** every chapter ends with a checkpoint list of tick boxes with an "X / Y completed" pill. Ticks persist in `localStorage` key `gtm_progress_v2` (`{"ch3-0": true}`) and drive the per-chapter counts on the landing page.
+- **Backing-track looper:** chord progressions now have a loop button. Playback is scheduled ahead on the audio clock for steady timing; any other play button stops the loop.
+- **Tools:** `tools.html` with eight calculators, linked from every page's nav. The landing nav is now Course + a Tools menu (find a song's key, capo/transpose, intervals by ear, rhythm by ear, chord fingerings, open-string finder, metronome).
+- **Landing page:** Modules I–IV as grouped sections and a Module V banner, each chapter showing checkpoint progress.
+- **`scripts/verify.js`:** headless-Chrome check of all 15 pages (JS errors after clicking every control, missing element ids, duplicate ids, TOC and pager links, checkpoint structure, index links). Run `node scripts/verify.js` (needs `puppeteer-core` and Chrome).
+
+### Changed
+- Chapter 1 now uses the shared `common.js` / `neck.js` helpers instead of its own copies.
+- Lesson ticks on the landing page use a new key (`gtm-lessons-v2`), because lesson numbers changed. Earlier ticks under `gtm-progress` are not carried over.
+- Chapter pages: top bar shows module and position, pager links run in course order (chapter 1 back to the index, chapter 13 on to the Toolkit).
+
+### Known
+- Some colours in the original palette (white text on the brand blue/green/red/orange chips, the green "core" badge) are below WCAG AA contrast. Pre-existing and unchanged here.
+
 ## Landing page v2 (branch `landing-page-v2`)
 
 Only the landing page and its own files changed. The chapter pages, `style.css`, `common.js`, `neck.js` and `metro.js` are untouched, so lesson content, audio and diagram logic are exactly as before. The site is still fully static with no build step, and `gtm-progress` in localStorage keeps its format, so existing progress carries over.

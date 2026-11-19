@@ -8,52 +8,58 @@
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body data-page="ch11">
 <main>
-<nav aria-label="Guide"><a href="index.html">← All chapters</a><span class="here">Chapter 11 of 13</span><span class="metro"></span><span style="display:flex;gap:8px"><a href="chapter-10.html">← Prev</a><a href="chapter-12.html">Next →</a></span></nav>
-<div class="chap" id="chapter-11" style="background:#6d28d9"><span>Chapter 11</span><h2>Advanced Voicings</h2><p>Generators for the wider world of chord shapes: every drop voicing, chords that mix in open strings, fourth voicings from any scale, triads over triads and the symmetry of diminished chords.</p></div>
+<nav aria-label="Guide"><a href="index.html">← All chapters</a><a href="tools.html">Tools</a><span class="here">Module III · Chapter 11 of 13</span><span class="metro"></span><span style="display:flex;gap:8px"><a href="chapter-10.html">← Prev</a><a href="chapter-12.html">Next →</a></span></nav>
+<div class="chap" id="chapter-11" style="background:#0369a1"><span>Chapter 11</span><h2>Altered Harmony, Melodic Minor and Symmetrical Scales</h2><p>Scales from melodic and harmonic minor, altered dominant tensions, upper-structure triads, polychords and symmetrical diminished harmony.</p></div>
 <div class="legend"><span><i class="sw" style="background:var(--root)"></i>Root</span><span><i class="sw" style="background:var(--perfect)"></i>Perfect</span><span><i class="sw" style="background:var(--major)"></i>Major</span><span><i class="sw" style="background:var(--minor)"></i>Minor</span><span><i class="sw" style="background:var(--tritone)"></i>Tritone / altered</span><span class="cap">Click any note, chord or ▶ to hear it.</span></div>
-<div class="card"><h3>In this chapter</h3><ol class="toc"><li><span class="n">1</span><i class="dotc" style="background:var(--minor)"></i><a href="#lesson-1">The voicing builder</a></li><li><span class="n">2</span><i class="dotc" style="background:var(--minor)"></i><a href="#lesson-2">Chords with open strings</a></li><li><span class="n">3</span><i class="dotc" style="background:var(--minor)"></i><a href="#lesson-3">Fourth voicings from any scale</a></li><li><span class="n">4</span><i class="dotc" style="background:var(--minor)"></i><a href="#lesson-4">Triads over triads</a></li><li><span class="n">5</span><i class="dotc" style="background:var(--minor)"></i><a href="#lesson-5">The symmetry of diminished chords</a></li><li><span class="n">6</span><i class="dotc" style="background:var(--major)"></i><a href="#lesson-6">Chapter 11 checkpoint</a></li></ol><p class="cap"><i class="dotc" style="background:var(--go)"></i> Core: do these on a first pass. <i class="dotc" style="background:var(--minor)"></i> Go deeper: safe to skip and come back to. <i class="dotc" style="background:var(--major)"></i> Checkpoint.</p></div>
+<div class="card"><h3>In this chapter</h3><ol class="toc"><li><span class="n">1</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-1">Scales from melodic and harmonic minor</a></li><li><span class="n">2</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-2">Altered dominant chords</a></li><li><span class="n">3</span><i class="dotc" style="background:var(--minor)"></i><a href="#lesson-3">Dominant chords that resolve elsewhere</a></li><li><span class="n">4</span><i class="dotc" style="background:var(--minor)"></i><a href="#lesson-4">Triads on top: upper structures</a></li><li><span class="n">5</span><i class="dotc" style="background:var(--minor)"></i><a href="#lesson-5">Triads over triads: polychords</a></li><li><span class="n">6</span><i class="dotc" style="background:var(--minor)"></i><a href="#lesson-6">Symmetrical and other scales</a></li><li><span class="n">7</span><i class="dotc" style="background:var(--minor)"></i><a href="#lesson-7">The symmetry of diminished chords</a></li><li><span class="n">8</span><i class="dotc" style="background:var(--minor)"></i><a href="#lesson-8">Diminished patterns</a></li><li><span class="n">9</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-9">Which scale for which chord</a></li><li><span class="n">10</span><i class="dotc" style="background:var(--major)"></i><a href="#lesson-10">Chapter 11 checkpoint</a></li></ol></div>
 
 <section id="lesson-1">
-  <div class="lhd"><span class="num">1</span><span class="badge deep">Go deeper</span></div>
-  <h2>The voicing builder</h2>
-  <p>Chapter 5 introduced drop 2 and drop 3. They belong to a family. Start with a seventh chord stacked in thirds (close position), number its notes from the top, and drop one or two of them an octave. Each recipe spreads the chord differently, and each one gives four inversions.</p>
+  <div class="lhd"><span class="num">1</span><span class="badge core">Core</span></div>
+  <h2>Scales from melodic and harmonic minor</h2>
+  <p>The melodic minor scale has seven modes of its own, and three of them are everyday tools in jazz and fusion. Harmonic minor contributes one more. Each is best learned as "the scale for one kind of chord".</p>
   <div class="card">
-    <div class="ctl"><div class="grp"><span class="lab">Root</span><span class="grp" id="vbRoot"></span></div></div>
-    <div class="ctl"><div class="grp"><span class="lab">Chord</span><span class="grp" id="vbType"></span></div></div>
-    <div class="ctl"><div class="grp"><span class="lab">Recipe</span><span class="grp" id="vbKind"></span></div><div class="grp"><span class="lab">Strings</span><span class="grp" id="vbSet"></span></div></div>
-    <p id="vbInfo"></p>
-    <div class="shapes" id="vbOut" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr))"></div>
-    <p class="cap">Only string groups where all four inversions are reachable are offered. Click a diagram to hear it.</p>
+    <div class="ctl"><div class="grp"><span class="lab">Scale</span><span class="grp" id="jmType"></span></div></div>
+    <div class="ctl"><div class="grp"><span class="lab">Root</span><span class="grp" id="jmRoot"></span></div><button type="button" class="pbtn" id="jmPlay">▶ Chord, then scale</button></div>
+    <p id="jmInfo"></p>
+    <div class="scroll"><div id="jmFret" style="min-width:720px"></div></div>
+    <div class="scroll"><div id="jmPiano" style="min-width:420px;max-width:620px"></div></div>
   </div>
 </section>
 <section id="lesson-2">
-  <div class="lhd"><span class="num">2</span><span class="badge deep">Go deeper</span></div>
-  <h2>Chords with open strings</h2>
-  <p>Letting open strings ring against fretted notes higher up the neck gives a shimmering sound that no barre chord can produce. There is no fixed system for these, so this finder searches for them: it looks for shapes with the root in the bass where every open string used is a note of the chord.</p>
+  <div class="lhd"><span class="num">2</span><span class="badge core">Core</span></div>
+  <h2>Altered dominant chords</h2>
+  <p>A dominant 7 chord is already tense. Raising or lowering its 9th, 11th or 13th adds notes that sit a half step from the chord you are resolving to, so the release is stronger. The four alterations are ♭9, ♯9, ♯11 and ♭13; "alt" means some mixture of them.</p>
   <div class="card">
-    <div class="ctl"><div class="grp"><span class="lab">Root</span><span class="grp" id="osRoot"></span></div></div>
-    <div class="ctl"><div class="grp"><span class="lab">Chord</span><span class="grp" id="osType"></span></div></div>
-    <p id="osInfo"></p>
-    <div class="shapes" id="osOut" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr))"></div>
-    <p class="cap">Small dots to the left of the nut are open strings. Keys with sharps that match the open strings (E, A, D, G) give the most results.</p>
+    <div class="ctl"><div class="grp"><span class="lab">Dominant on</span><span class="grp" id="adRoot"></span></div></div>
+    <div class="sd" id="adOut"></div>
+    <p class="cap">▶ plays the altered chord and then the major chord it resolves to, a 5th below.</p>
   </div>
 </section>
 <section id="lesson-3">
   <div class="lhd"><span class="num">3</span><span class="badge deep">Go deeper</span></div>
-  <h2>Fourth voicings from any scale</h2>
-  <p>The fourth voicings of chapter 5 can be built from any seven-note scale and with more notes. Three-note stacks are light and mobile; four-note stacks are fuller. Melodic and harmonic minor produce more stacks with a tritone or an unusual gap, which is the source of their darker colour.</p>
+  <h2>Dominant chords that resolve elsewhere</h2>
+  <p>A dominant 7 chord usually falls a 5th to its target, but it has other exits. Knowing them tells you what a surprising chord in a tune is doing, and which scale suits it: a dominant heading down a 5th takes Mixolydian or the altered scale; a dominant going anywhere else usually sounds best with Lydian dominant.</p>
   <div class="card">
-    <div class="ctl"><div class="grp"><span class="lab">Scale</span><span class="grp" id="qxScale"></span></div><div class="grp"><span class="lab">Notes</span><span class="grp" id="qxParts"></span></div></div>
-    <div class="ctl"><div class="grp"><span class="lab">Root</span><span class="grp" id="qxRoot"></span></div><button type="button" class="pbtn" id="qxPlay">▶ Play all seven</button></div>
-    <div class="shapes" id="qxOut" style="grid-template-columns:repeat(auto-fit,minmax(160px,1fr))"></div>
+    <div class="ctl"><div class="grp"><span class="lab">Arriving at</span><span class="grp" id="urKey"></span></div></div>
+    <div class="scroll"><div class="cheat" id="urOut"></div></div>
   </div>
 </section>
 <section id="lesson-4">
   <div class="lhd"><span class="num">4</span><span class="badge deep">Go deeper</span></div>
-  <h2>Triads over triads</h2>
-  <p>A <b>polychord</b> is two complete chords sounding at once, usually written one above the other. The lower triad sets the root and basic quality; the upper triad adds a block of colour. It is the same idea as the upper structures of chapter 8, with a full triad underneath.</p>
+  <h2>Triads on top: upper structures</h2>
+  <p>An easy way to play and hear those altered sounds is to think of two simple things at once: the shell of the dominant chord underneath (root, 3rd, ♭7) and an ordinary major triad on top. Each triad supplies a different set of tensions.</p>
+  <div class="card">
+    <div class="ctl"><div class="grp"><span class="lab">Dominant on</span><span class="grp" id="usRoot"></span></div></div>
+    <div class="sd" id="usOut"></div>
+    <p class="cap">Written as triad over chord. The labels show what each triad note is, measured from the dominant's root.</p>
+  </div>
+</section>
+<section id="lesson-5">
+  <div class="lhd"><span class="num">5</span><span class="badge deep">Go deeper</span></div>
+  <h2>Triads over triads: polychords</h2>
+  <p>A <b>polychord</b> is two complete chords sounding at once, usually written one above the other. The lower triad sets the root and basic quality; the upper triad adds a block of colour. It is the same idea as the upper structures earlier in this chapter, with a full triad underneath.</p>
   <div class="card">
     <div class="ctl"><div class="grp"><span class="lab">Lower triad</span><span class="grp" id="pcRoot"></span></div></div>
     <div class="ctl"><div class="grp"><span class="lab">Upper triad</span><span class="grp" id="pcUp"></span></div><div class="grp"><span class="grp" id="pcQ"></span></div></div>
@@ -61,8 +67,20 @@
     <p class="cap">The labels show what each upper note is, measured from the lower root.</p>
   </div>
 </section>
-<section id="lesson-5">
-  <div class="lhd"><span class="num">5</span><span class="badge deep">Go deeper</span></div>
+<section id="lesson-6">
+  <div class="lhd"><span class="num">6</span><span class="badge deep">Go deeper</span></div>
+  <h2>Symmetrical and other scales</h2>
+  <p>A few scales are built from a repeating pattern of steps, so they have no single home note and the same fingering repeats up the neck. Others are everyday scales with one note changed or added. All are specialist colours, used over particular chords.</p>
+  <div class="card">
+    <div class="ctl"><div class="grp"><span class="lab">Root</span><span class="grp" id="syRoot"></span></div></div>
+    <div class="ctl"><div class="grp"><span class="lab">Scale</span><span class="grp" id="syType"></span></div><button type="button" class="pbtn" id="syPlay">▶ Play scale</button></div>
+    <p id="syInfo"></p>
+    <div class="scroll"><div id="syFret" style="min-width:720px"></div></div>
+    <div class="scroll"><div id="syPiano" style="min-width:420px;max-width:620px"></div></div>
+  </div>
+</section>
+<section id="lesson-7">
+  <div class="lhd"><span class="num">7</span><span class="badge deep">Go deeper</span></div>
   <h2>The symmetry of diminished chords</h2>
   <p>A diminished 7 chord is four notes each a minor 3rd apart, which divides the octave into equal parts. Two things follow. Move the shape up three frets and you get the same four notes in a new order, so there are really only three different diminished 7 chords. And each one is the top four notes of four different dominant 7♭9 chords, which makes it a pivot between distant keys.</p>
   <div class="card">
@@ -73,74 +91,97 @@
     <p class="cap">Top row: one shape, repeated every three frets. Bottom row: the four dominant chords this diminished chord can stand in for; ▶ plays each with its root added underneath.</p>
   </div>
 </section>
-<section id="lesson-6">
-  <div class="lhd"><span class="num">6</span><span class="badge check">Checkpoint</span></div>
+<section id="lesson-8">
+  <div class="lhd"><span class="num">8</span><span class="badge deep">Go deeper</span></div>
+  <h2>Diminished patterns</h2>
+  <p>The half-whole diminished scale repeats itself every three frets, so any small shape can be moved up or down in minor 3rds and stay inside the scale. Over a dominant 7♭9 chord this produces the tumbling, symmetrical runs associated with bebop and fusion.</p>
+  <div class="card">
+    <div class="ctl"><div class="grp"><span class="lab">Over</span><span class="grp" id="dpRoot"></span></div><div class="grp"><span class="lab">Pattern</span><span class="grp" id="dpPat"></span></div><button type="button" class="pbtn" id="dpPlay">▶ Play</button></div>
+    <div class="chips" id="dpOut"></div>
+    <p class="cap" id="dpInfo"></p>
+    <div class="scroll" id="dpTab"></div>
+  </div>
+</section>
+<section id="lesson-9">
+  <div class="lhd"><span class="num">9</span><span class="badge core">Core</span></div>
+  <h2>Which scale for which chord</h2>
+  <p>A reference for everything in chapters 10 and 11. Start with the first choice; reach for the others when you want a different colour.</p>
+  <div class="card"><div class="scroll"><div class="cheat">
+    <div class="crow lhead"><span>Chord</span><span>First choice</span><span>Other colours</span></div>
+    <div class="crow"><b>maj7, 6</b><span>Major scale (Ionian) or major pentatonic</span><span class="ex">Lydian</span></div>
+    <div class="crow"><b>m7</b><span>Dorian or minor pentatonic</span><span class="ex">Aeolian, Phrygian</span></div>
+    <div class="crow"><b>m(maj7), m6</b><span>Melodic minor</span><span class="ex">Harmonic minor</span></div>
+    <div class="crow"><b>7</b><span>Mixolydian</span><span class="ex">Blues scale, Lydian dominant</span></div>
+    <div class="crow"><b>7 in a blues</b><span>Minor pentatonic or blues scale of the key</span><span class="ex">Mixolydian of each chord</span></div>
+    <div class="crow"><b>7alt, 7♯9, 7♭13</b><span>Altered scale</span><span class="ex">Whole tone (for ♯5)</span></div>
+    <div class="crow"><b>7♭9</b><span>Phrygian dominant (in a minor key)</span><span class="ex">Half-whole diminished</span></div>
+    <div class="crow"><b>7♯11</b><span>Lydian dominant</span><span class="ex">Whole tone</span></div>
+    <div class="crow"><b>m7♭5</b><span>Locrian</span><span class="ex">Locrian ♮2</span></div>
+    <div class="crow"><b>°7</b><span>Whole-half diminished</span><span class="ex">Chord tones plus approach notes</span></div>
+    <div class="crow"><b>sus4, 7sus4</b><span>Mixolydian</span><span class="ex">Major pentatonic a whole step below the root</span></div>
+  </div></div></div>
+  <div class="tip"><b>Chord tones still come first.</b> A scale choice only decides the notes between the targets. If a line lands on chord tones, almost any of these choices will sound intentional.</div>
+</section>
+<section id="lesson-10">
+  <div class="lhd"><span class="num">10</span><span class="badge check">Checkpoint</span></div>
   <h2>Chapter 11 checkpoint</h2>
   <div class="card">
     <h3>You are ready to move on when you can</h3>
-    <ul>
-      <li>Explain how a drop 2 and a drop 3 voicing are made from a close-position chord.</li>
-      <li>Play one seventh chord through four inversions on one string group.</li>
-      <li>Find one open-string voicing for a chord in the key of E, A or D.</li>
-      <li>Say why there are only three different diminished 7 chords.</li>
-    </ul>
+    <ul><li>Play one altered dominant resolving to its I chord.</li><li>Name one scale each for a maj7, m7, 7 and m7♭5 chord without looking.</li><li>Play one upper-structure triad over a dominant shell, resolved to I.</li><li>Name two places a dominant 7 chord can resolve other than down a 5th.</li><li>Say why there are only three different diminished 7 chords.</li></ul>
     <h3>A ten-minute routine</h3>
-    <ol>
-      <li>Four minutes: one chord type, four inversions, up and down one string group.</li>
-      <li>Three minutes: a ii – V – I using the nearest inversion each time.</li>
-      <li>Three minutes: one open-string voicing, used in place of the plain chord in a song you know.</li>
-    </ol>
+    <ol><li>Two minutes: V7 to I in one key, then V7♭9 to I, then V7alt to I. Listen to the pull increase.</li><li>Two minutes: one upper-structure triad over a dominant shell, resolved to I.</li><li>Three minutes: play a diminished 7 chord and move it up three frets, noticing it is the same chord.</li><li>Three minutes: a symmetrical scale over one chord, then the scale the reference table suggests.</li></ol>
   </div>
 </section>
 
-<div class="pager"><a class="ghost" href="chapter-10.html">← Chapter 10</a><a href="chapter-12.html">Chapter 12: Advanced Scales and Arpeggios →</a></div>
-<footer>Guitar Theory Maps · Chapter 11: Advanced Voicings</footer>
+<div class="pager"><a class="ghost" href="chapter-10.html">← Chapter 10</a><a href="chapter-12.html">Chapter 12: Making Music: Target Tones, Phrasing and Practice →</a></div>
+<footer>Guitar Theory Maps · Chapter 11: Altered Harmony, Melodic Minor and Symmetrical Scales</footer>
 </main>
 <script src="common.js"></script>
 <script src="neck.js"></script>
-<script>(function(){
-// 1. voicing builder
-const VT=[['maj7',[0,4,7,11]],['7',[0,4,7,10]],['m7',[0,3,7,10]],['m7♭5',[0,3,6,10]],['°7',[0,3,6,9]],['m(maj7)',[0,3,7,11]],['maj7♯5',[0,4,8,11]],['7♯5',[0,4,8,10]],['7♭5',[0,4,6,10]],['7sus4',[0,5,7,10]],['6',[0,4,7,9]],['m6',[0,3,7,9]]];
-const KD=[['Drop 2',[2,0,1,3],'the 2nd note from the top'],['Drop 3',[1,0,2,3],'the 3rd note from the top'],['Drop 2 and 3',[1,2,0,3],'the 2nd and 3rd notes from the top'],['Drop 2 and 4',[0,2,1,3],'the 2nd and 4th notes from the top']];
-const COMBOS=[];for(let a=0;a<3;a++)for(let b=a+1;b<4;b++)for(let c=b+1;c<5;c++)for(let d=c+1;d<6;d++)COMBOS.push([a,b,c,d]);
-const lab=(iv,x)=>({8:iv.includes(7)?'♭6':'♯5',6:iv.includes(7)?'♯4':'♭5',9:iv.includes(10)||iv.includes(11)?'13':iv.includes(6)?'°7':'6'})[x]||IVL[x];
-let V={root:0,t:0,k:0,set:0};
-function inv(pc,iv,k,set){return[0,1,2,3].map(r=>{const close=[0,1,2,3].map(j=>(r+j)%4),ord=KD[k][1].map(i=>close[i]),fr=voiceOn(pc,iv,ord,set);return{ord,fr,span:Math.max(...fr)-Math.min(...fr)}})}
-function drawVB(){const r=RMAJ[V.root],pc=pcOf(r),[nm,iv]=VT[V.t];
- const sets=COMBOS.filter(s=>inv(pc,iv,V.k,s).every(x=>x.span<=4)).sort((a,b)=>(a[3]-a[0])-(b[3]-b[0])||b[0]-a[0]);if(V.set>=sets.length)V.set=0;
- btns('vbRoot',RMAJ,V.root,i=>{V.root=i;drawVB()});btns('vbType',VT.map(x=>x[0]),V.t,i=>{V.t=i;drawVB()});btns('vbKind',KD.map(x=>x[0]),V.k,i=>{V.k=i;V.set=0;drawVB()});
- btns('vbSet',sets.map(s=>s.map(i=>SNM[i].toUpperCase()).join(' ')),V.set,i=>{V.set=i;drawVB()});
- $('vbInfo').innerHTML=`<b>${r}${nm}, ${KD[V.k][0].toLowerCase()}</b>: take the close-position chord and lower ${KD[V.k][2]} by an octave.`;
- if(!sets.length){$('vbOut').innerHTML='<p class="cap">No comfortable string group for this combination.</p>';return}
- const set=sets[V.set];$('vbOut').innerHTML=inv(pc,iv,V.k,set).sort((a,b)=>Math.min(...a.fr)-Math.min(...b.fr)).map(x=>{const dots=x.fr.map((f,j)=>{const v=iv[x.ord[j]];return{s:set[j],f,txt:lab(iv,v),fam:v===0?'root':[6,8].includes(v)?'tritone':FAM[v]}});
-  return `<div class="shape">${box(dots,r+nm)}<b>${r}${nm}</b><span>${['root',iv[1]===5?'4th':'3rd','5th',iv[3]===9&&!iv.includes(6)?'6th':'7th'][x.ord[0]]} in the bass · frets ${x.fr.join(' ')}</span></div>`}).join('')}
-drawVB();
-// 2. open-string finder
-const OT=[['major',[4],[0,4,7]],['minor',[3],[0,3,7]],['add9',[4,2],[0,2,4,7]],['maj7',[4,11],[0,4,7,11,2]],['6/9',[4,9],[0,2,4,7,9]],['sus2',[2],[0,2,7]],['sus4',[5],[0,5,7]],['m7',[3,10],[0,3,7,10,5]],['m9',[3,10,2],[0,2,3,7,10]],['7',[4,10],[0,4,7,10,2]],['maj7♯11',[4,11,6],[0,4,6,7,11,2]]];
-let O={root:4,t:2};
-function drawOS(){const r=RMAJ[O.root],pc=pcOf(r),[nm,req,ok]=OT[O.t];btns('osRoot',RMAJ,O.root,i=>{O.root=i;drawOS()});btns('osType',OT.map(x=>x[0]),O.t,i=>{O.t=i;drawOS()});
- const found={};for(let b=0;b<3;b++){const rf=mod12(pc-LOWM[b]);if(rf>9)continue;for(let w=Math.max(1,rf-2);w<=Math.max(1,rf)+1&&w<=10;w++){
-  const opts=[];for(let s=b+1;s<6;s++){const o=[];if(ok.includes(mod12(LOWM[s]-pc)))o.push(0);for(let f=w;f<=w+3;f++)if(ok.includes(mod12(LOWM[s]+f-pc)))o.push(f);opts.push(o)}
-  if(opts.some(o=>!o.length))continue;const rec=(i,cur)=>{if(i===opts.length){const fr=[rf].concat(cur),tones=new Set(fr.map((f,j)=>mod12(LOWM[b+j]+f-pc))),opens=cur.filter(f=>f===0).length,fretted=fr.filter(f=>f>0);
-    if(!req.every(x=>tones.has(x))||opens<1||fretted.length<1||fretted.length>4)return;const span=Math.max(...fretted)-Math.min(...fretted);if(span>3||(rf>0&&Math.min(...fretted)<rf-2))return;
-    if(Math.max(...fretted)<4&&rf===0&&opens>3)return;const key=b+':'+fr.join(','),score=tones.size*3+opens*2-span+(Math.max(...fretted)>=4?3:0);found[key]={b,fr,score};return}
-   opts[i].forEach(f=>rec(i+1,cur.concat(f)))};rec(0,[])}}
- const list=Object.values(found).sort((x,y)=>y.score-x.score).slice(0,6);
- $('osInfo').innerHTML=`<b>${r}${nm==='major'?'':nm==='minor'?'m':nm}</b>: ${list.length?`${list.length} shape${list.length>1?'s':''} found.`:'no shapes found. This chord shares too few notes with the open strings; try a root of E, A, D or G.'}`;
- $('osOut').innerHTML=list.map(x=>{const dots=x.fr.map((f,j)=>{const v=mod12(LOWM[x.b+j]+f-pc);return{s:x.b+j,f,txt:v===0?'R':TENS[v],fam:v===0?'root':FAM[v]}});return `<div class="shape">${box(dots,r+nm+' with open strings')}<b>${r}${nm==='major'?'':nm==='minor'?'m':nm}</b><span>frets ${'×'.repeat(x.b).split('').concat(x.fr).join(' ')}</span></div>`}).join('')}
-drawOS();
-// 3. quartal from any scale
-const QS=[['Major',[0,2,4,5,7,9,11]],['Melodic minor',[0,2,3,5,7,9,11]],['Harmonic minor',[0,2,3,5,7,8,11]]];
-let Q={sc:0,parts:0,root:0};
-function drawQX(){const r=(Q.sc?RMIN:RMAJ)[Q.root],pc=pcOf(r),S=QS[Q.sc][1],n=Q.parts?4:3;btns('qxScale',QS.map(x=>x[0]),Q.sc,i=>{Q.sc=i;drawQX()});btns('qxParts',['3','4'],Q.parts,i=>{Q.parts=i;drawQX()});btns('qxRoot',Q.sc?RMIN:RMAJ,Q.root,i=>{Q.root=i;drawQX()});
- let f0=mod12(pc-9),set=[1,2,3,4];if(f0>=7){f0-=7;set=[0,1,2,3]}set=set.slice(0,n);const all=[];
- $('qxOut').innerHTML=S.map((x,i)=>{let prev=LOWM[set[0]]+f0+x;const ms=[prev];for(let k=1;k<n;k++){const p=mod12(pc+S[(i+3*k)%7]);let m=prev+1;while(mod12(m)!==p)m++;ms.push(m);prev=m}
-  const gaps=ms.slice(1).map((m,j)=>m-ms[j]),odd=gaps.some(g=>g!==5),dots=ms.map((m,j)=>{const v=mod12(m-pc);return{s:set[j],f:m-LOWM[set[j]],txt:lbl7(S,S.indexOf(v)),fam:odd?'tritone':v?FAM[v]:'root'}});all.push(ms);
-  return `<div class="shape">${box(dots,'Fourth voicing '+(i+1))}<b>${i+1}. from ${spell(r,i,x)}</b><span>${odd?'gaps of '+gaps.join(', ')+' half steps':'all perfect 4ths'}</span></div>`}).join('');
- $('qxPlay').dataset.play='c'.repeat(7)+':'+all.map(m=>m.join(',')).join('|')}
-function lbl7(S,i){const d=S[i]-MAJ[i];return i?(d<0?'♭':d>0?'♯':'')+(i+1):'R'}
-drawQX();
-// 4. polychords
+<script>
+// from old chapter 8, lessons 4, 5, 6, 7
+(function(){
+const JM=[{n:'Melodic minor',s:[0,2,3,5,7,9,11],l:['R','2','♭3','4','5','6','7'],lo:[0,1,2,3,4,5,6],ch:[0,3,7,11],cn:'m(maj7)',par:0,pn:'melodic minor',use:'Use it over a minor chord that has a natural 7 or a 6.'},
+ {n:'Lydian dominant',s:[0,2,4,6,7,9,10],l:['R','2','3','♯4','5','6','♭7'],lo:[0,1,2,3,4,5,6],ch:[0,4,7,10],cn:'7',par:7,pn:'melodic minor',use:'Use it over a dominant 7 that is not resolving down a 5th, such as a tritone substitute or a IV7 chord.'},
+ {n:'Altered',s:[0,1,3,4,6,8,10],l:['R','♭9','♯9','3','♯11','♭13','♭7'],lo:[0,1,1,2,3,5,6],ch:[0,4,10],cn:'7alt',par:1,pn:'melodic minor',use:'Use it over a V7 that resolves to its I, for the most tension. It contains every altered note at once.'},
+ {n:'Locrian ♮2',s:[0,2,3,5,6,8,10],l:['R','2','♭3','4','♭5','♭6','♭7'],lo:[0,1,2,3,4,5,6],ch:[0,3,6,10],cn:'m7♭5',par:3,pn:'melodic minor',use:'Use it over a half-diminished chord. Its natural 2 is smoother than the ♭2 of plain Locrian.'},
+ {n:'Phrygian dominant',s:[0,1,4,5,7,8,10],l:['R','♭2','3','4','5','♭6','♭7'],lo:[0,1,2,3,4,5,6],ch:[0,4,7,10],cn:'7',par:5,pn:'harmonic minor',use:'Use it over the V7 chord in a minor key. It is the sound of flamenco and of much metal.'}];
+let J={t:1,root:0};
+function drawJM(){const j=JM[J.t],r=RMAJ[J.root],pc=pcOf(r),b=48+pc,map={};btns('jmType',JM.map(x=>x.n),J.t,i=>{J.t=i;drawJM()});btns('jmRoot',RMAJ,J.root,i=>{J.root=i;drawJM()});
+ j.s.forEach((x,i)=>map[x]=[j.l[i],i?(j.ch.includes(x)?FAM[x]:'ghost'):'root']);drawFret('jmFret',pc,map,r+' '+j.n);drawPiano('jmPiano',pc,map,r+' '+j.n);
+ $('jmPlay').dataset.play='cm:'+j.ch.map(x=>b+x).join(',')+'|'+j.s.concat(12).map(x=>b+x).join(',');
+ $('jmInfo').innerHTML=`<b>${r} ${j.n.toLowerCase()}</b>: ${j.s.map((x,i)=>spell(r,j.lo[i],x)).join(' ')}. Fits <b>${r}${j.cn}</b>. ${j.use} ${j.par?`It has the same notes as ${RMAJ[mod12(pc+j.par)]} ${j.pn}.`:''}<br><span class="cap">Coloured dots are the chord tones; grey dots are the other scale notes.</span>`}
+drawJM();
+const AD=[['7♭9',[0,4,7,10,13],[0,2,4,6,1],'Dark and urgent'],['7♯9',[0,4,7,10,15],[0,2,4,6,1],'Gritty: major and minor 3rd at once'],['7♯11',[0,4,7,10,18],[0,2,4,6,3],'Bright and floating'],['7♭13',[0,4,10,20],[0,2,6,5],'Brooding'],['7alt',[0,4,10,15,20],[0,2,6,1,5],'Maximum tension']];
+let A=7;
+function drawAD(){const r=RMAJ[A],pc=pcOf(r),b=43+mod12(pc-7),I=b+5,tn=spell(r,3,5);btns('adRoot',RMAJ,A,i=>{A=i;drawAD()});
+ $('adOut').innerHTML=AD.map(([n,s,lo,d])=>`<div class="sdc" style="border-top-color:var(--tritone)"><span class="rn">${r}${n}</span><span class="ns">${s.map((x,i)=>spell(r,lo[i],x%12)).join(' ')}</span><span class="cap">${d}. Resolves to ${tn}.</span>${PB('cc:'+s.map(x=>b+x).join(',')+'|'+[I,I+7,I+12,I+16].join(','),'Play '+r+n+' to '+tn)}</div>`).join('')}
+drawAD();
+const TEN=['R','♭9','9','♯9','3','11','♯11','5','♭13','13','♭7','7'],US=[[2,1,'13♯11'],[3,2,'7♯9'],[6,4,'7♭9♯11'],[8,5,'7♯9♭13'],[9,5,'13♭9']];
+let U=0;
+function drawUS(){const r=RMAJ[U],pc=pcOf(r),b=43+mod12(pc-7);btns('usRoot',RMAJ,U,i=>{U=i;drawUS()});
+ $('usOut').innerHTML=US.map(([iv,lo,nm])=>{const tr=spell(r,lo,iv),t=b+12+iv+(iv<5?12:0),lab=[0,4,7].map(x=>TEN[mod12(iv+x)]).join(' · ');
+  return `<div class="sdc" style="border-top-color:var(--major)"><span class="rn">${tr} / ${r}7</span><span class="cn">= ${r}${nm}</span><span class="ns">${chordOf(tr,0,0,'M').notes}</span><span class="cap">adds ${lab}</span>${PB('cc:'+[b,b+10,b+16].join(',')+'|'+[b,b+10,b+16,t,t+4,t+7].join(','),'Play shell then '+tr+' over '+r+'7')}</div>`}).join('')}
+drawUS();
+})();
+// from old chapter 13, lessons 4, 5
+(function(){
+const base=kp=>(kp>6?48:60)+kp;
+let U=0;
+const UR=[[7,'V7','Down a 5th','The normal resolution.','Mixolydian, or altered for more tension'],[1,'♭II7','Down a half step','The tritone substitute.','Lydian dominant'],[10,'♭VII7','Up a whole step','The backdoor dominant, borrowed from the parallel minor.','Lydian dominant'],[5,'IV7','Down a 4th','The blues move from IV7 back to I.','Mixolydian or Lydian dominant'],[11,'VII7','Up a half step','Less common. Heard as the V of iii arriving on I instead.','Altered']];
+function drawUR(){const key=RMAJ[U],kp=pcOf(key),I=chordOf(key,0,0,'maj7');btns('urKey',RMAJ.map(x=>x+'maj7'),U,i=>{U=i;drawUR()});
+ $('urOut').innerHTML='<div class="crow lhead"><span>Dominant</span><span>How it moves</span><span>Scale to try</span></div>'+UR.map(([o,rn,mv,d,sc])=>{const c=chordOf(RMAJ[mod12(kp+o)],0,0,'7');return `<div class="crow"><b>${PB('cc:'+c.midi.join(',')+'|'+I.midi.join(','),'Play '+c.name+' to '+I.name)} ${c.name} → ${I.name}<span class="cap" style="display:block;font-weight:500">${rn}</span></b><span>${mv}<span class="cap" style="display:block">${d}</span></span><span class="ex">${sc}</span></div>`}).join('')}
+drawUR();
+const DP=[['Four up',[0,1,3,4],3,'Four scale notes up, then the same shape a minor 3rd higher.'],['Four down',[12,10,9,7],-3,'Four scale notes down, repeated a minor 3rd lower each time.'],['Hidden major triads',[0,4,7],3,'The scale contains four major triads a minor 3rd apart. Arpeggiate each in turn.'],['Half step and leap',[0,1,6,7],3,'A half step, a jump, another half step.']];
+let Dp={root:7,p:0};
+function drawDP(){const r=RMAJ[Dp.root],pc=pcOf(r),b=base(pc),[n,cell,step,d]=DP[Dp.p];btns('dpRoot',RMAJ.map(x=>x+'7♭9'),Dp.root,i=>{Dp.root=i;drawDP()});btns('dpPat',DP.map(x=>x[0]),Dp.p,i=>{Dp.p=i;drawDP()});
+ const cells=[0,1,2,3].map(k=>cell.map(o=>o+step*k)),SH=['C','D♭','D','E♭','E','F','F♯','G','A♭','A','B♭','B'];
+ $('dpOut').innerHTML=cells.map(c=>`<span class="nchip" style="display:inline-flex;gap:8px">${c.map(o=>`<span><b>${SH[mod12(pc+o)]}</b> <small style="opacity:.7">${TENS[mod12(o)]}</small></span>`).join('')}</span>`).join('');
+ $('dpInfo').textContent=d+' Small labels show each note measured from the root of the chord.';const ms=cells.map(c=>c.map(o=>b+o));$('dpTab').innerHTML=tab(ms);$('dpPlay').dataset.play='mmmm:'+ms.map(x=>x.join(',')).join('|')}
+drawDP();
+})();
+// from old chapter 11, lessons 4, 5
+(function(){
 let P={root:0,up:2,q:0};
 function drawPC(){const r=RMAJ[P.root],pc=pcOf(r),ur=RMAJ[mod12(pc+P.up)],upc=pcOf(ur),iv=P.q?[0,3,7]:[0,4,7],b=48+pc;
  btns('pcRoot',RMAJ.map(x=>x+' major'),P.root,i=>{P.root=i;drawPC()});btns('pcUp',RMAJ.map((x,i)=>RMAJ[mod12(pc+i)]),P.up,i=>{P.up=i;drawPC()});btns('pcQ',['Major','Minor'],P.q,i=>{P.q=i;drawPC()});
@@ -149,7 +190,6 @@ function drawPC(){const r=RMAJ[P.root],pc=pcOf(r),ur=RMAJ[mod12(pc+P.up)],upc=pc
  let t=60+mod12(upc-0);while(t<=b+7)t+=12;
  $('pcOut').innerHTML=`<div class="flow"><div class="step"><b style="font-size:1.4rem">${up.name} over ${lo.name}</b>${up.notes} above ${lo.notes} ${PB('cc:'+[b,b+4,b+7].join(',')+'|'+[b,b+4,b+7,t,t+iv[1],t+7].join(','),'Play lower triad, then both')}</div><div class="step" style="border-top-color:var(--major)"><b>Adds ${labs.join(' · ')}</b>${feel}</div></div>`}
 drawPC();
-// 5. diminished symmetry
 let Dm=11;
 function drawDM(){const r=RMAJ[Dm],pc=pcOf(r),iv=[0,3,6,9],set=[2,3,4,5],names=iv.map((x,i)=>spell(r,i*2,x));btns('dmRoot',RMAJ,Dm,i=>{Dm=i;drawDM()});
  $('dmInfo').innerHTML=`<b>${r}°7</b>: ${names.join(' ')}. The same four notes also spell ${iv.slice(1).map(x=>RMAJ[mod12(pc+x)]+'°7').join(', ')}.`;
@@ -157,6 +197,15 @@ function drawDM(){const r=RMAJ[Dm],pc=pcOf(r),iv=[0,3,6,9],set=[2,3,4,5],names=i
  $('dmDom').innerHTML=iv.map(x=>{const dr=mod12(pc+x-4),dn=RMAJ[dr],b=36+dr+(dr<4?12:0);return `<div class="sdc" style="border-top-color:var(--go)"><span class="rn">${dn}7♭9</span><span class="cap">root ${dn} + ${r}°7. Resolves to ${RMAJ[mod12(dr+5)]}.</span>${PB('cc:'+[b].concat(iv.map(y=>60+pc+y-(pc>6?12:0))).join(',')+'|'+[b+5,b+5+12+4-12,b+5+7,b+5+12].join(','),'Play '+dn+'7♭9 and its resolution')}</div>`}).join('')}
 function inv4(pc,iv,set){return[0,1,2,3].map(r=>{const close=[0,1,2,3].map(j=>(r+j)%4),ord=[close[2],close[0],close[1],close[3]],fr=voiceOn(pc,iv,ord,set);return{ord,fr}}).sort((a,b)=>Math.min(...a.fr)-Math.min(...b.fr))}
 drawDM();
+})();
+// from old chapter 6, lessons 6
+(function(){
+const SY=[{n:'Whole tone',s:[0,2,4,6,8,10],d:'Six notes, all a whole step apart. Dreamy and unanchored. Fits augmented chords and dominant 7 chords with a raised 5th.'},{n:'Diminished (whole-half)',s:[0,2,3,5,6,8,9,11],d:'Eight notes alternating whole step, half step. Fits diminished 7 chords built on the same root.'},{n:'Diminished (half-whole)',s:[0,1,3,4,6,7,9,10],d:'Eight notes alternating half step, whole step. Fits dominant 7 chords with a ♭9 or ♯9.'},{n:'Chromatic',s:[0,1,2,3,4,5,6,7,8,9,10,11],d:'All twelve notes. Not a scale to improvise with wholesale, but the source of passing notes between scale tones.'},{n:'Augmented',s:[0,3,4,7,8,11],d:'Six notes alternating a minor 3rd and a half step: two augmented triads a half step apart. Bright and strange. Fits augmented and maj7♯5 chords.'},{n:'Bebop dominant',s:[0,2,4,5,7,9,10,11],d:'Mixolydian with one added passing note, the natural 7th. Having eight notes means chord tones land on the beats when you run it in eighth notes.'},{n:'Harmonic major',s:[0,2,4,5,7,8,11],d:'A major scale with a lowered 6th: major with a streak of minor.'},{n:'Double harmonic',s:[0,1,4,5,7,8,11],d:'Two three-fret gaps give it an unmistakably Middle Eastern colour.'}];
+let Y={root:0,t:0};
+function drawSym(){const r=RMAJ[Y.root],pc=pcOf(r),y=SY[Y.t],map={};btns('syRoot',RMAJ,Y.root,i=>{Y.root=i;drawSym()});btns('syType',SY.map(x=>x.n),Y.t,i=>{Y.t=i;drawSym()});
+ y.s.forEach(x=>map[x]=[IVL[x],x===6?'tritone':famOf(x)]);drawFret('syFret',pc,map,r+' '+y.n);drawPiano('syPiano',pc,map,r+' '+y.n);
+ $('syInfo').innerHTML=`<b>${r} ${y.n.toLowerCase()}.</b> ${y.d}`;$('syPlay').dataset.play='m:'+y.s.concat(12).map(x=>48+pc+x).join(',')}
+drawSym();
 })();
 </script>
 <script src="metro.js"></script>

@@ -8,263 +8,145 @@
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body data-page="ch4">
 <main>
-<nav aria-label="Guide"><a href="index.html">← All chapters</a><span class="here">Chapter 4 of 13</span><span class="metro"></span><span style="display:flex;gap:8px"><a href="chapter-3.html">← Prev</a><a href="chapter-5.html">Next →</a></span></nav>
-<div class="chap" id="chapter-4" style="background:var(--major)"><span>Chapter 4</span><h2>Substitution and Borrowed Chords</h2><p>Six ways to change the chords of a progression without changing where it is going. One key selector drives every example in this chapter.</p></div>
+<nav aria-label="Guide"><a href="index.html">← All chapters</a><a href="tools.html">Tools</a><span class="here">Module I · Chapter 4 of 13</span><span class="metro"></span><span style="display:flex;gap:8px"><a href="chapter-3.html">← Prev</a><a href="chapter-5.html">Next →</a></span></nav>
+<div class="chap" id="chapter-4" style="background:var(--tritone)"><span>Chapter 4</span><h2>Chords Across the Neck: Open, CAGED and Barres</h2><p>From your first eight open chords to movable CAGED shapes, barre chords, slash chords and pedal points across the fretboard.</p></div>
 <div class="legend"><span><i class="sw" style="background:var(--root)"></i>Root</span><span><i class="sw" style="background:var(--perfect)"></i>Perfect</span><span><i class="sw" style="background:var(--major)"></i>Major</span><span><i class="sw" style="background:var(--minor)"></i>Minor</span><span><i class="sw" style="background:var(--tritone)"></i>Tritone / altered</span><span class="cap">Click any note, chord or ▶ to hear it.</span></div>
-<div class="card"><h3>In this chapter</h3><ol class="toc"><li><span class="n">1</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-1">Swapping chords that do the same job</a></li><li><span class="n">2</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-2">Secondary dominants</a></li><li><span class="n">3</span><i class="dotc" style="background:var(--minor)"></i><a href="#lesson-3">Tritone substitution</a></li><li><span class="n">4</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-4">Borrowing from the parallel minor</a></li><li><span class="n">5</span><i class="dotc" style="background:var(--minor)"></i><a href="#lesson-5">Diminished passing chords</a></li><li><span class="n">6</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-6">The full palette of a key</a></li><li><span class="n">7</span><i class="dotc" style="background:var(--minor)"></i><a href="#lesson-7">Turnarounds and their upgrades</a></li><li><span class="n">8</span><i class="dotc" style="background:var(--minor)"></i><a href="#lesson-8">Two standard forms, reharmonised</a></li><li><span class="n">9</span><i class="dotc" style="background:var(--minor)"></i><a href="#lesson-9">One note, many chords</a></li><li><span class="n">10</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-10">Reharmonising cheat sheet</a></li><li><span class="n">11</span><i class="dotc" style="background:var(--major)"></i><a href="#lesson-11">Chapter 4 checkpoint</a></li></ol><p class="cap"><i class="dotc" style="background:var(--go)"></i> Core: do these on a first pass. <i class="dotc" style="background:var(--minor)"></i> Go deeper: safe to skip and come back to. <i class="dotc" style="background:var(--major)"></i> Checkpoint.</p></div>
+<div class="card"><h3>In this chapter</h3><ol class="toc"><li><span class="n">1</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-1">The eight essential open chords</a></li><li><span class="n">2</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-2">Five shapes cover the whole neck</a></li><li><span class="n">3</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-3">Barre chords from the E and A shapes</a></li><li><span class="n">4</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-4">Slash chords and inversions</a></li><li><span class="n">5</span><i class="dotc" style="background:var(--minor)"></i><a href="#lesson-5">Spread triads and pedal points</a></li><li><span class="n">6</span><i class="dotc" style="background:var(--major)"></i><a href="#lesson-6">Chapter 4 checkpoint</a></li></ol></div>
 
 <section id="lesson-1">
   <div class="lhd"><span class="num">1</span><span class="badge core">Core</span></div>
-  <h2>Swapping chords that do the same job</h2>
-  <p>Stack the notes of a key in thirds and the seven seventh chords appear as a staircase: each chord is the one above it shifted along by one note. Neighbours on the staircase share three of their four notes, which is why they can replace each other with so little disturbance.</p>
-  <div class="card">
-    <div class="ctl"><div class="grp"><span class="lab">Key</span><span class="grp" id="k1"></span></div></div>
-    <div class="scroll"><div class="mx" id="mx"></div></div>
-    <div class="legend">
-      <span><i class="sw" style="background:var(--go)"></i>Tonic</span>
-      <span><i class="sw" style="background:var(--perfect)"></i>Subdominant</span>
-      <span><i class="sw" style="background:var(--tritone)"></i>Dominant</span>
-    </div>
-    <p class="cap">Columns are the notes of the key arranged in thirds. R, 3, 5 and 7 show each note's role in that chord.</p>
-  </div>
-  <ul>
-    <li><b>For I:</b> try vi or iii. The melody note usually decides which one works.</li>
-    <li><b>For IV:</b> try ii. In jazz the ii chord is the default and IV is the alternative.</li>
-    <li><b>For V:</b> try vii°. It is a V7 chord with the root removed.</li>
-  </ul>
+  <h2>The eight essential open chords</h2>
+  <p>Most first songs use just eight chords: five major (C, A, G, E, D) and three minor (Am, Em, Dm). They are called open chords because they use open strings, which is why they ring so freely. In each box the lowest string is at the bottom, the nut is on the left, and a number shows the finger position as an interval: <b>R</b> is the root. A <b>×</b> marks a string you leave out, and a ring on the left means an open string. Click any box to hear it.</p>
+  <div class="card"><div class="shapes" id="ocGrid" style="grid-template-columns:repeat(auto-fill,minmax(150px,1fr))"></div></div>
+  <div class="tip"><b>Major or minor is one fret.</b> Compare A with Am: only the B string moves, from fret 2 to fret 1. The 3rd of the chord drops by one half step, and that is the whole difference between bright and dark. E to Em and D to Dm work the same way: find the 3rd and move it down one fret.</div>
 </section>
-
 <section id="lesson-2">
   <div class="lhd"><span class="num">2</span><span class="badge core">Core</span></div>
-  <h2>Secondary dominants</h2>
-  <p>The V7 chord pulls strongly toward I. You can borrow that pull for any other major or minor chord in the key by placing <b>its own</b> V7 in front of it, as if that chord were briefly the tonic. Each secondary dominant brings in at least one note from outside the key, and that note is the sound of the device.</p>
+  <h2>Five shapes cover the whole neck</h2>
+  <p>The five open major chords every guitarist learns first are C, A, G, E and D. Each one is a movable shape: slide it up the neck, let your index finger do the job the nut was doing, and it becomes a different chord. Placed in the order C, A, G, E, D, the five shapes link end to end, so any chord can be played in five positions. This is often called the CAGED system.</p>
   <div class="card">
-    <div class="ctl"><div class="grp"><span class="lab">Key</span><span class="grp" id="k2"></span></div></div>
-    <div class="sd" id="sd"></div>
-    <p class="cap">Read "V7/ii" as "five-seven of two": the dominant 7th chord built a 5th above the ii chord.</p>
+    <div class="ctl"><div class="grp"><span class="lab">Chord</span><span class="grp" id="cgRoot"></span></div><div class="grp"><span class="grp" id="cgQual"></span></div></div>
+    <div class="ctl"><div class="grp"><span class="lab">Shape</span><span class="grp" id="cgShape"></span></div></div>
+    <div class="scroll"><div id="cgNeck" style="min-width:720px"></div></div>
+    <div class="two"><div id="cgBox" style="max-width:260px"></div><p id="cgInfo"></p></div>
+    <p class="cap">Bright dots are the selected shape; faded dots are the other four. R marks every root. Click the small diagram to hear the chord.</p>
   </div>
-  <div class="tip"><b>On the neck.</b> The dominant's root is a 5th above its target, which is the same fret on the next thicker string. If your target chord has its root on the A string, its secondary dominant has its root at the same fret on the low E string.</div>
-  <div class="tip"><b>Go one step further.</b> Any dominant 7 can be turned into a ii–V by putting the minor 7 chord a 5th above it in front. One bar of V7 becomes half a bar of ii7 and half a bar of V7.</div>
+  <div class="tip"><b>Why it matters.</b> The shapes are also landmarks. Each one has a scale position and an arpeggio wrapped around it, which is how chapter 6 organises the neck.</div>
 </section>
-
 <section id="lesson-3">
-  <div class="lhd"><span class="num">3</span><span class="badge deep">Go deeper</span></div>
-  <h2>Tritone substitution</h2>
-  <p>The tension in a dominant 7 chord comes from its 3rd and 7th, which sit a tritone apart. The dominant 7 chord whose root is a tritone away contains the same two notes with their roles swapped. So one can replace the other, and the bass line turns from a leap into a half-step slide.</p>
+  <div class="lhd"><span class="num">3</span><span class="badge core">Core</span></div>
+  <h2>Barre chords from the E and A shapes</h2>
+  <p>Two of the five shapes do most of the everyday work. The E shape has its root on the low E string and the A shape has its root on the A string. Know the note names on those two strings and you can play any major, minor or seventh chord anywhere.</p>
   <div class="card">
-    <div class="ctl"><div class="grp"><span class="lab">Key</span><span class="grp" id="k3"></span></div></div>
-    <div class="two">
-      <div class="triads" id="tt"></div>
-      <div style="display:flex;flex-direction:column;gap:10px">
-        <span class="lab2">Original <span id="ttP1"></span></span><div class="prog" id="tt1" style="min-width:0"></div>
-        <span class="lab2">With the substitute <span id="ttP2"></span></span><div class="prog" id="tt2" style="min-width:0"></div>
-        <p class="cap" id="ttNote"></p>
-      </div>
-    </div>
+    <div class="ctl"><div class="grp"><span class="lab">Root</span><span class="grp" id="brRoot"></span></div></div>
+    <div class="ctl"><div class="grp"><span class="lab">Type</span><span class="grp" id="brType"></span></div></div>
+    <div class="shapes" id="brOut" style="grid-template-columns:repeat(auto-fit,minmax(230px,1fr))"></div>
+    <h3>Root finder: the two bottom strings</h3>
+    <div class="scroll"><div id="brNeck" style="min-width:720px"></div></div>
+    <p class="cap">The dark dots are your chosen root. The root sits under your index finger in both shapes.</p>
   </div>
-  <div class="tip"><b>On the neck.</b> In a shell voicing the 3rd and 7th stay on exactly the same two frets. Only the bass note moves, and it lands one fret above the root of the I chord you are heading for.</div>
+  <div class="tip"><b>Power chords.</b> Play only the lowest two or three notes of either shape (root, 5th and the octave) and you have a power chord. With no 3rd in it, it is neither major nor minor, which is why it works over both.</div>
 </section>
-
 <section id="lesson-4">
   <div class="lhd"><span class="num">4</span><span class="badge core">Core</span></div>
-  <h2>Borrowing from the parallel minor</h2>
-  <p>A major key can borrow chords from the minor key that shares its home note. This is called modal mixture. The borrowed chords bring in the lowered 3rd, 6th and 7th, which darken the colour without leaving the key centre.</p>
+  <h2>Slash chords and inversions</h2>
+  <p>A slash chord names a chord and then the bass note to play under it: C/E is a C chord with E as the lowest note. When the bass note belongs to the chord it is an <b>inversion</b>. When it does not, the bass adds a new colour to the chord.</p>
   <div class="card">
-    <div class="ctl"><div class="grp"><span class="lab">Key</span><span class="grp" id="k4"></span></div></div>
-    <div class="rel">
-      <span class="rl">Major key</span><div class="chips" id="bmaj"></div>
-      <span class="rl">Parallel minor</span><div class="chips" id="bmin"></div>
-    </div>
-    <p class="cap">Purple chords are the ones most often borrowed into the major key.</p>
-    <div class="sd" id="bor"></div>
-    <h3>Try these</h3>
-    <ul id="borEx"></ul>
+    <h3>Slash chord explorer</h3>
+    <div class="ctl"><div class="grp"><span class="lab">Chord</span><span class="grp" id="slRoot"></span></div><div class="grp"><span class="grp" id="slQual"></span></div></div>
+    <div class="ctl"><div class="grp"><span class="lab">Bass note</span><span class="grp" id="slBass"></span></div></div>
+    <div id="slOut" class="nmout"></div>
+  </div>
+  <div class="card">
+    <h3>What they are for: a walking bass line</h3>
+    <div class="ctl"><div class="grp"><span class="lab">Key</span><span class="grp" id="slKey"></span></div><button type="button" class="pbtn" id="slPlay">▶ Play the line</button></div>
+    <div class="scroll"><div class="prog" id="slProg" style="min-width:860px"></div></div>
+    <p class="cap">The chords are ordinary ones from the key. The slash chords exist only to let the bass walk down the scale one step at a time.</p>
   </div>
 </section>
-
 <section id="lesson-5">
   <div class="lhd"><span class="num">5</span><span class="badge deep">Go deeper</span></div>
-  <h2>Diminished passing chords</h2>
-  <p>When two chords in a key have roots a whole step apart, a diminished 7 chord fits on the fret between them. It works because it is really the secondary dominant of the chord you are heading to, with its root left out, so the bass climbs by half steps.</p>
+  <h2>Spread triads and pedal points</h2>
+  <p>Two more things to do with three notes and a bass. A <b>spread triad</b> takes the middle note of a triad and moves it up an octave, so the chord covers more than an octave. It sounds open and piano-like. A <b>pedal point</b> does the opposite job: the bass holds one note while the chords above it change, building tension until the bass finally moves.</p>
   <div class="card">
-    <div class="ctl"><div class="grp"><span class="lab">Key</span><span class="grp" id="k6"></span></div></div>
-    <div id="dimOut" style="display:flex;flex-direction:column;gap:10px"></div>
-    <p class="cap">A diminished 7 chord repeats every three frets, so any of its four notes can be treated as the root.</p>
+    <h3>Spread triads</h3>
+    <div class="ctl"><div class="grp"><span class="lab">Chord</span><span class="grp" id="spRoot"></span></div><div class="grp"><span class="grp" id="spQual"></span></div></div>
+    <div class="shapes" id="spOut" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr))"></div>
+  </div>
+  <div class="card">
+    <h3>Pedal point</h3>
+    <div class="ctl"><div class="grp"><span class="lab">Key</span><span class="grp" id="pdKey"></span></div><button type="button" class="pbtn" id="pdPlay">▶ Play</button></div>
+    <div class="scroll"><div class="prog" id="pdProg" style="min-width:560px"></div></div>
+    <p class="cap">I, IV, V and the borrowed iv, all over the key note in the bass.</p>
   </div>
 </section>
-
 <section id="lesson-6">
-  <div class="lhd"><span class="num">6</span><span class="badge core">Core</span></div>
-  <h2>The full palette of a key</h2>
-  <p>Put the last few lessons side by side and you have nearly every chord found in most pop, rock, folk and country songs: the seven chords of the key, the dominant 7 chords that lead into them, and the handful borrowed from the parallel minor. This is the working palette of a songwriter.</p>
-  <div class="card">
-    <div class="ctl"><div class="grp"><span class="lab">Key</span><span class="grp" id="plKey"></span></div></div>
-    <span class="lab2">In the key</span><div class="sd" id="plDia"></div>
-    <span class="lab2">Secondary dominants: each leads to the chord named after the slash</span><div class="sd" id="plSec"></div>
-    <span class="lab2">Borrowed from the parallel minor</span><div class="sd" id="plBor"></div>
-    <p class="cap">Click any chord to hear it. When a song has a chord you cannot explain, it is usually in the second or third row.</p>
-  </div>
-</section>
-<section id="lesson-7">
-  <div class="lhd"><span class="num">7</span><span class="badge deep">Go deeper</span></div>
-  <h2>Turnarounds and their upgrades</h2>
-  <p>A <b>turnaround</b> is the short progression at the end of a section that leads back to the top. The basic one is I – vi – ii – V. Each row below applies one substitution from this chapter to it, which is how a plain turnaround becomes a jazz one.</p>
-  <div class="card">
-    <div class="ctl"><div class="grp"><span class="lab">Key</span><span class="grp" id="taKey"></span></div></div>
-    <div id="taOut" style="display:flex;flex-direction:column;gap:14px"></div>
-  </div>
-</section>
-<section id="lesson-8">
-  <div class="lhd"><span class="num">8</span><span class="badge deep">Go deeper</span></div>
-  <h2>Two standard forms, reharmonised</h2>
-  <p>Two chord sequences are used for hundreds of tunes: the 12-bar blues and a 32-bar form known as rhythm changes. Both are testing grounds for substitution. The blues below is shown at three levels of complexity; every added chord is a secondary dominant, a ii – V or a passing diminished chord from earlier in this chapter.</p>
-  <div class="card">
-    <div class="ctl"><div class="grp"><span class="lab">Key</span><span class="grp" id="sfKey"></span></div></div>
-    <div class="ctl"><div class="grp"><span class="lab">Blues</span><span class="grp" id="sfLv"></span></div><button type="button" class="pbtn" id="sfPlay">▶ Play 12 bars</button></div>
-    <div class="scroll"><div class="prog blues" id="sfGrid" style="min-width:560px"></div></div>
-    <p id="sfInfo"></p>
-  </div>
-  <div class="card">
-    <h3>Rhythm changes: the bridge</h3>
-    <p>The main section of rhythm changes is the I – vi – ii – V turnaround repeated. Its middle section, the bridge, is a chain of four dominant 7 chords, each one the V of the next, two bars apiece, ending on the V of the home key.</p>
-    <div class="scroll"><div class="prog" id="rcProg" style="min-width:560px"></div></div>
-  </div>
-</section>
-<section id="lesson-9">
-  <div class="lhd"><span class="num">9</span><span class="badge deep">Go deeper</span></div>
-  <h2>One note, many chords</h2>
-  <p>A melody note can be harmonised by any chord that contains it. Hold the note and change the chord underneath, and the note changes meaning: the root of one chord becomes the 3rd of another and the 7th of a third. Reharmonising a melody this way is called common-tone reharmonisation.</p>
-  <div class="card">
-    <div class="ctl"><div class="grp"><span class="lab">Melody note</span><span class="grp" id="ctNote"></span></div></div>
-    <div class="scroll"><div class="tbl" id="ctTbl"></div></div>
-    <p class="cap">Each cell is a chord with your note on top. Click to hear how the same note feels in each setting.</p>
-  </div>
-</section>
-<section id="lesson-10">
-  <div class="lhd"><span class="num">10</span><span class="badge core">Core</span></div>
-  <h2>Reharmonising cheat sheet</h2>
-  <p>The six moves from this chapter in one place, spelled out in the key you have selected. Apply one at a time to a progression you already know and listen to what changes.</p>
-  <div class="card">
-    <div class="ctl"><div class="grp"><span class="lab">Key</span><span class="grp" id="k5"></span></div></div>
-    <div class="scroll"><div class="cheat" id="cheat"></div></div>
-  </div>
-  <div class="tip"><b>Practice loop.</b> Take I – vi – ii – V in one key. Play it plain, then swap one chord per pass using a different move each time. Keep the top note of your voicings as still as you can, so you hear the harmony change underneath it.</div>
-</section>
-<section id="lesson-11">
-  <div class="lhd"><span class="num">11</span><span class="badge check">Checkpoint</span></div>
+  <div class="lhd"><span class="num">6</span><span class="badge check">Checkpoint</span></div>
   <h2>Chapter 4 checkpoint</h2>
   <div class="card">
     <h3>You are ready to move on when you can</h3>
-    <ul>
-      <li>Replace a I chord with vi or iii and hear why it still works.</li>
-      <li>Find the secondary dominant of any major or minor chord in a key.</li>
-      <li>Explain why a tritone substitute works, and play it inside a ii – V – I.</li>
-      <li>Name the four chords most often borrowed from the parallel minor.</li>
-      <li>Place a diminished passing chord between I and ii.</li>
-    </ul>
+    <ul><li>Play the eight open chords (C, A, G, E, D, Am, Em, Dm) cleanly, with every string ringing.</li><li>Play one major chord in all five shapes, in order up the neck.</li><li>Find any major, minor or dominant 7 chord as an E-shape and an A-shape barre.</li><li>Explain what C/E and C/G are, and play a descending bass line under a chord progression.</li></ul>
     <h3>A ten-minute routine</h3>
-    <ol>
-      <li>Two minutes: play I – vi – ii – V plain, in one key.</li>
-      <li>Three minutes: add a secondary dominant before the ii, then before the vi.</li>
-      <li>Three minutes: swap the V for its tritone substitute, then try iv in place of ii.</li>
-      <li>Two minutes: play your favourite version from memory in a second key.</li>
-    </ol>
+    <ol><li>Two minutes: strum the eight open chords slowly and check that every string rings.</li><li>Three minutes: one chord, five shapes, up and back. Change the chord each day.</li><li>Three minutes: I – IV – V in one key using only E-shape and A-shape barres, staying within five frets.</li><li>Two minutes: the walking bass line from lesson 4 in two keys.</li></ol>
   </div>
 </section>
 
-<div class="pager"><a class="ghost" href="chapter-3.html">← Chapter 3</a><a href="chapter-5.html">Chapter 5: Chords Across the Neck →</a></div>
-<footer>Guitar Theory Maps · Chapter 4: Substitution and Borrowed Chords</footer>
+<div class="pager"><a class="ghost" href="chapter-3.html">← Chapter 3</a><a href="chapter-5.html">Chapter 5: Chord Function, Progressions and Minor Keys →</a></div>
+<footer>Guitar Theory Maps · Chapter 4: Chords Across the Neck: Open, CAGED and Barres</footer>
 </main>
 <script src="common.js"></script>
-<script>(function(){
-const pc2=n=>{let p=NAT[L.indexOf(n[0])];for(const c of n.slice(1))p+=c==='♯'?1:-1;return ((p%12)+12)%12};
-const sp=(root,lo,semi)=>{const li=(L.indexOf(root[0])+lo)%7;let d=(((pc2(root)+semi)%12-NAT[li])%12+12)%12;if(d>6)d-=12;return L[li]+(d>0?'♯'.repeat(d):'♭'.repeat(-d))};
-const simp=n=>{if(!n.includes('♭♭'))return n;const li=(L.indexOf(n[0])+6)%7;let d=((pc2(n)-NAT[li])%12+12)%12;if(d>6)d-=12;return L[li]+(d>0?'♯'.repeat(d):'♭'.repeat(-d))};
-const FN=['go','perfect','go','perfect','tritone','go','tritone'];
-const RNT=['I','ii','iii','IV','V','vi','vii°'],TS=['','m','m','','','m','°'],SS=['maj7','m7','m7','maj7','7','m7','m7♭5'],RS=['Imaj7','ii7','iii7','IVmaj7','V7','vi7','viiø7'];
-const dom=r=>[[0,0],[4,2],[7,4],[10,6]].map(([s,lo])=>sp(r,lo,s));
-const tri=(r,min)=>[[0,0],[min?3:4,2],[7,4]].map(([s,lo])=>sp(r,lo,s));
-let K=0;
-function render(){const key=RMAJ[K],n=MAJ.map((x,i)=>sp(key,i,x)),keypc=n.map(pc2);const bm=48+pc2(key),dm=(r,ks)=>ks.map(k=>bm+MAJ[(r+k)%7]+(r+k>6?12:0)),d7=m=>[m,m+4,m+7,m+10],cm=(root,min)=>[0,min?3:4,7].map(x=>48+pc2(root)+x),cs=c=>cm(c.replace(/m$/,''),/m$/.test(c)),seq=l=>'c'.repeat(l.length)+':'+l.map(x=>x.join(',')).join('|');
- ['k1','k2','k3','k4','k5','k6'].forEach(id=>btns(id,RMAJ,K,i=>{K=i;render()}));
- // staircase matrix
- const cols=[3,5,0,2,4,6,1],rows=[1,3,5,0,2,4,6];
- let h='<span></span>'+cols.map(c=>`<span class="mh">${n[c]}</span>`).join('');
- rows.forEach(r=>{h+=`<span class="ml">${PB(BOTH(dm(r,[0,2,4,6])),"Play "+n[r]+SS[r])} <b>${RS[r]}</b> ${n[r]}${SS[r]}</span>`;const tones=[0,2,4,6].map(k=>(r+k)%7);
-  cols.forEach(c=>{const t=tones.indexOf(c);h+=t<0?'<span class="mc"></span>':`<span class="mc on" style="background:${col(FN[r])}">${'R357'[t]}</span>`})});
- document.getElementById('mx').innerHTML=h;
- // secondary dominants
- document.getElementById('sd').innerHTML=[1,2,3,4,5].map(i=>{const r=sp(n[i],4,7),t=dom(r),nw=t.filter(x=>!keypc.includes(pc2(x)));
-  return `<div class="sdc"><span class="rn">V7/${RNT[i]}</span><span class="cn">${r}7 <i>→</i> ${n[i]}${TS[i]}</span><span class="ns">${t.map(x=>nw.includes(x)?`<b>${x}</b>`:x).join(' ')}</span><span class="cap">outside note: ${nw.join(', ')}</span>${PB(seq([d7(bm+MAJ[i]-5),dm(i,[0,2,4])]),"Play "+r+"7 to "+n[i]+TS[i])}</div>`}).join('');
- // tritone sub
- const V=n[4],S=simp(sp(key,1,1)),tv=dom(V),ts=dom(S),lab=['R','3','5','♭7'];
- const stack=(name,t,mid)=>{let s='';for(let i=3;i>=0;i--){const f=i===0?'root':(i===2?'ghost':'tritone');s+=`<div class="note" style="background:${col(f)};${i?'':'color:var(--root-ink)'};margin-bottom:5px"><span>${t[i]}</span><span>${lab[i]}</span></div>`}
-  return `<div class="triad"><h3>${name} ${PB(BOTH(mid),"Play "+name)}</h3><div class="stack">${s}</div></div>`};
- document.getElementById('tt').innerHTML=stack(V+'7',tv,d7(bm+7))+stack(S+'7',ts,d7(bm+1));
- const card=(f,rn,nm)=>`<div class="deg" style="background:${col(f)}"><span class="rn" style="font-size:1.15rem">${rn}</span><span class="cn">${nm}</span></div>`,ar='<span class="arrow" aria-hidden="true">→</span>';
- document.getElementById('tt1').innerHTML=[card('perfect','ii7',n[1]+'m7'),card('tritone','V7',V+'7'),card('go','Imaj7',n[0]+'maj7')].join(ar);
- document.getElementById('ttP1').innerHTML=PB(seq([dm(1,[0,2,4,6]),d7(bm+7),dm(0,[0,2,4,6])]),'Play original');document.getElementById('ttP2').innerHTML=PB(seq([dm(1,[0,2,4,6]),d7(bm+1),dm(0,[0,2,4,6])]),'Play with substitute');
- document.getElementById('tt2').innerHTML=[card('perfect','ii7',n[1]+'m7'),card('tritone','♭II7',S+'7'),card('go','Imaj7',n[0]+'maj7')].join(ar);
- const same=(a,b)=>a===b?a:`${a} (written ${b} in ${S}7)`;
- document.getElementById('ttNote').textContent=`Shared notes: ${same(tv[1],ts[3])} and ${same(tv[3],ts[1])}. Bass line changes from ${n[1]} → ${V} → ${n[0]} to ${n[1]} → ${S} → ${n[0]}, stepping down one fret at a time.`;
- // borrowed
- const b3=simp(sp(key,2,3)),b6=simp(sp(key,5,8)),b7=simp(sp(key,6,10)),chip=(t,on)=>`<span class="nchip" style="${on?'background:var(--minor);color:#fff':''}">${t}</span>`;
- document.getElementById('bmaj').innerHTML=n.map((x,i)=>chip(x+TS[i])).join('');
- document.getElementById('bmin').innerHTML=[[n[0]+'m',0],[n[1]+'°',0],[b3,1],[n[3]+'m',1],[n[4]+'m',0],[b6,1],[b7,1]].map(([t,o])=>chip(t,o)).join('');
- const B=[['♭III',b3,tri(b3),'A bold lift, common in rock'],['iv',n[3]+'m',tri(n[3],1),'A wistful turn just before home'],['♭VI',b6,tri(b6),'Dramatic and cinematic'],['♭VII',b7,tri(b7),'A softer approach to I than V']];
- document.getElementById('bor').innerHTML=B.map(([rn,nm,t,use])=>`<div class="sdc" style="border-top-color:var(--minor)"><span class="rn">${rn}</span><span class="cn">${nm}</span><span class="ns">${t.join(' ')}</span><span class="cap">${use}</span>${PB(BOTH(cs(nm)),"Play "+nm)}</div>`).join('');
- document.getElementById('borEx').innerHTML=[['I – IV – iv – I',[n[0],n[3],n[3]+'m',n[0]]],['I – ♭VII – IV – I',[n[0],b7,n[3],n[0]]],['♭VI – ♭VII – I',[b6,b7,n[0]]],['I – ♭III – IV – I',[n[0],b3,n[3],n[0]]]].map(([a,c])=>`<li><b>${a}</b>: ${c.join(' → ')} ${PB(seq(c.map(cs)),'Play '+a)}</li>`).join('');
- // diminished passing chords
- const up=x=>{const u=sp(x,0,1);return u.includes('♯♯')?sp(x,1,1):u};
- document.getElementById('dimOut').innerHTML=[[0,1,'♯I°7'],[1,2,'♯II°7'],[3,4,'♯IV°7'],[4,5,'♯V°7']].map(([a,b,rn])=>{const r=bm+MAJ[a]+1;return `<div class="prog" style="min-width:0">${card(FN[a],RNT[a],n[a]+TS[a])}${ar}${card('tritone',rn,up(n[a])+'°7')}${ar}${card(FN[b],RNT[b],n[b]+TS[b])}${PB(seq([dm(a,[0,2,4]),[r,r+3,r+6,r+9],dm(b,[0,2,4])]),'Play this passing chord')}</div>`}).join('');
- // cheat sheet
- const C=[['Same-job swap','Replace a chord with another from its function group',`${n[0]} → ${n[5]}m or ${n[2]}m`],
-  ['Secondary dominant','Put the V7 of the target chord in front of it',`${n[1]}m → ${sp(n[1],4,7)}7 ${n[1]}m`],
-  ['Add the ii','Turn a dominant 7 into a ii–V',`${V}7 → ${n[1]}m7 ${V}7`],
-  ['Tritone substitution','Replace V7 with the dominant 7 a tritone away',`${V}7 → ${S}7`],
-  ['Borrow from parallel minor','Use iv in place of IV, or approach I through ♭VI and ♭VII',`${n[3]} → ${n[3]}m · ${b6} ${b7} ${n[0]}`],
-  ['Diminished passing chord','Slip a diminished 7 between two chords whose roots are a whole step apart',`${n[0]} → ${up(n[0])}°7 → ${n[1]}m`]];
- document.getElementById('cheat').innerHTML='<div class="crow lhead"><span>Move</span><span>What you do</span><span>In this key</span></div>'+C.map(([a,b,c],i)=>`<div class="crow"><b><span class="cn2">${i+1}</span>${a}</b><span>${b}</span><span class="ex">${c}</span></div>`).join('')}
-render();
+<script src="neck.js"></script>
+<script>
+// from old chapter 5, lessons 1, 2, 3, 4
+(function(){
+let G={root:0,q:0,sh:3};
+function drawCaged(){const r=RMAJ[G.root],pc=pcOf(r),k=G.q?'m':'M';
+ btns('cgRoot',RMAJ,G.root,i=>{G.root=i;drawCaged()});btns('cgQual',['Major','Minor'],G.q,i=>{G.q=i;drawCaged()});btns('cgShape',CAGED.map(s=>s.n+' shape'),G.sh,i=>{G.sh=i;drawCaged()});
+ const seen={},dots=[];CAGED.map((s,i)=>i).sort((a,b)=>(a===G.sh?-1:0)-(b===G.sh?-1:0)).forEach(i=>{shapeDots(CAGED[i][k],shapeShift(CAGED[i],pc),pc).forEach(d=>{const key=d.s+'-'+d.f;if(seen[key])return;seen[key]=1;d.dim=i!==G.sh;dots.push(d)})});
+ const s=CAGED[G.sh],b=shapeShift(s,pc),sel=shapeDots(s[k],b,pc);
+ neck('cgNeck',dots,r+(G.q?' minor':' major')+' in five shapes');
+ $('cgBox').innerHTML=box(sel,r+(G.q?'m':'')+' '+s.n+' shape');
+ const order=CAGED.map((x,i)=>[shapeShift(x,pc),x.n]).sort((a,b)=>a[0]-b[0]).map(x=>x[1]).join(' → ');
+ $('cgInfo').innerHTML=`<b>${r}${G.q?'m':''}, ${s.n} shape.</b> ${b?`The open ${s.n}${G.q?'m':''} chord moved up ${b} fret${b>1?'s':''}, with a barre or fingered notes where the open strings were.`:`This is the ordinary open ${s.n}${G.q?'m':''} chord.`} Notes: ${sel.map(d=>d.txt).join(' ')}.<br><span class="cap">Going up the neck from the nut, ${r}${G.q?'m':''} appears as: ${order}.</span>`}
+drawCaged();
+const BT=[['major','',[0,2,2,1,0,0],[null,0,2,2,2,0]],['minor','m',[0,2,2,0,0,0],[null,0,2,2,1,0]],['7','7',[0,2,0,1,0,0],[null,0,2,0,2,0]],['m7','m7',[0,2,0,0,0,0],[null,0,2,0,1,0]],['maj7','maj7',[0,2,1,1,0,0],[null,0,2,1,2,0]]];
+let B={root:7,t:0};
+function drawBarre(){const r=RMAJ[B.root],pc=pcOf(r),t=BT[B.t];btns('brRoot',RMAJ,B.root,i=>{B.root=i;drawBarre()});btns('brType',BT.map(x=>x[0]),B.t,i=>{B.t=i;drawBarre()});
+ const e=mod12(pc-4),a=mod12(pc-9),cell=(nm,fr,sh,str)=>`<div class="shape">${box(shapeDots(fr,sh,pc),r+t[1]+' '+nm)}<b>${r}${t[1]} · ${nm}</b><span>${sh?`barre at fret ${sh}`:'open position, no barre'} · root on the ${str} string</span></div>`;
+ $('brOut').innerHTML=cell('E shape',t[2],e,'low E')+cell('A shape',t[3],a,'A');
+ const dots=[];[0,1].forEach(s=>{for(let f=0;f<=12;f++){const p=mod12(LOWM[s]+f),n=['C','C♯','D','E♭','E','F','F♯','G','A♭','A','B♭','B'][p];dots.push({s,f,txt:n,fam:p===pc?'root':n.length>1?'ghost':'perfect'})}});
+ neck('brNeck',dots,'Note names on the low E and A strings',{frets:12})}
+drawBarre();
+let S={root:0,q:0,bass:4,key:0};
+function drawSlash(){const r=RMAJ[S.root],pc=pcOf(r),bp=pcOf(RMAJ[S.bass]),iv=mod12(bp-pc),third=S.q?3:4;
+ btns('slRoot',RMAJ,S.root,i=>{S.root=i;drawSlash()});btns('slQual',['Major','Minor'],S.q,i=>{S.q=i;drawSlash()});btns('slBass',RMAJ,S.bass,i=>{S.bass=i;drawSlash()});
+ const ch=chordOf(r,0,0,S.q?'m':'M'),inC=[0,third,7].includes(iv),nm=iv?`${ch.name}/${RMAJ[S.bass]}`:ch.name;
+ const what=iv===0?'Root position. The root is already the lowest note, so no slash is needed.':iv===third?'First inversion: the 3rd is in the bass. Lighter and less final than root position.':iv===7?'Second inversion: the 5th is in the bass. Often used as a passing chord.':`Not an inversion. ${RMAJ[S.bass]} is not in the chord: it is the ${IVL[iv]} above the root, so the bass adds a new colour.`+(iv===10?` This one sounds like ${r}${S.q?'m7':'7'} with its 7th in the bass.`:iv===2?` With the bass as the new root it is heard as a suspended chord on ${RMAJ[S.bass]}.`:'');
+ const fam=iv===0?'go':inC?'perfect':'tritone';
+ $('slOut').innerHTML=`<div class="flow"><div class="step" style="border-top-color:${col(fam)}"><b style="font-size:1.5rem">${nm}</b>${ch.notes} over ${RMAJ[S.bass]} in the bass ${PB('c:'+[36+bp].concat(ch.midi.map(m=>m+(m<48+0?12:0))).join(','),'Play '+nm)}</div><div class="step" style="border-top-color:${col(fam)}"><b>${iv===0?'Root position':inC?'Inversion':'New colour'}</b>${what}</div></div>`;
+ const key=RMAJ[S.key];btns('slKey',RMAJ,S.key,i=>{S.key=i;drawSlash()});const n=MAJ.map((x,i)=>spell(key,i,x)),kb=36+pcOf(key);
+ const L=[[0,'M',12,'I'],[4,'M',11,'V/7'],[5,'m',9,'vi'],[5,'m',7,'vi/5'],[3,'M',5,'IV'],[0,'M',4,'I/3'],[1,'m',2,'ii'],[4,'M',7,'V']].map(([d,q,bo,rn])=>{const c=chordOf(key,d,MAJ[d],q),bn=n[[0,2,4,5,7,9,11].indexOf(bo%12)],sl=bn!==n[d];return{rn,name:c.name+(sl?'/'+bn:''),bass:bn,sl,midi:[kb+bo].concat(c.midi)}});
+ $('slProg').innerHTML=L.map(c=>`<button type="button" class="deg" data-play="c:${c.midi.join(',')}" style="background:${col(c.sl?'perfect':'go')}"><span class="cn">${c.name}</span><span class="ns">bass: ${c.bass}</span></button>`).join('<span class="arrow" aria-hidden="true">→</span>');
+ $('slPlay').dataset.play='c'.repeat(L.length)+':'+L.map(c=>c.midi.join(',')).join('|')}
+drawSlash();
+function voice(pc,iv,ord,set){let prev=0;const ms=ord.map((t,j)=>{let m=j?prev+1:LOWM[set[0]];while(mod12(m)!==mod12(pc+iv[t]))m++;prev=m;return m});let fr=ms.map((m,j)=>m-LOWM[set[j]]);if(Math.min(...fr)<0)fr=fr.map(f=>f+12);if(Math.min(...fr)>=12)fr=fr.map(f=>f-12);return fr}
+const vdots=(fr,ord,iv,set)=>fr.map((f,j)=>{const x=iv[ord[j]]%12;return{s:set[j],f,txt:IVL[x],fam:famOf(x)}});
+let SP={root:7,q:0,key:0};
+function drawSP(){const r=RMAJ[SP.root],pc=pcOf(r),iv=CQ[SP.q?'m':'M'][0];btns('spRoot',RMAJ,SP.root,i=>{SP.root=i;drawSP()});btns('spQual',['Major','Minor'],SP.q,i=>{SP.q=i;drawSP()});
+ $('spOut').innerHTML=[0,1,2].map(k=>{const ord=[k,(k+2)%3,(k+1)%3];let best=null;[[0,1,3],[1,2,4],[2,3,5]].forEach(set=>{const fr=voice(pc,iv,ord,set),sp=Math.max(...fr)-Math.min(...fr);if(!best||sp<best.sp||(sp===best.sp&&Math.min(...fr)<Math.min(...best.fr)))best={fr,set,sp}});
+  return `<div class="shape">${box(vdots(best.fr,ord,iv,best.set),r+' spread triad')}<b>${r}${SP.q?'m':''}</b><span>${['root','3rd','5th'][k]} in the bass · frets ${best.fr.join(' ')}</span></div>`}).join('');
+ const key=RMAJ[SP.key],kb=36+pcOf(key);btns('pdKey',RMAJ,SP.key,i=>{SP.key=i;drawSP()});
+ const ch=[[0,'M'],[3,'M'],[4,'M'],[3,'m'],[0,'M']].map(([d,q])=>chordOf(key,d,d===3&&q==='m'?5:MAJ[d],q)),tn=spell(key,0,0);
+ $('pdProg').innerHTML=ch.map((c,i)=>`<button type="button" class="deg" data-play="c:${[kb].concat(c.midi).join(',')}" style="background:${col(c.name===tn?'go':'perfect')}"><span class="cn">${c.name===tn?c.name:c.name+'/'+tn}</span><span class="ns">bass: ${tn}</span></button>`).join('<span class="arrow" aria-hidden="true">→</span>');
+ $('pdPlay').dataset.play='c'.repeat(ch.length)+':'+ch.map(c=>[kb].concat(c.midi).join(',')).join('|')}
+drawSP();
 })();
-</script>
-<script>(function(){
-const $=id=>document.getElementById(id),QT=['M','m','m','M','M','m','°'],RNT=['I','ii','iii','IV','V','vi','vii°'];
-const card=(c,rn,f)=>`<button type="button" class="deg" data-play="${BOTH(c.midi)}" style="background:${col(f)}"><span class="rn" style="font-size:1.15rem">${rn}</span><span class="cn">${c.name}</span><span class="ns">${c.notes}</span></button>`,ar='<span class="arrow" aria-hidden="true">→</span>';
-const seq=l=>'c'.repeat(l.length)+':'+l.map(c=>c.midi.join(',')).join('|');
-// palette
-let P=0;
-function drawPal(){const k=RMAJ[P];btns('plKey',RMAJ,P,i=>{P=i;drawPal()});const f=['major','minor','minor','major','major','minor','tritone'];
- $('plDia').innerHTML=MAJ.map((s,i)=>card(chordOf(k,i,s,QT[i]),RNT[i],f[i])).join('');
- $('plSec').innerHTML=[1,2,3,4,5].map(d=>card(chordOf(k,(d+4)%7,(MAJ[d]+7)%12,'7'),'V7/'+RNT[d],'go')).join('');
- $('plBor').innerHTML=[['♭III',2,3,'M'],['iv',3,5,'m'],['♭VI',5,8,'M'],['♭VII',6,10,'M']].map(([rn,lo,s,q])=>card(chordOf(k,lo,s,q),rn,'perfect')).join('')}
-drawPal();
-// turnarounds
-let T=0;const TA=[['Basic',[['Imaj7',0,0,'maj7'],['vi7',5,9,'m7'],['ii7',1,2,'m7'],['V7',4,7,'7']],'All four chords from the key.'],['Dominant on VI',[['Imaj7',0,0,'maj7'],['VI7',5,9,'7'],['ii7',1,2,'m7'],['V7',4,7,'7']],'The vi chord becomes a secondary dominant pulling into ii.'],['Start on iii',[['iii7',2,4,'m7'],['VI7',5,9,'7'],['ii7',1,2,'m7'],['V7',4,7,'7']],'iii replaces I (same job), giving two ii – V pairs in a row.'],['Tritone substitutes',[['Imaj7',0,0,'maj7'],['♭III7',2,3,'7'],['ii7',1,2,'m7'],['♭II7',1,1,'7']],'Both dominants are swapped for the ones a tritone away. The bass now slides down by half steps.'],['Backdoor',[['Imaj7',0,0,'maj7'],['iv7',3,5,'m7'],['♭VII7',6,10,'7'],['Imaj7',0,0,'maj7']],'A borrowed ii – V from the parallel minor side. The ♭VII7 resolves up a whole step to I.']];
-function drawTA(){const k=RMAJ[T];btns('taKey',RMAJ,T,i=>{T=i;drawTA()});
- $('taOut').innerHTML=TA.map(([n,l,d])=>{const ch=l.map(([rn,lo,s,q])=>[rn,chordOf(k,lo,s,q)]);return `<div><div class="ctl"><b>${n}</b>${PB(seq(ch.map(x=>x[1]).concat([chordOf(k,0,0,'maj7')])),'Play '+n+' turnaround')}<span class="cap">${d}</span></div><div class="prog" style="min-width:0;margin-top:6px">${ch.map(([rn,c])=>card(c,rn,/7$/.test(rn)&&!/maj|m7|ii|vi|iv/.test(rn)?'go':/^I/.test(rn)?'major':'minor')).join(ar)}</div></div>`}).join('')}
-drawTA();
-// blues levels
-let S={k:5,lv:0};const I7=[0,0,'7'],IV7=[3,5,'7'],V7=[4,7,'7'],VI7=[5,9,'7'],ii7=[1,2,'m7'];
-const BL=[['Basic',[[I7],[IV7],[I7],[I7],[IV7],[IV7],[I7],[I7],[V7],[IV7],[I7],[V7]],'Three dominant 7 chords and nothing else.'],
- ['Jazz blues',[[I7],[IV7],[I7],[[4,7,'m7'],I7],[IV7],[[3,6,'°7']],[I7],[VI7],[ii7],[V7],[I7,VI7],[ii7,V7]],'Bar 4 becomes a ii – V into the IV chord, bar 6 is a diminished passing chord, bar 8 is a secondary dominant into ii, and the last two bars are a turnaround.'],
- ['With more ii – Vs',[[[0,0,'maj7']],[[6,11,'ø'],[2,4,'7']],[[5,9,'m7'],[1,2,'7']],[[4,7,'m7'],I7],[IV7],[[3,5,'m7'],[6,10,'7']],[[2,4,'m7'],VI7],[[2,3,'m7'],[5,8,'7']],[ii7],[V7],[[0,0,'maj7'],VI7],[ii7,V7]],'A bebop-era version. Chains of ii – V pairs walk down to the IV chord in bar 5 and again down to the ii chord in bar 9. The three landmarks of the blues (I at bar 1, IV at bar 5, ii – V at bars 9 and 10) are still there.']];
-function drawBlues(){const k=RMAJ[S.k],b=BL[S.lv];btns('sfKey',RMAJ,S.k,i=>{S.k=i;drawBlues()});btns('sfLv',BL.map(x=>x[0]),S.lv,i=>{S.lv=i;drawBlues()});
- const bars=b[1].map(bar=>bar.map(([lo,s,q])=>chordOf(k,lo,s,q)));
- $('sfGrid').innerHTML=bars.map((bar,i)=>`<button type="button" class="deg" data-play="${seq(bar)}" style="background:${col(bar.length>1?'minor':'perfect')}"><span class="ns">bar ${i+1}</span><span class="cn">${bar.map(c=>c.name).join('  ')}</span></button>`).join('');
- $('sfInfo').innerHTML=`<b>${k} blues, ${b[0].toLowerCase()}.</b> ${b[2]}`;$('sfPlay').dataset.play=seq(bars.flat());
- const br=[[2,4,'7','III7'],[5,9,'7','VI7'],[1,2,'7','II7'],[4,7,'7','V7']].map(([lo,s,q,rn])=>[rn,chordOf(k,lo,s,q)]);
- $('rcProg').innerHTML=br.map(([rn,c])=>card(c,rn,'go')).join(ar)+PB(seq(br.map(x=>x[1]).concat([chordOf(k,0,0,'maj7')])),'Play the bridge')}
-drawBlues();
-// common tone
-let N=0;
-function drawCT(){const pc=pcOf(RMAJ[N]);btns('ctNote',RMAJ,N,i=>{N=i;drawCT()});
- const roles=[['Root',{maj7:0,'7':0,m7:0}],['3rd',{maj7:4,'7':4,m7:3}],['5th',{maj7:7,'7':7,m7:7}],['7th',{maj7:11,'7':10,m7:10}],['9th',{maj7:2,'7':2,m7:2}]];
- $('ctTbl').innerHTML='<div class="trow lhead" style="grid-template-columns:1fr repeat(3,1.4fr)"><span>'+RMAJ[N]+' is the</span><span>of a major 7</span><span>of a dominant 7</span><span>of a minor 7</span></div>'+roles.map(([r,m])=>`<div class="trow" style="grid-template-columns:1fr repeat(3,1.4fr)"><b>${r}</b>${['maj7','7','m7'].map(q=>{const rp=((pc-m[q])%12+12)%12,c=chordOf(RMAJ[rp],0,0,q),top=72+pc;return `<span><button type="button" class="pbtn" data-play="c:${c.midi.map(x=>x>=top?x-12:x).concat(top).join(',')}">▶ ${c.name}</button></span>`}).join('')}</div>`).join('')}
-drawCT();
-})();
+// new lesson
+(function(){const OC=[['C',[null,3,2,0,1,0]],['A',[null,0,2,2,2,0]],['G',[3,2,0,0,0,3]],['E',[0,2,2,1,0,0]],['D',[null,null,0,2,3,2]],['Am',[null,0,2,2,1,0]],['Em',[0,2,2,0,0,0]],['Dm',[null,null,0,2,3,1]]];
+ $('ocGrid').innerHTML=OC.map(([n,fr])=>{const dots=shapeDots(fr,0,pcOf(n[0])),first=fr.findIndex(f=>f!=null),ms=dots.slice().sort((a,b)=>a.s-b.s).map(d=>LOWM[d.s]+d.f);
+  return '<div class="shape">'+box(dots,n+' open chord')+'<b>'+n+(n.length>1?' (minor)':' (major)')+'</b><span>Strum from the '+SNM[first]+' string '+PB(BOTH(ms),'Play '+n)+'</span></div>'}).join('')})();
 </script>
 <script src="metro.js"></script>
 </body>

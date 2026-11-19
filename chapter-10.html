@@ -8,139 +8,201 @@
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body data-page="ch10">
 <main>
-<nav aria-label="Guide"><a href="index.html">← All chapters</a><span class="here">Chapter 10 of 13</span><span class="metro"></span><span style="display:flex;gap:8px"><a href="chapter-9.html">← Prev</a><a href="chapter-11.html">Next →</a></span></nav>
-<div class="chap" id="chapter-10" style="background:#047857"><span>Chapter 10</span><h2>Ear Training and Real Songs</h2><p>Connecting everything to music you actually hear: recognising intervals, chords and progressions by ear, finding a song's key, and using a capo.</p></div>
+<nav aria-label="Guide"><a href="index.html">← All chapters</a><a href="tools.html">Tools</a><span class="here">Module III · Chapter 10 of 13</span><span class="metro"></span><span style="display:flex;gap:8px"><a href="chapter-9.html">← Prev</a><a href="chapter-11.html">Next →</a></span></nav>
+<div class="chap" id="chapter-10" style="background:#4f46e5"><span>Chapter 10</span><h2>Modal Harmony and Chord Scales</h2><p>The seven modes from bright to dark, matching scales to chords, writing modal vamps, quartal harmony, and melodic mode studies.</p></div>
 <div class="legend"><span><i class="sw" style="background:var(--root)"></i>Root</span><span><i class="sw" style="background:var(--perfect)"></i>Perfect</span><span><i class="sw" style="background:var(--major)"></i>Major</span><span><i class="sw" style="background:var(--minor)"></i>Minor</span><span><i class="sw" style="background:var(--tritone)"></i>Tritone / altered</span><span class="cap">Click any note, chord or ▶ to hear it.</span></div>
-<div class="card"><h3>In this chapter</h3><ol class="toc"><li><span class="n">1</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-1">Intervals by ear</a></li><li><span class="n">2</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-2">Chord qualities by ear</a></li><li><span class="n">3</span><i class="dotc" style="background:var(--minor)"></i><a href="#lesson-3">Progressions by ear</a></li><li><span class="n">4</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-4">Finding the key of a song</a></li><li><span class="n">5</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-5">Capo and transposing</a></li><li><span class="n">6</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-6">Learning a song from start to finish</a></li><li><span class="n">7</span><i class="dotc" style="background:var(--major)"></i><a href="#lesson-7">Chapter 10 checkpoint</a></li></ol><p class="cap"><i class="dotc" style="background:var(--go)"></i> Core: do these on a first pass. <i class="dotc" style="background:var(--minor)"></i> Go deeper: safe to skip and come back to. <i class="dotc" style="background:var(--major)"></i> Checkpoint.</p></div>
+<div class="card"><h3>In this chapter</h3><ol class="toc"><li><span class="n">1</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-1">The seven modes, bright to dark</a></li><li><span class="n">2</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-2">Matching a scale to a chord</a></li><li><span class="n">3</span><i class="dotc" style="background:var(--go)"></i><a href="#lesson-3">Modes as home keys</a></li><li><span class="n">4</span><i class="dotc" style="background:var(--minor)"></i><a href="#lesson-4">The chords of every mode</a></li><li><span class="n">5</span><i class="dotc" style="background:var(--minor)"></i><a href="#lesson-5">Brighter and darker on one root</a></li><li><span class="n">6</span><i class="dotc" style="background:var(--minor)"></i><a href="#lesson-6">Voicings built in fourths</a></li><li><span class="n">7</span><i class="dotc" style="background:var(--minor)"></i><a href="#lesson-7">Mode studies</a></li><li><span class="n">8</span><i class="dotc" style="background:var(--major)"></i><a href="#lesson-8">Chapter 10 checkpoint</a></li></ol></div>
 
 <section id="lesson-1">
   <div class="lhd"><span class="num">1</span><span class="badge core">Core</span></div>
-  <h2>Intervals by ear</h2>
-  <p>Theory becomes useful when you can hear it. The first step is recognising intervals, because melodies are chains of intervals and chords are stacks of them. Start with a few very different ones and add more as they become easy.</p>
-  <div class="card"><div id="qzInt"></div></div>
-  <div class="tip"><b>Sing it back.</b> Before you answer, hum both notes. If you can sing an interval you can recognise it, and the other way round.</div>
+  <h2>The seven modes, bright to dark</h2>
+  <p>Start a major scale from each of its seven notes and you get seven modes. Comparing them all from the same root is more useful: arranged this way, each mode is the one above it with a single note lowered by a half step.</p>
+  <div class="card">
+    <div class="scroll"><div class="modes" id="modes"></div></div>
+    <p class="cap">Highlighted degrees differ from the plain major scale (Ionian). "Home" is the degree of a major key where that mode naturally sits. ▶ plays each mode from C so you can compare them.</p>
+  </div>
+  <div class="tip"><b>One note gives each mode its flavour.</b> Lydian is major with a ♯4. Mixolydian is major with a ♭7. Dorian is natural minor with a raised 6th. Phrygian is natural minor with a ♭2. Lean on that one note and the mode becomes audible.</div>
 </section>
 <section id="lesson-2">
   <div class="lhd"><span class="num">2</span><span class="badge core">Core</span></div>
-  <h2>Chord qualities by ear</h2>
-  <p>Next, learn the colour of each chord type. Do not try to pick out individual notes. Listen to the overall mood: bright, dark, tense or unsettled.</p>
-  <div class="card"><div id="qzCh"></div></div>
+  <h2>Matching a scale to a chord</h2>
+  <p>A scale fits a chord when it contains the chord's tones. The chord tones are your safe landing notes; the other scale notes add colour between them. Pick a root and a mode to see both layers.</p>
+  <div class="card">
+    <div class="ctl"><div class="grp"><span class="lab">Root</span><span class="grp" id="mRoots"></span></div></div>
+    <div class="ctl"><div class="grp"><span class="lab">Mode</span><span class="grp" id="mModes"></span></div></div>
+    <p id="mInfo"></p>
+    <div class="scroll"><div id="mFret" style="min-width:720px"></div></div>
+    <div class="scroll"><div id="mPiano" style="min-width:420px;max-width:620px"></div></div>
+    <div class="legend">
+      <span><i class="sw" style="background:var(--root)"></i>Root</span>
+      <span><i class="sw" style="background:var(--major)"></i><i class="sw" style="background:var(--minor)"></i><i class="sw" style="background:var(--perfect)"></i>Chord tones (3rd, 5th, 7th)</span>
+      <span><i class="sw" style="background:var(--ghost)"></i>Other scale notes</span>
+    </div>
+  </div>
+  <ul>
+    <li><b>Major 7 chords:</b> Ionian when the chord is I, Lydian when it is IV or when you want a floating sound.</li>
+    <li><b>Minor 7 chords:</b> Dorian on ii, Phrygian on iii, Aeolian on vi. Dorian is the usual first choice for a minor 7 on its own.</li>
+    <li><b>Dominant 7 chords:</b> Mixolydian.</li>
+    <li><b>Half-diminished chords:</b> Locrian.</li>
+  </ul>
+  <div class="tip"><b>Practice loop.</b> Record or loop one chord. Play only the coloured chord tones for a minute, then add the grey notes as passing notes between them, always landing on a coloured dot at the end of a phrase.</div>
 </section>
 <section id="lesson-3">
-  <div class="lhd"><span class="num">3</span><span class="badge deep">Go deeper</span></div>
-  <h2>Progressions by ear</h2>
-  <p>The same handful of progressions appear in thousands of songs. Once you know their sound in numerals, you can often name a song's chords on first hearing, in whatever key it happens to be in.</p>
-  <div class="card"><div id="qzPr"></div></div>
-  <div class="tip"><b>Follow the bass.</b> The lowest note usually plays the root of each chord. Hum the bass line and you have the progression's shape.</div>
+  <div class="lhd"><span class="num">3</span><span class="badge core">Core</span></div>
+  <h2>Modes as home keys</h2>
+  <p>Lessons 1 and 2 treated modes as scales to play over a chord. A mode can also be a key: a piece can live in D Dorian the way it can live in C major. Two things make that work. The mode's first chord has to feel like home, and the progression has to feature the chord containing the mode's <b>characteristic note</b>, the one note that separates it from plain major or minor.</p>
+  <div class="card">
+    <div class="ctl"><div class="grp"><span class="lab">Mode</span><span class="grp" id="mvMode"></span></div></div>
+    <div class="ctl"><div class="grp"><span class="lab">Root</span><span class="grp" id="mvRoot"></span></div><button type="button" class="pbtn" id="mvPlay">▶ Play the vamp</button></div>
+    <div class="scroll"><div class="prog" id="mvProg" style="min-width:0"></div></div>
+    <p id="mvInfo"></p>
+    <div class="scroll"><div id="mvFret" style="min-width:720px"></div></div>
+  </div>
+  <div class="tip warn"><b>Avoid the pull of the parent key.</b> D Dorian uses the notes of C major, and a G7 chord would drag the ear straight to C. Modal pieces keep to two or three chords and keep returning to the home chord for that reason.</div>
 </section>
 <section id="lesson-4">
-  <div class="lhd"><span class="num">4</span><span class="badge core">Core</span></div>
-  <h2>Finding the key of a song</h2>
-  <p>To work out what key a song is in, collect its chords and see which key contains them.</p>
+  <div class="lhd"><span class="num">4</span><span class="badge deep">Go deeper</span></div>
+  <h2>The chords of every mode</h2>
+  <p>Each mode has its own set of seven chords, found the same way as in chapter 3: stack every other note. The chords that contain the characteristic note are the ones that give the mode away.</p>
   <div class="card">
-    <div class="flow">
-      <div class="step"><b>1. List the chords</b>Write down every chord in the song, major and minor.</div>
-      <div class="arrow" aria-hidden="true">→</div>
-      <div class="step"><b>2. Match a key</b>Find the key whose seven chords include them all.</div>
-      <div class="arrow" aria-hidden="true">→</div>
-      <div class="step"><b>3. Find home</b>Major or relative minor? The chord the song ends on, or keeps returning to, is the answer.</div>
-    </div>
-    <h3>Key finder</h3>
-    <p>Select the chords in your song.</p>
-    <div class="ctl"><div class="grp"><span class="lab">Major</span><span class="grp" id="kfMaj"></span></div></div>
-    <div class="ctl"><div class="grp"><span class="lab">Minor</span><span class="grp" id="kfMin"></span></div><button type="button" class="pbtn" id="kfClear">Clear</button></div>
-    <div id="kfOut" style="display:flex;flex-direction:column;gap:8px"></div>
+    <div class="ctl"><div class="grp"><span class="lab">Mode</span><span class="grp" id="mcMode"></span></div></div>
+    <div class="ctl"><div class="grp"><span class="lab">Root</span><span class="grp" id="mcRoot"></span></div></div>
+    <div class="scroll"><div class="dia" id="mcOut"></div></div>
+    <p class="cap">Outlined chords contain the characteristic note. Click a chord to hear it.</p>
   </div>
 </section>
 <section id="lesson-5">
-  <div class="lhd"><span class="num">5</span><span class="badge core">Core</span></div>
-  <h2>Capo and transposing</h2>
-  <p>A capo clamps across a fret and raises every open string by that many half steps. It lets you keep easy open-chord shapes while the music sounds in a different key, which is useful for matching a singer's range. Thinking in numerals makes the conversion mechanical: the shapes are the numerals of one key, the sound is the numerals of another.</p>
+  <div class="lhd"><span class="num">5</span><span class="badge deep">Go deeper</span></div>
+  <h2>Brighter and darker on one root</h2>
+  <p>A piece can change mode without changing its home note, for example from C Ionian to C Mixolydian. Because each mode in the bright-to-dark order differs from its neighbour by one note, moving one step along the order changes one note and shifts the mood a shade. Moving several steps at once is a bigger jolt.</p>
   <div class="card">
-    <div class="ctl"><div class="grp"><span class="lab">I want to sound in</span><span class="grp" id="cpKey"></span></div></div>
-    <div class="scroll"><div class="cheat" id="cpOut"></div></div>
-    <p class="cap">Each row is one way to get that key with open-chord shapes. "Shapes" are what your hands play; the sounding chords are what the listener hears.</p>
+    <div class="ctl"><div class="grp"><span class="lab">Root</span><span class="grp" id="brRootM"></span></div></div>
+    <div class="ctl"><div class="grp"><span class="lab">Bright → dark</span><span class="grp" id="brMode"></span></div></div>
+    <div class="chips" id="brChips"></div>
+    <p id="brInfo"></p>
+    <h3>Mirror pairs</h3>
+    <p>A curiosity that explains the order: write a mode's pattern of whole and half steps backwards and you get another mode. The pairs sit opposite each other in the bright-to-dark list.</p>
+    <div class="chips" id="brMirror"></div>
   </div>
 </section>
 <section id="lesson-6">
-  <div class="lhd"><span class="num">6</span><span class="badge core">Core</span></div>
-  <h2>Learning a song from start to finish</h2>
-  <p>A repeatable method, drawing on every chapter.</p>
-  <div class="card"><div class="scroll"><div class="cheat">
-    <div class="crow lhead"><span>Step</span><span>What to do</span><span>Where it is covered</span></div>
-    <div class="crow"><b><span class="cn2">1</span>Key</b><span>List the chords and find the key and its home chord.</span><span class="ex">This chapter, lesson 4</span></div>
-    <div class="crow"><b><span class="cn2">2</span>Numerals</b><span>Rewrite the chords as Roman numerals. Notice any chord from outside the key.</span><span class="ex">Chapters 3 and 4</span></div>
-    <div class="crow"><b><span class="cn2">3</span>Form</b><span>Mark the sections: verse, chorus, bridge. Most songs repeat two or three short progressions.</span><span class="ex">Chapter 3</span></div>
-    <div class="crow"><b><span class="cn2">4</span>Rhythm</b><span>Find the time signature and a strumming pattern that matches the feel.</span><span class="ex">Chapter 9</span></div>
-    <div class="crow"><b><span class="cn2">5</span>Voicings</b><span>Choose where on the neck to play the chords so the changes are small.</span><span class="ex">Chapter 5</span></div>
-    <div class="crow"><b><span class="cn2">6</span>Melody and solo</b><span>Find the melody inside the key's scale position, then improvise around its chord tones.</span><span class="ex">Chapters 6 and 7</span></div>
-  </div></div></div>
+  <div class="lhd"><span class="num">6</span><span class="badge deep">Go deeper</span></div>
+  <h2>Voicings built in fourths</h2>
+  <p>Chords do not have to be built in thirds. Stack notes of a scale a 4th apart and you get open, modern-sounding voicings that do not state major or minor as plainly. They are called <b>quartal</b> voicings, and moving one shape up through a scale gives seven of them.</p>
+  <div class="card">
+    <div class="ctl"><div class="grp"><span class="lab">Dorian on</span><span class="grp" id="q4Root"></span></div><button type="button" class="pbtn" id="q4Play">▶ Play all seven</button></div>
+    <div class="shapes" id="q4Out" style="grid-template-columns:repeat(auto-fit,minmax(150px,1fr))"></div>
+    <p class="cap">Three-note stacks through the Dorian mode. Most are two perfect 4ths (a straight line across the strings); the ones marked in red contain a tritone.</p>
+  </div>
+  <div class="tip"><b>How to use them.</b> Over a single minor 7 chord, any of the seven shapes from that chord's Dorian mode will work. Slide between two neighbours for movement without changing the harmony.</div>
 </section>
 <section id="lesson-7">
-  <div class="lhd"><span class="num">7</span><span class="badge check">Checkpoint</span></div>
+  <div class="lhd"><span class="num">7</span><span class="badge deep">Go deeper</span></div>
+  <h2>Mode studies</h2>
+  <p>A short study for any mode. Each one is built the same way: outline the home chord, then keep returning to the mode's characteristic note so that its colour is unmistakable. Play it slowly over a held bass note on the root.</p>
+  <div class="card">
+    <div class="ctl"><div class="grp"><span class="lab">Mode</span><span class="grp" id="msMode"></span></div></div>
+    <div class="ctl"><div class="grp"><span class="lab">Root</span><span class="grp" id="msRoot"></span></div><button type="button" class="pbtn" id="msPlay">▶ Play the study</button></div>
+    <div id="msOut" style="display:flex;flex-direction:column;gap:8px"></div>
+    <div class="scroll" id="msTab"></div>
+    <p class="cap">Red chips are the characteristic note.</p>
+  </div>
+</section>
+<section id="lesson-8">
+  <div class="lhd"><span class="num">8</span><span class="badge check">Checkpoint</span></div>
   <h2>Chapter 10 checkpoint</h2>
   <div class="card">
-    <h3>You have finished the guide when you can</h3>
-    <ul>
-      <li>Score eight out of ten on the easy interval and triad trainers.</li>
-      <li>Recognise I – IV – V – I and I – V – vi – IV by ear.</li>
-      <li>Find the key of a song from its chord list.</li>
-      <li>Move a song to a new key, with and without a capo.</li>
-      <li>Take one song through all six steps of the method above.</li>
-    </ul>
+    <h3>You are ready to move on when you can</h3>
+    <ul><li>Name the one note that gives Dorian, Lydian and Mixolydian their flavour.</li><li>Choose a workable mode for a major 7, a minor 7 and a dominant 7 chord.</li><li>Play a two-chord vamp in Dorian and in Mixolydian and name the characteristic note of each.</li><li>Explain why a modal progression avoids the V7 of its parent key.</li><li>Play a voicing built in fourths on one set of strings.</li></ul>
     <h3>A ten-minute routine</h3>
-    <ol>
-      <li>Three minutes: interval trainer, one level harder than is comfortable.</li>
-      <li>Two minutes: chord trainer.</li>
-      <li>Five minutes: put on a song you like and find its key and first two chords by ear.</li>
-    </ol>
+    <ol><li>Three minutes: loop a Dorian vamp and improvise, leaning on the natural 6th.</li><li>Three minutes: the same with a Mixolydian vamp and its ♭7.</li><li>Two minutes: play the chords of one mode and say which one carries the characteristic note.</li><li>Two minutes: build one quartal voicing on a chord of a Dorian vamp.</li></ol>
   </div>
 </section>
 
-<div class="pager"><a class="ghost" href="chapter-9.html">← Chapter 9</a><a href="chapter-11.html">Chapter 11: Advanced Voicings →</a></div>
-<footer>Guitar Theory Maps · Chapter 10: Ear Training and Real Songs</footer>
+<div class="pager"><a class="ghost" href="chapter-9.html">← Chapter 9</a><a href="chapter-11.html">Chapter 11: Altered Harmony, Melodic Minor and Symmetrical Scales →</a></div>
+<footer>Guitar Theory Maps · Chapter 10: Modal Harmony and Chord Scales</footer>
 </main>
 <script src="common.js"></script>
 <script src="neck.js"></script>
-<script>(function(){
-const rnd=n=>Math.floor(Math.random()*n);
-// generic ear trainer. levels: [{n, items:[{l, spec(): play string}]}]
-function quiz(id,levels,prompt){let lv=0,cur=-1,spec='',done=true,score=0,total=0;const el=$(id);
- function draw(msg,pick){const L=levels[lv];el.innerHTML=`<div class="ctl"><div class="grp"><span class="lab">Level</span>${levels.map((x,i)=>`<button type="button" data-lv="${i}" aria-pressed="${i===lv}">${x.n}</button>`).join('')}</div></div>
-  <div class="ctl"><button type="button" class="big" data-act="next" style="border:0;cursor:pointer">${cur<0?'▶ Start':'▶ Next one'}</button>${cur>=0?'<button type="button" class="pbtn" data-act="again">▶ Hear it again</button>':''}<span class="cap">Score: <b>${score}</b> of ${total}</span></div>
-  <p>${cur<0?prompt:done?msg:'What did you hear?'}</p>
-  <div class="grp">${L.items.map((x,i)=>`<button type="button" data-ans="${i}" ${cur<0?'disabled':''} style="${done&&cur>=0&&i===cur?'background:var(--go);color:#fff;border-color:var(--go)':done&&i===pick?'background:var(--tritone);color:#fff;border-color:var(--tritone)':''}">${x.l}</button>`).join('')}</div>`}
- el.onclick=e=>{const t=e.target.closest('button');if(!t)return;const L=levels[lv];
-  if(t.dataset.lv!=null){lv=+t.dataset.lv;cur=-1;done=true;score=0;total=0;draw()}
-  else if(t.dataset.act==='next'){let n;do{n=rnd(L.items.length)}while(L.items.length>1&&n===cur);cur=n;spec=L.items[cur].spec();done=false;play(spec);draw()}
-  else if(t.dataset.act==='again'){play(spec)}
-  else if(t.dataset.ans!=null&&!done){const a=+t.dataset.ans;done=true;total++;if(a===cur)score++;draw(a===cur?`<b style="color:var(--go)">Correct.</b> That was ${L.items[cur].l}.`:`<b style="color:var(--tritone)">Not this time.</b> It was ${L.items[cur].l}.`,a)}};
- draw()}
-const IN=['','Minor 2nd','Major 2nd','Minor 3rd','Major 3rd','Perfect 4th','Tritone','Perfect 5th','Minor 6th','Major 6th','Minor 7th','Major 7th','Octave'];
-const iv=n=>({l:IN[n],spec:()=>{const r=55+rnd(10);return `mc:${r},${r+n}|${r},${r+n}`}});
-quiz('qzInt',[{n:'Easy (4)',items:[3,4,7,12].map(iv)},{n:'Medium (7)',items:[2,3,4,5,7,9,12].map(iv)},{n:'All 12',items:[1,2,3,4,5,6,7,8,9,10,11,12].map(iv)}],'Press Start. You will hear two notes one after the other, then together.');
-const ch=(l,s)=>({l,spec:()=>{const r=52+rnd(10);return BOTH(s.map(x=>r+x))}});
-quiz('qzCh',[{n:'Major or minor',items:[ch('Major',[0,4,7]),ch('Minor',[0,3,7])]},{n:'Four triads',items:[ch('Major',[0,4,7]),ch('Minor',[0,3,7]),ch('Diminished',[0,3,6]),ch('Augmented',[0,4,8])]},{n:'Seventh chords',items:[ch('Major 7',[0,4,7,11]),ch('Dominant 7',[0,4,7,10]),ch('Minor 7',[0,3,7,10]),ch('Half-diminished',[0,3,6,10])]}],'Press Start. You will hear a chord broken up, then together.');
-const pr=(l,list)=>({l,spec:()=>{const key=RMAJ[rnd(12)],c=list.map(([lo,s,q])=>chordOf(key,lo,s,q).midi.join(','));return 'c'.repeat(c.length)+':'+c.join('|')}});
-quiz('qzPr',[{n:'Two classics',items:[pr('I – IV – V – I',[[0,0,'M'],[3,5,'M'],[4,7,'M'],[0,0,'M']]),pr('I – V – vi – IV',[[0,0,'M'],[4,7,'M'],[5,9,'m'],[3,5,'M']])]},{n:'Five progressions',items:[pr('I – IV – V – I',[[0,0,'M'],[3,5,'M'],[4,7,'M'],[0,0,'M']]),pr('I – V – vi – IV',[[0,0,'M'],[4,7,'M'],[5,9,'m'],[3,5,'M']]),pr('I – vi – IV – V',[[0,0,'M'],[5,9,'m'],[3,5,'M'],[4,7,'M']]),pr('ii – V – I',[[1,2,'m7'],[4,7,'7'],[0,0,'maj7']]),pr('i – ♭VII – ♭VI – V',[[0,0,'m'],[6,10,'M'],[5,8,'M'],[4,7,'M']])]}],'Press Start. You will hear a progression in a random key.');
-// key finder
-const sel=new Set(),DEGS=[[0,0,'I'],[2,1,'ii'],[4,1,'iii'],[5,0,'IV'],[7,0,'V'],[9,1,'vi']],nm=k=>{const[p,m]=k.split('-').map(Number);return RMAJ[p]+(m?'m':'')};
-function drawKF(){const mk=(id,m)=>{$(id).innerHTML=RMAJ.map((r,i)=>`<button type="button" data-kf="${i}-${m}" aria-pressed="${sel.has(i+'-'+m)}">${r}${m?'m':''}</button>`).join('')};mk('kfMaj',0);mk('kfMin',1);
- if(!sel.size){$('kfOut').innerHTML='<p class="cap">Nothing selected yet. Try G, C, D and Em.</p>';return}
- const res=RMAJ.map((r,k)=>{const map={};DEGS.forEach(([s,m,rn])=>map[mod12(k+s)+'-'+m]=rn);const hit=[...sel].filter(c=>map[c]);return{k,hit,map,miss:[...sel].filter(c=>!map[c])}}),best=Math.max(...res.map(x=>x.hit.length)),full=res.filter(x=>x.hit.length===sel.size);
- const row=x=>`<div class="tip" style="border-left-color:var(--${x.miss.length?'major':'go'})"><b style="color:var(--ink)">${RMAJ[x.k]} major</b> or its relative minor <b style="color:var(--ink)">${RMIN[mod12(x.k+9)]} minor</b>: ${x.hit.map(c=>`${nm(c)} = ${x.map[c]}`).join(', ')}${x.miss.length?`. Outside the key: ${x.miss.map(nm).join(', ')}`:''}</div>`;
- $('kfOut').innerHTML=full.length?`<p><b>${full.length===1?'One key fits':'These keys fit'} all ${sel.size} chord${sel.size>1?'s':''}.</b>${full.length>1?' Add more chords to narrow it down.':''}</p>`+full.map(row).join(''):`<p><b>No single key contains all of these.</b> The closest fits are below. A chord outside the key is usually borrowed from the parallel minor or is a secondary dominant (chapter 4).</p>`+res.filter(x=>x.hit.length===best).slice(0,3).map(row).join('')}
-function mod12(x){return((x%12)+12)%12}
-drawKF();document.addEventListener('click',e=>{const b=e.target.closest&&e.target.closest('[data-kf]');if(b){const k=b.dataset.kf;sel.has(k)?sel.delete(k):sel.add(k);drawKF()}});$('kfClear').onclick=()=>{sel.clear();drawKF()};
-// capo
-let Cp=11;const SHP=['C','A','G','E','D'];
-function drawCapo(){const key=RMAJ[Cp],kp=pcOf(key);btns('cpKey',RMAJ,Cp,i=>{Cp=i;drawCapo()});
- const four=k=>[[0,0,'M'],[3,5,'M'],[4,7,'M'],[5,9,'m']].map(([lo,s,q])=>chordOf(k,lo,s,q).name).join('  ');
- const rows=SHP.map(s=>({s,f:mod12(kp-pcOf(s))})).filter(x=>x.f<=9).sort((a,b)=>a.f-b.f);
- $('cpOut').innerHTML='<div class="crow lhead"><span>Capo</span><span>Shapes you play (I IV V vi)</span><span>What it sounds like</span></div>'+rows.map(x=>`<div class="crow"><b>${x.f?'Capo on fret '+x.f:'No capo'}</b><span>${x.s} shapes: ${four(x.s)}</span><span class="ex">${four(key)}</span></div>`).join('')}
-drawCapo();
+<script>
+// from old chapter 3, lessons 4, 5
+(function(){
+const MD=[
+ {n:'Lydian',s:[0,2,4,6,7,9,11],l:['1','2','3','♯4','5','6','7'],ch:'maj7',home:'IV',c:3,mood:'floating, bright'},
+ {n:'Ionian',s:[0,2,4,5,7,9,11],l:['1','2','3','4','5','6','7'],ch:'maj7',home:'I',c:3,mood:'plain major'},
+ {n:'Mixolydian',s:[0,2,4,5,7,9,10],l:['1','2','3','4','5','6','♭7'],ch:'7',home:'V',c:6,mood:'bluesy major'},
+ {n:'Dorian',s:[0,2,3,5,7,9,10],l:['1','2','♭3','4','5','6','♭7'],ch:'m7',home:'ii',c:5,mood:'minor with a lift'},
+ {n:'Aeolian',s:[0,2,3,5,7,8,10],l:['1','2','♭3','4','5','♭6','♭7'],ch:'m7',home:'vi',c:5,mood:'natural minor'},
+ {n:'Phrygian',s:[0,1,3,5,7,8,10],l:['1','♭2','♭3','4','5','♭6','♭7'],ch:'m7',home:'iii',c:1,mood:'dark, Spanish'},
+ {n:'Locrian',s:[0,1,3,5,6,8,10],l:['1','♭2','♭3','4','♭5','♭6','♭7'],ch:'m7♭5',home:'vii',c:4,mood:'unstable'}];
+document.getElementById('modes').innerHTML='<div class="mrow lhead"><span>Mode</span><span>Formula</span><span>Fits</span><span>Home</span><span>Mood</span><span>Hear</span></div>'+MD.map(m=>`<div class="mrow"><b>${m.n}</b><span class="chips">${m.l.map((x,i)=>{const d=m.s[i]-MAJ[i];return `<span class="nchip" style="${d?`background:${col(d>0?'major':'minor')};color:#fff`:''}">${x}</span>`}).join('')}</span><span>${m.ch}</span><span>${m.home}</span><span class="cap">${m.mood}</span>${PB("m:"+m.s.concat(12).map(x=>60+x).join(","),"Play C "+m.n)}</div>`).join('');
+let M={root:0,mode:3};
+function renderM(){const r=RMAJ[M.root],m=MD[M.mode],map={};
+ btns('mRoots',RMAJ,M.root,i=>{M.root=i;renderM()});btns('mModes',MD.map(x=>x.n),M.mode,i=>{M.mode=i;renderM()});
+ m.s.forEach((x,i)=>{const tone=i%2===0;map[x]=[m.l[i],i===0?'root':tone?(x===6?'tritone':FAM[x]):'ghost']});
+ document.getElementById('mInfo').innerHTML=`<b>${r} ${m.n}</b> fits <b>${r}${m.ch}</b>. Notes: ${m.s.map((x,i)=>spell(r,i,x)).join(' ')}. Characteristic note: <b>${m.l[m.c]}</b> (${spell(r,m.c,m.s[m.c])}). Same notes as <b>${RMAJ[((pcOf(r)-MAJ[['I','ii','iii','IV','V','vi','vii'].indexOf(m.home)])%12+12)%12]} major</b>, started from its ${m.home} degree. ${PB('m:'+m.s.concat(12).map(x=>48+pcOf(r)+x).join(','),'Play scale')} scale ${PB(BOTH([0,2,4,6].map(i=>48+pcOf(r)+m.s[i])),'Play chord')} chord`;
+ drawFret('mFret',pcOf(r),map,r+' '+m.n);drawPiano('mPiano',pcOf(r),map,r+' '+m.n)}
+renderM();
+})();
+// from old chapter 8, lessons 1, 2, 3
+(function(){
+const MD=[{n:'Lydian',s:[0,2,4,6,7,9,11],c:3,cl:'♯4',par:7},{n:'Ionian',s:[0,2,4,5,7,9,11],c:3,cl:'4',par:0},{n:'Mixolydian',s:[0,2,4,5,7,9,10],c:6,cl:'♭7',par:5},{n:'Dorian',s:[0,2,3,5,7,9,10],c:5,cl:'natural 6',par:10},{n:'Aeolian',s:[0,2,3,5,7,8,10],c:5,cl:'♭6',par:3},{n:'Phrygian',s:[0,1,3,5,7,8,10],c:1,cl:'♭2',par:8},{n:'Locrian',s:[0,1,3,5,6,8,10],c:4,cl:'♭5',par:1}];
+const lbl=(s,i)=>{const d=s[i]-MAJ[i];return i?(d<0?'♭':d>0?'♯':'')+(i+1):'R'};
+const MV=[[3,[['i7',0,0,'m7'],['IV7',3,5,'7']]],[2,[['I',0,0,'M'],['♭VII',6,10,'M'],['IV',3,5,'M']]],[0,[['Imaj7',0,0,'maj7'],['II',1,2,'M']]],[5,[['i',0,0,'m'],['♭II',1,1,'M']]],[4,[['i',0,0,'m'],['♭VI',5,8,'M'],['♭VII',6,10,'M']]]];
+let V={m:0,root:2};
+function drawVamp(){const [mi,chs]=MV[V.m],m=MD[mi],r=RMAJ[V.root],pc=pcOf(r),map={};
+ btns('mvMode',MV.map(x=>MD[x[0]].n),V.m,i=>{V.m=i;drawVamp()});btns('mvRoot',RMAJ,V.root,i=>{V.root=i;drawVamp()});
+ const ch=chs.map(([rn,lo,s,q])=>({rn,...chordOf(r,lo,s,q)})),cp=mod12(pc+m.s[m.c]);
+ $('mvProg').innerHTML=ch.map((c,i)=>`<button type="button" class="deg" data-play="c:${c.midi.join(',')}" style="background:${col(i?'perfect':'go')}"><span class="rn">${c.rn}</span><span class="cn">${c.name}</span><span class="ns">${c.notes}</span></button>`).join('<span class="arrow" aria-hidden="true">→</span>');
+ const loop=ch.concat(ch,[ch[0]]);$('mvPlay').dataset.play='c'.repeat(loop.length)+':'+loop.map(c=>c.midi.join(',')).join('|');
+ m.s.forEach((x,i)=>map[x]=[lbl(m.s,i),i===m.c?'tritone':i?FAM[x]:'root']);drawFret('mvFret',pc,map,r+' '+m.n);
+ $('mvInfo').innerHTML=`<b>${r} ${m.n}</b>: ${m.s.map((x,i)=>spell(r,i,x)).join(' ')}. Characteristic note: <b>${m.cl}</b> (${spell(r,m.c,m.s[m.c])}, shown in red). Same notes as ${RMAJ[mod12(pc+m.par)]} major, with ${r} as home.`}
+drawVamp();
+let C={m:3,root:2};
+const RN=['I','II','III','IV','V','VI','VII'];
+function drawModeChords(){const m=MD[C.m],r=RMAJ[C.root],s=m.s,names=s.map((x,i)=>spell(r,i,x)),b=48+pcOf(r);
+ btns('mcMode',MD.map(x=>x.n),C.m,i=>{C.m=i;drawModeChords()});btns('mcRoot',RMAJ,C.root,i=>{C.root=i;drawModeChords()});
+ const iv=(i,k)=>mod12(s[(i+k)%7]-s[i]);
+ $('mcOut').innerHTML=s.map((x,i)=>{const t=iv(i,2),f=iv(i,4),q=t===4?(f===7?'maj':'aug'):(f===7?'min':'dim'),suf={maj:'',min:'m',dim:'°',aug:'+'}[q],fam={maj:'major',min:'minor',dim:'tritone',aug:'tritone'}[q];
+  let rn=RN[i];if(t===3)rn=rn.toLowerCase();rn=(x<MAJ[i]?'♭':x>MAJ[i]?'♯':'')+rn+({dim:'°',aug:'+'}[q]||'');
+  const has=[0,2,4].some(k=>(i+k)%7===m.c),mid=[0,2,4].map(k=>b+s[(i+k)%7]+(i+k>6?12:0));
+  return `<button type="button" class="deg" data-play="${BOTH(mid)}" style="background:${col(fam)};${has?'outline:4px solid var(--ink);outline-offset:-4px':''}"><span class="rn">${rn}</span><span class="cn">${names[i]}${suf}</span><span class="ns">${[0,2,4].map(k=>names[(i+k)%7]).join(' ')}</span></button>`}).join('')}
+drawModeChords();
+let Br={root:0,m:1};
+function drawBr(){const r=RMAJ[Br.root],pc=pcOf(r),b=48+pc,m=MD[Br.m];btns('brRootM',RMAJ,Br.root,i=>{Br.root=i;drawBr()});btns('brMode',MD.map(x=>x.n),Br.m,i=>{Br.m=i;drawBr()});
+ const prev=Br.m?MD[Br.m-1]:null;
+ $('brChips').innerHTML=m.s.map((x,i)=>{const ch=prev&&prev.s[i]!==x,d=x-MAJ[i];return `<span class="nchip" style="${ch?'background:var(--tritone);color:#fff':d?`background:${col(d>0?'major':'minor')};color:#fff`:''}">${lbl(m.s,i)==='R'?'1':lbl(m.s,i)}<small style="display:block;font-size:.68rem;font-weight:600;opacity:.85">${spell(r,i,x)}</small></span>`}).join('');
+ const t=mod12(m.s[2]),f=mod12(m.s[4]),q=t===4?'M':f===6?'°':'m',c=chordOf(r,0,0,q);
+ $('brInfo').innerHTML=`<b>${r} ${m.n}</b>, home chord ${c.name}. ${prev?`One step darker than ${prev.n}: the <b>${['4th','4th','7th','3rd','6th','2nd','5th'][Br.m]}</b> is lowered by a half step (red).`:'The brightest of the seven: every note is as high as it can go.'} ${PB('cm:'+c.midi.join(',')+'|'+m.s.concat(12).map(x=>b+x).join(','),'Play chord then scale')}`;
+ const st=s=>s.map((x,i)=>(i<6?s[i+1]:12)-x),key=a=>a.join('');
+ $('brMirror').innerHTML=MD.map(a=>{const rev=key(st(a.s).slice().reverse()),bm=MD.find(x=>key(st(x.s))===rev);return [a.n,bm.n]}).filter(([a,bb],i,arr)=>arr.findIndex(([c,d])=>c===bb&&d===a)>=i).map(([a,bb])=>`<span class="nchip">${a}${a===bb?' (its own mirror)':' ↔ '+bb}</span>`).join('')}
+drawBr();
+})();
+// from old chapter 5, lessons 7
+(function(){
+let Q=2;
+const DOR=[0,2,3,5,7,9,10];
+function drawQuartal(){const r=RMAJ[Q],pc=pcOf(r);btns('q4Root',RMAJ,Q,i=>{Q=i;drawQuartal()});
+ let f0=mod12(pc-9),set=[1,2,3];if(f0>=7){f0-=7;set=[0,1,2]}
+ const all=[];$('q4Out').innerHTML=DOR.map((x,i)=>{let prev=LOWM[set[0]]+f0+x;const ms=[prev];[3,6].forEach((st,j)=>{const p=mod12(pc+DOR[(i+st)%7]);let m=prev+1;while(mod12(m)!==p)m++;ms.push(m);prev=m});
+  const tt=(ms[1]-ms[0]===6)||(ms[2]-ms[1]===6),dots=ms.map((m,j)=>{const v=mod12(m-pc);return{s:set[j],f:m-LOWM[set[j]],txt:IVL[v],fam:tt?'tritone':famOf(v)}});all.push(ms);
+  return `<div class="shape">${box(dots,'Quartal voicing '+(i+1))}<b>${i+1}. from ${spell(r,i,x)}</b><span>${tt?'contains a tritone':'two perfect 4ths'}</span></div>`}).join('');
+ $('q4Play').dataset.play='c'.repeat(7)+':'+all.map(m=>m.join(',')).join('|')}
+drawQuartal();
+})();
+// from old chapter 13, lessons 6
+(function(){
+const chip=(t,cls)=>`<span class="nchip" style="${cls==='root'?'background:var(--root);color:var(--root-ink)':cls==='out'?'background:var(--tritone);color:#fff':''}">${t}</span>`;
+const base=kp=>(kp>6?48:60)+kp;
+const MS=[['Lydian',[0,2,4,6,7,9,11],3],['Mixolydian',[0,2,4,5,7,9,10],6],['Dorian',[0,2,3,5,7,9,10],5],['Aeolian',[0,2,3,5,7,8,10],5],['Phrygian',[0,1,3,5,7,8,10],1],['Lydian dominant',[0,2,4,6,7,9,10],3],['Phrygian dominant',[0,1,4,5,7,8,10],1]];
+let Ms={m:2,root:2};
+function drawMS(){const [n,Sx,c]=MS[Ms.m],r=RMAJ[Ms.root],pc=pcOf(r),b=base(pc)-(pc>3&&pc<7?12:0);btns('msMode',MS.map(x=>x[0]),Ms.m,i=>{Ms.m=i;drawMS()});btns('msRoot',RMAJ,Ms.root,i=>{Ms.root=i;drawMS()});
+ const C=c<2?c+7:c,bars=[[0,2,4,2,C,4,2,0],[7,6,5,4,C,2,1,0],[0,4,2,5,4,7,C,4],[7,5,4,2,C,2,0]],mid=d=>b+Sx[d%7]+12*Math.floor(d/7);
+ $('msOut').innerHTML=bars.map((bar,i)=>`<div class="chain"><span class="lab2" style="min-width:3.5em">Bar ${i+1}</span>${bar.map(d=>chip(spell(r,d%7,Sx[d%7]),d%7===c?'out':d%7===0?'root':'')).join('')}</div>`).join('');
+ const ms=bars.map(bar=>bar.map(mid));$('msTab').innerHTML=tab(ms);$('msPlay').dataset.play='mmmm:'+ms.map(x=>x.join(',')).join('|')}
+drawMS();
 })();
 </script>
 <script src="metro.js"></script>

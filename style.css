@@ -195,3 +195,20 @@ button.rc{cursor:pointer;border-radius:9px}
 button:disabled{opacity:.45;cursor:default}
 .mdot{width:14px;height:14px;border-radius:50%;background:var(--line);display:inline-block}
 nav{gap:8px 16px}
+
+/* ---- v2 curriculum additions ---- */
+.badge.tool{color:var(--perfect);border-color:var(--perfect)}
+.chk-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px}
+.chk-pill{font:700 .78rem var(--body);border:1.5px solid var(--line);border-radius:999px;padding:3px 12px;background:var(--bg);color:var(--muted);font-variant-numeric:tabular-nums}
+.chk-pill.all{background:var(--go);border-color:var(--go);color:#fff}
+.chk-li{list-style:none;margin-left:-1.1em}
+.chk-item{display:flex;gap:10px;align-items:flex-start;cursor:pointer;padding:4px 0}
+.chk-item input{width:20px;height:20px;margin:2px 0 0;flex:0 0 auto;accent-color:var(--go);cursor:pointer}
+.chk-item input:focus-visible{outline:3px solid var(--perfect);outline-offset:2px}
+.chk-item input:checked+span{opacity:.72}
+.loop-btn{margin-left:4px}
+.loop-btn[aria-pressed="true"]{background:var(--go);border-color:var(--go);color:#fff}
+.toc.tpills{display:flex;flex-wrap:wrap;gap:8px}
+.toc.tpills li{margin:0;border:1.5px solid var(--line);border-radius:999px;padding:5px 14px;background:var(--card)}
+.toc.tpills li:hover{border-color:var(--ink)}
+nav a[aria-current="page"]{border-color:var(--ink)}

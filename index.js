@@ -149,7 +149,7 @@
   }
 
   /* --------------------------------------------------------------- progress */
-  var KEY = 'gtm-progress', done = {};
+  var KEY = 'gtm-lessons-v2', done = {};
   try { JSON.parse(localStorage.getItem(KEY) || '[]').forEach(function (k) { done[k] = 1; }); } catch (e) { done = {}; }
   function save() { try { localStorage.setItem(KEY, JSON.stringify(Object.keys(done))); } catch (e) {} }
 
@@ -208,9 +208,38 @@
   paint = function () {
     basePaint();
     $$('.group').forEach(function (g) {
-      $('.gcount b', g).textContent = $$('.lesson.done', g).length;
+      var gc = $('.gcount b', g); if (gc) gc.textContent = $$('.lesson.done', g).length;
     });
+    paintChecks();
   };
+
+  /* ------------------------------------------------ checkpoint progress */
+  // ticks made inside each chapter page are stored under gtm_progress_v2 as { 'ch3-0': true, ... }
+  function readChecks() {
+    try { return JSON.parse(localStorage.getItem('gtm_progress_v2') || '{}') || {}; } catch (e) { return {}; }
+  }
+  function paintChecks() {
+    var st = readChecks();
+    chapters.forEach(function (ch) {
+      var n = ch.getAttribute('data-ch'), total = +ch.getAttribute('data-chk'), c = 0, el = $('.chkcount', ch);
+      if (!el || !total) return;
+      for (var i = 0; i < total; i++) if (st['ch' + n + '-' + i]) c++;
+      el.textContent = ' · checkpoint ' + c + '/' + total;
+      el.classList.toggle('all', c === total);
+    });
+  }
+  window.addEventListener('pageshow', paintChecks);
+  window.addEventListener('storage', paintChecks);
+
+  /* ------------------------------------------------------------- tools menu */
+  var dd = $('#ddbtn'), menu = $('#ddmenu');
+  function ddOpen(open) { if (!dd) return; menu.hidden = !open; dd.setAttribute('aria-expanded', open ? 'true' : 'false'); }
+  if (dd) {
+    dd.addEventListener('click', function (e) { e.stopPropagation(); ddOpen(menu.hidden); });
+    document.addEventListener('click', function (e) { if (!menu.hidden && !e.target.closest('.dd')) ddOpen(false); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !menu.hidden) { ddOpen(false); dd.focus(); } });
+    menu.addEventListener('focusout', function (e) { if (!menu.contains(e.relatedTarget) && e.relatedTarget !== dd) ddOpen(false); });
+  }
 
   /* ------------------------------------------------------------- accordion */
   function setOpen(ch, open) {
@@ -239,10 +268,16 @@
     var ch = li.closest('.chap'), a = li.querySelector('a');
     var title = a.querySelector('span').textContent;
     return {
-      title: title, href: a.getAttribute('href'), ch: ch.getAttribute('data-ch'),
-      chTitle: ch.getAttribute('data-title'),
+      title: title, href: a.getAttribute('href'), where: 'Chapter ' + ch.getAttribute('data-ch') + ' · ' + ch.getAttribute('data-title'),
       hay: (title + ' ' + ch.getAttribute('data-title') + ' ' + ch.getAttribute('data-stage')).toLowerCase()
     };
+  });
+  $$('.toolchip').forEach(function (a) {
+    var title = $('b', a).textContent;
+    index.push({ title: title, href: a.getAttribute('href'), where: 'Toolkit · ' + $('span', a).textContent, hay: (title + ' tool toolkit reference calculator ' + $('span', a).textContent).toLowerCase() });
+  });
+  [["find a song's key", 'chapter-7.html#lesson-4', 'key finder'], ['capo and transpose', 'chapter-7.html#lesson-5', 'capo transposing'], ['metronome', 'chapter-2.html#lesson-1', 'metronome click tempo bpm'], ['chord fingerings', 'chapter-4.html#lesson-1', 'chord shapes fingering open chords']].forEach(function (t) {
+    index.push({ title: t[0], href: t[1], where: 'Tool', hay: (t[0] + ' ' + t[2] + ' tool').toLowerCase() });
   });
   function runSearch() {
     var v = q.value.trim().toLowerCase();
@@ -259,7 +294,7 @@
     hits.slice(0, 8).forEach(function (it) {
       var a = document.createElement('a'); a.href = it.href;
       var t = document.createElement('span'); t.className = 'rt'; t.textContent = it.title;
-      var c = document.createElement('span'); c.className = 'rc'; c.textContent = 'Chapter ' + it.ch + ' · ' + it.chTitle;
+      var c = document.createElement('span'); c.className = 'rc'; c.textContent = it.where;
       a.appendChild(t); a.appendChild(c); box.appendChild(a);
     });
     if (hits.length > 8) {
