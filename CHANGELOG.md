@@ -1,5 +1,12 @@
 # Changelog
 
+## Tracks and four new tools
+
+- New hub pages `core.html`, `guitar.html`, `keyboard.html`, `drums.html`. Chapter 1 is the shared core; guitar keeps chapters 2-13; keyboard and drums list live shared chapters plus planned lessons. The landing page has a "Choose your instrument" section.
+- Toolkit is now fifteen tools: Chord Finder (notes or a typed fingering in, chord names and slash chords out), Scale Finder (notes in, every matching scale and mode out), Chord Transposer with capo helper and Roman numerals, and Inversions and String-Set Voicings (triads, close 7ths, drop 2, drop 3 by string set).
+- `scripts/verify.js` now also checks the four hub pages and their links.
+- `agents/` holds the three-agent loop (Scout, Placer, Publisher), its backlog, inbox and log; agent definitions are in `.claude/agents/`.
+
 ## ChordLab tools added to the Toolkit
 Three tools ported from the ChordLab app, bringing the Toolkit (`tools.html`, Module V) to eleven tools.
 

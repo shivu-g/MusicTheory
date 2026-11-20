@@ -2,7 +2,7 @@
 
 An interactive visual study guide to music theory for guitar, with a piano reference beside every fretboard and clickable sound throughout.
 
-Thirteen chapters (102 lessons) in four Modules, plus an interactive Toolkit of eleven tools (chord library, scale-degree ear trainer, circle of fifths and eight calculators). One page per chapter.
+Thirteen chapters (102 lessons) in four Modules, plus an interactive Toolkit of fifteen tools (chord library, scale-degree ear trainer, circle of fifths and eight calculators). One page per chapter.
 
 **Module I. Foundations & Rhythm**
 1. Notes, Tuning and Intervals
@@ -33,3 +33,7 @@ Open `index.html` in any browser, or host the folder with GitHub Pages. Keep all
 
 ## Checking the site
 `node scripts/verify.js` serves the folder locally and tests all 15 pages in headless Chrome (needs `puppeteer-core` and Chrome; set `CHROME` to the browser path if not at a standard location).
+
+## Tracks and the agent loop
+
+The course is one shared core chapter followed by guitar, keyboard and drums tracks (`core.html`, `guitar.html`, `keyboard.html`, `drums.html`). Content is grown by three agents (Scout, Placer, Publisher) described in `agents/LOOP.md`.

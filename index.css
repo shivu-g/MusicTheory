@@ -271,3 +271,10 @@ button.pill:hover,a.pill:hover{background:rgba(255,255,255,.18)}
 .toolnote{padding:6px 0 18px;font-size:15px;line-height:1.6;color:var(--mute)}
 .toolnote a{color:var(--ink);text-underline-offset:3px}
 .toolchip:focus-visible,.toolnote a:focus-visible,.ddbtn:focus-visible,.ddmenu a:focus-visible{outline:3px solid var(--perfect);outline-offset:2px}
+
+.tracks-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:18px}
+.trk{display:block;border-radius:24px;padding:22px;color:var(--ink,#f6f1e7);text-decoration:none;border-top:4px solid #F2C14E}
+.trk:hover,.trk:focus-visible{transform:translateY(-3px)}
+.trk h3{margin:.2em 0 .3em;font-size:1.35rem}
+.trk p{margin:0;opacity:.85}
+.trk .eyebrow{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:#b9a6d0}

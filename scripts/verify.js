@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-/* Verifies all 15 pages (index, chapter-1..13, tools) in headless Chrome.
+/* Verifies all pages (index, hubs, chapter-1..13, tools) in headless Chrome.
    Usage:  npm i puppeteer-core   (once, anywhere on NODE_PATH)
            CHROME=/usr/bin/google-chrome node scripts/verify.js
    Checks per page:
@@ -12,7 +12,8 @@
 const http = require('http'), fs = require('fs'), path = require('path');
 const puppeteer = require('puppeteer-core');
 const ROOT = path.resolve(__dirname, '..');
-const PAGES = ['index', ...Array.from({ length: 13 }, (_, i) => 'chapter-' + (i + 1)), 'tools'];
+const HUBS = ['core', 'guitar', 'keyboard', 'drums'];
+const PAGES = ['index', ...HUBS, ...Array.from({ length: 13 }, (_, i) => 'chapter-' + (i + 1)), 'tools'];
 const MIME = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.svg': 'image/svg+xml', '.png': 'image/png', '.webp': 'image/webp', '.jpg': 'image/jpeg' };
 const srv = http.createServer((q, r) => {
   const p = path.join(ROOT, decodeURIComponent(q.url.split('?')[0]));
@@ -42,14 +43,14 @@ const LOOP_IDS = ['pPlay', 'diaPlay', 'mkPlay', 'sfPlay', 'mvPlay', 'vlPlay', 's
       }
     });
     await new Promise(r => setTimeout(r, 300));
-    const r = await pg.evaluate((name, LOOP_IDS) => {
+    const r = await pg.evaluate((name, LOOP_IDS, HUBS) => {
       const out = [];
       const nulls = [...new Set(window.__nulls)].filter(id => !LOOP_IDS.includes(id));
       if (nulls.length) out.push('getElementById found nothing for: ' + nulls.join(', '));
       const seen = {}, dups = [];
       document.querySelectorAll('[id]').forEach(e => { if (seen[e.id]) dups.push(e.id); seen[e.id] = 1; });
       if (dups.length) out.push('duplicate ids: ' + [...new Set(dups)].join(', '));
-      if (name !== 'index') {
+      if (name !== 'index' && !HUBS.includes(name)) {
         const secs = [...document.querySelectorAll('section[id^="lesson-"]')];
         secs.forEach((s, i) => {
           if (s.id !== 'lesson-' + (i + 1)) out.push(`section ${i + 1} has id ${s.id}`);
@@ -77,14 +78,20 @@ const LOOP_IDS = ['pPlay', 'diaPlay', 'mkPlay', 'sfPlay', 'mvPlay', 'vlPlay', 's
             if (secs[secs.length - 1] !== cs) out.push('checkpoint is not the last lesson');
           }
         }
+      } else if (HUBS.includes(name)) {
+        if (!document.querySelector('.hubcard')) out.push('hub has no cards');
       } else {
         document.querySelectorAll('.lesson a').forEach(a => { const [f, h] = a.getAttribute('href').split('#'); if (!/^chapter-\d+\.html$/.test(f) || !/^lesson-\d+$/.test(h)) out.push('bad lesson link ' + a.getAttribute('href')); });
         if (document.querySelectorAll('.chap').length !== 13) out.push('index should list 13 chapters, has ' + document.querySelectorAll('.chap').length);
         if (document.querySelectorAll('.group').length !== 5) out.push('index should show 4 modules + Module V');
       }
       return out;
-    }, name, LOOP_IDS);
+    }, name, LOOP_IDS, HUBS);
     problems.push(...r);
+    if (HUBS.includes(name)) {
+      const hs = await pg.evaluate(() => [...document.querySelectorAll('a[href]')].map(a => a.getAttribute('href')).filter(h => !/^(https?:|#|mailto:)/.test(h)));
+      for (const h of [...new Set(hs)]) { const [f, id] = h.split('#'); if (!fs.existsSync(path.join(ROOT, f)) || (id && !fs.readFileSync(path.join(ROOT, f), 'utf8').includes(`id="${id}"`))) problems.push('hub link goes nowhere: ' + h); }
+    }
     // index links must point at real lessons in the target files
     if (name === 'index') {
       const hrefs = await pg.evaluate(() => [...document.querySelectorAll('a[href*=".html#lesson-"]')].map(a => a.getAttribute('href')));
@@ -97,6 +104,6 @@ const LOOP_IDS = ['pPlay', 'diaPlay', 'mkPlay', 'sfPlay', 'mvPlay', 'vlPlay', 's
     await pg.close();
   }
   await browser.close(); srv.close();
-  console.log(failures ? `\n${failures} page(s) failed` : '\nAll 15 pages pass');
+  console.log(failures ? `\n${failures} page(s) failed` : '\nAll ' + PAGES.length + ' pages pass');
   process.exit(failures ? 1 : 0);
 })();
