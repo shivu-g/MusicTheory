@@ -16,7 +16,8 @@
 - [ ] K5 Comping patterns, K6 Reading chord charts.
 
 ## Drums track
-- [ ] D1 Pulse and subdivisions, D2 Time signatures, D3 Rudiments (with a stick-sticking player), D4 Basic grooves (groove builder grid), D5 Fills, D6 Syncopation and polyrhythm. Extend `metro.js`.
+- [x] D1 Pulse and subdivisions, D2 Time signatures, D3 Rudiments (drums-1..3.html; `metro.js` now has `GTMetro.set` for ticks, subdivisions, accents)
+- [ ] D4 Basic grooves (groove builder grid), D5 Fills, D6 Syncopation and polyrhythm. Extend `metro.js`.
 
 ## Quality
 - [ ] Phone-width visual check of all tool pages.

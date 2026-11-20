@@ -1,5 +1,12 @@
 # Changelog
 
+## Drums lessons D1-D3
+
+- New pages `drums-1.html` to `drums-3.html`: Pulse and subdivisions (quarter, eighth, triplet, sixteenth counting display with a sound-only-this-syllable mode), Time signatures (simple, compound and odd meters with grouped accent player), Rudiments (single, double, triple stroke and single paradiddle sticking player, right and left hand at different pitches).
+- `metro.js` gained `window.GTMetro.set({n,sub,level,freq,audible,onTick,onState})`; the default 4-click metronome behaves as before. New `.cells` styles in `style.css`.
+- Hub, landing page track card and Tools menu link the lessons; `scripts/verify.js` covers them (26 pages pass).
+- Left out: other diddle and flam variants (unsourced stickings). D4-D6 still open; the polyrhythm entry stays unsure.
+
 ## Keyboard lessons K1-K4
 
 - New pages `keyboard-1.html` to `keyboard-4.html`: Keys and layout (88-key strip, octave numbers, find-the-note game), Major scale fingering (stepper for C and F major, G major left hand), Triads and inversions (inversion explorer with right-hand fingers), Seventh chords and rootless voicings (type A/B ii-V-I in seven keys).

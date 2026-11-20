@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rudiments · Drums · Guitar Theory Maps</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="drums-3">
+<main>
+<nav aria-label="Guide"><a href="index.html">← All chapters</a><a href="drums.html">Drums</a><a href="tools.html">Tools</a><span class="here">Drums · Lesson D3 of 6</span><span class="metro"></span><span style="display:flex;gap:8px"><a href="drums.html">Hub →</a></span></nav>
+<div class="chap" style="background:#3a3342"><span>Drums · D3</span><h2>Rudiments</h2><p>The small sticking patterns every drummer builds from: singles, doubles, triples and the paradiddle.</p></div>
+<section>
+<h2>What a rudiment is</h2>
+<p>Rudiments are short sticking patterns, named and standardised, that train the hands to move in every combination. The international list kept by the Percussive Arts Society has <b>40 rudiments</b> in four families: <b>roll</b>, <b>diddle</b>, <b>flam</b> and <b>drag</b>. Almost every fill and groove you will play is made from these pieces.</p>
+<p>In sticking, <b>R</b> is the right hand and <b>L</b> the left. The four patterns below are the foundation:</p>
+<ul>
+<li><b>Single stroke roll:</b> R L R L. Hands strictly alternate.</li>
+<li><b>Double stroke roll:</b> R R L L. Two strokes per hand, so the second one is a controlled rebound.</li>
+<li><b>Triple stroke roll:</b> R R R L L L. Three per hand.</li>
+<li><b>Single paradiddle:</b> R L R R, then L R L L. Accent the first note of each group of four. The doubled stroke at the end of each group swaps the lead hand, so the pattern flips every four notes.</li>
+</ul>
+<p>The diddle family also holds the double and triple paradiddle and the paradiddle-diddle, and the flam family starts with the flam, flam tap, flamacue and flam paradiddle. Those get their own pass later.</p>
+<div class="card">
+<h3>Sticking player</h3>
+<div class="ctl"><div class="grp"><span class="lab">Rudiment</span><span class="grp" id="d3Rud"></span></div></div>
+<div class="ctl"><div class="grp"><span class="lab">Notes per beat</span><span class="grp" id="d3Rate"></span></div></div>
+<div class="cells" id="d3Cells" role="img" aria-label="The sticking, one letter per note"></div>
+<div class="ctl"><button type="button" class="pbtn go" id="d3Go">▶ Start</button><span id="d3Say" role="status"></span></div>
+<p class="cap">The right hand sounds a higher click and the left hand a lower one, so you can hear the sticking as well as see it. Accented notes have a gold outline and a louder click. Set the tempo in the top bar and start slow.</p>
+</div>
+<div class="tip"><b>Slow first.</b> Evenness matters more than speed. Play each pattern at a tempo where every stroke is the same height and the same loudness, and raise the metronome only when it stays even.</div>
+</section>
+<section>
+<h2>Practise this</h2>
+<ul>
+<li>Five minutes: singles, then doubles, then paradiddles, eighth notes at 70 bpm on a pad.</li>
+<li>Start the paradiddle with the left hand too (L R L L, R L R R) so neither hand always leads.</li>
+<li>Move from eighths to sixteenths without changing the tempo, then back.</li>
+</ul>
+</section>
+</main>
+<script src="common.js"></script>
+<script src="metro.js"></script>
+<script>
+(function(){
+ const RUD=[
+  {n:'Single stroke',s:'RL',acc:[]},
+  {n:'Double stroke',s:'RRLL',acc:[]},
+  {n:'Triple stroke',s:'RRRLLL',acc:[]},
+  {n:'Single paradiddle',s:'RLRRLRLL',acc:[0,4]}];
+ const RATES=[1,2,4],RN=['Quarter (1)','Eighth (2)','Sixteenth (4)'];
+ let ri=3,rt=1,cells=[];
+ function build(){
+  const r=RUD[ri],box=document.getElementById('d3Cells');box.innerHTML='';cells=[];
+  const size=r.s.length%4===0?4:r.s.length%3===0?3:2;
+  let grp;
+  r.s.split('').forEach((ch,i)=>{if(i%size===0){grp=document.createElement('span');grp.className='cellg';box.appendChild(grp)}
+   const c=document.createElement('span');c.className='cell'+(r.acc.includes(i)?' acc':'');c.textContent=ch;grp.appendChild(c);cells.push(c)});
+  btns('d3Rud',RUD.map(x=>x.n),ri,i=>{ri=i;build();cfg()});
+  btns('d3Rate',RN,rt,i=>{rt=i;build();cfg()});
+  document.getElementById('d3Say').textContent=r.n+': '+r.s.split('').join(' ')+(r.acc.length?', accent on the first note of each group of four.':'.')}
+ function lit(i){cells.forEach((c,j)=>c.classList.toggle('on',j===i))}
+ function cfg(){
+  const r=RUD[ri];
+  GTMetro.set({n:r.s.length,sub:RATES[rt],level:i=>r.acc.includes(i)?2:0,freq:i=>r.s[i]==='R'?1300:850,onTick:lit,
+   onState:on=>{document.getElementById('d3Go').textContent=on?'■ Stop':'▶ Start';if(!on)lit(-1)}})}
+ document.getElementById('d3Go').addEventListener('click',()=>GTMetro.running()?GTMetro.stop():GTMetro.start());
+ build();cfg();
+})();
+</script>
+</body>
+</html>

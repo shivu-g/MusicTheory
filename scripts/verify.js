@@ -14,7 +14,8 @@ const puppeteer = require('puppeteer-core');
 const ROOT = path.resolve(__dirname, '..');
 const HUBS = ['core', 'guitar', 'keyboard', 'drums'];
 const KLESSONS = [1, 2, 3, 4].map(n => 'keyboard-' + n);
-const PAGES = ['index', ...HUBS, ...KLESSONS, ...Array.from({ length: 13 }, (_, i) => 'chapter-' + (i + 1)), 'tools'];
+const DLESSONS = [1, 2, 3].map(n => 'drums-' + n);
+const PAGES = ['index', ...HUBS, ...KLESSONS, ...DLESSONS, ...Array.from({ length: 13 }, (_, i) => 'chapter-' + (i + 1)), 'tools'];
 const MIME = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.svg': 'image/svg+xml', '.png': 'image/png', '.webp': 'image/webp', '.jpg': 'image/jpeg' };
 const srv = http.createServer((q, r) => {
   const p = path.join(ROOT, decodeURIComponent(q.url.split('?')[0]));
@@ -45,7 +46,7 @@ const LOOP_IDS = ['pPlay', 'diaPlay', 'mkPlay', 'sfPlay', 'mvPlay', 'vlPlay', 's
     });
     await new Promise(r => setTimeout(r, 300));
     const r = await pg.evaluate((name, LOOP_IDS, HUBS) => {
-      const KL = /^keyboard-\d$/.test(name);
+      const KL = /^(keyboard|drums)-\d$/.test(name), DR = /^drums-\d$/.test(name);
       const out = [];
       const nulls = [...new Set(window.__nulls)].filter(id => !LOOP_IDS.includes(id));
       if (nulls.length) out.push('getElementById found nothing for: ' + nulls.join(', '));
@@ -54,9 +55,10 @@ const LOOP_IDS = ['pPlay', 'diaPlay', 'mkPlay', 'sfPlay', 'mvPlay', 'vlPlay', 's
       if (dups.length) out.push('duplicate ids: ' + [...new Set(dups)].join(', '));
       if (KL) {
         if (!document.querySelector('.chap')) out.push('no header');
-        if (!document.querySelector('svg .snd, svg [data-play]')) out.push('no interactive piano');
+        if (DR ? !document.querySelector('.cells .cell') : !document.querySelector('svg .snd, svg [data-play]')) out.push(DR ? 'no counting cells' : 'no interactive piano');
         const nv = [...document.querySelectorAll('nav[aria-label="Guide"] a')].map(a => a.getAttribute('href'));
-        if (!nv.includes('keyboard.html')) out.push('top bar is missing Keyboard hub link');
+        const hub = DR ? 'drums.html' : 'keyboard.html';
+        if (!nv.includes(hub)) out.push('top bar is missing hub link ' + hub);
       } else if (name !== 'index' && !HUBS.includes(name)) {
         const secs = [...document.querySelectorAll('section[id^="lesson-"]')];
         secs.forEach((s, i) => {
@@ -95,7 +97,7 @@ const LOOP_IDS = ['pPlay', 'diaPlay', 'mkPlay', 'sfPlay', 'mvPlay', 'vlPlay', 's
       return out;
     }, name, LOOP_IDS, HUBS);
     problems.push(...r);
-    if (HUBS.includes(name) || /^keyboard-\d$/.test(name)) {
+    if (HUBS.includes(name) || /^(keyboard|drums)-\d$/.test(name)) {
       const hs = await pg.evaluate(() => [...document.querySelectorAll('a[href]')].map(a => a.getAttribute('href')).filter(h => !/^(https?:|#|mailto:)/.test(h)));
       for (const h of [...new Set(hs)]) { const [f, id] = h.split('#'); if (!fs.existsSync(path.join(ROOT, f)) || (id && !fs.readFileSync(path.join(ROOT, f), 'utf8').includes(`id="${id}"`))) problems.push('hub link goes nowhere: ' + h); }
     }

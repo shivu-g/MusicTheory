@@ -30,7 +30,7 @@
 - Suggested placement: tool: Chord Finder (naming function); note convention in the tool help text.
 - Interactive idea: show the chosen name split into labelled parts (root, quality, extension, alteration, bass).
 
-## [drums] Core rudiment stickings and the PAS list            status: new
+## [drums] Core rudiment stickings and the PAS list            status: placed -> drums-3.html (singles, doubles, triples, single paradiddle; other variants left out as unsourced)
 - Fact(s): The Percussive Arts Society international list has 40 rudiments grouped as roll, diddle, flam and drag families. The roll family includes single stroke roll, multiple bounce, triple stroke, double stroke open roll, and the five, six, seven, nine, ten, eleven, thirteen, fifteen and seventeen stroke rolls.
 - Fact(s): Stickings: single stroke roll R L R L; double stroke roll R R L L; triple stroke roll R R R L L L; single paradiddle R L R R then L R L L (accent the first note of each group of four).
 - Fact(s): Diddle family on the PAS list: single, double and triple paradiddle plus single paradiddle-diddle. Flam family begins with flam, flam tap, flamacue, flam paradiddle. I did not source the sticking for the double, triple and paradiddle-diddle variants, leave those for a later pass.
@@ -38,7 +38,7 @@
 - Suggested placement: new lesson D3 "Rudiments" in drums track
 - Interactive idea: stick-sticking player that lights up R and L hands in time with metro.js, tempo slider.
 
-## [drums] Time signatures: simple, compound, duple, triple, quadruple            status: new
+## [drums] Time signatures: simple, compound, duple, triple, quadruple            status: placed -> drums-2.html (metro.js accent groups)
 - Fact(s): Meters are described by beats per bar and how each beat divides. Duple: 2/4, 2/2, 6/8 (two beats). Triple: 3/4, 3/2, 9/8 (three beats). Quadruple: 4/4, 4/2, 12/8 (four beats).
 - Fact(s): Simple meters (2/4, 3/4, 4/4) divide each beat in two; compound meters (6/8, 9/8, 12/8) divide each beat in three, so 6/8 is felt as two big beats of three eighth notes, not six equal beats.
 - Fact(s): Odd meters such as 5/4 or 7/8 are usually counted as grouped pulses, for example 7/8 as 2+2+3 or 3+2+2. I have only a general teaching source for the grouping idea.
@@ -76,3 +76,42 @@
 - Sources: https://pianowithjonny.com/piano-lessons/rootless-voicings-for-piano-the-complete-guide/ ; https://www.pianogroove.com/jazz-piano-lessons/rootless-chord-voicings/ ; https://piano.org/theory/rootless-voicings/
 - Suggested placement: new lesson K4 "Seventh chords and voicings" in keyboard track; also tool: Inversions and Voicings piano view (left-hand voicings, which is still open in BACKLOG).
 - Interactive idea: choose ii-V-I in a key and toggle A-first vs B-first; the piano strip shows the voice leading between chords.
+
+## [drums] Pulse and subdivision counting (quarter, eighth, sixteenth, triplet)            status: placed -> drums-1.html (metro.js subdivision selector)
+- Fact(s): In 4/4 the quarter note is the pulse, counted 1 2 3 4. Eighth notes split each beat in two: 1 & 2 & 3 & 4 & (8 per bar). Sixteenths split it in four: 1 e & a 2 e & a ... (16 per bar). Eighth-note triplets split it in three: 1-trip-let 2-trip-let (12 per bar); three triplet eighths fill the same time as one quarter.
+- Fact(s): Rests are counted as actively as notes; keep saying the full grid through silences. Dotted note = note plus half its value (dotted quarter = 1.5 beats, dotted eighth = 0.75 beat).
+- Fact(s): Practice drill from the sources: say the full 16th grid aloud at slow tempo and clap only on the numbers, then only the "&", then only the "e", to separate the voice from the hands. Notation convention: x noteheads = cymbals, round dots = drums with skins.
+- Sources: https://upbeat.studio/free-stuff/blog/how-to-read-drum-sheet-music-like-a-pro/ ; https://drummingtips.com/drum-fills-for-beginners/ (counting of 8ths, 16ths, triplets agrees)
+- Suggested placement: new lesson D1 "Pulse and subdivisions" in drums track; extend metro.js with a subdivision selector (1, 2, 3, 4 clicks per beat) and an accented beat.
+- Interactive idea: a counting display that lights each syllable (1 e & a / 1 & / 1-trip-let) in time with the click, and a "mute the numbers" toggle to clap only the chosen syllable.
+
+## [drums] Basic rock beat and common variations (groove builder)            status: new
+- Fact(s): Basic rock beat in 4/4: hi-hat plays steady eighths (1 & 2 & 3 & 4 &), snare on 2 and 4 (the backbeat), kick on 1 and 3. Backbeat means beats 2 and 4, usually the snare, though a hi-hat or a clap can carry it.
+- Fact(s): Variations listed in two sources: kick on 1, the "and" of 2, and 3; four-on-the-floor (kick on all four beats, snare still 2 and 4); sixteenth-note hi-hat with the same kick and snare. The kick is the flexible voice, the snare backbeat is the stable one.
+- Fact(s): In compound quadruple (12/8 feel) the kick stays on 1 and 3 and the snare on 2 and 4, with the hi-hat marking the three-part beat division. A half-time feel puts the snare only on beat 3; a double-time backbeat puts it on the second eighth of every beat.
+- Sources: https://viva.pressbooks.pub/openmusictheory/chapter/drumbeats/ ; https://drumbeatsonline.com/blog/rock-drum-beats-essential-patterns-every-drummer-should-know
+- Suggested placement: new lesson D4 "Basic grooves" in drums track with a groove builder grid (rows hi-hat, snare, kick; 8 or 16 steps; presets above).
+- Interactive idea: step-sequencer grid rows kick, snare, hi-hat on 16 steps, with presets (basic rock, kick variation, four-on-the-floor, half-time) played through metro.js.
+
+## [drums] Fills: what they are and starter shapes            status: new
+- Fact(s): A fill is a short break from the repeating beat that links sections (for example verse into chorus). It can be half a beat to several bars; knowing where it goes and how long it should be matters more than how busy it is, and leaving space often works better.
+- Fact(s): Beginner fill shapes, all after one bar of the basic backbeat: eighths moving snare, tom 1, tom 2, floor tom, two notes each (1 & 2 & ...); the same with four sixteenths per drum (one drum per beat); a crescendo of eighths, quiet to loud over the bar; Bonham-style triplets (first tom on the beat, floor tom on "trip", kick on "let", four beats in a row); and a linear sixteenth pattern R L R K (right, left, right, kick; no two limbs together), repeated.
+- Fact(s): Flams in fills: a flam is a light grace note just before the main stroke. Practice every fill slowly with a click, and try leading with the non-dominant hand.
+- Sources: https://drummingtips.com/drum-fills-for-beginners/ ; https://www.drumeo.com/beat/beginner-drum-fills/ (page title only confirmed, content not read)
+- Suggested placement: new lesson D5 "Fills" in drums track
+- Interactive idea: pick a one-bar fill shape and a drum order; the grid plays beat for 3 bars then the fill, with the sticking (R, L, K) shown per note.
+
+## [drums] Syncopation: strong beats, off-beats and four types            status: new
+- Fact(s): In 4/4, beat 1 is the strongest, beat 3 next, beats 2 and 4 weaker, and the "&" between beats are off-beats. Syncopation is accenting a weak position at the expense of a strong one while the pulse still runs underneath. "Off-beat" names a place; syncopation is the effect.
+- Fact(s): Four recurring devices: off-beat accents (notes on the "&"s), a missed downbeat (rest on a strong beat), anticipation (a note an eighth or sixteenth early, often held through the beat), and a tie across the beat. A common recipe is a straight foundation (four-on-the-floor kick) with a syncopated layer on top, e.g. snare on 1, 2, 3 and the "and" of 3.
+- Fact(s): Method: write the rhythm straight first, displace one or two notes, remove a strong-beat note, keep one voice playing straight as an anchor, loop it and check you can still feel the pulse. Count the full grid (1 & 2 & 3 & 4 &) and mark the syllables that carry notes.
+- Sources: https://www.masterthescore.com/article/syncopation ; https://viva.pressbooks.pub/openmusictheory/chapter/drumbeats/ (backbeat and anticipation examples)
+- Suggested placement: new lesson D6 "Syncopation and polyrhythm" in drums track, first half
+- Interactive idea: grid with a locked straight kick, user drags notes between on-beat and "&" slots and a meter shows how many accents sit on weak positions.
+
+## [drums] Polyrhythm 3:2 and 4:3 (hemiola)            status: unsure
+- Fact(s): A polyrhythm is two different rhythmic divisions sounding at once. 3:2 means three equal notes in the time of two (called a hemiola in the PAS blog). Over a 6-step cycle, one hand plays steps 0, 2, 4 and the other plays steps 0 and 3; the combined attack order is both, three-hand, two-hand, three-hand, which is the spoken mnemonic "nice cup of tea" (one syllable per attack).
+- Fact(s): 4:3 means four notes against three over a 12-step cycle (hands on 0,3,6,9 and 0,4,8). One source suggests practicing at 60 BPM with a metronome and learning by ear first, then adding counting. I derived the step lists myself from the ratio; only the 3:2 mnemonic appears in the sources, the exact 4:3 spoken count text could not be read cleanly, so confirm before writing the 4:3 words.
+- Sources: https://pas.org/pas-blog/hot-licks-32-polyrhythmic-fill-combinations/ ; https://www.musical-u.com/learn/introduction-to-polyrhythms/
+- Suggested placement: new lesson D6 "Syncopation and polyrhythm" in drums track, second half; tool idea for metro.js: two-ratio click (high and low pitch) with common-cycle length shown.
+- Interactive idea: choose a ratio (3:2, 4:3, 5:4), hear each layer in a different pitch, with dots on a shared 6- or 12-step timeline.

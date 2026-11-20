@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Time signatures · Drums · Guitar Theory Maps</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="drums-2">
+<main>
+<nav aria-label="Guide"><a href="index.html">← All chapters</a><a href="drums.html">Drums</a><a href="tools.html">Tools</a><span class="here">Drums · Lesson D2 of 6</span><span class="metro"></span><span style="display:flex;gap:8px"><a href="drums-3.html">Next →</a></span></nav>
+<div class="chap" style="background:#3a3342"><span>Drums · D2</span><h2>Time signatures</h2><p>How beats are grouped into bars, and why 6/8 feels different from 3/4 even though both fill a bar with six eighths.</p></div>
+<section>
+<h2>Beats per bar, and how each beat divides</h2>
+<p>A time signature answers two questions. The top number says how many counted units sit in a bar. The bottom number says which note value is the unit: 4 is a quarter note, 8 is an eighth note. Two things then decide how a meter feels: how many <b>beats</b> you feel in the bar, and how each beat <b>divides</b>.</p>
+<ul>
+<li><b>Duple</b> meters have two beats (2/4, 2/2, 6/8). <b>Triple</b> meters have three (3/4, 3/2, 9/8). <b>Quadruple</b> meters have four (4/4, 4/2, 12/8).</li>
+<li><b>Simple</b> meters (2/4, 3/4, 4/4) divide each beat in two. <b>Compound</b> meters (6/8, 9/8, 12/8) divide each beat in three.</li>
+</ul>
+<p>So 6/8 is not six equal beats. It is <b>two big beats of three eighths each</b>, counted <b>1 la li 2 la li</b>. It holds the same six eighths as 3/4, but 3/4 groups them in twos (three beats) and 6/8 groups them in threes (two beats). That is why the two sound so different.</p>
+<h2>Odd meters are grouped pulses</h2>
+<p>Meters like 5/4 and 7/8 are usually felt as short groups of two and three added together. 7/8 can be <b>2+2+3</b>, <b>3+2+2</b> or <b>2+3+2</b>: the same seven eighths, three different accent patterns. Count each group from 1 and the groups become easy to lock to.</p>
+<div class="card">
+<h3>Meter and accent player</h3>
+<div class="ctl"><div class="grp"><span class="lab">Meter</span><span class="grp" id="d2Meter"></span></div></div>
+<div class="ctl"><div class="grp"><span class="lab">Grouping</span><span class="grp" id="d2Group"></span></div></div>
+<div class="cells" id="d2Cells" role="img" aria-label="One bar of the chosen meter, grouped"></div>
+<div class="ctl"><button type="button" class="pbtn go" id="d2Go">▶ Start</button><span id="d2Say" role="status"></span></div>
+<p class="cap">One click per written unit (a quarter in x/4, an eighth in x/8), so the bpm shown is clicks per minute. The high click is beat 1 of the bar, the middle click starts each other group.</p>
+</div>
+<div class="tip"><b>On the kit.</b> Keep the hi-hat steady on every unit and put the bass drum on the start of each group. When the groups change, the whole feel changes while the hi-hat does not.</div>
+</section>
+<section>
+<h2>Practise this</h2>
+<ul>
+<li>Play 4/4, 3/4 and 6/8 with the same hi-hat speed and notice where the bass drum lands.</li>
+<li>Take 7/8 in each of its three groupings and say the counts aloud before you add the kit.</li>
+<li>Count 6/8 as two beats ("1 la li 2 la li") and then as six, and feel how the second way flattens it.</li>
+</ul>
+</section>
+</main>
+<script src="common.js"></script>
+<script src="metro.js"></script>
+<script>
+(function(){
+ // each meter: list of groupings (sizes sum to the number of written units), kind text
+ const M=[
+  {n:'2/4',g:[[1,1]],t:'Simple duple: two beats, each split in two.'},
+  {n:'3/4',g:[[1,1,1]],t:'Simple triple: three beats, each split in two.'},
+  {n:'4/4',g:[[1,1,1,1]],t:'Simple quadruple: four beats, each split in two.'},
+  {n:'6/8',g:[[3,3]],t:'Compound duple: two beats, each split in three.'},
+  {n:'9/8',g:[[3,3,3]],t:'Compound triple: three beats, each split in three.'},
+  {n:'12/8',g:[[3,3,3,3]],t:'Compound quadruple: four beats, each split in three.'},
+  {n:'5/4',g:[[3,2],[2,3]],t:'Odd meter: five quarters grouped as a three and a two.'},
+  {n:'7/8',g:[[2,2,3],[3,2,2],[2,3,2]],t:'Odd meter: seven eighths grouped in twos and threes.'}];
+ const NAMES=M.map(m=>m.n);
+ let mi=2,gi=0,cells=[];
+ const compound=m=>/^(6|9|12)\/8$/.test(m.n);
+ function syl(m,size,k){return compound(m)?(k===0?'':k===1?'la':'li'):''}
+ function build(){
+  const m=M[mi],g=m.g[gi],box=document.getElementById('d2Cells');box.innerHTML='';cells=[];
+  let beat=0;
+  g.forEach((size,bi)=>{const grp=document.createElement('span');grp.className='cellg';
+   for(let k=0;k<size;k++){const c=document.createElement('span');c.className='cell'+(k===0?' acc':'');
+    c.textContent=k===0?String(bi+1):(compound(m)?syl(m,size,k):String(k+1));
+    grp.appendChild(c);cells.push(c)}
+   box.appendChild(grp)});
+  btns('d2Meter',NAMES,mi,i=>{mi=i;gi=0;build();cfg()});
+  btns('d2Group',m.g.map(x=>x.join('+')),gi,i=>{gi=i;build();cfg()});
+  document.getElementById('d2Say').textContent=m.n+(g.every(x=>x===1)?'. ':' as '+g.join('+')+'. ')+m.t}
+ function lit(i){cells.forEach((c,j)=>c.classList.toggle('on',j===i))}
+ function cfg(){
+  const g=M[mi].g[gi],starts=new Set();let p=0;g.forEach(s=>{starts.add(p);p+=s});
+  GTMetro.set({n:p,sub:1,level:i=>i===0?2:(starts.has(i)?1:0),onTick:lit,
+   onState:r=>{document.getElementById('d2Go').textContent=r?'■ Stop':'▶ Start';if(!r)lit(-1)}})}
+ document.getElementById('d2Go').addEventListener('click',()=>GTMetro.running()?GTMetro.stop():GTMetro.start());
+ build();cfg();
+})();
+</script>
+</body>
+</html>

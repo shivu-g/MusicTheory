@@ -247,3 +247,11 @@ nav{background:rgba(31,31,34,.94)}
 .hubcard .st{display:inline-block;margin-top:8px;font-size:.72rem;font-weight:700;padding:2px 8px;border-radius:99px;background:var(--purple);color:#fff}
 .hubcard .st.live{background:var(--go);color:#12312a}
 .hubsplit{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+
+/* drums lessons: counting cells lit by metro.js */
+.cells{display:flex;flex-wrap:wrap;gap:8px}
+.cellg{display:flex;gap:4px;padding:4px;border:1px solid var(--line);border-radius:10px}
+.cell{min-width:2.3em;text-align:center;padding:6px 4px;border-radius:8px;background:var(--card);border:1px solid var(--line);font-weight:600;font-size:.95rem}
+.cell.acc{border-color:var(--gold);font-weight:800}
+.cell.mut{opacity:.4}
+.cell.on{background:var(--gold);color:var(--charcoal);border-color:var(--gold)}

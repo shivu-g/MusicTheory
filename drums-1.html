@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pulse and subdivisions · Drums · Guitar Theory Maps</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="drums-1">
+<main>
+<nav aria-label="Guide"><a href="index.html">← All chapters</a><a href="drums.html">Drums</a><a href="tools.html">Tools</a><span class="here">Drums · Lesson D1 of 6</span><span class="metro"></span><span style="display:flex;gap:8px"><a href="drums-2.html">Next →</a></span></nav>
+<div class="chap" style="background:#3a3342"><span>Drums · D1</span><h2>Pulse and subdivisions</h2><p>How one steady beat splits into two, three or four, and how to count every split out loud.</p></div>
+<section>
+<h2>The pulse and its splits</h2>
+<p>In 4/4 the <b>quarter note is the pulse</b>. You count it <b>1 2 3 4</b> and the bar repeats. Every other rhythm is a way of cutting that pulse into equal pieces.</p>
+<ul>
+<li><b>Eighths</b> cut each beat in two: <b>1 &amp; 2 &amp; 3 &amp; 4 &amp;</b>, eight notes per bar.</li>
+<li><b>Sixteenths</b> cut each beat in four: <b>1 e &amp; a 2 e &amp; a</b> and so on, sixteen notes per bar.</li>
+<li><b>Eighth-note triplets</b> cut each beat in three: <b>1 trip let 2 trip let</b>, twelve notes per bar. Three of them take exactly the time of one quarter note.</li>
+</ul>
+<p>Silence counts too. Keep saying the whole grid through a rest, so the next note arrives on time. A <b>dotted note</b> lasts its own value plus half again: a dotted quarter is 1.5 beats and a dotted eighth is 0.75 of a beat.</p>
+<p>On drum notation, notes with an x head are cymbals and round heads are drums with skins.</p>
+<div class="card">
+<h3>Subdivision counter</h3>
+<div class="ctl"><div class="grp"><span class="lab">Split each beat in</span><span class="grp" id="d1Sub"></span></div></div>
+<div class="ctl"><div class="grp"><span class="lab">Sound only</span><span class="grp" id="d1Hear"></span></div></div>
+<div class="cells" id="d1Cells" role="img" aria-label="One bar of counting syllables"></div>
+<div class="ctl"><button type="button" class="pbtn go" id="d1Go">▶ Start counting</button><span id="d1Say" role="status" class="cap">Press start. The metronome in the top bar sets the tempo.</span></div>
+<p class="cap">The gold cell is the syllable sounding now. Choose a single syllable under "Sound only" and keep counting the rest silently: the muted cells stay in the grid.</p>
+</div>
+<div class="tip"><b>Drill.</b> Say the full sixteenth grid at a slow tempo and clap only on the numbers. Repeat clapping only on the "&amp;", then only the "e", then only the "a". Your voice holds the grid while your hands pick out a part of it.</div>
+</section>
+<section>
+<h2>Practise this</h2>
+<ul>
+<li>Two minutes at 60 bpm per subdivision: quarters, eighths, triplets, sixteenths, counting aloud each time.</li>
+<li>Switch splits every bar without letting the pulse move. The click on the beat is your anchor.</li>
+<li>Play the "Sound only: &amp;" setting and tap along on the off-beats with a foot or a pad.</li>
+</ul>
+</section>
+</main>
+<script src="common.js"></script>
+<script src="metro.js"></script>
+<script>
+(function(){
+ const SYL={1:['1','2','3','4'],2:['1','&'],3:['1','trip','let'],4:['1','e','&','a']};
+ const NAME={1:'Quarters',2:'Eighths',3:'Triplets',4:'Sixteenths'};
+ let sub=2,only=-1,cells=[];
+ const label=(b,k)=>k===0?String(b+1):SYL[sub][k];
+ function build(){
+  const box=document.getElementById('d1Cells');box.innerHTML='';cells=[];
+  for(let b=0;b<4;b++){const g=document.createElement('span');g.className='cellg';
+   for(let k=0;k<sub;k++){const c=document.createElement('span');c.className='cell'+(k===0?' acc':'');c.textContent=label(b,k);
+    if(only>=0&&k!==only)c.classList.add('mut');g.appendChild(c);cells.push(c)}
+   box.appendChild(g)}
+  const syl=sub===1?['all']:SYL[sub].map((s,k)=>k===0?'1':s);
+  const opts=sub===1?['All']:['All',...syl.map((s,k)=>k===0?'Numbers':s)];
+  btns('d1Hear',opts,only<0?0:only+1,i=>{only=i-1;build();cfg()});
+  document.getElementById('d1Say').textContent=NAME[sub]+': '+(sub===1?'one click per beat.':sub*4+' notes per bar, counted '+SYL[sub].join(' ')+'.')}
+ function lit(i){cells.forEach((c,j)=>c.classList.toggle('on',j===i))}
+ function cfg(){GTMetro.set({n:4*sub,sub,level:i=>i===0?2:(i%sub===0?1:0),
+  audible:i=>only<0||i%sub===only,onTick:lit,onState:r=>{document.getElementById('d1Go').textContent=r?'■ Stop':'▶ Start counting';if(!r)lit(-1)}})}
+ const SUBS=['Quarter','Eighth','Triplet','Sixteenth'];
+ function pick(i){sub=i+1;only=-1;btns('d1Sub',SUBS,i,pick);build();cfg()}
+ btns('d1Sub',SUBS,sub-1,pick);
+ document.getElementById('d1Go').addEventListener('click',()=>GTMetro.running()?GTMetro.stop():GTMetro.start());
+ build();cfg();
+})();
+</script>
+</body>
+</html>
