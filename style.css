@@ -255,3 +255,18 @@ nav{background:rgba(31,31,34,.94)}
 .cell.acc{border-color:var(--gold);font-weight:800}
 .cell.mut{opacity:.4}
 .cell.on{background:var(--gold);color:var(--charcoal);border-color:var(--gold)}
+
+/* drums grids: step buttons (D4, D6), lit column from metro.js */
+.gg{overflow-x:auto;padding-bottom:4px}
+.gr{display:flex;align-items:center;gap:3px;margin:3px 0;min-width:max-content}
+.gr .rl{width:4.6em;flex:none;font-size:.74rem;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);font-weight:700}
+.gs{width:26px;height:30px;flex:none;padding:0;border:1px solid var(--line);border-radius:6px;background:var(--card);color:var(--ink);font-size:.8rem;line-height:1;cursor:pointer;text-align:center}
+.gs.bt{margin-left:6px}
+.gs[data-v="1"]{background:var(--ghost);color:var(--ink)}
+.gs[data-v="2"],.gs[aria-pressed="true"]{background:var(--lilac);color:var(--charcoal);border-color:var(--lilac)}
+.gs.lock{border-color:var(--gold)}
+.gs.on{outline:2px solid var(--gold);outline-offset:1px}
+.gcnt .cell{min-width:0;width:26px;padding:4px 0;font-size:.72rem}
+.gcnt .cell.bt{margin-left:6px}
+.gcnt{gap:3px;min-width:max-content}
+.gmeter{font-weight:600}

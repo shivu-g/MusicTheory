@@ -85,7 +85,7 @@
 - Suggested placement: new lesson D1 "Pulse and subdivisions" in drums track; extend metro.js with a subdivision selector (1, 2, 3, 4 clicks per beat) and an accented beat.
 - Interactive idea: a counting display that lights each syllable (1 e & a / 1 & / 1-trip-let) in time with the click, and a "mute the numbers" toggle to clap only the chosen syllable.
 
-## [drums] Basic rock beat and common variations (groove builder)            status: new
+## [drums] Basic rock beat and common variations (groove builder)            status: placed -> drums-4.html (groove builder, 16-step presets)
 - Fact(s): Basic rock beat in 4/4: hi-hat plays steady eighths (1 & 2 & 3 & 4 &), snare on 2 and 4 (the backbeat), kick on 1 and 3. Backbeat means beats 2 and 4, usually the snare, though a hi-hat or a clap can carry it.
 - Fact(s): Variations listed in two sources: kick on 1, the "and" of 2, and 3; four-on-the-floor (kick on all four beats, snare still 2 and 4); sixteenth-note hi-hat with the same kick and snare. The kick is the flexible voice, the snare backbeat is the stable one.
 - Fact(s): In compound quadruple (12/8 feel) the kick stays on 1 and 3 and the snare on 2 and 4, with the hi-hat marking the three-part beat division. A half-time feel puts the snare only on beat 3; a double-time backbeat puts it on the second eighth of every beat.
@@ -93,7 +93,7 @@
 - Suggested placement: new lesson D4 "Basic grooves" in drums track with a groove builder grid (rows hi-hat, snare, kick; 8 or 16 steps; presets above).
 - Interactive idea: step-sequencer grid rows kick, snare, hi-hat on 16 steps, with presets (basic rock, kick variation, four-on-the-floor, half-time) played through metro.js.
 
-## [drums] Fills: what they are and starter shapes            status: new
+## [drums] Fills: what they are and starter shapes            status: placed -> drums-5.html (fill player; hand splits shown as a common choice)
 - Fact(s): A fill is a short break from the repeating beat that links sections (for example verse into chorus). It can be half a beat to several bars; knowing where it goes and how long it should be matters more than how busy it is, and leaving space often works better.
 - Fact(s): Beginner fill shapes, all after one bar of the basic backbeat: eighths moving snare, tom 1, tom 2, floor tom, two notes each (1 & 2 & ...); the same with four sixteenths per drum (one drum per beat); a crescendo of eighths, quiet to loud over the bar; Bonham-style triplets (first tom on the beat, floor tom on "trip", kick on "let", four beats in a row); and a linear sixteenth pattern R L R K (right, left, right, kick; no two limbs together), repeated.
 - Fact(s): Flams in fills: a flam is a light grace note just before the main stroke. Practice every fill slowly with a click, and try leading with the non-dominant hand.
@@ -101,7 +101,7 @@
 - Suggested placement: new lesson D5 "Fills" in drums track
 - Interactive idea: pick a one-bar fill shape and a drum order; the grid plays beat for 3 bars then the fill, with the sticking (R, L, K) shown per note.
 
-## [drums] Syncopation: strong beats, off-beats and four types            status: new
+## [drums] Syncopation: strong beats, off-beats and four types            status: placed -> drums-6.html (syncopation grid with weak-position meter)
 - Fact(s): In 4/4, beat 1 is the strongest, beat 3 next, beats 2 and 4 weaker, and the "&" between beats are off-beats. Syncopation is accenting a weak position at the expense of a strong one while the pulse still runs underneath. "Off-beat" names a place; syncopation is the effect.
 - Fact(s): Four recurring devices: off-beat accents (notes on the "&"s), a missed downbeat (rest on a strong beat), anticipation (a note an eighth or sixteenth early, often held through the beat), and a tie across the beat. A common recipe is a straight foundation (four-on-the-floor kick) with a syncopated layer on top, e.g. snare on 1, 2, 3 and the "and" of 3.
 - Fact(s): Method: write the rhythm straight first, displace one or two notes, remove a strong-beat note, keep one voice playing straight as an anchor, loop it and check you can still feel the pulse. Count the full grid (1 & 2 & 3 & 4 &) and mark the syllables that carry notes.
@@ -156,3 +156,36 @@
 - Sources: https://tomus.app/music-symbols/repeats ; https://www.pianote.com/blog/the-number-system/ ; https://www.danpianostudio.com/post/piano-comping-patterns
 - Suggested placement: closing checklist of lesson K6; low priority until a second source on lead-sheet conventions is found.
 - Interactive idea: a six-step checklist the reader ticks while playing along to a short 8-bar chart with a metronome.
+
+## [drums] Shuffle feel: triplet skip, half-time shuffle, ghost-note shuffle            status: placed -> drums-4.html (12-step triplet presets; swing slider left out)
+- Fact(s): A shuffle is a triplet-based "long-short" skipping feel. It is written either as triplets in 4/4 or as 12/8, the two being nearly equivalent. Count 1 & ah 2 & ah ...; the cymbal or hi-hat plays beat and "ah" (first and third triplet partial) and skips the middle one: "1 - ah 2 - ah".
+- Fact(s): Variations named in the Drum! Magazine article: the half-time shuffle puts the snare accent on count 3 only and feels more laid back; the Purdie shuffle is a half-time shuffle with soft ghosted snare notes filling the gaps and the hi-hat closed on the beats and open on every "ah"; the jazz/swing version replaces the shuffle hi-hat with a ride pattern; a rock shuffle is played heavier with kick and snare implying the triplet feel.
+- Fact(s): Dynamics make the feel: unaccented snare notes are played very softly and accents clearly louder; weak dynamic contrast is a common reason a shuffle sounds stiff. Delaying the "ah" slightly gives a harder, driving feel; straightening it slightly gives a lazier, rounder feel (very fast tempos do this naturally).
+- Fact(s): Cross-check: the 12/8 / compound-quadruple equivalence agrees with the existing inbox entry from Open Music Theory on compound meters. Only one detailed source for the variation names.
+- Sources: https://drummagazine.com/how-to-play-shuffles-and-shuffle-variations/ ; https://viva.pressbooks.pub/openmusictheory/chapter/drumbeats/
+- Suggested placement: lesson D4 "Basic grooves", a second preset group "Triplet grooves" (12-step grid, 4 beats x 3 triplet partials) after the 16-step rock presets.
+- Interactive idea: 12-step grid with presets "shuffle" (hi-hat on steps 1, 3 of each triplet), "half-time shuffle" (snare on beat 3 only), and a swing slider that moves the "ah" step later or earlier.
+
+## [drums] Ghost notes: very soft snare notes around the backbeat            status: placed -> drums-4.html#ghost (snare ghost state; placement marked typical, not a rule)
+- Fact(s): A ghost note is a very soft note, usually on the snare, with little attack, played quietly between the main accented hits. It adds texture and momentum and should not compete with the backbeat; if every snare hit has the same weight the groove sounds flat, so create dynamic contrast.
+- Fact(s): Practical points: ghosting after the backbeat feels easier than ghosting into it (the stick has to be low before the next accent). Keep the stick low for ghosts and raise it for accents. Ghosts typically sit on the off-beat sixteenths ("e" and "a") around the snare on 2 and 4.
+- Fact(s): Confirmed only by general teaching sources and a forum definition, and the stick-height advice by an excerpt; the specific "e and a" placement is my reading of common funk and shuffle patterns, so state it as typical, not as a rule.
+- Sources: https://drummagazine.com/how-to-play-shuffles-and-shuffle-variations/ ; https://www.reddit.com/r/drums/comments/20ngs7/can_someone_explain_to_me_what_ghost_notes_are_on/ ; https://www.youtube.com/watch?v=k0yQRZYXq3s (title and excerpt only)
+- Suggested placement: lesson D4 (variation row for the snare, with a per-step velocity: ghost, normal, accent) or the start of D5 as a dynamics note for fills.
+- Interactive idea: snare row where each step cycles off, ghost (quiet), normal, accent; presets add ghosts on the "e" and "a" before the backbeat; metro.js needs per-note volume.
+
+## [drums] Tresillo (3+3+2) and the Bo Diddley / dembow family            status: placed -> drums-6.html (tresillo preset)
+- Fact(s): Tresillo is the rhythm 3+3+2 over eight sixteenth steps (hits on steps 0, 3, 6 of 8, or 0, 3, 6 and then a rest to the next beat). Played as eighths it is 3+3+2 over four beats; it is one of the most common syncopated cells in popular music and is the first bar of the 3-2 son clave.
+- Fact(s): It is heard in the Bo Diddley beat, the reggaeton/dembow kick-snare pattern (compared with the habanera bass line in the Puget Sound text), second-line drumming, and rock riffs; doubled it gives 3+3+3+3+2+2 (16 steps), and 3+3+4+3+3 is another named variant. The pattern is felt as a triple grouping pulling against the duple meter.
+- Fact(s): Two independent sources (a university open textbook and a music-theory blog on Toussaint's work) agree on the 3+3+2 structure and the Bo Diddley link.
+- Sources: https://musictheory.pugetsound.edu/mt21c/ThreeTwoClave.html ; https://www.ethanhein.com/wp/2013/why-is-son-clave-so-awesome/
+- Suggested placement: lesson D6, syncopation section: a "3+3+2" preset on the grid, with the kick on 0, 3, 6 (and 8, 11, 14 for the doubled form) and the snare on 2 and 4.
+- Interactive idea: 16-step grid where the reader switches between 4+4+4+4 (straight) and 3+3+3+3+2+2 groupings and sees the accents fall off the beat.
+
+## [drums] Son clave 3-2 and 2-3 (five hits in a 16-step cycle)            status: placed -> drums-6.html (3-2 and 2-3 presets)
+- Fact(s): The 3-2 son clave is a two-bar timeline: three hits in the first bar, two in the second. Counted over 16 sixteenth steps in one 4/4 bar the hits fall on steps 0, 3, 6, 10, 12 (gaps 3-3-4-2-4). The 2-3 clave starts with the two-hit half instead (same pattern rotated by half the cycle). Which side you start on is a chart convention; the rhythm is the same one.
+- Fact(s): The three-side builds tension by crossing the beat; the two-side lands on the pulse and resolves it. Toussaint's analysis: it is not maximally even, but it has no pairs of hits opposite each other (rhythmic oddity), so it does not split into two halves. The Bo Diddley beat is the same pattern.
+- Fact(s): Note: the step list is derived from the 3-3-4-2-4 gaps in the Ethan Hein / Toussaint post and the 3+3+2 first bar in the Puget Sound text; an in-text commenter on the blog gives the same grid (0, 3, 6, 10, 12 steps counting from 0). Terminology 3-2 / 2-3 is described there as a North American usage, not Cuban.
+- Sources: https://www.ethanhein.com/wp/2013/why-is-son-clave-so-awesome/ ; https://musictheory.pugetsound.edu/mt21c/ThreeTwoClave.html
+- Suggested placement: lesson D6, polyrhythm half, as an example of a 3-against-2 feel built from one pattern; also a preset in a 16-step grid.
+- Interactive idea: a circular or linear 16-step clave with a toggle between 3-2 and 2-3 that rotates the cycle by 8 steps, with the click on the main beats so the reader hears where the pattern crosses and resolves.

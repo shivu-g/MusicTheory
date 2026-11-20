@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fills · Drums · Guitar Theory Maps</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="drums-5">
+<main>
+<nav aria-label="Guide"><a href="index.html">← All chapters</a><a href="drums.html">Drums</a><a href="tools.html">Tools</a><span class="here">Drums · Lesson D5 of 6</span><span class="metro"></span><span style="display:flex;gap:8px"><a href="drums-4.html">← Prev</a><a href="drums-6.html">Next →</a></span></nav>
+<div class="chap" style="background:#3a3342"><span>Drums · D5</span><h2>Fills</h2><p>A fill is a short break from the groove that carries the music into the next section. Five starter shapes, each landing on the next downbeat.</p></div>
+<section>
+<h2>What a fill does</h2>
+<p>A <b>fill</b> briefly leaves the repeating beat, usually at the end of a phrase, to link one section to the next, for example a verse into a chorus. It can last half a beat or several bars. What matters most is <b>where it goes and how long it is</b>, not how busy it is. Leaving space often works better than filling every gap.</p>
+<p>A fill always ends by <b>landing on the next downbeat</b>, normally with a crash cymbal and the kick on beat 1 of the new section. If the fill is lost the groove lands, so practise the landing as much as the fill.</p>
+<h2>Five starter shapes</h2>
+<p>All of these are played in the last bar after three bars of basic rock. Notes are counted on the sixteenth or triplet grid you met in D1 and D4.</p>
+<ul>
+<li><b>Eighths around the toms:</b> two notes each on snare, high tom, mid tom and floor tom, one drum per half beat, moving down the kit.</li>
+<li><b>Sixteenths, one drum per beat:</b> the same order with four notes on each drum.</li>
+<li><b>Crescendo:</b> eight eighths on the snare, getting louder across the bar.</li>
+<li><b>Triplets in the Bonham style:</b> on each beat, high tom on the beat, floor tom on "trip", kick on "let", four beats in a row.</li>
+<li><b>Linear sixteenths:</b> right, left, right, kick, repeated. No two limbs play together, so every note is a single stroke.</li>
+</ul>
+<div class="card">
+<h3>Fill player</h3>
+<div class="ctl"><div class="grp"><span class="lab">Fill</span><span class="grp" id="d5Fill"></span></div></div>
+<div class="ctl"><span class="lab">Bar</span><b id="d5Bar" role="status">1 of 4</b></div>
+<div class="cells" id="d5Cells" role="img" aria-label="The notes of the fill, with sticking and drum"></div>
+<div class="ctl"><button type="button" class="pbtn go" id="d5Go">▶ Start</button><span id="d5Say"></span></div>
+<p class="cap">The loop plays three bars of basic rock and then the fill, with a crash and kick on the first beat of the next loop. Each note shows its sticking (R, L, or K for kick) and drum (sn snare, t1 high tom, t2 mid tom, ft floor tom, k kick). Alternating hands is a common choice here, not the only one; try leading with your weaker hand too.</p>
+</div>
+<div class="tip"><b>Flams.</b> A flam is a very light grace note just before the main stroke. It fattens one note of a fill, and it is one of the rudiments still to come. Practise every fill slowly with a click first.</div>
+</section>
+<section>
+<h2>Practise this</h2>
+<ul>
+<li>Loop three bars of groove and one bar of fill at 60 bpm, and make the crash land exactly with the kick.</li>
+<li>Play each fill with the left hand leading, then the right.</li>
+<li>Play one fill, then deliberately play a bar with <em>no</em> fill and hear how the next section feels different.</li>
+</ul>
+</section>
+</main>
+<script src="common.js"></script>
+<script src="metro.js"></script>
+<script>
+(function(){
+ // 48 ticks per bar: 12 per beat, so an eighth = 6, a sixteenth = 3, a triplet part = 4
+ const AB={snare:'sn',tom1:'t1',tom2:'t2',floor:'ft',kick:'k'};
+ const alt=i=>i%2?'L':'R';
+ function seq(n,step,drums,stick,vol){const o=[];for(let i=0;i<n;i++)o.push({t:i*step,d:drums(i),s:stick(i),v:vol?vol(i):.85});return o}
+ const D4=['snare','tom1','tom2','floor'];
+ const F=[
+  {n:'Eighths around the toms',x:'Two eighths on each drum, moving from snare down to floor tom.',notes:seq(8,6,i=>D4[i>>1],alt)},
+  {n:'Sixteenths, one drum per beat',x:'Four sixteenths on each drum, one drum per beat.',notes:seq(16,3,i=>D4[i>>2],alt)},
+  {n:'Crescendo eighths',x:'Eight eighths on the snare from quiet to loud.',notes:seq(8,6,()=>'snare',alt,i=>.2+.75*i/7)},
+  {n:'Bonham-style triplets',x:'High tom on the beat, floor tom on "trip", kick on "let". The hand split is a common choice.',
+   notes:[].concat(...[0,1,2,3].map(b=>[{t:b*12,d:'tom1',s:'R',v:.85},{t:b*12+4,d:'floor',s:'L',v:.85},{t:b*12+8,d:'kick',s:'K',v:.9}]))},
+  {n:'Linear R L R K',x:'Right, left, right, kick, repeated. This orchestration (snare, high tom, mid tom, kick) is one possible choice.',
+   notes:seq(16,3,i=>['snare','tom1','tom2','kick'][i%4],i=>'RLRK'[i%4])}];
+ const GR={hat:[0,6,12,18,24,30,36,42],snare:[12,36],kick:[0,24]};
+ let fi=0,cells=[],at={};
+ function build(){
+  const f=F[fi],box=document.getElementById('d5Cells');box.innerHTML='';cells=[];at={};
+  const per=f.notes.length>12?4:f.notes.length>8?3:2;let g;
+  f.notes.forEach((n,i)=>{if(i%per===0){g=document.createElement('span');g.className='cellg';box.appendChild(g)}
+   const c=document.createElement('span');c.className='cell'+(n.s==='K'?' acc':'');c.textContent=n.s+' '+AB[n.d];g.appendChild(c);cells.push(c);at[n.t]=i});
+  btns('d5Fill',F.map(x=>x.n),fi,i=>{fi=i;build();cfg()});
+  document.getElementById('d5Say').textContent=f.x}
+ function lit(i){cells.forEach((c,j)=>c.classList.toggle('on',j===i))}
+ function play(i){
+  const bar=i/48|0,t=i%48,f=F[fi];
+  document.getElementById('d5Bar').textContent=(bar+1)+' of 4'+(bar===3?' (fill)':'');
+  if(bar<3){lit(-1);if(GR.hat.includes(t))GTMetro.hit('hat',.6);if(GR.snare.includes(t))GTMetro.hit('snare',.85);if(GR.kick.includes(t))GTMetro.hit('kick',.9)}
+  else{if(t===0)GTMetro.hit('kick',.9);const k=at[t];if(k!==undefined){const n=f.notes[k];GTMetro.hit(n.d,n.v);lit(k)}}
+  if(bar===0&&t===0)GTMetro.hit('crash',.7)}
+ function cfg(){GTMetro.set({n:192,sub:12,level:i=>i===0?2:(i%12===0?1:0),audible:()=>false,onTick:play,
+  onState:r=>{document.getElementById('d5Go').textContent=r?'■ Stop':'▶ Start';if(!r)lit(-1)}})}
+ document.getElementById('d5Go').addEventListener('click',()=>GTMetro.running()?GTMetro.stop():GTMetro.start());
+ build();cfg();
+})();
+</script>
+</body>
+</html>

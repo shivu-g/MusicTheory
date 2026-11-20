@@ -16,3 +16,5 @@ Cycle 3 complete: drums lessons D1-D3 live at 5d27f0c.
 Scout: 5 items, tracks: keyboard
 - 2026-11-20 Placer: keyboard K5-K6 (keyboard-5..6.html), hub/index/nav links, verify.js covers 6 lessons; 4 keyboard inbox entries placed, chart-workflow entry left unsure.
 Cycle 4 complete: keyboard lessons K5-K6 live at fd564b8.
+Scout: 4 items, tracks: drums
+- 2026-11-20 Placer: drums D4-D6 (drums-4..6.html), GTMetro.hit drum synth, hub/index/menu links, verify.js covers 6 drum lessons; 7 drums inbox entries placed, polyrhythm entry left unsure.

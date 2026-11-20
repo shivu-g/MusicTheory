@@ -1,5 +1,12 @@
 # Changelog
 
+## Drums lessons D4-D6
+
+- New pages `drums-4.html` (Basic grooves: hi-hat/snare/kick groove builder on 16 sixteenth steps or 12 triplet steps, presets for rock, kick variation, four on the floor, sixteenth hi-hat, half-time, ghost funk, shuffle, half-time shuffle, 12/8 rock; snare has an off/ghost/normal cycle), `drums-5.html` (Fills: five starter fills played after three bars of groove, with sticking and drum per note, crash and kick on the landing), `drums-6.html` (Syncopation grid with a locked kick anchor and a weak-position meter, tresillo and son clave 3-2/2-3 presets, and a polyrhythm player for 3:2, 4:3, 5:4).
+- `metro.js` gained `GTMetro.hit(name, vol)`, a small synthesised kit (kick, snare, hat, ohat, tom1, tom2, floor, crash, rim). `style.css` gained the `.gg` step-grid styles.
+- Hub, landing page card and Tools menu link all six lessons; `scripts/verify.js` covers them (31 pages pass).
+- Left out: swing slider for the shuffle, spoken 4:3 count (polyrhythm inbox entry stays unsure), ghost-note placement is labelled typical, not a rule.
+
 ## Keyboard lessons K5-K6
 
 - New pages `keyboard-5.html` (Comping patterns: eighth-note rhythm grid with Charleston, reverse, pushed, half-note, four-to-the-floor and pickup presets, shell/rootless/drop 2 voicings of Dm7, G7, Cmaj7 and a ii-V-I mode, played with `GTMetro`) and `keyboard-6.html` (Reading charts: D.S. al Coda road map walker, and a Nashville/Roman/letter converter in seven keys with a piano strip).

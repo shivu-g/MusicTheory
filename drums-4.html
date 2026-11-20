@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Basic grooves · Drums · Guitar Theory Maps</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="drums-4">
+<main>
+<nav aria-label="Guide"><a href="index.html">← All chapters</a><a href="drums.html">Drums</a><a href="tools.html">Tools</a><span class="here">Drums · Lesson D4 of 6</span><span class="metro"></span><span style="display:flex;gap:8px"><a href="drums-3.html">← Prev</a><a href="drums-5.html">Next →</a></span></nav>
+<div class="chap" style="background:#3a3342"><span>Drums · D4</span><h2>Basic grooves</h2><p>Three voices, one bar: hi-hat, snare and kick. Build a groove on a grid, hear it, and change one thing at a time.</p></div>
+<section>
+<h2>The basic rock beat</h2>
+<p>In 4/4 the standard starting groove gives each limb a job. The <b>hi-hat</b> keeps steady eighth notes (<b>1 &amp; 2 &amp; 3 &amp; 4 &amp;</b>). The <b>snare</b> plays on beats <b>2 and 4</b>, which is called the <b>backbeat</b>. The <b>kick</b> plays on beats <b>1 and 3</b>. A hi-hat or a clap can carry the backbeat on other records, but on a kit it is nearly always the snare.</p>
+<p>Of the three voices the snare backbeat is the stable one, because it tells the listener where the bar is. The <b>kick is the flexible voice</b>: move it and the groove changes character while the backbeat holds.</p>
+<ul>
+<li><b>Kick variation:</b> kick on 1, the "and" of 2, and 3.</li>
+<li><b>Four on the floor:</b> kick on all four beats, snare still on 2 and 4.</li>
+<li><b>Sixteenth hi-hat:</b> the same kick and snare with the hi-hat on every sixteenth.</li>
+<li><b>Half-time:</b> the snare moves to beat 3 only, so the bar feels half as fast.</li>
+</ul>
+<div class="card">
+<h3>Groove builder</h3>
+<div class="ctl"><div class="grp"><span class="lab">Grid</span><span class="grp" id="d4Mode"></span></div></div>
+<div class="ctl"><div class="grp"><span class="lab">Preset</span><span class="grp" id="d4Pre"></span></div></div>
+<div class="gg"><div class="gr cells gcnt" id="d4Cnt" role="presentation"><span class="rl"></span></div><div id="d4Rows"></div></div>
+<div class="ctl"><button type="button" class="pbtn go" id="d4Go">▶ Start</button><span id="d4Say" role="status"></span></div>
+<p class="cap">Press a square to switch a note on or off. The snare row has three states: off, ghost (a very quiet note, shown with a g) and normal. The gold outline follows the beat. The grid has one square per sixteenth note, four to a beat, so "1 e &amp; a" runs under each beat. Scroll sideways on a small screen.</p>
+</div>
+<div class="tip"><b>Change one thing.</b> Load a preset, change a single square, and listen to what moves. Learning a groove is mostly learning which note decides its character.</div>
+</section>
+<section>
+<h2>Ghost notes</h2>
+<p>A <b>ghost note</b> is a very quiet snare note placed between the main hits. It adds texture and forward motion without competing with the backbeat. If every snare note has the same weight the groove sounds flat, so the point is contrast: ghosts barely sound, backbeats clearly do. Keep the stick low for ghosts and lift it for accents.</p>
+<p>Where do ghosts go? In funk and shuffle patterns they <em>typically</em> sit on the off-beat sixteenths, the "e" and "a", around the backbeat. That is a common habit, <b>not a rule</b>, and the "Ghost funk" preset is one example of it. Players often find a ghost just after the backbeat easier than one leading into it.</p>
+<h2>Triplet grooves and the shuffle</h2>
+<p>Switch the grid to <b>12 steps</b> and each beat splits into three, counted "1 la li". A <b>shuffle</b> is a long-short skipping feel built on triplets: the cymbal plays the beat and the third triplet part but skips the middle one. It can be written as triplets in 4/4 or in 12/8, which are nearly equivalent. In 12/8 the kick still sits on 1 and 3 and the snare on 2 and 4, with the hi-hat marking the three-part beat.</p>
+<ul>
+<li><b>Half-time shuffle:</b> snare on beat 3 only, a more laid-back feel.</li>
+<li><b>Purdie-style shuffle:</b> a half-time shuffle with soft ghost snare notes in the gaps.</li>
+</ul>
+<p>Dynamic contrast matters here too: a weak difference between ghosts and accents is a common reason a shuffle sounds stiff. This page plays all triplet parts evenly; players also nudge the third part slightly later for a driving feel or slightly earlier for a lazy one, which the grid does not model.</p>
+</section>
+<section>
+<h2>Practise this</h2>
+<ul>
+<li>Play basic rock at 70 bpm until the hi-hat is perfectly even, then add the kick variation.</li>
+<li>Say "1 e &amp; a" aloud while you play the sixteenth hi-hat preset.</li>
+<li>Try each preset with the snare removed, then put it back and notice what the backbeat adds.</li>
+</ul>
+</section>
+</main>
+<script src="common.js"></script>
+<script src="metro.js"></script>
+<script>
+(function(){
+ const L16=['1','e','&','a'],L12=['1','la','li'];
+ const P16=[
+  {n:'Basic rock',h:[0,2,4,6,8,10,12,14],s:[[4,2],[12,2]],k:[0,8],t:'Eighth-note hi-hat, snare on 2 and 4, kick on 1 and 3.'},
+  {n:'Kick variation',h:[0,2,4,6,8,10,12,14],s:[[4,2],[12,2]],k:[0,6,8],t:'The kick adds a note on the "and" of 2; the backbeat does not move.'},
+  {n:'Four on the floor',h:[0,2,4,6,8,10,12,14],s:[[4,2],[12,2]],k:[0,4,8,12],t:'Kick on every beat, snare still on 2 and 4.'},
+  {n:'Sixteenth hi-hat',h:[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15],s:[[4,2],[12,2]],k:[0,8],t:'Same kick and snare with the hi-hat on every sixteenth.'},
+  {n:'Half-time',h:[0,2,4,6,8,10,12,14],s:[[8,2]],k:[0],t:'Snare on beat 3 only. The kick position is a free choice.'},
+  {n:'Ghost funk',h:[0,2,4,6,8,10,12,14],s:[[4,2],[12,2],[5,1],[7,1],[11,1],[13,1]],k:[0,8],t:'Backbeats plus quiet snare notes on the "e" and "a" around them. A typical placement, not a rule.'}];
+ const P12=[
+  {n:'Shuffle',h:[0,2,3,5,6,8,9,11],s:[[3,2],[9,2]],k:[0,6],t:'Hi-hat on the beat and the third part, skipping the middle. Snare on 2 and 4.'},
+  {n:'Half-time shuffle',h:[0,2,3,5,6,8,9,11],s:[[6,2]],k:[0],t:'Same hi-hat, snare on beat 3 only.'},
+  {n:'Ghost shuffle',h:[0,2,3,5,6,8,9,11],s:[[6,2],[1,1],[4,1],[7,1],[10,1]],k:[0],t:'Half-time shuffle with soft ghost snare notes on the skipped middle parts, a Purdie-style idea.'},
+  {n:'12/8 rock',h:[0,1,2,3,4,5,6,7,8,9,10,11],s:[[3,2],[9,2]],k:[0,6],t:'Hi-hat on all three parts of each beat, kick on 1 and 3, snare on 2 and 4.'}];
+ let mode=0,pi=0,N=16,hat=[],sn=[],kk=[],cur=null;
+ const rows={},cnt=document.getElementById('d4Cnt'),box=document.getElementById('d4Rows');
+ const pres=()=>mode===0?P16:P12;
+ function load(i){const p=pres()[i];pi=i;hat=Array(N).fill(0);sn=Array(N).fill(0);kk=Array(N).fill(0);
+  p.h.forEach(x=>hat[x]=1);p.s.forEach(x=>sn[x[0]]=x[1]);p.k.forEach(x=>kk[x]=1);
+  document.getElementById('d4Say').textContent=p.n+'. '+p.t;draw();btns('d4Pre',pres().map(x=>x.n),pi,load)}
+ function mk(row,arr,i,lab){const b=document.createElement('button');b.type='button';b.className='gs'+(i%(N/4)===0&&i>0?' bt':'');
+  b.setAttribute('aria-label',lab+' step '+i);
+  b.onclick=()=>{if(row==='sn')sn[i]=(sn[i]+1)%3;else arr[i]=arr[i]?0:1;pi=-1;btns('d4Pre',pres().map(x=>x.n),-1,load);paint()};return b}
+ function draw(){
+  const per=N/4,L=per===4?L16:L12;
+  cnt.innerHTML='<span class="rl"></span>';box.innerHTML='';
+  for(let i=0;i<N;i++){const c=document.createElement('span');c.className='cell'+(i%per===0&&i>0?' bt':'')+(i%per===0?' acc':'');c.textContent=i%per===0?String(i/per+1):L[i%per];cnt.appendChild(c)}
+  [['hat','Hi-hat',hat],['sn','Snare',sn],['kk','Kick',kk]].forEach(r=>{
+   const d=document.createElement('div');d.className='gr';d.innerHTML='<span class="rl">'+r[1]+'</span>';
+   rows[r[0]]=[];for(let i=0;i<N;i++){const b=mk(r[0],r[2],i,r[1]);d.appendChild(b);rows[r[0]].push(b)}
+   box.appendChild(d)});
+  paint();cfg()}
+ function paint(){
+  for(let i=0;i<N;i++){
+   const a=rows.hat[i],s=rows.sn[i],k=rows.kk[i];
+   a.textContent=hat[i]?'●':'';a.setAttribute('aria-pressed',String(!!hat[i]));
+   s.textContent=sn[i]===1?'g':sn[i]===2?'●':'';s.dataset.v=sn[i];s.setAttribute('aria-pressed',String(sn[i]>0));
+   k.textContent=kk[i]?'●':'';k.setAttribute('aria-pressed',String(!!kk[i]))}}
+ function lit(i){for(let j=0;j<N;j++){const on=j===i;
+   cnt.children[j+1].classList.toggle('on',on);['hat','sn','kk'].forEach(r=>rows[r]&&rows[r][j]&&rows[r][j].classList.toggle('on',on))}}
+ function play(i){lit(i);if(hat[i])GTMetro.hit('hat',.6);if(sn[i]===1)GTMetro.hit('snare',.2);else if(sn[i]===2)GTMetro.hit('snare',.85);if(kk[i])GTMetro.hit('kick',.9)}
+ function cfg(){GTMetro.set({n:N,sub:N/4,level:i=>i===0?2:(i%(N/4)===0?1:0),audible:()=>false,onTick:play,
+  onState:r=>{document.getElementById('d4Go').textContent=r?'■ Stop':'▶ Start';if(!r)lit(-1)}})}
+ function setMode(m){mode=m;N=m===0?16:12;btns('d4Mode',['16 steps (sixteenths)','12 steps (triplets)'],m,setMode);load(0)}
+ document.getElementById('d4Go').addEventListener('click',()=>GTMetro.running()?GTMetro.stop():GTMetro.start());
+ setMode(0);
+})();
+</script>
+</body>
+</html>

@@ -17,7 +17,7 @@
 
 ## Drums track
 - [x] D1 Pulse and subdivisions, D2 Time signatures, D3 Rudiments (drums-1..3.html; `metro.js` now has `GTMetro.set` for ticks, subdivisions, accents)
-- [ ] D4 Basic grooves (groove builder grid), D5 Fills, D6 Syncopation and polyrhythm. Extend `metro.js`.
+- [x] D4 Basic grooves (groove builder grid), D5 Fills, D6 Syncopation and polyrhythm (drums-4..6.html; `metro.js` now has `GTMetro.hit` drum synth). Open: swing slider for the shuffle, 4:3 spoken count
 
 ## Quality
 - [ ] Phone-width visual check of all tool pages.

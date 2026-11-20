@@ -14,7 +14,7 @@ const puppeteer = require('puppeteer-core');
 const ROOT = path.resolve(__dirname, '..');
 const HUBS = ['core', 'guitar', 'keyboard', 'drums'];
 const KLESSONS = [1, 2, 3, 4, 5, 6].map(n => 'keyboard-' + n);
-const DLESSONS = [1, 2, 3].map(n => 'drums-' + n);
+const DLESSONS = [1, 2, 3, 4, 5, 6].map(n => 'drums-' + n);
 const PAGES = ['index', ...HUBS, ...KLESSONS, ...DLESSONS, ...Array.from({ length: 13 }, (_, i) => 'chapter-' + (i + 1)), 'tools'];
 const MIME = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.svg': 'image/svg+xml', '.png': 'image/png', '.webp': 'image/webp', '.jpg': 'image/jpeg' };
 const srv = http.createServer((q, r) => {
