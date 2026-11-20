@@ -21,3 +21,4 @@ Scout: 4 items, tracks: drums
 Publisher: f31d540 live ok (verified via Firecrawl: drums-4, drums-6)
 Cycle 5 complete: drums lessons D4-D6 live at f31d540.
 Cycle 6 skipped: cycle 5 already completed all K1-K6/D1-D6 backlog items; loop stopped, scheduled task disabled.
+Cycle 7 skipped: all K1-K6/D1-D6 done at cycle 5; task still enabled, disabled it via update_trigger (delete not possible from its own session). Loop stopped.
