@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reading chord charts · Keyboard · Guitar Theory Maps</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="keyboard-6">
+<main>
+<nav aria-label="Guide"><a href="index.html">← All chapters</a><a href="keyboard.html">Keyboard</a><a href="tools.html">Tools</a><span class="here">Keyboard · Lesson K6 of 6</span><span style="display:flex;gap:8px"><a href="keyboard-5.html">← Prev</a><a href="keyboard.html">Hub →</a></span></nav>
+<div class="chap" style="background:#3a3342"><span>Keyboard · K6</span><h2>Reading chord charts</h2><p>Follow the road map of repeats and jumps, then read chords as letters, Roman numerals or Nashville numbers.</p></div>
+<section>
+<h2>Road map: repeats and jumps</h2>
+<p>A bar line divides the music into bars and is never played. A double bar line marks the end of a section, often before a change of key, time or tempo. A thin line plus a thick line is the final bar. Add two dots in front of it and it becomes an <b>end-repeat</b>: go back to the matching start-repeat (dots facing the repeated music), or to the top if there is none.</p>
+<ul>
+<li><b>First and second endings:</b> play bracket 1, repeat, then skip bracket 1 and play bracket 2.</li>
+<li><b>D.C.</b> (da capo) goes back to the very start. <b>D.S.</b> (dal segno) goes back to the segno sign.</li>
+<li><b>al Fine</b> means play on until the word Fine. <b>al Coda</b> means play on until "To Coda", then jump to the coda sign.</li>
+<li>On the first pass "To Coda" is ignored. Whether repeats are taken again after a D.C. or D.S. is a convention, usually no; follow the chart or ask the bandleader.</li>
+</ul>
+<p>A D.S. al Coda uses three markers: the segno (where you restart), To Coda (where you leave) and the coda sign (where you land).</p>
+<div class="card">
+<h3>Walk the map</h3>
+<p>Eight bars: a segno on bar 3, "To Coda" on bar 5, "D.S. al Coda" on bar 6, and the coda on bars 7 and 8. Step through to see the real playing order.</p>
+<div class="cells" id="k6Bars" role="img" aria-label="Eight bars of a chart with segno, To Coda and coda markers"></div>
+<div class="ctl" style="margin-top:10px"><button type="button" class="pbtn go" id="k6Go">▶ Play the map</button><button type="button" class="pbtn" id="k6Step">Step</button><button type="button" class="pbtn" id="k6Reset">Reset</button></div>
+<p id="k6Order" role="status"></p>
+<p class="cap">Order played: 1 2 3 4 5 6, jump to the segno, 3 4 5, leave at To Coda, then 7 8. Nashville and letter names are in the next section.</p>
+</div>
+</section>
+<section>
+<h2>Chords as numbers</h2>
+<p>The <b>Nashville number system</b> names each chord by the scale degree of its root, with the tonic as 1. In C major, 1-4-5 means C-F-G; in B major the same numbers mean B-E-F♯. One chart works in every key, which helps when a singer asks for a different one. Everything is major until marked: minor is written with a minus sign (-6), and a 7 after the number adds a seventh (57 is G7 in C).</p>
+<p><b>Roman numerals</b> do something similar, but the case of the letters tells the quality: uppercase for major, lowercase for minor, as in I ii iii IV V vi. Symbols vary a little between writers, so ask whoever made the chart. Slash chords put numbers on both sides, so 1/3 is the tonic chord with its third in the bass.</p>
+<div class="card">
+<h3>Number converter</h3>
+<p>Type a chart using 1 to 7, a leading minus for minor, a leading b for a lowered degree, and a trailing 7 for a seventh. Separate chords with spaces.</p>
+<div class="ctl"><div class="grp"><span class="lab">Key</span><span class="grp" id="k6Keys"></span></div></div>
+<div class="ctl"><div class="grp"><span class="lab">Chart</span><span class="grp" id="k6Pre"></span></div></div>
+<div class="ctl"><label class="lab" for="k6In">Numbers</label><input id="k6In" type="text" value="1 5 -6 4" autocomplete="off" spellcheck="false" style="min-width:12em"><button type="button" class="pbtn go" id="k6Play" data-play="c:60">▶ Play chart</button></div>
+<div class="scroll"><table id="k6Tab" style="min-width:300px"></table></div>
+<div class="scroll"><div id="k6Strip" style="min-width:420px"></div></div>
+<p id="k6Say" role="status"></p>
+<p class="cap">Click a chord column to show it on the keys. The strip shows the root in gold.</p>
+</div>
+<div class="tip"><b>First read.</b> Check the key and time signature, then the road map signs, then the chords bar by bar, and finally choose a comping rhythm from <a href="keyboard-5.html">lesson K5</a>. A chart gives you chord symbols but not the rhythm or voicing, so those are your decision. This is a sensible order rather than a fixed method.</div>
+</section>
+</main>
+<script src="common.js"></script>
+<script src="keys.js"></script>
+<script>
+(function(){
+ const BC=['C','Am','F','G','C','G7','F','C'],BM=[[48,52,55],[45,48,52],[53,57,60],[43,47,50],[48,52,55],[43,47,50,53],[53,57,60],[48,52,55]];
+ const MK={2:'𝄋 segno',4:'To Coda',5:'D.S. al Coda',6:'𝄌 coda'};
+ const ORDER=[0,1,2,3,4,5,2,3,4,6,7];
+ let pos=-1,cells=[],timer=null;
+ function build(){const box=document.getElementById('k6Bars');box.innerHTML='';cells=[];
+  BC.forEach((c,i)=>{const d=document.createElement('div');d.className='cell';d.style.minWidth='4.2em';d.innerHTML=(i+1)+'<br>'+c+(MK[i]?'<br><small>'+MK[i]+'</small>':'');box.appendChild(d);cells.push(d)})}
+ function show(){cells.forEach((c,i)=>c.classList.toggle('on',pos>=0&&ORDER[pos]===i));
+  document.getElementById('k6Order').innerHTML='Order: '+ORDER.map((b,i)=>i===pos?'<b>['+(b+1)+']</b>':(i<pos?'<span class="cap">'+(b+1)+'</span>':String(b+1))).join(' ')}
+ function step(){pos=pos+1>=ORDER.length?-1:pos+1;show();if(pos>=0)BM[ORDER[pos]].forEach((m,k)=>tone(m,k*.02,1))}
+ function stop(){clearInterval(timer);timer=null;document.getElementById('k6Go').textContent='▶ Play the map'}
+ document.getElementById('k6Step').onclick=()=>{stop();step()};
+ document.getElementById('k6Reset').onclick=()=>{stop();pos=-1;show()};
+ document.getElementById('k6Go').onclick=()=>{if(timer){stop();return}pos=-1;document.getElementById('k6Go').textContent='■ Stop';step();
+  timer=setInterval(()=>{if(pos>=ORDER.length-1){stop();return}step()},1000)};
+ document.addEventListener('visibilitychange',()=>{if(document.hidden)stop()});
+ build();show();
+})();
+(function(){
+ const KEYS=['C','G','D','A','F','B♭','E♭'],RM=['I','II','III','IV','V','VI','VII'],
+  PRE=[['1 5 -6 4','1 5 -6 4'],['1 4 5 1','1 4 5 1'],['-2 5 1','-2 5 1'],['1 -6 -2 5','1 -6 -2 5'],['1 b7 4 1','1 b7 4 1']];
+ let key=0,sel=0,chords=[];
+ function parse(txt){const out=[];
+  txt.trim().split(/\s+/).forEach(t=>{const m=t.replace(/♭/g,'b').match(/^(b?)(-?)([1-7])(7?)$/);if(!m)return;
+   const flat=!!m[1],minor=!!m[2],deg=+m[3]-1,sev=!!m[4];
+   out.push({flat,minor,deg,sev,tok:t})});
+  return out}
+ function info(c){const k=KEYS[key],semi=MAJ[c.deg]-(c.flat?1:0),root=spell(k,c.deg,semi),
+   third=spell(root,2,c.minor?3:4),fifth=spell(root,4,7),sev=spell(root,6,10);
+  const names=[root,third,fifth].concat(c.sev?[sev]:[]);
+  const iv=[0,c.minor?3:4,7].concat(c.sev?[10]:[]);
+  const rp=pcOf(root),midi=iv.map(x=>60+rp+x);
+  const rn=(c.flat?'♭':'')+(c.minor?RM[c.deg].toLowerCase():RM[c.deg])+(c.sev?'7':'');
+  const nn=(c.flat?'♭':'')+(c.minor?'-':'')+(c.deg+1)+(c.sev?'7':'');
+  return{root,names,midi,letter:root+(c.minor?'m':'')+(c.sev?'7':''),rn,nn}}
+ function render(){const tab=document.getElementById('k6Tab'),inp=document.getElementById('k6In').value;
+  chords=parse(inp).map(info);if(sel>=chords.length)sel=0;
+  const row=(lab,f)=>'<tr><th scope="row" style="text-align:left;padding:4px 8px">'+lab+'</th>'+chords.map((c,i)=>'<td data-i="'+i+'" style="padding:4px 10px;cursor:pointer;font-weight:'+(i===sel?800:500)+';color:'+(i===sel?'var(--gold)':'inherit')+'">'+f(c)+'</td>').join('')+'</tr>';
+  tab.innerHTML=chords.length?row('Nashville',c=>c.nn)+row('Roman',c=>c.rn)+row('Letters',c=>c.letter):'<tr><td>Nothing readable yet. Try 1 4 5.</td></tr>';
+  tab.querySelectorAll('td[data-i]').forEach(td=>td.onclick=()=>{sel=+td.dataset.i;render()});
+  const c=chords[sel],marks={};
+  if(c)c.midi.forEach((m,i)=>marks[m]=[c.names[i],i===0?'root':'minor',11]);
+  KB.draw('k6Strip',60,84,{w:26,h:100,marks,min:420,label:c?'Chord '+c.letter+' on the keys':'Piano keys'});
+  document.getElementById('k6Say').textContent=c?'In '+KEYS[key]+' major, '+c.nn+' is '+c.letter+': '+c.names.join(' ')+'.':'';
+  document.getElementById('k6Play').dataset.play=chords.length?'c:'+chords.map(x=>x.midi.join(',')).join('|'):'c:60'}
+ function head(){btns('k6Keys',KEYS,key,i=>{key=i;head();render()});btns('k6Pre',PRE.map(p=>p[0]),-1,i=>{document.getElementById('k6In').value=PRE[i][1];sel=0;render()})}
+ document.getElementById('k6In').addEventListener('input',()=>{sel=0;render()});
+ head();render();
+})();
+</script>
+</body>
+</html>

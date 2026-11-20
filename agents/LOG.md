@@ -13,3 +13,5 @@ Scout: 5 items, tracks: drums
 - 2026-11-20 cycle 3 Placer: drums D1-D3 (drums-1..3.html), metro.js GTMetro.set (subdivision, accent groups, per-tick pitch/mute), hub/index/menu links, verify.js covers them (26 pages pass). 3 drums inbox entries placed; unsure and D4-D6 entries untouched.
 Publisher: 5d27f0c live ok (verified via Firecrawl: drums-3, drums hub)
 Cycle 3 complete: drums lessons D1-D3 live at 5d27f0c.
+Scout: 5 items, tracks: keyboard
+- 2026-11-20 Placer: keyboard K5-K6 (keyboard-5..6.html), hub/index/nav links, verify.js covers 6 lessons; 4 keyboard inbox entries placed, chart-workflow entry left unsure.

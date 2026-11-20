@@ -13,7 +13,7 @@
 
 ## Keyboard track
 - [x] K1 Keys and layout, K2 Major scale fingering, K3 Triads and inversions, K4 Seventh chords and voicings (keyboard-1..4.html, shared `keys.js`)
-- [ ] K5 Comping patterns, K6 Reading chord charts.
+- [x] K5 Comping patterns, K6 Reading chord charts (keyboard-5..6.html; Nashville toggle in the Chord Transposer still open)
 
 ## Drums track
 - [x] D1 Pulse and subdivisions, D2 Time signatures, D3 Rudiments (drums-1..3.html; `metro.js` now has `GTMetro.set` for ticks, subdivisions, accents)

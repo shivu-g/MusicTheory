@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Comping patterns · Keyboard · Guitar Theory Maps</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="keyboard-5">
+<main>
+<nav aria-label="Guide"><a href="index.html">← All chapters</a><a href="keyboard.html">Keyboard</a><a href="tools.html">Tools</a><span class="here">Keyboard · Lesson K5 of 6</span><span class="metro"></span><span style="display:flex;gap:8px"><a href="keyboard-4.html">← Prev</a><a href="keyboard-6.html">Next →</a></span></nav>
+<div class="chap" style="background:#3a3342"><span>Keyboard · K5</span><h2>Comping patterns</h2><p>What to play behind a soloist: a few chords, placed with care, and plenty of space.</p></div>
+<section>
+<h2>What comping is</h2>
+<p>To <b>comp</b> is to accompany. You play chords with a little rhythmic punctuation under a singer or soloist. The job has two halves: keep the groove moving, and support the harmony without crowding the person in front. Do not echo the soloist note for note, stay in the middle of the keyboard, and let silence do some of the work. The most common beginner mistake is playing too much, and the cure is to take notes away.</p>
+<p>Think of a rhythm as a small word. Chain a few words into a phrase, for example two bars of one pattern, a bar of calm half notes, then a pickup into the next section.</p>
+<h3>Starter rhythms</h3>
+<ul>
+<li><b>Charleston:</b> a chord on beat 1 and a shorter one on the "and" of 2. Count "1 . . &amp; 2 &amp;" and play on the first and the last.</li>
+<li><b>Reverse Charleston:</b> the chord on the "and" of 1 and another on beat 3. Teachers disagree on the exact shift, so treat this as one named version.</li>
+<li><b>Pushed Charleston:</b> the plain Charleston moved one eighth earlier, so the chords land on the "and" of 4 and on beat 2. It adds forward drive and suits intros.</li>
+<li><b>Half-note pulse:</b> beats 1 and 3 only. Calm, good for ballads or when the soloist is busy.</li>
+<li><b>Four to the floor:</b> every beat. Use it sparingly, at slow tempos or in a gospel feel.</li>
+<li><b>Pickup:</b> two eighths leading into beat 3 (or beat 1).</li>
+</ul>
+<div class="card">
+<h3>Rhythm grid</h3>
+<p>Eight eighth-note slots make one bar of 4/4. Pick a preset or click slots to write your own, choose a chord and voicing, then press play on the metronome bar above. The click sounds on beats 2 and 4 only.</p>
+<div class="ctl"><div class="grp"><span class="lab">Rhythm</span><span class="grp" id="k5Pre"></span></div></div>
+<div class="ctl"><div class="grp"><span class="lab">Chord</span><span class="grp" id="k5Chord"></span></div><div class="grp"><span class="lab">Voicing</span><span class="grp" id="k5Voi"></span></div></div>
+<div class="cells" id="k5Cells"></div>
+<button type="button" class="pbtn go" id="k5Go" style="margin-top:10px">▶ Play the grid</button>
+<div class="scroll"><div id="k5Strip" style="min-width:420px"></div></div>
+<p id="k5Say" role="status"></p>
+<p class="cap">Slots read 1 &amp; 2 &amp; 3 &amp; 4 &amp;. Gold slots sound a chord. "ii-V-I" plays Dm7, G7 and Cmaj7 on successive bars.</p>
+</div>
+</section>
+<section>
+<h2>Which chords to play</h2>
+<p>Three voicing families cover most comping.</p>
+<ul>
+<li><b>Shell:</b> root, 3rd and 7th only. The leanest and quickest to learn.</li>
+<li><b>Rootless:</b> drop the root, keep the 3rd and 7th and add a colour tone such as the 9th or 13th. It lives in the middle register while the bass covers the root. Types A and B are in <a href="keyboard-4.html">lesson K4</a>.</li>
+<li><b>Drop 2:</b> a close four-note chord with the second note from the top lowered an octave. Fuller, so it suits ballads and half-note comping. The same idea on guitar is in <a href="tools.html#lesson-15">Inversions and voicings</a>.</li>
+</ul>
+<p>For a light left hand you can play the root plus the 3rd, or the shell 3rd plus 7th, or an octave plus the 3rd for drive at fast tempos. A good test of voice leading: from Dm7 to G7 the shell should need only a tiny move. If the hand leaps more than a third, pick a different inversion. One teacher suggests staying about an octave either side of middle C; treat that as a rule of thumb rather than a law.</p>
+<div class="tip"><b>Practice routine.</b> Learn one rhythm on one shell voicing at about 70 to 80 bpm with the click on 2 and 4 only. Then play it over Dm7, G7, Cmaj7. Speed up a little at a time. Swing uses swung eighths; Latin and bossa use straight eighths and lean on the half-note pulse. Guitarists have a strum called the Charleston too, on a different grid, in <a href="chapter-2.html">chapter 2</a>.</div>
+</section>
+</main>
+<script src="common.js"></script>
+<script src="keys.js"></script>
+<script src="metro.js"></script>
+<script>
+(function(){
+ const PRE=[['Charleston',[0,3]],['Reverse',[1,4]],['Pushed',[2,7]],['Half-note pulse',[0,4]],['Four to the floor',[0,2,4,6]],['Pickup into 3',[2,3,4]]];
+ const CH=[{n:'Dm7',v:{Shell:[50,53,60],Rootless:[53,57,60,64],'Drop 2':[45,50,53,60]}},
+  {n:'G7',v:{Shell:[43,53,59],Rootless:[53,57,59,62],'Drop 2':[50,55,59,65]}},
+  {n:'Cmaj7',v:{Shell:[48,52,59],Rootless:[52,55,59,62],'Drop 2':[43,48,52,59]}}];
+ const VO=['Shell','Rootless','Drop 2'],CN=['Dm7','G7','Cmaj7','ii-V-I'];
+ let pre=0,ch=0,vo=0,on=new Set(PRE[0][1]),cells=[],bar=0;
+ const cur=()=>ch===3?CH[bar%3]:CH[ch];
+ function strip(c){const m=c.v[VO[vo]],marks={};m.forEach((x,i)=>marks[x]=[KB.info(x).name,i===0&&vo!==1?'root':'minor',11]);
+  KB.draw('k5Strip',43,67,{w:26,h:100,marks,min:420,label:c.n+' '+VO[vo]+' voicing'});
+  document.getElementById('k5Say').innerHTML='<b>'+c.n+'</b> ('+VO[vo]+'): '+m.map(x=>KB.info(x).name).join(' ')+'. Chords per bar: '+on.size+'.'}
+ function build(){const box=document.getElementById('k5Cells');box.innerHTML='';cells=[];
+  const lab=['1','&','2','&','3','&','4','&'];
+  lab.forEach((t,i)=>{const b=document.createElement('button');b.type='button';b.className='cell'+(i%2?'':' acc')+(on.has(i)?' on':'');b.textContent=t;b.setAttribute('aria-pressed',String(on.has(i)));b.setAttribute('aria-label','Slot '+(i+1)+', '+t);
+   b.onclick=()=>{on.has(i)?on.delete(i):on.add(i);pre=-1;head();strip(cur());build()};box.appendChild(b);cells.push(b)})}
+ function head(){btns('k5Pre',PRE.map(p=>p[0]),pre,i=>{pre=i;on=new Set(PRE[i][1]);head();build();strip(cur())});
+  btns('k5Chord',CN,ch,i=>{ch=i;bar=0;head();strip(cur())});btns('k5Voi',VO,vo,i=>{vo=i;head();strip(cur())})}
+ function lit(i){cells.forEach((c,j)=>{c.style.boxShadow=j===i?'0 0 0 3px var(--tritone)':''});
+  if(on.has(i)){const c=cur();c.v[VO[vo]].forEach((m,k)=>tone(m,k*.02,.7))}
+  if(i===7&&ch===3){bar++;strip(cur())}}
+ GTMetro.set({n:8,sub:2,level:i=>i===0?2:0,audible:i=>i===2||i===6,onTick:lit,onState:r=>{bar=0;document.getElementById('k5Go').textContent=r?'■ Stop':'▶ Play the grid';if(!r){cells.forEach(c=>c.style.boxShadow='');strip(cur())}}});
+ document.getElementById('k5Go').addEventListener('click',()=>GTMetro.running()?GTMetro.stop():GTMetro.start());
+ head();build();strip(cur());
+})();
+</script>
+</body>
+</html>

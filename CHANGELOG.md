@@ -1,5 +1,11 @@
 # Changelog
 
+## Keyboard lessons K5-K6
+
+- New pages `keyboard-5.html` (Comping patterns: eighth-note rhythm grid with Charleston, reverse, pushed, half-note, four-to-the-floor and pickup presets, shell/rootless/drop 2 voicings of Dm7, G7, Cmaj7 and a ii-V-I mode, played with `GTMetro`) and `keyboard-6.html` (Reading charts: D.S. al Coda road map walker, and a Nashville/Roman/letter converter in seven keys with a piano strip).
+- Hub, landing page card and menu link both; lesson counters now read "of 6"; `scripts/verify.js` covers them.
+- Left out: Nashville diamonds and arrows (single source), a Nashville toggle in the Chord Transposer (still open), the unsure chart-reading checklist entry only appears as a short tip.
+
 ## Drums lessons D1-D3
 
 - New pages `drums-1.html` to `drums-3.html`: Pulse and subdivisions (quarter, eighth, triplet, sixteenth counting display with a sound-only-this-syllable mode), Time signatures (simple, compound and odd meters with grouped accent player), Rudiments (single, double, triple stroke and single paradiddle sticking player, right and left hand at different pitches).
