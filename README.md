@@ -2,7 +2,7 @@
 
 An interactive visual study guide to music theory for guitar, with a piano reference beside every fretboard and clickable sound throughout.
 
-Thirteen chapters (102 lessons) in four Modules, plus an interactive Toolkit of eight calculators. One page per chapter.
+Thirteen chapters (102 lessons) in four Modules, plus an interactive Toolkit of eleven tools (chord library, scale-degree ear trainer, circle of fifths and eight calculators). One page per chapter.
 
 **Module I. Foundations & Rhythm**
 1. Notes, Tuning and Intervals
@@ -25,7 +25,7 @@ Thirteen chapters (102 lessons) in four Modules, plus an interactive Toolkit of 
 12. Making Music: Target Tones, Phrasing and Practice
 13. The Jazz Line Workshop
 
-**Module V. Interactive Reference Toolkit** (`tools.html`)
+**Module V. Interactive Reference Toolkit** (`tools.html`): chord library, scale-degree ear trainer, circle of fifths, scale harmonizer, drop voicings, open-string chord finder, quartal voicings, arpeggios, notes-per-string explorer, melodic and harmonic minor modes, twelve-tone triads
 
 Each chapter ends with a checkpoint; ticks are saved in your browser (`localStorage`, key `gtm_progress_v2`). Chord progressions can be looped as a backing track.
 

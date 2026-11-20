@@ -11,9 +11,9 @@
 <body data-page="tools">
 <main>
 <nav aria-label="Guide"><a href="index.html">← All chapters</a><a href="tools.html" aria-current="page">Tools</a><span class="here">Module V · Toolkit</span><span class="metro"></span><span style="display:flex;gap:8px"><a href="chapter-13.html">← Prev</a><a href="index.html">Next →</a></span></nav>
-<div class="chap" id="tools-top" style="background:#3a3342"><span>Module V · Tools</span><h2>Interactive Reference Toolkit</h2><p>Eight calculators for looking things up while you practise: harmonize any scale, build voicings and arpeggios, and explore every melodic and harmonic minor mode.</p></div>
+<div class="chap" id="tools-top" style="background:#3a3342"><span>Module V · Tools</span><h2>Interactive Reference Toolkit</h2><p>Eleven tools for looking things up while you practise: a chord library, a scale-degree ear trainer, the circle of fifths, and calculators that harmonize any scale, build voicings and arpeggios, and explore every melodic and harmonic minor mode.</p></div>
 <div class="legend"><span><i class="sw" style="background:var(--root)"></i>Root</span><span><i class="sw" style="background:var(--perfect)"></i>Perfect</span><span><i class="sw" style="background:var(--major)"></i>Major</span><span><i class="sw" style="background:var(--minor)"></i>Minor</span><span><i class="sw" style="background:var(--tritone)"></i>Tritone / altered</span><span class="cap">Click any note, chord or ▶ to hear it.</span></div>
-<div class="card"><h3>Jump to a tool</h3><ol class="toc tpills"><li><span class="n">1</span><i class="dotc" style="background:var(--perfect)"></i><a href="#lesson-1">The Scale Harmonizer</a></li><li><span class="n">2</span><i class="dotc" style="background:var(--perfect)"></i><a href="#lesson-2">The Drop Voicing Builder</a></li><li><span class="n">3</span><i class="dotc" style="background:var(--perfect)"></i><a href="#lesson-3">Open-String Chord Finder</a></li><li><span class="n">4</span><i class="dotc" style="background:var(--perfect)"></i><a href="#lesson-4">Quartal Voicing Generator</a></li><li><span class="n">5</span><i class="dotc" style="background:var(--perfect)"></i><a href="#lesson-5">Arpeggio Library</a></li><li><span class="n">6</span><i class="dotc" style="background:var(--perfect)"></i><a href="#lesson-6">2, 3 and 4 Notes-Per-String Explorer</a></li><li><span class="n">7</span><i class="dotc" style="background:var(--perfect)"></i><a href="#lesson-7">All 14 Melodic & Harmonic Minor Modes</a></li><li><span class="n">8</span><i class="dotc" style="background:var(--perfect)"></i><a href="#lesson-8">Twelve-Tone Triad Combinatorics</a></li></ol></div>
+<div class="card"><h3>Jump to a tool</h3><ol class="toc tpills"><li><span class="n">1</span><i class="dotc" style="background:var(--perfect)"></i><a href="#lesson-1">The Scale Harmonizer</a></li><li><span class="n">2</span><i class="dotc" style="background:var(--perfect)"></i><a href="#lesson-2">The Drop Voicing Builder</a></li><li><span class="n">3</span><i class="dotc" style="background:var(--perfect)"></i><a href="#lesson-3">Open-String Chord Finder</a></li><li><span class="n">4</span><i class="dotc" style="background:var(--perfect)"></i><a href="#lesson-4">Quartal Voicing Generator</a></li><li><span class="n">5</span><i class="dotc" style="background:var(--perfect)"></i><a href="#lesson-5">Arpeggio Library</a></li><li><span class="n">6</span><i class="dotc" style="background:var(--perfect)"></i><a href="#lesson-6">2, 3 and 4 Notes-Per-String Explorer</a></li><li><span class="n">7</span><i class="dotc" style="background:var(--perfect)"></i><a href="#lesson-7">All 14 Melodic & Harmonic Minor Modes</a></li><li><span class="n">8</span><i class="dotc" style="background:var(--perfect)"></i><a href="#lesson-8">Twelve-Tone Triad Combinatorics</a></li><li><span class="n">9</span><i class="dotc" style="background:var(--perfect)"></i><a href="#lesson-9">Chord Library</a></li><li><span class="n">10</span><i class="dotc" style="background:var(--perfect)"></i><a href="#lesson-10">Scale-Degree Ear Trainer</a></li><li><span class="n">11</span><i class="dotc" style="background:var(--perfect)"></i><a href="#lesson-11">Circle of Fifths</a></li></ol></div>
 
 <section id="lesson-1">
   <div class="lhd"><span class="num">1</span><span class="badge tool">Tool</span></div>
@@ -127,6 +127,82 @@
     <div class="sd" id="ttOut"></div>
     <p class="cap" id="ttInfo"></p>
   </div>
+</section>
+<section id="lesson-9">
+  <div class="lhd"><span class="num">9</span><span class="badge tool">Tool</span></div>
+  <h2>Chord Library</h2>
+  <p>Pick any root and any of sixteen chord types. You get the correct note spelling, five movable guitar shapes from the CAGED system, piano inversions, the interval formula and the key it belongs to. Click a chord box, a key or a play button to hear it.</p>
+  <div class="card">
+    <div class="ctl">
+      <div class="grp"><span class="lab">Root</span><span class="grp" id="clLet"></span><span class="grp" id="clAcc"></span></div>
+    </div>
+    <div class="ctl"><div class="grp"><span class="lab">Type</span><span class="grp" id="clQual"></span></div></div>
+    <div class="clhead"><span class="clsym" id="clSym"></span><span><b id="clFull"></b><br><span class="cap" id="clNotes"></span></span></div>
+    <h3>Guitar</h3>
+    <div class="ctl">
+      <div class="grp"><span class="lab">Shape</span><span class="grp" id="clVoc"></span></div>
+      <div class="grp"><span class="lab">Labels</span><span class="grp" id="clLab"></span></div>
+      <span id="clGtrPlay"></span>
+    </div>
+    <div class="clbox" id="clBox"></div>
+    <p class="cap" id="clForm"></p>
+    <h3>Piano</h3>
+    <div class="ctl">
+      <div class="grp"><span class="lab">Inversion</span><span class="grp" id="clInv"></span></div>
+      <span id="clPnoPlay"></span>
+    </div>
+    <div class="scroll"><div id="clPiano" style="min-width:520px;max-width:700px"></div></div>
+    <h3>Theory</h3>
+    <div id="clTheory"></div>
+  </div>
+  <div class="tip"><b>Easy, Medium, Hard</b> is a rough guide: open shapes are easy, clean barres are medium, and wide stretches or a muted string between two played strings are hard. Every shape is movable: change the root and the same pattern slides up or down the neck.</div>
+</section>
+<section id="lesson-10">
+  <div class="lhd"><span class="num">10</span><span class="badge tool">Tool</span></div>
+  <h2>Scale-Degree Ear Trainer</h2>
+  <p>A workout for hearing where each note sits in a scale. Choose a scale or mode, a starting root, which way the run goes and how the root moves between rounds. Each round plays the tonic, then asks for the notes one at a time. Name the scale degree you hear. A wrong answer plays the note you chose, so you hear the difference. After a round the root moves on by itself.</p>
+  <div class="card" id="etSetup">
+    <div class="ctl">
+      <div class="grp"><label class="lab" for="etScale">Scale</label><select id="etScale"></select></div>
+      <div class="grp"><label class="lab" for="etRoot">Starting root</label><select id="etRoot"></select></div>
+    </div>
+    <div class="ctl"><div class="grp"><span class="lab">Direction</span><span class="grp" id="etDir"></span></div></div>
+    <div class="ctl"><div class="grp"><span class="lab">Root moves</span><span class="grp" id="etMove"></span></div></div>
+    <div class="ctl"><div class="grp"><span class="lab">Start and end on</span><span class="grp" id="etStart"></span></div></div>
+    <p class="cap" id="etInfo"></p>
+    <div class="ctl"><button type="button" class="pbtn go" id="etGo">▶ Start workout</button></div>
+  </div>
+  <div class="card" id="etRun" hidden>
+    <div class="etbar"><button type="button" class="pbtn" id="etEnd">‹ End workout</button><span class="cap" id="etRound"></span></div>
+    <div class="ethead"><b id="etRootBig"></b><span id="etName"></span><span class="cap" id="etNext"></span></div>
+    <div class="etboxes" id="etBoxes" aria-hidden="true"></div>
+    <div class="ctl" style="justify-content:center"><button type="button" class="pbtn" id="etReplay">▶ Replay note</button><button type="button" class="pbtn" id="etTonic">♪ Tonic</button></div>
+    <p class="cap" id="etMsg" aria-live="polite" style="text-align:center;margin:10px 0 6px"></p>
+    <div class="etans" id="etAns"></div>
+    <p class="cap" id="etStats" style="text-align:center"></p>
+  </div>
+  <div class="tip"><b>Why the tonic plays first.</b> Scale degrees only make sense against a home note. Listen for how each note leans: the 7 leans up to the root, the 5 feels stable, the 4 wants to fall to the 3. When a degree is hard, replay the tonic and sing up to it.</div>
+</section>
+<section id="lesson-11">
+  <div class="lhd"><span class="num">11</span><span class="badge tool">Tool</span></div>
+  <h2>Circle of Fifths</h2>
+  <p>Each step clockwise is a perfect 5th higher and adds one sharp. Each step counter-clockwise adds one flat. Click a key on the outer ring (major) or the inner ring (its relative minor). The highlighted keys are the chords of that key, and the cards below name each one with its Roman numeral. Click a card to hear it.</p>
+  <div class="card">
+    <div class="ctl">
+      <div class="grp"><span class="lab">Key</span><span class="grp" id="cfKeys"></span></div>
+      <button type="button" class="pbtn" id="cfScale">▶ Scale</button>
+    </div>
+    <div class="cfwrap"><div id="cfSvg"></div>
+    <div class="cfinfo"><h3 id="cfTitle"></h3><p id="cfSig"></p><p id="cfRel"></p></div></div>
+    <div class="legend">
+      <span><i class="sw" style="background:var(--root)"></i>Tonic</span>
+      <span><i class="sw" style="background:var(--major)"></i>Major chord in the key</span>
+      <span><i class="sw" style="background:var(--minor)"></i>Minor chord in the key</span>
+      <span><i class="sw" style="background:var(--tritone)"></i>Diminished chord</span>
+    </div>
+    <div class="chain" id="cfChords"></div>
+  </div>
+  <div class="tip"><b>Neighbours are close relatives.</b> I, IV and V are three keys in a row on the outer ring, and ii, iii and vi sit just inside them. That is why most songs only visit chords near each other on the circle.</div>
 </section>
 
 <div class="pager"><a class="ghost" href="chapter-13.html">← Chapter 13</a><a href="index.html">All chapters →</a></div>
@@ -251,6 +327,195 @@ function drawTT(){const pc=pcOf(RMAJ[Tt.root]);btns('ttRoot',RMAJ,Tt.root,i=>{Tt
  $('ttOut').innerHTML=ch.map(c=>`<div class="sdc" style="border-top-color:var(--perfect)"><span class="rn">${c.name}</span><span class="ns">${c.notes}</span>${PB(BOTH(c.midi),'Play '+c.name)}</div>`).join('');
  $('ttPlay').dataset.play='mmmm:'+ch.map(c=>c.midi.join(',')).join('|');$('ttInfo').textContent=`${SETS.length} such sets exist using only major and minor triads; ${UNI.length} that include a triad on the starting note are shown. Between them the four triads contain all twelve notes once each.`}
 drawTT();
+})();
+// new tool: Chord Library
+(function(){
+const Q=[
+{id:'maj',label:'Maj',sym:'',full:'Major',fam:'M',iv:[[1,0],[3,4],[5,7]],txt:'The foundation of Western harmony: stable, bright, at rest. It stacks a major 3rd and a minor 3rd. Nearly every progression begins or resolves on a major chord.'},
+{id:'min',label:'Min',sym:'m',full:'Minor',fam:'m',iv:[[1,0],[3,3],[5,7]],txt:'One note different from major (♭3), but the mood flips to dark and inward. Each minor chord shares its key with the major chord a minor 3rd above it (Am and C).'},
+{id:'dom7',label:'7',sym:'7',full:'Dominant 7th',fam:'M',iv:[[1,0],[3,4],[5,7],[7,10]],txt:'A major triad plus ♭7. The tritone between the 3 and the ♭7 creates tension that resolves down a 5th: G7 to C. This V7 to I pull drives blues, jazz and functional harmony.'},
+{id:'maj7',label:'Maj7',sym:'maj7',full:'Major 7th',fam:'M',iv:[[1,0],[3,4],[5,7],[7,11]],txt:'A major triad with the 7 on top. Dreamy and at rest despite the extra colour. The default I and IV chord in jazz, bossa nova and neo-soul.'},
+{id:'min7',label:'Min7',sym:'m7',full:'Minor 7th',fam:'m',iv:[[1,0],[3,3],[5,7],[7,10]],txt:'A minor triad plus ♭7, which softens the minor edge. The classic ii chord of ii – V – I and the backbone of funk, R&B and lo-fi vamps.'},
+{id:'six',label:'6',sym:'6',full:'Major 6th',fam:'M',iv:[[1,0],[3,4],[5,7],[6,9]],txt:'A major triad plus the 6: sweet without the pull of a 7th. The classic closing chord of swing-era jazz. C6 contains exactly the same notes as Am7.'},
+{id:'m6',label:'m6',sym:'m6',full:'Minor 6th',fam:'m',iv:[[1,0],[3,3],[5,7],[6,9]],txt:'Minor with a natural 6, which forms a tritone against the ♭3: bittersweet and noir. The home chord of Dorian and a staple of gypsy jazz.'},
+{id:'sus4',label:'sus4',sym:'sus4',full:'Suspended 4th',fam:'M',iv:[[1,0],[4,5],[5,7]],txt:'The 4 replaces the 3, so the chord is neither major nor minor: open and unresolved. The 4 usually falls to the 3 (Gsus4 to G), a move pop and rock use constantly.'},
+{id:'sus2',label:'sus2',sym:'sus2',full:'Suspended 2nd',fam:'M',iv:[[1,0],[2,2],[5,7]],txt:'The 2 replaces the 3: airy and ambiguous. Good for adding movement without changing the harmonic function. Dsus2 to D to Dsus4 is a whole style of campfire guitar.'},
+{id:'add9',label:'add9',sym:'add9',full:'Added 9th',fam:'M',iv:[[1,0],[3,4],[5,7],[9,14]],txt:'A plain triad with the 9 added for shimmer. There is no 7th, so it stays consonant but lush. The default pretty chord of modern pop and worship music.'},
+{id:'nine',label:'9',sym:'9',full:'Dominant 9th',fam:'M',iv:[[1,0],[3,4],[5,7],[7,10],[9,14]],txt:'A dominant 7 with the 9 stacked on top: a funkier, jazzier dominant. Think horn stabs, blues turnarounds and gospel V chords.'},
+{id:'dim',label:'Dim',sym:'dim',full:'Diminished',fam:'m',iv:[[1,0],[3,3],[5,6]],txt:'Two minor 3rds stacked: very unstable, it wants to resolve at once. Usually a chromatic passing chord between two stable chords (C, C♯dim, Dm).'},
+{id:'m7b5',label:'m7♭5',sym:'m7♭5',full:'Half-Diminished',fam:'m',iv:[[1,0],[3,3],[5,6],[7,10]],txt:'A diminished triad with ♭7. The ii chord of every minor-key ii – V – i, and jazz at its most wistful.'},
+{id:'dim7',label:'Dim7',sym:'dim7',full:'Diminished 7th',fam:'m',iv:[[1,0],[3,3],[5,6],[7,9]],txt:'Three minor 3rds divide the octave evenly, so any of its four notes can act as the root. The same shape repeats every 3 frets on guitar.'},
+{id:'aug',label:'Aug',sym:'+',full:'Augmented',fam:'M',iv:[[1,0],[3,4],[5,8]],txt:'Two major 3rds. It is symmetric like dim7 and repeats every 4 frets. The ♯5 pushes upward, which makes it a dramatic passing chord: C, C+, then Am or F.'},
+{id:'mMaj7',label:'mMaj7',sym:'m(maj7)',full:'Minor-Major 7th',fam:'m',iv:[[1,0],[3,3],[5,7],[7,11]],txt:'A minor triad with a major 7: haunted and cinematic. A classic step in a descending minor line: Am, Am(maj7), Am7, Am6.'}];
+// CAGED-style movable shapes. off = fret offsets from the root fret, low string first; null = muted
+const SH={
+maj:[{r:6,o:[0,2,2,1,0,0]},{r:5,o:[null,0,2,2,2,0]},{r:4,o:[null,null,0,2,3,2]}],
+min:[{r:6,o:[0,2,2,0,0,0]},{r:5,o:[null,0,2,2,1,0]},{r:4,o:[null,null,0,2,3,1]}],
+dom7:[{r:6,o:[0,2,0,1,0,0]},{r:5,o:[null,0,2,0,2,0]},{r:4,o:[null,null,0,2,1,2]}],
+maj7:[{r:6,o:[0,2,1,1,0,0]},{r:5,o:[null,0,2,1,2,0]},{r:4,o:[null,null,0,2,2,2]}],
+min7:[{r:6,o:[0,2,0,0,0,0]},{r:5,o:[null,0,2,0,1,0]},{r:4,o:[null,null,0,2,1,1]}],
+six:[{r:6,o:[0,2,2,1,2,0]},{r:5,o:[null,0,2,2,2,2]},{r:4,o:[null,null,0,2,0,2]}],
+m6:[{r:6,o:[0,2,2,0,2,0]},{r:5,o:[null,0,2,2,1,2]},{r:4,o:[null,null,0,2,0,1]}],
+sus4:[{r:6,o:[0,2,2,2,0,0]},{r:5,o:[null,0,2,2,3,0]},{r:4,o:[null,null,0,2,3,3]}],
+sus2:[{r:5,o:[null,0,2,2,0,0]},{r:4,o:[null,null,0,2,3,0]}],
+add9:[{r:6,o:[0,2,2,1,0,2]},{r:5,o:[null,0,2,4,2,0]}],
+nine:[{r:6,o:[0,2,0,1,0,2]},{r:5,o:[null,0,-1,0,0,0]}],
+dim:[{r:6,o:[0,1,2,0,null,null]},{r:5,o:[null,0,1,2,1,null]},{r:4,o:[null,null,0,1,3,1]}],
+m7b5:[{r:6,o:[0,1,0,0,null,null]},{r:5,o:[null,0,1,0,1,null]}],
+dim7:[{r:6,o:[0,1,2,0,2,0]},{r:5,o:[null,0,1,2,1,2]}],
+aug:[{r:6,o:[0,3,2,1,1,0]},{r:5,o:[null,0,3,2,2,1]},{r:4,o:[null,null,0,3,3,2]}],
+mMaj7:[{r:6,o:[0,2,1,0,0,0]},{r:5,o:[null,0,2,1,1,0]}]};
+const OPENPC=[4,9,2,7,11,4],RS={6:0,5:1,4:2},FORM={6:'E',5:'A',4:'D'};
+// C- and G-shapes are generated for triads only, from open C and open G
+const GAP={5:[null,0,5,10,14,19],6:[0,5,10,15,19,24]},ROLE={5:[null,0,1,2,0,1],6:[0,1,2,0,1,0]},FN={5:'C',6:'G'};
+const nearest=(t,c)=>{let b=null;[t-12,t,t+12,t+24].forEach(x=>{const o=x-c;if(b===null||Math.abs(o)<Math.abs(b))b=o});return b};
+function gen(r,iv){if(iv.length!==3)return null;return{r,f:FN[r],o:GAP[r].map((g,i)=>g===null?null:nearest(iv[ROLE[r][i]][1],g))}}
+function hard(fr){const f=fr.filter(x=>x!==null),mx=Math.max(...f);if(fr.includes(0)&&mx<=4)return 'Easy';const p=f.filter(x=>x>0),sp=p.length?Math.max(...p)-Math.min(...p):0;let sw=false;for(let i=1;i<5;i++)if(fr[i]===null&&fr[i-1]!==null&&fr[i+1]!==null)sw=true;return sw||sp>=3?'Hard':'Medium'}
+function voicings(q,pc){const sh=(SH[q.id]||[]).slice(),c=gen(5,q.iv),g=gen(6,q.iv);if(c)sh.push(c);if(g)sh.push(g);const found=[];
+ sh.forEach(s=>{const b=mod12(pc-OPENPC[RS[s.r]]);[b,b+12].forEach(rf=>{const fr=s.o.map(o=>o===null?null:rf+o),f=fr.filter(x=>x!==null);if(Math.min(...f)<0||Math.max(...f)>15)return;const mx=Math.max(...f),p=f.filter(x=>x>0);
+  found.push({form:s.f||FORM[s.r],r:s.r,fr,mx,pos:fr.includes(0)&&mx<=4?'Open':Math.min(...p)+'fr',dif:hard(fr)})})});
+ found.sort((a,b)=>a.mx-b.mx);const seen=new Set(),out=[];found.forEach(v=>{if(!seen.has(v.form)){seen.add(v.form);out.push(v)}});return out}
+const MS={1:0,2:2,3:4,4:5,5:7,6:9,7:11,9:14},GL={'-2':'𝄫','-1':'♭','0':'','1':'♯'};
+const lab=(d,s)=>(GL[s-MS[d]]||'')+d;
+const NM={'1:0':'Root','2:2':'Major 2nd','3:3':'Minor 3rd','3:4':'Major 3rd','4:5':'Perfect 4th','5:6':'Diminished 5th','5:7':'Perfect 5th','5:8':'Augmented 5th','6:9':'Major 6th','7:9':'Diminished 7th','7:10':'Minor 7th','7:11':'Major 7th','9:14':'Major 9th'};
+const LET='CDEFGAB',INV=['Root position','1st inversion','2nd inversion','3rd inversion'];
+const st={l:'C',a:'',q:'maj',v:0,i:0,m:'note'};
+function chord(){const q=Q.find(x=>x.id===st.q),root=st.l+st.a,pc=pcOf(root);
+ const tones=q.iv.map(([d,s])=>{let nt=spell(root,d-1,s);if(pcOf(nt)!==mod12(pc+s))nt=RMAJ[mod12(pc+s)];return{d,s,l:lab(d,s),nt,pc:mod12(pc+s),name:NM[d+':'+s]||'Degree '+d,fam:famOf(mod12(s))}});
+ return{q,root,pc,tones}}
+function render(){
+ const c=chord(),vs=voicings(c.q,c.pc);if(st.v>=vs.length)st.v=0;const inv=Math.min(c.tones.length,4);if(st.i>=inv)st.i=0;
+ btns('clLet',LET.split(''),LET.indexOf(st.l),i=>{st.l=LET[i];st.v=0;st.i=0;render()});
+ btns('clAcc',['♯','♭'],st.a==='♯'?0:st.a==='♭'?1:-1,i=>{const a=i?'♭':'♯';st.a=st.a===a?'':a;st.v=0;st.i=0;render()});
+ btns('clQual',Q.map(q=>q.label),Q.findIndex(q=>q.id===st.q),i=>{st.q=Q[i].id;st.v=0;st.i=0;render()});
+ $('clSym').textContent=c.root+c.q.sym;$('clFull').textContent=c.root+' '+c.q.full;$('clNotes').textContent=c.tones.map(t=>t.nt).join(' · ');
+ btns('clLab',['Notes','Intervals'],st.m==='note'?0:1,i=>{st.m=i?'int':'note';render()});
+ // guitar
+ const vl=$('clVoc');vl.innerHTML='';vs.forEach((v,i)=>{const b=document.createElement('button');b.type='button';b.setAttribute('aria-pressed',String(i===st.v));b.innerHTML='<span class="dif '+v.dif+'" aria-hidden="true"></span>'+v.pos+' · '+v.form+' shape';b.title=v.dif;b.onclick=()=>{st.v=i;render()};vl.appendChild(b)});
+ const v=vs[st.v];
+ if(v){const dots=[],ms=[];v.fr.forEach((f,si)=>{if(f===null)return;const p=mod12(LOWM[si]+f),t=c.tones.find(x=>x.pc===p);if(!t)return;dots.push({s:si,f,txt:st.m==='note'?t.nt:t.l,fam:t.fam});ms.push(LOWM[si]+f)});
+  $('clBox').innerHTML=box(dots,c.root+c.q.sym+' shape');
+  $('clGtrPlay').innerHTML=PB(BOTH(ms),'Play '+c.root+c.q.sym+' on guitar');
+  $('clForm').textContent='Root on the '+(v.r===6?'low E':v.r===5?'A':'D')+' string · '+v.form+' shape · '+v.dif+'. The box shows the lowest string at the bottom and the nut on the left.'}
+ else{$('clBox').innerHTML='';$('clGtrPlay').innerHTML='';$('clForm').textContent='No guitar shape for this chord at this root.'}
+ // piano
+ const base=48+c.pc,mid=c.tones.map(t=>base+t.s);let ord=mid.slice();for(let k=0;k<st.i;k++)ord[k]+=12;
+ const lbl={};c.tones.forEach((t,k)=>{lbl[ord[k]]=[st.m==='note'?t.nt:t.l,t.fam]});
+ btns('clInv',INV.slice(0,inv),st.i,i=>{st.i=i;render()});
+ $('clPnoPlay').innerHTML=PB('mc:'+ord.slice().sort((a,b)=>a-b).join(',')+'|'+ord.slice().sort((a,b)=>a-b).join(','),'Play '+c.root+c.q.sym+' on piano');
+ const ww=30,h=112,top=48,nO=3;let s='<svg viewBox="0 0 '+(ww*21+2)+' '+(h+6)+'" role="img" aria-label="'+c.root+c.q.sym+', '+INV[st.i].toLowerCase()+', on the piano">',tops='';
+ for(let o=0;o<nO;o++){NAT.forEach((p,k)=>{const x=1+(o*7+k)*ww,mi=top+o*12+p;s+='<rect class="snd" data-play="m:'+mi+'" x="'+x+'" y="1" width="'+ww+'" height="'+h+'" rx="4" fill="var(--key-white)" stroke="var(--string)"/>';
+   if(lbl[mi])tops+=dot(x+ww/2,h-18,lbl[mi][0],lbl[mi][1],11,mi)});
+  [[0,1],[1,3],[3,6],[4,8],[5,10]].forEach(([k,p])=>{const x=1+(o*7+k+1)*ww-9,mi=top+o*12+p;tops+='<rect class="snd" data-play="m:'+mi+'" x="'+x+'" y="1" width="18" height="'+h*.62+'" rx="3" fill="var(--key-black)"/>';
+   if(lbl[mi])tops+=dot(x+9,h*.62-15,lbl[mi][0],lbl[mi][1],9.5,mi)})}
+ $('clPiano').innerHTML=s+tops+'</svg>';
+ // theory
+ const maj=c.q.fam==='M',rel=maj?spell(c.root,5,9)+' minor':spell(c.root,2,3)+' major',par=c.root+(maj?' minor':' major');
+ const chip=(t,x)=>'<span class="clchip" style="background:'+col(t.fam)+'">'+x+'</span>';
+ $('clTheory').innerHTML='<div class="clrow"><b>Formula</b>'+c.tones.map(t=>chip(t,t.l)).join('')+'</div><div class="clrow"><b>Notes</b>'+c.tones.map(t=>chip(t,t.nt)).join('')+'</div>'
+  +'<table class="cltab"><tbody>'+c.tones.map(t=>'<tr><td>'+t.l+'</td><td>'+t.nt+'</td><td>'+t.name+'</td></tr>').join('')+'</tbody></table>'
+  +'<p><b>Relative:</b> '+rel+' &nbsp; <b>Parallel:</b> '+par+'</p><p>'+c.q.txt+'</p>'}
+render();
+})();
+// new tool: Scale-Degree Ear Trainer
+(function(){
+const MAJ7=[0,2,4,5,7,9,11],MM=[0,2,3,5,7,9,11],HM=[0,2,3,5,7,8,11],HMAJ=[0,2,4,5,7,8,11];
+const rot=(p,k)=>p.map((_,i)=>mod12(p[(k+i)%p.length]-p[k]));
+const modes=(id,p,names)=>names.map((name,i)=>({id:id+'-'+i,name,semis:rot(p,i)}));
+const DL={'-2':'𝄫','-1':'♭','0':'','1':'♯'},DM={1:0,2:2,3:4,4:5,5:7,6:9,7:11};
+const prep=s=>{const deg=s.degrees||s.semis.map((_,i)=>i+1);return Object.assign({},s,{degrees:deg,labels:s.semis.map((x,i)=>(DL[x-DM[deg[i]]]||'')+deg[i])})};
+const GROUPS=[
+{t:'Pentatonic',s:[{id:'pent-0',name:'Major Pentatonic',semis:[0,2,4,7,9],degrees:[1,2,3,5,6]},{id:'pent-1',name:'Minor Pentatonic',semis:[0,3,5,7,10],degrees:[1,3,4,5,7]}]},
+{t:'Major modes',s:modes('maj',MAJ7,['Ionian (major)','Dorian','Phrygian','Lydian','Mixolydian','Aeolian (natural minor)','Locrian'])},
+{t:'Melodic minor modes',s:modes('mm',MM,['Melodic minor','Dorian ♭2','Lydian augmented','Lydian dominant','Mixolydian ♭6','Locrian ♮2','Altered'])},
+{t:'Harmonic minor modes',s:modes('hm',HM,['Harmonic minor','Locrian ♮6','Ionian ♯5','Dorian ♯4','Phrygian dominant','Lydian ♯2','Ultralocrian'])},
+{t:'Harmonic major modes',s:modes('hmaj',HMAJ,['Harmonic major','Dorian ♭5','Phrygian ♭4','Lydian ♭3','Mixolydian ♭2','Lydian augmented ♯2','Locrian 𝄫7'])},
+{t:'Other',s:[{id:'o-0',name:'Blues',semis:[0,3,5,6,7,10],degrees:[1,3,4,5,5,7]},{id:'o-1',name:'Whole tone',semis:[0,2,4,6,8,10],degrees:[1,2,3,4,5,7]},{id:'o-2',name:'Diminished (half–whole)',semis:[0,1,3,4,6,7,9,10],degrees:[1,2,3,3,4,5,6,7]},{id:'o-3',name:'Diminished (whole–half)',semis:[0,2,3,5,6,8,9,11],degrees:[1,2,3,4,5,6,6,7]},{id:'o-4',name:'Chromatic',semis:[0,1,2,3,4,5,6,7,8,9,10,11],degrees:[1,2,2,3,3,4,5,5,6,6,7,7]}]}
+].map(g=>({t:g.t,s:g.s.map(prep)}));
+const ALL=GROUPS.flatMap(g=>g.s),find=id=>ALL.find(s=>s.id===id)||ALL[0];
+const ROOTS=['C','C♯','D','E♭','E','F','F♯','G','A♭','A','B♭','B'];
+const DIRS=[['up','Ascending','1 2 3 4 5 6 7 1'],['down','Descending','1 7 6 5 4 3 2 1'],['random','Random','1 4 3 5 2 7 6 1']];
+const MOVES=[['static','Stays put',0],['up','Up a half step',1],['down','Down a half step',-1]];
+const shuf=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+function seq(sc,sp,dir){const n=sc.semis.length,out=[];
+ if(dir==='down'){for(let i=0;i<=n;i++){const k=sp-i;out.push({pos:((k%n)+n)%n,oct:Math.floor(k/n)+1})}}
+ else if(dir==='random'){out.push({pos:sp,oct:0});shuf(Array.from({length:n},(_,i)=>i).filter(i=>i!==sp)).forEach(pos=>out.push({pos,oct:0}));out.push({pos:sp,oct:1})}
+ else{for(let i=0;i<=n;i++){const k=sp+i;out.push({pos:k%n,oct:Math.floor(k/n)})}}
+ return out}
+const offOf=(sc,s)=>sc.semis[s.pos]+12*s.oct;
+function baseFor(pc,offs){const mid=(Math.min(...offs)+Math.max(...offs))/2;let best=null;for(let k=2;k<=6;k++){const b=pc+12*k,d=Math.abs(b+mid-64);if(!best||d<best.d)best={b,d}}return best.b}
+// a wrong guess is played in the octave nearest the target so the two can be compared
+function guessOff(sc,pos,target,octs){let b=null;octs.forEach(k=>{const o=sc.semis[pos]+12*k,d=Math.abs(o-target);if(!b||d<b.d)b={o,d}});return b.o}
+const cfg={scale:'maj-0',root:0,dir:'up',move:'static',start:0};
+const sel=$('etScale'),rsel=$('etRoot');
+sel.innerHTML=GROUPS.map(g=>'<optgroup label="'+g.t+'">'+g.s.map(s=>'<option value="'+s.id+'">'+s.name+'</option>').join('')+'</optgroup>').join('');
+rsel.innerHTML=ROOTS.map((r,i)=>'<option value="'+i+'">'+r+'</option>').join('');
+sel.onchange=()=>{cfg.scale=sel.value;cfg.start=Math.min(cfg.start,find(cfg.scale).semis.length-1);setup()};
+rsel.onchange=()=>{cfg.root=+rsel.value};
+function setup(){const sc=find(cfg.scale);sel.value=cfg.scale;rsel.value=cfg.root;
+ btns('etDir',DIRS.map(d=>d[1]),DIRS.findIndex(d=>d[0]===cfg.dir),i=>{cfg.dir=DIRS[i][0];setup()});
+ btns('etMove',MOVES.map(m=>m[1]),MOVES.findIndex(m=>m[0]===cfg.move),i=>{cfg.move=MOVES[i][0];setup()});
+ btns('etStart',sc.labels.map((l,i)=>l+(sc.labels.indexOf(l)!==i||sc.labels.lastIndexOf(l)!==i?' (#'+(i+1)+')':'')),cfg.start,i=>{cfg.start=i;setup()});
+ const run=cfg.dir==='random'?'every degree once, in random order, ending back on '+sc.labels[cfg.start]:seq(sc,cfg.start,cfg.dir).map(x=>sc.labels[x.pos]).join(' ');
+ $('etInfo').textContent=sc.name+' has the degrees '+sc.labels.join(' ')+'. Each round: '+run+'.'}
+let rd=null,idx=0,num=1,clean=0,miss=0,missedHere=false,timers=[];
+const after=(ms,f)=>timers.push(setTimeout(f,ms)),clear=()=>{timers.forEach(clearTimeout);timers=[]};
+const note=(r,off)=>tone(r.base+off,0,1.0);
+function make(pc){const sc=find(cfg.scale),steps=seq(sc,cfg.start,cfg.dir),offs=steps.map(s=>offOf(sc,s));return{sc,pc,steps,offs,octs:[...new Set(steps.map(s=>s.oct))].sort((a,b)=>a-b),base:baseFor(pc,offs)}}
+const nextPc=(pc)=>mod12(pc+MOVES.find(m=>m[0]===cfg.move)[2]);
+function showRound(){const r=rd;$('etRound').textContent='Round '+num;$('etRootBig').textContent=ROOTS[r.pc];$('etName').textContent=r.sc.name;$('etNext').textContent='next root: '+ROOTS[nextPc(r.pc)];
+ $('etAns').innerHTML='';r.sc.labels.forEach((l,pos)=>{const b=document.createElement('button');b.type='button';b.className='etb';b.textContent=l;b.onclick=()=>answer(pos);$('etAns').appendChild(b)});
+ draw();clear();note(r,0);after(900,()=>note(r,r.offs[0]))}
+function draw(){const r=rd,done=idx>=r.steps.length;
+ $('etBoxes').innerHTML=r.steps.map((s,i)=>'<span class="etbox'+(i<idx?' ok':i===idx?' on':'')+'">'+(i<idx?r.sc.labels[s.pos]:i===idx?'♪':'')+'</span>').join('');
+ $('etStats').textContent='Clean '+clean+' · misses '+miss;$('etReplay').disabled=done;
+ $('etAns').querySelectorAll('button').forEach(b=>b.disabled=done)}
+function answer(pos){const r=rd;if(idx>=r.steps.length)return;const target=r.offs[idx];note(r,guessOff(r.sc,pos,target,r.octs));
+ const btn=$('etAns').children[pos];
+ if(pos!==r.steps[idx].pos){missedHere=true;miss++;btn.classList.add('bad');$('etMsg').textContent='Not '+r.sc.labels[pos]+'. Listen again.';after(600,()=>btn.classList.remove('bad'));draw();return}
+ if(!missedHere)clean++;missedHere=false;idx++;$('etMsg').textContent=idx<r.steps.length?'Yes, '+r.sc.labels[r.steps[idx-1].pos]+'. Next note…':'Round complete. Moving to '+ROOTS[nextPc(r.pc)]+'…';draw();
+ if(idx<r.steps.length)after(550,()=>note(r,r.offs[idx]));
+ else after(1400,()=>{rd=make(nextPc(r.pc));idx=0;num++;$('etMsg').textContent='';showRound()})}
+$('etGo').onclick=()=>{rd=make(cfg.root);idx=0;num=1;clean=0;miss=0;missedHere=false;$('etMsg').textContent='';$('etSetup').hidden=true;$('etRun').hidden=false;showRound();$('etRun').scrollIntoView({block:'nearest'})};
+$('etEnd').onclick=()=>{clear();stopSound();$('etRun').hidden=true;$('etSetup').hidden=false};
+$('etReplay').onclick=()=>{if(idx<rd.steps.length)note(rd,rd.offs[idx])};
+$('etTonic').onclick=()=>note(rd,0);
+setup();
+})();
+// new tool: Circle of Fifths
+(function(){
+const RING=[['C',0],['G',7],['D',2],['A',9],['E',4],['B',11],['F♯',6],['D♭',1],['A♭',8],['E♭',3],['B♭',10],['F',5]];
+const MINR=['A','E','B','F♯','C♯','G♯','E♭','B♭','F','C','G','D'];
+const SHARPS=['F♯','C♯','G♯','D♯','A♯','E♯','B♯'],FLATS=['B♭','E♭','A♭','D♭','G♭','C♭','F♭'];
+const MAJQ=['M','m','m','M','M','m','°'],MAJR=['I','ii','iii','IV','V','vi','vii°'],MINQ=['m','°','M','m','m','M','M'],MINR_=['i','ii°','III','iv','v','VI','VII'];
+const MAJS=[0,2,4,5,7,9,11],MINS=[0,2,3,5,7,8,10];
+let key={i:0,minor:false};
+const tonicName=()=>key.minor?MINR[key.i]:RING[key.i][0];
+const tonicPc=()=>key.minor?mod12(RING[key.i][1]+9):RING[key.i][1];
+function chords(){const root=tonicName(),sc=key.minor?MINS:MAJS,q=key.minor?MINQ:MAJQ,r=key.minor?MINR_:MAJR;
+ return sc.map((s,d)=>{const nm=spell(root,d,s),qq=q[d],iv=qq==='M'?[0,4,7]:qq==='m'?[0,3,7]:[0,3,6],b=48+mod12(tonicPc()+s);
+  return{name:nm+(qq==='m'?'m':qq==='°'?'°':''),q:qq,rn:r[d],pc:mod12(tonicPc()+s),notes:iv.map((x,k)=>spell(nm,k*2,x)).join(' '),midi:iv.map(x=>b+x)}})}
+function sig(){const maj=key.minor?mod12(tonicPc()+3):tonicPc(),i=RING.findIndex(r=>r[1]===maj);
+ if(i===0)return'no sharps or flats';if(i<=6&&i!==6)return i+' sharp'+(i>1?'s':'')+' ('+SHARPS.slice(0,i).join(', ')+')';if(i===6)return'6 sharps (F♯, C♯, G♯, D♯, A♯, E♯) or 6 flats (B♭, E♭, A♭, D♭, G♭, C♭)';const f=12-i;return f+' flat'+(f>1?'s':'')+' ('+FLATS.slice(0,f).join(', ')+')'}
+function render(){
+ const ch=chords(),M=new Set(),m=new Set(),D=new Set();ch.forEach(c=>{(c.q==='M'?M:c.q==='m'?m:D).add(c.pc)});
+ const S=400,cx=S/2,cy=S/2,R1=S/2-30,R2=R1-70;let s='<svg viewBox="0 0 '+S+' '+S+'" role="group" aria-label="Circle of fifths">';
+ s+='<circle cx="'+cx+'" cy="'+cy+'" r="'+(R1+27)+'" fill="none" stroke="var(--line)"/><circle cx="'+cx+'" cy="'+cy+'" r="'+(R2-27)+'" fill="none" stroke="var(--line)"/>';
+ RING.forEach(([nm,pc],i)=>{const a=(-90+i*30)*Math.PI/180;
+  [[R1,nm,pc,false],[R2,MINR[i],mod12(pc+9),true]].forEach(([R,lbl,p,mn])=>{const x=cx+R*Math.cos(a),y=cy+R*Math.sin(a),isRoot=key.i===i&&key.minor===mn;
+   const inK=mn?(m.has(p)||D.has(p)):M.has(p);let fill='var(--card)',stroke='var(--line)',tc='var(--muted)';
+   if(isRoot){fill='var(--root)';stroke='var(--root)';tc='var(--root-ink)'}
+   else if(inK){const f=mn&&D.has(p)&&!m.has(p)?'var(--tritone)':mn?'var(--minor)':'var(--major)';fill=f;stroke=f;tc='#14120f'}
+   s+='<g class="cfn" tabindex="0" role="button" data-i="'+i+'" data-m="'+(mn?1:0)+'" aria-label="'+lbl+(mn?' minor':' major')+(isRoot?', selected':'')+'"><circle cx="'+x+'" cy="'+y+'" r="'+(mn?19:25)+'" fill="'+fill+'" stroke="'+stroke+'" stroke-width="'+(isRoot?3:1.5)+'"/><text x="'+x+'" y="'+(y+5)+'" text-anchor="middle" font-size="'+(mn?13:16)+'" font-weight="700" fill="'+tc+'">'+lbl+(mn?'m':'')+'</text></g>'})});
+ $('cfSvg').innerHTML=s+'</svg>';
+ const t=tonicName()+(key.minor?' minor':' major');$('cfTitle').textContent='Key of '+t;$('cfSig').innerHTML='<b>Key signature:</b> '+sig()+'.';
+ const relI=key.minor?RING[key.i][0]+' major':MINR[key.i]+' minor';$('cfRel').innerHTML='<b>Relative '+(key.minor?'major':'minor')+':</b> '+relI+'. Same notes, different home.';
+ $('cfChords').innerHTML=ch.map(c=>'<button type="button" class="cfch" data-play="mc:'+c.midi.join(',')+'|'+c.midi.join(',')+'" aria-label="Play '+c.name+'"><i>'+c.rn+'</i><b>'+c.name+'</b><span>'+c.notes+'</span></button>').join('');
+ btns('cfKeys',RING.map((r,i)=>r[0]),key.minor?-1:key.i,i=>{key={i,minor:false};render()})}
+$('cfSvg').addEventListener('click',e=>{const g=e.target.closest('.cfn');if(!g)return;key={i:+g.dataset.i,minor:g.dataset.m==='1'};render();const c=chords()[0];tone(c.midi[0],0,1.1);c.midi.slice(1).forEach((x,k)=>tone(x,.03*(k+1),1.4))});
+$('cfSvg').addEventListener('keydown',e=>{if(e.key!=='Enter'&&e.key!==' ')return;const g=e.target.closest('.cfn');if(!g)return;e.preventDefault();key={i:+g.dataset.i,minor:g.dataset.m==='1'};render();const f=document.querySelector('#cfSvg .cfn[data-i="'+key.i+'"][data-m="'+(key.minor?1:0)+'"]');if(f)f.focus()});
+$('cfScale').onclick=()=>{const sc=key.minor?MINS:MAJS,b=48+tonicPc();play('m:'+sc.concat([12]).map(x=>b+x).join(','))};
+render();
 })();
 </script>
 <script src="metro.js"></script>

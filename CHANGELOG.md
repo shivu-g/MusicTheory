@@ -1,5 +1,14 @@
 # Changelog
 
+## ChordLab tools added to the Toolkit
+Three tools ported from the ChordLab app, bringing the Toolkit (`tools.html`, Module V) to eleven tools.
+
+- **Chord Library (tool 9):** any root and 16 chord types, correctly spelled; up to five movable CAGED shapes per chord with an Easy/Medium/Hard guide, notes or interval labels, piano inversions, formula, relative and parallel keys, and a short note on each chord's sound and use. Everything is clickable and plays.
+- **Scale-Degree Ear Trainer (tool 10):** a workout for naming the degree you hear. 40 scales and modes (pentatonic, the major, melodic minor, harmonic minor and harmonic major modes, blues, whole tone, diminished, chromatic), ascending, descending or random runs, a choice of start degree, and a root that stays put or moves by a half step each round. Each round opens with the tonic and a wrong answer plays the note you picked.
+- **Circle of Fifths (tool 11):** major keys on the outer ring and relative minors on the inner ring. Pick a key to see its signature, relative key and diatonic chords with Roman numerals, with each chord playable.
+- Sounds use the site's built-in synth, so the app's piano and guitar samples were not carried over.
+- Landing page, Tools menu and search now list eleven tools. Style additions are at the end of `style.css`; a global `[hidden]` rule was added so hidden panels stay hidden.
+
 ## Modular curriculum v2 (branch `feat/modular-curriculum-v2`)
 
 The 13 chapters are regrouped into four Modules plus an interactive Toolkit, with new lessons, persistent checkpoints, a backing-track looper and a calculators page. The site is still plain static HTML/CSS/JS with no build step.
@@ -13,7 +22,7 @@ The 13 chapters are regrouped into four Modules plus an interactive Toolkit, wit
 | IV. Improvisation & Line Workshop | 12 Making Music: Target Tones, Phrasing and Practice; 13 The Jazz Line Workshop |
 | V. Interactive Reference Toolkit | `tools.html`: 8 calculators |
 
-102 lessons across the 13 chapters (59 core) plus 8 tools. Lessons are renumbered within each chapter; every migrated interactive keeps its own script scope (one IIFE per original chapter block), so nothing leaks between lessons.
+102 lessons across the 13 chapters (59 core) plus 8 tools (now 11, see above). Lessons are renumbered within each chapter; every migrated interactive keeps its own script scope (one IIFE per original chapter block), so nothing leaks between lessons.
 
 ### New
 - **Lessons:** open chords (chapter 4) and rhythm by ear (chapter 2).
