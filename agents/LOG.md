@@ -15,3 +15,4 @@ Publisher: 5d27f0c live ok (verified via Firecrawl: drums-3, drums hub)
 Cycle 3 complete: drums lessons D1-D3 live at 5d27f0c.
 Scout: 5 items, tracks: keyboard
 - 2026-11-20 Placer: keyboard K5-K6 (keyboard-5..6.html), hub/index/nav links, verify.js covers 6 lessons; 4 keyboard inbox entries placed, chart-workflow entry left unsure.
+Cycle 4 complete: keyboard lessons K5-K6 live at fd564b8.
