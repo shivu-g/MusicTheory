@@ -1,5 +1,11 @@
 # Changelog
 
+## Keyboard lessons K1-K4
+
+- New pages `keyboard-1.html` to `keyboard-4.html`: Keys and layout (88-key strip, octave numbers, find-the-note game), Major scale fingering (stepper for C and F major, G major left hand), Triads and inversions (inversion explorer with right-hand fingers), Seventh chords and rootless voicings (type A/B ii-V-I in seven keys).
+- New shared `keys.js` draws a clickable piano strip for any MIDI range. Hub, landing page track card and Tools menu link the lessons; `scripts/verify.js` covers the four pages.
+- Left out on purpose: B major and F sharp major fingerings and left-hand inversion fingerings, which are not yet confirmed by two sources.
+
 ## Tracks and four new tools
 
 - New hub pages `core.html`, `guitar.html`, `keyboard.html`, `drums.html`. Chapter 1 is the shared core; guitar keeps chapters 2-13; keyboard and drums list live shared chapters plus planned lessons. The landing page has a "Choose your instrument" section.

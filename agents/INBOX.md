@@ -1,6 +1,6 @@
 # Inbox (Scout writes, Placer clears). Entry format is in `.claude/agents/scout.md`.
 
-## [keyboard] Triad inversions and right-hand fingering            status: new
+## [keyboard] Triad inversions and right-hand fingering            status: placed -> keyboard-3.html (RH fingerings only; LH inversion fingering left out as unconfirmed)
 - Fact(s): Root position triad: right hand fingers 1-3-5 (thumb, middle, pinky). First inversion (3rd in bass): 1-2-5, because the gap between the lower two notes is a minor or major third and the upper gap is a fourth, so the index finger fits the middle note. Second inversion (5th in bass): back to 1-3-5. Name logic: the inversion number equals the chord tone's position counted from the root that now sits in the bass (root is 2nd note in second inversion, 3rd note is bottom in first).
 - Fact(s): Left hand root position is typically 5-3-1 (first-inversion left-hand fingering not confirmed in my sources). Fingerings are conventions, not rules: 1-2-5 on root position forces an unnecessary thumb stretch.
 - Sources: https://www.pianote.com/blog/how-to-practice-chord-inversions/ ; https://music.stackexchange.com/questions/67135/what-are-the-correct-fingerings-for-piano-chords-and-inversions
@@ -45,3 +45,34 @@
 - Sources: https://www.libertyparkmusic.com/musical-time-signatures/ ; https://us.humankinetics.com/blogs/excerpt/learn-four-types-of-time-signatures ; https://www.tunelark.com/blog/odd-time-signatures-drums/
 - Suggested placement: new lesson D2 "Time signatures" in drums track; extend metro.js with accent groupings.
 - Interactive idea: choose a meter and a grouping and hear the accent pattern, with beat dots clustered by group.
+
+## [keyboard] Keyboard layout, 88 keys and octave numbers            status: placed -> keyboard-1.html
+- Fact(s): A full piano has 88 keys: 52 white and 36 black, running A0 to C8 (seven octaves plus a minor third). Middle C is C4, the fourth C from the left, key number 40, about 261.6 Hz.
+- Fact(s): In scientific pitch notation the octave number increases at each C, not at A, so B3 is followed by C4. The 2-black-key group marks C (the white key just left of it) and the 3-black-key group marks F.
+- Sources: https://piano.org/theory/piano-notes/ ; https://www.musicandtheory.com/an-easy-guide-to-scientific-pitch-notation/
+- Suggested placement: new lesson K1 "Keys and layout" in keyboard.html (no 88-key or C4 content exists there now)
+- Interactive idea: hover any key of a full 88-key strip to see its name, octave number and key number; a "find C" game using the 2-black-key anchor.
+
+## [keyboard] C major scale fingering, both hands            status: placed -> keyboard-2.html
+- Fact(s): Right hand ascending C to C: 1-2-3-1-2-3-4-5. The thumb tucks under finger 3 to play F. Descending uses the same fingers, with finger 3 crossing over the thumb.
+- Fact(s): Left hand ascending C to C: 5-4-3-2-1-3-2-1. Finger 3 crosses over the thumb to play A. Both hands play the same notes with mirrored fingerings.
+- Fact(s): Practice tips given: start one octave then extend to two, three, four; metronome around 100 BPM then raise a few BPM at a time; work through keys by adding one sharp or flat (circle of fifths order).
+- Sources: https://www.anselmoacademy.org/piano-technique-playing-the-c-major-scale/ ; https://www.pianoscales.org/major.html (LH pattern 5-4-3-2-1-3-2-1 for F and G)
+- Suggested placement: new lesson K2 "Major scale fingering" in keyboard track
+- Interactive idea: animated hand over a piano strip showing which finger plays each note, with thumb-tuck points highlighted, tempo from metro.js.
+
+## [keyboard] Major scale fingering exceptions (F, B, F#/Gb)            status: unsure
+- Fact(s): F major: right hand 1-2-3-4-1-2-3-4 (four fingers first, then thumb on C); left hand 5-4-3-2-1-3-2-1. G major left hand uses the same 5-4-3-2-1-3-2-1 as C and F.
+- Fact(s): B major left hand 4-3-2-1-4-3-2-1. F#/Gb major left hand 4-3-2-1-3-2-1-4, right hand 2-3-4-1-2-3-1-2. Db, Gb and B (the scales with five black keys) share one pattern per a teaching page.
+- Fact(s): Confirmed twice only for F and G; the B and F#/Gb numbers come from a single chart page and the second site gave the grouping idea but its numbers were images.
+- Sources: https://www.pianoscales.org/major.html ; https://piano-ology.com/piano-technique/major-scale-fingering/
+- Suggested placement: lesson K2, after the C major fingering; add only F and G until the others are verified.
+- Interactive idea: pick a key and see the fingering numbers appear under the notes with a note on where the thumb sits (usually on white keys).
+
+## [keyboard] Rootless voicings, Type A and Type B            status: placed -> keyboard-4.html (ii-V-I widget; 5th-dropped variant mentioned in text)
+- Fact(s): A rootless voicing is a four-note left-hand chord that leaves out the root (the bass player covers it) and stacks 3, 5, 7, 9. Type A has the 3rd on the bottom: 3-5-7-9. Type B has the 7th on the bottom: 7-9-3-5.
+- Fact(s): Minor 9: A = b3-5-b7-9. Dominant 7b9: A = 3-5-b7-b9, B = b7-b9-3-5. Dominant 7b9b13: A = 3-b13-b7-b9. Per one source, the usual dominant voicing drops the 5th for 3-7-9 in some tutorials, so spelling varies by teacher.
+- Fact(s): Alternating A and B across a ii-V-I keeps the hand in one small area with minimal movement (stated by the teaching sites; Bill Evans style is the common attribution).
+- Sources: https://pianowithjonny.com/piano-lessons/rootless-voicings-for-piano-the-complete-guide/ ; https://www.pianogroove.com/jazz-piano-lessons/rootless-chord-voicings/ ; https://piano.org/theory/rootless-voicings/
+- Suggested placement: new lesson K4 "Seventh chords and voicings" in keyboard track; also tool: Inversions and Voicings piano view (left-hand voicings, which is still open in BACKLOG).
+- Interactive idea: choose ii-V-I in a key and toggle A-first vs B-first; the piano strip shows the voice leading between chords.

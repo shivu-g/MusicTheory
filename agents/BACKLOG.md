@@ -12,7 +12,8 @@
 - [ ] Capo and tuning calculator (alternate tunings, note names per string).
 
 ## Keyboard track
-- [ ] K1 Keys and layout, K2 Major scale fingering, K3 Triads and inversions, K4 Seventh chords and voicings, K5 Comping patterns, K6 Reading chord charts.
+- [x] K1 Keys and layout, K2 Major scale fingering, K3 Triads and inversions, K4 Seventh chords and voicings (keyboard-1..4.html, shared `keys.js`)
+- [ ] K5 Comping patterns, K6 Reading chord charts.
 
 ## Drums track
 - [ ] D1 Pulse and subdivisions, D2 Time signatures, D3 Rudiments (with a stick-sticking player), D4 Basic grooves (groove builder grid), D5 Fills, D6 Syncopation and polyrhythm. Extend `metro.js`.

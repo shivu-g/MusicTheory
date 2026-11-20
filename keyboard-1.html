@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Keys and layout · Keyboard · Guitar Theory Maps</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="keyboard-1">
+<main>
+<nav aria-label="Guide"><a href="index.html">← All chapters</a><a href="keyboard.html">Keyboard</a><a href="tools.html">Tools</a><span class="here">Keyboard · Lesson K1 of 4</span><span style="display:flex;gap:8px"><a href="keyboard.html">← Hub</a><a href="keyboard-2.html">Next →</a></span></nav>
+<div class="chap" style="background:#3a3342"><span>Keyboard · K1</span><h2>Keys and layout</h2><p>Where the 88 keys sit, how octave numbers count, and how the black-key groups let you find any note without counting from the left.</p></div>
+<section>
+<h2>The pattern that never changes</h2>
+<p>A full-size piano has <b>88 keys</b>: 52 white and 36 black. They run from <b>A0</b> at the far left to <b>C8</b> at the far right, which is seven complete octaves plus three extra notes at the bottom end. The twelve-note pattern of the keys (seven white, five black) simply repeats.</p>
+<p>The black keys come in a group of <b>two</b> and a group of <b>three</b>. Those groups are your map. The white key just to the left of every two-black-key group is <b>C</b>. The white key just left of every three-black-key group is <b>F</b>. From any C, the white keys climb C D E F G A B and then you reach the next C.</p>
+<p>Octave numbers change at <b>C</b>, not at A. So the key after B3 is C4. <b>Middle C is C4</b>, the fourth C from the left and key number 40, sounding at roughly 261.6 Hz. Keys are numbered 1 to 88 from the left, so A0 is key 1 and C8 is key 88.</p>
+<div class="card">
+<h3>The whole keyboard</h3>
+<p class="cap">Click or tap any key to hear it and read its name, octave, key number and frequency. Every C is labelled. Scroll sideways on a phone.</p>
+<div class="scroll"><div id="k1Strip" style="min-width:880px"></div></div>
+<p id="k1Info" role="status"><b>Pick a key.</b></p>
+</div>
+<div class="card">
+<h3>Find it fast</h3>
+<p class="cap">The game names a white key. Click it on the strip above, using the two- and three-black-key groups to navigate.</p>
+<div class="ctl"><button type="button" class="pbtn go" id="k1New">New question</button><span id="k1Q" role="status">Press New question.</span><span id="k1Score" class="cap">Score 0 / 0</span></div>
+</div>
+<div class="tip"><b>Try this.</b> Find middle C by looking for the two-black-key group nearest the centre of the keyboard, then drop to the white key on its left. Then find the F above it using the three-black-key group.</div>
+</section>
+
+</main>
+<script src="common.js"></script>
+<script src="keys.js"></script>
+<script>
+(function(){
+ const marks={};for(let m=24;m<=108;m+=12)marks[m]=['C'+(m/12-1),m===60?'major':'root',9.5];
+ KB.draw('k1Strip',21,108,{w:22,h:110,marks,label:'The 88 keys of a piano, A0 to C8'});
+ const info=document.getElementById('k1Info'),q=document.getElementById('k1Q'),sc=document.getElementById('k1Score');
+ let target=null,right=0,asked=0;
+ const WH=[0,2,4,5,7,9,11],nm=m=>KB.NAMES[m%12]+(Math.floor(m/12)-1);
+ document.getElementById('k1New').addEventListener('click',()=>{
+  const o=3+Math.floor(Math.random()*5);target=12*(o+1)+WH[Math.floor(Math.random()*7)];asked++;
+  q.textContent='Find '+nm(target);sc.textContent='Score '+right+' / '+(asked-1)});
+ document.getElementById('k1Strip').addEventListener('click',e=>{
+  const k=e.target.closest&&e.target.closest('[data-midi]');if(!k)return;
+  const m=+k.dataset.midi,i=KB.info(m);
+  info.innerHTML='<b>'+i.name+i.oct+'</b> · key number '+i.key+' of 88 · '+i.hz.toFixed(1)+' Hz'+(m===60?' · middle C':'');
+  if(target!==null){if(m===target){right++;q.textContent='Correct: '+nm(m)+'. Press New question.'}else q.textContent='That was '+nm(m)+'. Look for '+nm(target)+'.';
+   if(m===target)target=null;sc.textContent='Score '+right+' / '+asked}});
+})();
+
+</script>
+</body>
+</html>

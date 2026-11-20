@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Major scale fingering · Keyboard · Guitar Theory Maps</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="keyboard-2">
+<main>
+<nav aria-label="Guide"><a href="index.html">← All chapters</a><a href="keyboard.html">Keyboard</a><a href="tools.html">Tools</a><span class="here">Keyboard · Lesson K2 of 4</span><span style="display:flex;gap:8px"><a href="keyboard-1.html">← Prev</a><a href="keyboard-3.html">Next →</a></span></nav>
+<div class="chap" style="background:#3a3342"><span>Keyboard · K2</span><h2>Major scale fingering</h2><p>Which finger plays which note of a major scale, where the thumb tucks under, and how to practise it so it sounds even.</p></div>
+<section>
+<h2>Why fingering matters</h2>
+<p>Fingers are numbered <b>1 to 5 from the thumb to the little finger</b>, the same in both hands. A scale is longer than five notes, so at some point the hand has to move. The trick is to pass the thumb <b>under</b> a finger (right hand going up) or to cross a finger <b>over</b> the thumb (left hand going up), so the sound stays smooth.</p>
+<p><b>C major</b> is all white keys. Going up, the right hand plays 1-2-3, tucks the thumb under to play F, then continues 2-3-4-5. The left hand plays 5-4-3-2-1 up to G, then crosses finger 3 over the thumb for A and finishes 2-1. The two hands mirror each other. Coming down you use the same fingers in reverse: the right hand crosses finger 3 over the thumb, the left hand tucks the thumb under.</p>
+<div class="card">
+<h3>Fingering stepper</h3>
+<div class="ctl"><div class="grp"><span class="lab">Key</span><span class="grp" id="k2Keys"></span></div><div class="grp"><span class="lab">Hand</span><span class="grp" id="k2Hands"></span></div></div>
+<div class="scroll"><div id="k2Strip" style="min-width:420px"></div></div>
+<div class="ctl"><button type="button" class="pbtn" id="k2Prev">← Back</button><button type="button" class="pbtn go" id="k2Next">Next note →</button><button type="button" class="pbtn" id="k2Play" data-play="m:60">▶ Play scale</button></div>
+<p id="k2Say" role="status">Pick a key and press Next note.</p>
+<p class="cap">Purple dots show the finger for every note. The gold dot is the note you are on.</p>
+</div>
+<div class="tip"><b>Only two keys so far.</b> C major (both hands) and F major (both hands) are shown, plus the G major left hand. The other keys follow in a later pass once each fingering has been checked against two sources.</div>
+<h2>F major changes the right hand</h2>
+<p>F major has one black key, B♭, and finger 4 plays it. The right hand plays 1-2-3-4 for F G A B♭, then the thumb goes on C and 2-3-4 finish the scale. The left hand keeps the same 5-4-3-2-1-3-2-1 pattern as in C and G. Fingerings are conventions that make the hand comfortable, so you may see small variations in other books.</p>
+<h2>How to practise</h2>
+<ul>
+<li>Start with one octave, hands separately, and only then extend to two, three and four octaves.</li>
+<li>Use a metronome at about 100 BPM, and raise it a few beats at a time once it feels even.</li>
+<li>Move through the keys by adding one sharp or flat each time, in circle-of-fifths order.</li>
+<li>Listen for gaps at the thumb crossing. The note after the tuck should be as loud and as long as the others.</li>
+</ul>
+</section>
+
+</main>
+<script src="common.js"></script>
+<script src="keys.js"></script>
+<script>
+(function(){
+ // ascending notes (MIDI), RH/LH fingers. Only fingerings confirmed by two sources are listed; null = not listed yet.
+ const SC={
+  C:{notes:[60,62,64,65,67,69,71,72],names:'C D E F G A B C',rh:[1,2,3,1,2,3,4,5],lh:[5,4,3,2,1,3,2,1]},
+  F:{notes:[65,67,69,70,72,74,76,77],names:'F G A B♭ C D E F',rh:[1,2,3,4,1,2,3,4],lh:[5,4,3,2,1,3,2,1]},
+  G:{notes:[67,69,71,72,74,76,78,79],names:'G A B C D E F♯ G',rh:null,lh:[5,4,3,2,1,3,2,1]}};
+ const KEYS=['C','F','G'],HANDS=['Right hand','Left hand'];
+ let key='C',hand=0,step=-1;
+ const fing=()=>{const s=SC[key];return hand===0?s.rh:s.lh};
+ function render(){
+  const s=SC[key],f=fing(),say=document.getElementById('k2Say'),pl=document.getElementById('k2Play'),marks={};
+  if(f){s.notes.forEach((m,i)=>{marks[m]=[String(f[i]),i===step?'major':'minor',11]});
+   pl.dataset.play='m:'+s.notes.join(',');pl.disabled=false}
+  else{pl.disabled=true}
+  KB.draw('k2Strip',60,84,{w:34,h:120,marks,min:420,label:HANDS[hand]+' fingering for '+key+' major'});
+  const nm=s.names.split(' ');
+  if(!f)say.textContent='Right hand for '+key+' major is not listed yet. Try the left hand.';
+  else if(step<0)say.textContent=key+' major, '+HANDS[hand].toLowerCase()+': '+f.join('-')+'. Press Next note.';
+  else{let t='Note '+(step+1)+' of 8: '+nm[step]+' with finger '+f[step]+'.';
+   if(step>0&&hand===0&&f[step]===1)t+=' The thumb tucked under finger '+f[step-1]+' to get here.';
+   if(step>0&&hand===1&&f[step]===3&&f[step-1]===1)t+=' Finger 3 crossed over the thumb to get here.';
+   say.textContent=t}}
+ function setup(){btns('k2Keys',KEYS,KEYS.indexOf(key),i=>{key=KEYS[i];step=-1;setup()});
+  btns('k2Hands',HANDS,hand,i=>{hand=i;step=-1;setup()});render()}
+ document.getElementById('k2Next').addEventListener('click',()=>{const f=fing();if(!f)return;
+  step=(step+1)%8;render();play('m:'+SC[key].notes[step])});
+ document.getElementById('k2Prev').addEventListener('click',()=>{if(!fing())return;step=step<=0?-1:step-1;render()});
+ setup();
+})();
+
+</script>
+</body>
+</html>

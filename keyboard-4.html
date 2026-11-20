@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seventh chords and rootless voicings · Keyboard · Guitar Theory Maps</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="keyboard-4">
+<main>
+<nav aria-label="Guide"><a href="index.html">← All chapters</a><a href="keyboard.html">Keyboard</a><a href="tools.html">Tools</a><span class="here">Keyboard · Lesson K4 of 4</span><span style="display:flex;gap:8px"><a href="keyboard-3.html">← Prev</a><a href="keyboard.html">Hub →</a></span></nav>
+<div class="chap" style="background:#3a3342"><span>Keyboard · K4</span><h2>Seventh chords and rootless voicings</h2><p>Four-note left-hand voicings that leave out the root, and how alternating two types carries you smoothly through a ii-V-I.</p></div>
+<section>
+<h2>Leave the root out</h2>
+<p>When a bass player (or your other hand) already plays the root, a chord does not need it again. A <b>rootless voicing</b> is a four-note chord that skips the root and stacks the colour notes: the 3rd, 5th, 7th and 9th. There are two standard orders.</p>
+<ul>
+<li><b>Type A</b> has the 3rd at the bottom: 3-5-7-9.</li>
+<li><b>Type B</b> has the 7th at the bottom: 7-9-3-5.</li>
+</ul>
+<p>The quality of the chord changes which notes are flat. A minor 9 chord in type A is ♭3-5-♭7-9. A dominant 7♭9 chord in type A is 3-5-♭7-♭9, and in type B it is ♭7-♭9-3-5. Teachers vary on the details: some drop the 5th of a dominant chord to leave 3-7-9. Use the spelling here as a starting point, not the only answer.</p>
+<p>The big benefit: if you alternate type A and type B through a ii-V-I, each chord is only a step or two from the last, so the hand barely moves.</p>
+<div class="card">
+<h3>ii-V-I with rootless voicings</h3>
+<div class="ctl"><div class="grp"><span class="lab">Key</span><span class="grp" id="k4Keys"></span></div><div class="grp"><span class="lab">Start with</span><span class="grp" id="k4Start"></span></div></div>
+<div class="ctl"><div class="grp"><span class="lab">Chord</span><span class="grp" id="k4Chords"></span></div><button type="button" class="pbtn" id="k4Play" data-play="c:60">▶ Play this chord</button><button type="button" class="pbtn go" id="k4All" data-play="c:60">▶ Play ii-V-I</button></div>
+<div class="scroll"><div id="k4Strip" style="min-width:560px"></div></div>
+<p id="k4Say" role="status"></p>
+<p class="cap">Dots show the note names. Gold is the 3rd. The three chords are played in the order ii, V, I.</p>
+</div>
+<div class="tip"><b>Compare the totals.</b> Switch between Type A first and Type B first. In both, the whole progression moves by only a handful of semitones in total. That is what "staying in one area" means.</div>
+</section>
+
+</main>
+<script src="common.js"></script>
+<script src="keys.js"></script>
+<script>
+(function(){
+ const KEYS=['C','F','B♭','E♭','G','D','A'],START=['Type A','Type B'],NAMESC=['ii: m9','V: 7♭9','I: maj9'];
+ // degrees as [letter steps from root, semitones] for 3rd, 5th, 7th, 9th
+ const Q=[{suf:'m9',d:[[2,3],[4,7],[6,10],[1,14]]},{suf:'7♭9',d:[[2,4],[4,7],[6,10],[1,13]]},{suf:'maj9',d:[[2,4],[4,7],[6,11],[1,14]]}];
+ let key=0,st=0,cur=0;
+ function voice(root,q,type){ // type 0 = A (3 5 7 9), 1 = B (7 9 3 5)
+  const d=q.d,order=type?[d[2],d[3],[d[0][0],d[0][1]+12],[d[1][0],d[1][1]+12]]:d;
+  const rel=order.map(x=>x[1]),pc=pcOf(root);let m=pc;
+  while(m+rel[0]<50)m+=12;while(m+rel[0]>=62)m-=12;
+  return order.map((x,i)=>({midi:m+rel[i],name:spell(root,x[0],x[1]),deg:x}))}
+ function all(){const k=KEYS[key],roots=[spell(k,1,2),spell(k,4,7),k],out=[];
+  roots.forEach((r,i)=>{let v=voice(r,Q[i],(st+i)%2);
+   if(i){const p=out[i-1].v,dist=s=>v.reduce((a,n,j)=>a+Math.abs(n.midi+s-p[j].midi),0);
+    let best=0;[-12,12].forEach(s=>{if(dist(s)<dist(best))best=s});v=v.map(n=>({...n,midi:n.midi+best}))}
+   out.push({root:r,q:Q[i],v})});
+  return out}
+ function render(){
+  const ch=all(),c=ch[cur],marks={};
+  c.v.forEach((n,i)=>{const third=(n.deg===Q[cur].d[0]||n.deg[0]===2);marks[n.midi]=[n.name,third?'major':'minor',12]});
+  KB.draw('k4Strip',48,84,{w:26,h:110,marks,min:560,label:'Rootless voicing of '+c.root+c.q.suf});
+  let move=0;for(let i=1;i<3;i++)for(let j=0;j<4;j++)move+=Math.abs(ch[i].v[j].midi-ch[i-1].v[j].midi);
+  const type=(st+cur)%2?'Type B':'Type A';
+  document.getElementById('k4Say').innerHTML='<b>'+c.root+c.q.suf+'</b> ('+type+'): '+c.v.map(n=>n.name).join(' ')+'. Total movement across the three chords: '+move+' semitones.';
+  document.getElementById('k4Play').dataset.play='c:'+c.v.map(n=>n.midi).join(',');
+  document.getElementById('k4All').dataset.play='c:'+ch.map(x=>x.v.map(n=>n.midi).join(',')).join('|')}
+ function setup(){btns('k4Keys',KEYS,key,i=>{key=i;setup()});btns('k4Start',START,st,i=>{st=i;setup()});
+  const ch=all();btns('k4Chords',ch.map((x,i)=>NAMESC[i].split(':')[0]+': '+x.root+x.q.suf),cur,i=>{cur=i;setup()});render()}
+ setup();
+})();
+
+</script>
+</body>
+</html>

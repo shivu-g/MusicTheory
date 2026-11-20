@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Triads and inversions · Keyboard · Guitar Theory Maps</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="keyboard-3">
+<main>
+<nav aria-label="Guide"><a href="index.html">← All chapters</a><a href="keyboard.html">Keyboard</a><a href="tools.html">Tools</a><span class="here">Keyboard · Lesson K3 of 4</span><span style="display:flex;gap:8px"><a href="keyboard-2.html">← Prev</a><a href="keyboard-4.html">Next →</a></span></nav>
+<div class="chap" style="background:#3a3342"><span>Keyboard · K3</span><h2>Triads and inversions</h2><p>Turn any triad into three shapes by moving the bottom note to the top, and see which right-hand fingers fit each shape.</p></div>
+<section>
+<h2>One chord, three shapes</h2>
+<p>A triad has three notes: the root, the 3rd and the 5th. In <b>root position</b> the root is the lowest note. Take that bottom note and move it up an octave and you get <b>first inversion</b>, with the 3rd now at the bottom. Do it again and you get <b>second inversion</b>, with the 5th at the bottom. It is still the same chord; only the order changes.</p>
+<p>Inversions let your hand stay in one place while the chords change, instead of jumping around the keyboard. That is the whole point of learning them.</p>
+<div class="card">
+<h3>Inversion explorer</h3>
+<div class="ctl"><div class="grp"><span class="lab">Root</span><span class="grp" id="k3Roots"></span></div><div class="grp"><span class="lab">Type</span><span class="grp" id="k3Types"></span></div></div>
+<div class="ctl"><div class="grp"><span class="lab">Position</span><span class="grp" id="k3Inv"></span></div><button type="button" class="pbtn" id="k3Play" data-play="c:60,64,67">▶ Play chord</button></div>
+<div class="scroll"><div id="k3Strip" style="min-width:560px"></div></div>
+<p id="k3Say" role="status"></p>
+<p class="cap">Numbers on the keys are right-hand fingers (1 is the thumb). Gold marks the root wherever it sits.</p>
+</div>
+<h2>Right-hand fingering</h2>
+<p>In root position the right hand uses <b>1-3-5</b>: thumb, middle finger, little finger. In first inversion the gaps change. The bottom two notes are a third apart and the top two a fourth apart, so the index finger fits comfortably in the middle: <b>1-2-5</b>. Second inversion goes back to <b>1-3-5</b>.</p>
+<p>For the left hand, root position is normally <b>5-3-1</b>, little finger on the root. Left-hand fingerings for the inversions are not listed here yet. Treat every fingering as a convention that suits the hand, not a rule. For example, using 1-2-5 on a root-position triad would add an awkward stretch.</p>
+<div class="tip"><b>Name check.</b> The inversion number tells you which chord tone is at the bottom: first inversion has the 3rd, second inversion has the 5th. Written as a slash chord it is C/E and C/G, with the bass note after the slash.</div>
+</section>
+
+</main>
+<script src="common.js"></script>
+<script src="keys.js"></script>
+<script>
+(function(){
+ const ROOTS=['C','D♭','D','E♭','E','F','G','A♭','A','B♭'],TYPES=['Major','Minor'],INV=['Root position','1st inversion','2nd inversion'];
+ const FING=[[1,3,5],[1,2,5],[1,3,5]],BASS=['root','3rd','5th'];
+ let r=0,ty=0,inv=0;
+ function notes(){const root=ROOTS[r],pc=pcOf(root),base=pc<=5?60+pc:48+pc,third=ty?3:4;
+  const tones=[base,base+third,base+7],names=[spell(root,0,0),spell(root,2,third),spell(root,4,7)];
+  const idx=[0,1,2].map(i=>(i+inv)%3),mids=idx.map((t,k)=>tones[t]+(t<inv?12:0));
+  return{mids,names:idx.map(t=>names[t]),root:tones[0],rootName:names[0],bassName:names[inv]}}
+ function render(){
+  const n=notes(),marks={};
+  n.mids.forEach((m,i)=>{marks[m]=[String(FING[inv][i]),(m-n.root)%12===0?'major':'minor',11]});
+  KB.draw('k3Strip',48,84,{w:26,h:110,marks,min:560,label:'Triad on the keyboard'});
+  const sym=n.rootName+(ty?'m':'')+(inv?'/'+n.bassName:'');
+  document.getElementById('k3Say').innerHTML='<b>'+sym+'</b> · notes bottom to top: '+n.names.join(' ')+' · bass note is the '+BASS[inv]+' · right-hand fingers '+FING[inv].join('-');
+  document.getElementById('k3Play').dataset.play='c:'+n.mids.join(',')}
+ function setup(){btns('k3Roots',ROOTS,r,i=>{r=i;setup()});btns('k3Types',TYPES,ty,i=>{ty=i;setup()});btns('k3Inv',INV,inv,i=>{inv=i;setup()});render()}
+ setup();
+})();
+
+</script>
+</body>
+</html>
